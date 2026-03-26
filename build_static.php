@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 const LEGACY_SITE_ROOT = __DIR__ . DIRECTORY_SEPARATOR . 'legacy' . DIRECTORY_SEPARATOR . 'www.addresshotels.com';
+const LEGACY_SITE_ROOT_ALT = __DIR__ . DIRECTORY_SEPARATOR . 'od_legacy' . DIRECTORY_SEPARATOR . 'www.addresshotels.com';
 const OUTPUT_PAGES_ROOT = __DIR__ . DIRECTORY_SEPARATOR . 'pages';
 const OUTPUT_DEPENDENCIES_ROOT = __DIR__ . DIRECTORY_SEPARATOR . 'dependencies';
 
@@ -37,8 +38,11 @@ $typeMap = [
     'txt' => 'vendor',
 ];
 
-if (!is_dir(LEGACY_SITE_ROOT)) {
-    fwrite(STDERR, "Legacy path not found: " . LEGACY_SITE_ROOT . PHP_EOL);
+/** @var string $legacyRoot */
+$legacyRoot = is_dir(LEGACY_SITE_ROOT) ? LEGACY_SITE_ROOT : LEGACY_SITE_ROOT_ALT;
+
+if (!is_dir($legacyRoot)) {
+    fwrite(STDERR, "Legacy path not found: " . LEGACY_SITE_ROOT . " or " . LEGACY_SITE_ROOT_ALT . PHP_EOL);
     exit(1);
 }
 
@@ -57,7 +61,7 @@ $htmlFiles = [];
 $rootAssetUrls = [];
 
 $iterator = new RecursiveIteratorIterator(
-    new RecursiveDirectoryIterator(LEGACY_SITE_ROOT, FilesystemIterator::SKIP_DOTS)
+    new RecursiveDirectoryIterator($legacyRoot, FilesystemIterator::SKIP_DOTS)
 );
 
 foreach ($iterator as $fileInfo) {
@@ -66,7 +70,7 @@ foreach ($iterator as $fileInfo) {
     }
 
     $absolutePath = $fileInfo->getPathname();
-    $relative = normalizePath(substr($absolutePath, strlen(LEGACY_SITE_ROOT) + 1));
+    $relative = normalizePath(substr($absolutePath, strlen($legacyRoot) + 1));
     $ext = strtolower(pathinfo($relative, PATHINFO_EXTENSION));
 
     if ($ext === 'htm') {
@@ -116,7 +120,7 @@ foreach (array_keys($rootAssetUrls) as $rootUrl) {
         continue;
     }
 
-    $legacyFile = LEGACY_SITE_ROOT . DIRECTORY_SEPARATOR . str_replace('/', DIRECTORY_SEPARATOR, $normalized);
+    $legacyFile = $legacyRoot . DIRECTORY_SEPARATOR . str_replace('/', DIRECTORY_SEPARATOR, $normalized);
     $targetRelative = buildDependencyTargetRelative($normalized, $query, $typeMap);
     $targetAbsolute = OUTPUT_DEPENDENCIES_ROOT . DIRECTORY_SEPARATOR . str_replace('/', DIRECTORY_SEPARATOR, $targetRelative);
     ensureDir(dirname($targetAbsolute));
@@ -146,7 +150,7 @@ foreach (array_keys($rootAssetUrls) as $rootUrl) {
 }
 
 foreach ($htmlFiles as $htmlFile) {
-    $htmlRelative = normalizePath(substr($htmlFile, strlen(LEGACY_SITE_ROOT) + 1));
+    $htmlRelative = normalizePath(substr($htmlFile, strlen($legacyRoot) + 1));
     $htmlContent = file_get_contents($htmlFile);
     if ($htmlContent === false) {
         continue;
@@ -154,6 +158,9 @@ foreach ($htmlFiles as $htmlFile) {
 
     $pageDirRelative = normalizePath(dirname($htmlRelative));
     $htmlContent = rewriteLinks($htmlContent, $pageDirRelative, $assetRouteMap, $assetFileMap, $assetFullUrlMap);
+    $htmlContent = sanitizeExternalReferences($htmlContent, $pageDirRelative, $assetRouteMap, $assetFileMap, $assetFullUrlMap);
+    $htmlContent = ensureCoreLocalScripts($htmlContent);
+    $htmlContent = injectInternalOnlyRuntimeGuard($htmlContent);
     $htmlContent = removeBom($htmlContent);
 
     $targetPageDir = OUTPUT_PAGES_ROOT . DIRECTORY_SEPARATOR . str_replace('/', DIRECTORY_SEPARATOR, $pageDirRelative);
@@ -340,6 +347,169 @@ function removeBom(string $content): string
         return substr($content, 3);
     }
     return $content;
+}
+
+function sanitizeExternalReferences(string $html, string $pageDir, array $assetRouteMap, array $assetFileMap, array $assetFullUrlMap): string
+{
+    // Remove only known error-generating scripts for static mode.
+    $html = preg_replace('/<script\b[^>]*\bsrc=("|\')[^"\']*(?:googletagmanager|hotjar|nr-spa|newrelic|googleapis\.com\/maps|digital-vouchers|utils-single|utils-matcher|vendor\/js\/window-onload|vendor\/js\/bootstrap-select|vendor\/js\/global-booking-modal|vendor\/js\/spabooking|vendor\/js\/global-homepage-booking-widget|vendor\/js\/dinebooking|vendor\/js\/individual-home|vendor\/js\/login)[^"\']*\1[^>]*>\s*<\/script>/i', '', $html) ?? $html;
+
+    // Remove direct external asset includes.
+    $html = preg_replace('/<script\b[^>]*\bsrc=("|\')https?:\/\/[^"\']+\1[^>]*>\s*<\/script>/i', '', $html) ?? $html;
+    $html = preg_replace('/<link\b[^>]*\bhref=("|\')https?:\/\/[^"\']+\1[^>]*>/i', '', $html) ?? $html;
+    $html = preg_replace('/<iframe\b[^>]*\bsrc=("|\')https?:\/\/[^"\']+\1[^>]*>\s*<\/iframe>/i', '', $html) ?? $html;
+
+    // Remove preconnect/prefetch hints to external hosts.
+    $html = preg_replace('/<link\b[^>]*\brel=("|\')(dns-prefetch|preconnect)\1[^>]*>/i', '', $html) ?? $html;
+
+    $html = preg_replace_callback(
+        '/\b(href|src|content)=("|\')(.*?)\2/i',
+        function (array $matches) use ($pageDir, $assetRouteMap, $assetFileMap, $assetFullUrlMap): string {
+            $attr = strtolower($matches[1]);
+            $quote = $matches[2];
+            $url = trim($matches[3]);
+
+            if ($url === '') {
+                return $matches[0];
+            }
+
+            if (str_starts_with($url, 'http://') || str_starts_with($url, 'https://') || str_starts_with($url, '//')) {
+                $normalized = $url;
+                if (str_starts_with($normalized, '//')) {
+                    $normalized = 'https:' . $normalized;
+                }
+                $parts = parse_url($normalized);
+                $host = strtolower($parts['host'] ?? '');
+                $path = $parts['path'] ?? '';
+                $query = isset($parts['query']) ? ('?' . $parts['query']) : '';
+                $fragment = isset($parts['fragment']) ? ('#' . $parts['fragment']) : '';
+
+                if ($host === 'www.addresshotels.com' || $host === 'addresshotels.com') {
+                    $localCandidate = rewriteUrl($path . $query . $fragment, $pageDir, $assetRouteMap, $assetFileMap, $assetFullUrlMap);
+                    return $attr . '=' . $quote . $localCandidate . $quote;
+                }
+
+                if ($attr === 'href') {
+                    return $attr . '=' . $quote . 'javascript:void(0);' . $quote;
+                }
+                return $attr . '=' . $quote . '' . $quote;
+            }
+
+            return $matches[0];
+        },
+        $html
+    ) ?? $html;
+
+    return $html;
+}
+
+function injectInternalOnlyRuntimeGuard(string $html): string
+{
+    $guard = <<<'HTML'
+<script>
+(function () {
+  function isAllowed(url) {
+    try {
+      var u = new URL(url, window.location.origin);
+      return u.origin === window.location.origin;
+    } catch (e) {
+      return true;
+    }
+  }
+
+  var originalFetch = window.fetch;
+  if (typeof originalFetch === 'function') {
+    window.fetch = function (input, init) {
+      var url = typeof input === 'string' ? input : (input && input.url ? input.url : '');
+      if (url && !isAllowed(url)) {
+        return Promise.resolve(new Response('', { status: 204, statusText: 'No Content' }));
+      }
+      return originalFetch.apply(this, arguments);
+    };
+  }
+
+  var originalOpen = XMLHttpRequest.prototype.open;
+  var originalSend = XMLHttpRequest.prototype.send;
+  XMLHttpRequest.prototype.open = function (method, url) {
+    if (url && !isAllowed(url)) {
+      this.__blockedExternal = true;
+      this.__blockedExternalUrl = url;
+      return originalOpen.call(this, method || 'GET', '/');
+    }
+    this.__blockedExternal = false;
+    return originalOpen.apply(this, arguments);
+  };
+  XMLHttpRequest.prototype.send = function () {
+    if (this.__blockedExternal) {
+      return;
+    }
+    return originalSend.apply(this, arguments);
+  };
+
+  if (typeof navigator.sendBeacon === 'function') {
+    var originalBeacon = navigator.sendBeacon.bind(navigator);
+    navigator.sendBeacon = function (url, data) {
+      if (url && !isAllowed(url)) {
+        return false;
+      }
+      return originalBeacon(url, data);
+    };
+  }
+
+  if (typeof window.WebSocket === 'function') {
+    var OriginalWebSocket = window.WebSocket;
+    window.WebSocket = function (url, protocols) {
+      if (url && !isAllowed(url)) {
+        return {
+          close: function () {},
+          send: function () {},
+          readyState: 3
+        };
+      }
+      return new OriginalWebSocket(url, protocols);
+    };
+  }
+
+  if (typeof window.EventSource === 'function') {
+    var OriginalEventSource = window.EventSource;
+    window.EventSource = function (url, config) {
+      if (url && !isAllowed(url)) {
+        return {
+          close: function () {},
+          readyState: 2
+        };
+      }
+      return new OriginalEventSource(url, config);
+    };
+  }
+})();
+</script>
+HTML;
+
+    if (stripos($html, '<head>') !== false) {
+        return preg_replace('/<head>/i', '<head>' . "\n" . $guard, $html, 1) ?? $html;
+    }
+
+    return $guard . "\n" . $html;
+}
+
+function ensureCoreLocalScripts(string $html): string
+{
+    $hasJquery = (bool) preg_match('/id=("|\')jquery-js\1|jquery\.min\.js/i', $html);
+    $needsJquery = (bool) preg_match('/vendor\/js\/(?:login|bootstrap-select|individual-home|jquery\.plugin|jquery\.datepick|dinebooking|spabooking)\.js|vendor\/js\/(?:bootstrap-select|jquery\.plugin)\.min\.js/i', $html);
+
+    if (!$hasJquery && $needsJquery) {
+        $jqueryTag = '<script type="text/javascript" src="/dependencies/js/wp-content/themes/emaar-projects/js/lib/jquery.min.js?ver=3.6.0" id="jquery-js"></script>' . "\n";
+
+        // Prefer injecting before first script include.
+        $updated = preg_replace('/<script\b/i', $jqueryTag . '<script', $html, 1);
+        if (is_string($updated) && $updated !== '') {
+            return $updated;
+        }
+        return $jqueryTag . $html;
+    }
+
+    return $html;
 }
 
 function ensureDir(string $path): void

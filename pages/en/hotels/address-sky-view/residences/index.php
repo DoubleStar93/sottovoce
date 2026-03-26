@@ -3,10 +3,88 @@
 <html lang="en">
 
 
-<head><script src="/dependencies/js/wp-content/themes/emaar-projects/addresshotel/js/utils-matcher.js"></script><script src="/dependencies/js/wp-content/themes/emaar-projects/addresshotel/js/utils-single.js"></script>
+<head>
+<script>
+(function () {
+  function isAllowed(url) {
+    try {
+      var u = new URL(url, window.location.origin);
+      return u.origin === window.location.origin;
+    } catch (e) {
+      return true;
+    }
+  }
+
+  var originalFetch = window.fetch;
+  if (typeof originalFetch === 'function') {
+    window.fetch = function (input, init) {
+      var url = typeof input === 'string' ? input : (input && input.url ? input.url : '');
+      if (url && !isAllowed(url)) {
+        return Promise.resolve(new Response('', { status: 204, statusText: 'No Content' }));
+      }
+      return originalFetch.apply(this, arguments);
+    };
+  }
+
+  var originalOpen = XMLHttpRequest.prototype.open;
+  var originalSend = XMLHttpRequest.prototype.send;
+  XMLHttpRequest.prototype.open = function (method, url) {
+    if (url && !isAllowed(url)) {
+      this.__blockedExternal = true;
+      this.__blockedExternalUrl = url;
+      return originalOpen.call(this, method || 'GET', '/');
+    }
+    this.__blockedExternal = false;
+    return originalOpen.apply(this, arguments);
+  };
+  XMLHttpRequest.prototype.send = function () {
+    if (this.__blockedExternal) {
+      return;
+    }
+    return originalSend.apply(this, arguments);
+  };
+
+  if (typeof navigator.sendBeacon === 'function') {
+    var originalBeacon = navigator.sendBeacon.bind(navigator);
+    navigator.sendBeacon = function (url, data) {
+      if (url && !isAllowed(url)) {
+        return false;
+      }
+      return originalBeacon(url, data);
+    };
+  }
+
+  if (typeof window.WebSocket === 'function') {
+    var OriginalWebSocket = window.WebSocket;
+    window.WebSocket = function (url, protocols) {
+      if (url && !isAllowed(url)) {
+        return {
+          close: function () {},
+          send: function () {},
+          readyState: 3
+        };
+      }
+      return new OriginalWebSocket(url, protocols);
+    };
+  }
+
+  if (typeof window.EventSource === 'function') {
+    var OriginalEventSource = window.EventSource;
+    window.EventSource = function (url, config) {
+      if (url && !isAllowed(url)) {
+        return {
+          close: function () {},
+          readyState: 2
+        };
+      }
+      return new OriginalEventSource(url, config);
+    };
+  }
+})();
+</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="profile" href="https://gmpg.org/xfn/11">
+  
   <!-- Favicons -->
   <link rel="apple-touch-icon" sizes="180x180" href="/dependencies/img/wp-content/themes/emaar-projects/img/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/dependencies/img/wp-content/themes/emaar-projects/img/favicon/favicon-32x32.png">
@@ -27,11 +105,11 @@ window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){va
 <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'>
 <link rel="alternate" href="/pages/en/hotels/address-sky-view/residences/index.php" hreflang="x-default">
 <link rel="alternate" hreflang="en" href="/pages/en/hotels/address-sky-view/residences/index.php">
-<link rel="alternate" hreflang="ar" href="https://www.addresshotels.com/ar/hotels/address-sky-view/residences/">
-<link rel="alternate" hreflang="zh-cn" href="https://www.addresshotels.com/zh-hans/hotels/address-sky-view/residences/">
-<link rel="alternate" hreflang="fr-fr" href="https://www.addresshotels.com/fr/hotels/address-sky-view/residences/">
-<link rel="alternate" hreflang="de-de" href="https://www.addresshotels.com/de/hotels/address-sky-view/residences/">
-<link rel="alternate" hreflang="ru-ru" href="https://www.addresshotels.com/ru/hotels/address-sky-view/residences/">
+
+
+
+
+
 <link rel="alternate" hreflang="x-default" href="/pages/en/hotels/address-sky-view/residences/index.php">
 
 	<!-- This site is optimized with the Yoast SEO plugin v22.9 - https://yoast.com/wordpress/plugins/seo/ -->
@@ -42,7 +120,7 @@ window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){va
 	<meta property="og:type" content="article">
 	<meta property="og:title" content="Address Sky View | Residences | Address Hotels + Resorts">
 	<meta property="og:description" content="Experience luxury living at Address Sky View Residences, offering 1 to 6-bedroom serviced apartments with stunning Burj Khalifa views in the heart of Downtown Dubai.">
-	<meta property="og:url" content="https://www.addresshotels.com/en/hotels/address-sky-view/residences/">
+	<meta property="og:url" content="/en/hotels/address-sky-view/residences/">
 	<meta property="og:site_name" content="Address Hotels in Dubai">
 	<meta property="article:modified_time" content="2025-03-27T12:36:51+00:00">
 	<meta name="twitter:card" content="summary_large_image">
@@ -50,9 +128,9 @@ window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){va
 	<!-- / Yoast SEO plugin. -->
 
 
-<link rel='dns-prefetch' href='//use.typekit.net'>
-<link rel='dns-prefetch' href='//www-addresshotels-com.azureedge.net'>
-<link href='https://www-addresshotels-com.azureedge.net' rel='preconnect'>
+
+
+
 <link rel='stylesheet' id='sbi_styles-css' href='/dependencies/css/wp-content/plugins/instagram-feed/css/sbi-styles.min.css?ver=6.9.1' type='text/css' media='all'>
 <style id='wp-emoji-styles-inline-css' type='text/css'>
 
@@ -331,12 +409,12 @@ html[dir=rtl] .individual-homepage-experience-section .overlap-btn-new-block,htm
 </style>
 <script type="text/javascript" src="/dependencies/js/wp-includes/js/dist/vendor/react.min.js?ver=18.3.1" id="react-js"></script>
 <script type="text/javascript" src="/dependencies/js/wp-includes/js/dist/vendor/react-dom.min.js?ver=18.3.1" id="react-dom-js"></script>
-<script type="text/javascript" src="/dependencies/js/wp-content/plugins/emaar-digital-vouchers/build/blocks/vouchers-listing-block/view.js?ver=4ce0c6d36fdcbf5c8338" id="digital-vouchers-vouchers-listing-block-script-js"></script>
-<script type="text/javascript" src="/dependencies/js/wp-content/plugins/emaar-digital-vouchers/build/blocks/vouchers-cart-block/view.js?ver=52383da8f512ac2eb756" id="digital-vouchers-vouchers-cart-block-script-js"></script>
-<script type="text/javascript" src="/dependencies/js/wp-content/plugins/emaar-digital-vouchers/build/blocks/vouchers-checkout-block/view.js?ver=5bdee964c02e936ce254" id="digital-vouchers-vouchers-checkout-block-script-js"></script>
-<script type="text/javascript" src="/dependencies/js/wp-content/plugins/emaar-digital-vouchers/build/blocks/vouchers-confirmation-block/view.js?ver=85630d52822762967ca7" id="digital-vouchers-vouchers-confirmation-block-script-js"></script>
-<script type="text/javascript" src="/dependencies/js/wp-content/plugins/emaar-digital-vouchers/build/blocks/vouchers-styleguide-block/view.js?ver=bc9b95158f230cdc9300" id="digital-vouchers-vouchers-styleguide-block-script-js"></script>
-<script type="text/javascript" src="/dependencies/js/wp-content/plugins/emaar-digital-vouchers/build/blocks/vouchers-details-block/view.js?ver=c0c5d31665da9eb6f838" id="digital-vouchers-vouchers-details-block-script-js"></script>
+
+
+
+
+
+
 <script type="text/javascript" src="/dependencies/js/wp-content/themes/emaar-projects/gutenberg-blocks/build/blocks/homepage-video-section/index-render.js?ver=31d6cfe0d16ae931b73c" id="gutenberg-blocks-homepage-video-section-script-js"></script>
 <script type="text/javascript" src="/dependencies/js/wp-content/plugins/sitepress-multilingual-cms/templates/language-switchers/legacy-dropdown-click/script.min.js?ver=1" id="wpml-legacy-dropdown-click-0-js"></script>
 <script type="text/javascript" src="/dependencies/js/wp-content/themes/emaar-projects/js/lib/jquery.min.js?ver=3.6.0" id="jquery-js"></script>
@@ -344,7 +422,7 @@ html[dir=rtl] .individual-homepage-experience-section .overlap-btn-new-block,htm
 <link rel="icon" href="/dependencies/img/wp-content/uploads/2020/06/address-favicon-dark.jpg.webp" sizes="32x32">
 <link rel="icon" href="/dependencies/img/wp-content/uploads/2020/06/address-favicon-dark.jpg.webp" sizes="192x192">
 <link rel="apple-touch-icon" href="/dependencies/img/wp-content/uploads/2020/06/address-favicon-dark.jpg.webp">
-<meta name="msapplication-TileImage" content="https://www-addresshotels-com.azureedge.net/wp-content/uploads/2020/06/address-favicon-dark.jpg">
+<meta name="msapplication-TileImage" content="">
 		<style type="text/css" id="wp-custom-css">
 			/* Start Page Infinity Pool */
 .page-id-190574 .individual-homepage-featured-offer:nth-child(2n+1) .row {
@@ -424,9 +502,9 @@ html[dir=rtl] .individual-homepage-experience-section .overlap-btn-new-block,htm
 
 
 		</style>
-		<noscript><style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}</style></noscript>  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-  <!-- <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">  -->
+		<noscript><style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}</style></noscript>  
+  
+  <!--   -->
 <meta name="generator" content="WP Rocket 3.17.3.1" data-wpr-features="wpr_lazyload_iframes wpr_oci wpr_image_dimensions wpr_cache_webp wpr_cdn wpr_desktop wpr_dns_prefetch"></head>
 
 <body class="page-template-default page page-id-2767 page-child parent-pageid-3739">
@@ -449,10 +527,10 @@ html[dir=rtl] .individual-homepage-experience-section .overlap-btn-new-block,htm
 <script>
 var page = {"PAGE_SCOPE":"individual","HOME_PAGE":false,"DINE_PAGE":false,"BOOK_NOW_BTN":false,"HOTEL_TITLE":"Address Sky View","HOTEL_SLUG":"address-sky-view","HOTEL_ID":"18","TEMPLATE":"default","HOTEL_URL":"https:\/\/www.addresshotels.com\/en\/hotels\/address-sky-view\/","DROPDOWN_POSITION":"dropup","DISABLE_BOOK_NOW":false,"FACEBOOK_SOCIAL_LINK":"https:\/\/www.facebook.com\/addressskyview","TWITTER_SOCIAL_LINK":"https:\/\/twitter.com\/Address_Hotels\/","YOUTUBE_SOCIAL_LINK":"https:\/\/www.youtube.com\/@AddressHotels","INSTAGRAM_SOCIAL_LINK":"https:\/\/www.instagram.com\/addressskyview\/","WHATSAPP_SOCIAL_LINK":"97142488553","POST_TYPE":"page"};
 </script>
-<!-- <script src="https://cdn.quicktext.im/widget.min.js" data-license="8QHsG-4I9i"></script>
+<!-- 
 
 <noscript>
-   <a href="https://www.quicktext.im/" title="Hotel AI Chabot and Guest Communication">Quicktext hotel chatbot</a>
+   <a href="javascript:void(0);" title="Hotel AI Chabot and Guest Communication">Quicktext hotel chatbot</a>
 </noscript> -->
 
 
@@ -477,7 +555,7 @@ var page = {"PAGE_SCOPE":"individual","HOME_PAGE":false,"DINE_PAGE":false,"BOOK_
 
               <div class="d-flex">
                                   <div class="d-block d-xl-none whatsapp-icon-mobile">
-                        <a href="https://api.whatsapp.com/send?phone=97142488553&text=Hi Address Sky View" class="nav-link " target="_blank">
+                        <a href="javascript:void(0);" class="nav-link " target="_blank">
                             <svg width="22" height="22" viewbox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M20.4664 2.43597C10.9087 2.43597 3.13672 10.1492 3.13672 19.6315C3.13672 23.3917 4.36218 26.8781 6.43721 29.7133L4.27275 36.0977L10.931 33.9821C13.667 35.7777 16.9437 36.8243 20.4664 36.8243C30.02 36.8243 37.7947 29.111 37.7947 19.6301C37.7947 10.1492 30.02 2.43457 20.4664 2.43457V2.43597Z" fill="url(#paint0_linear_7343_26683)"></path>
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M40.0014 19.4844C40.0014 30.2438 31.2094 38.9688 20.3647 38.9688C16.9203 38.9688 13.6855 38.0898 10.8726 36.5444L0 40L3.54363 29.5466C1.75505 26.6094 0.726612 23.1664 0.726612 19.4858C0.726612 8.72354 9.51862 0 20.3647 0C31.2108 0 40.0014 8.72354 40.0014 19.4858V19.4844ZM20.3661 3.10208C11.2597 3.10208 3.85524 10.4506 3.85524 19.4844C3.85524 23.0671 5.02201 26.3872 6.99923 29.0896L4.93817 35.1722L11.2821 33.1573C13.8881 34.8676 17.0111 35.8653 20.3661 35.8653C29.4683 35.8653 36.8756 28.5167 36.8756 19.4844C36.8756 10.452 29.4683 3.10208 20.3661 3.10208ZM30.2816 23.9726C30.16 23.7728 29.8386 23.654 29.3593 23.4151C28.8772 23.1761 26.5102 22.0205 26.0686 21.8612C25.6285 21.702 25.3043 21.6223 24.9857 22.1002C24.6643 22.5781 23.7421 23.654 23.4598 23.9726C23.1803 24.2926 22.8995 24.3303 22.4188 24.0914C21.9367 23.8524 20.3843 23.3466 18.5468 21.7215C17.1173 20.4541 16.1504 18.8919 15.8681 18.414C15.5886 17.9361 15.8401 17.679 16.0791 17.4401C16.2957 17.2249 16.5612 16.8826 16.8015 16.6045C17.0432 16.325 17.1229 16.1238 17.2836 15.8052C17.4443 15.4866 17.3646 15.2086 17.2431 14.9696C17.1243 14.7307 16.1601 12.3804 15.7591 11.4232C15.3609 10.4688 14.9584 10.5037 14.6762 10.5037C14.3939 10.5037 13.8769 10.5876 13.8769 10.5876C13.8769 10.5876 12.9113 10.7064 12.4712 11.1842C12.031 11.6621 10.7874 12.8177 10.7874 15.1666C10.7874 17.5155 12.5103 19.789 12.752 20.1062C12.9938 20.4262 16.0805 25.4063 20.9753 27.3178C25.8688 29.2294 25.8688 28.5922 26.7519 28.5111C27.6336 28.4329 29.5997 27.3569 30.0007 26.2405C30.4017 25.1254 30.4017 24.1682 30.283 23.9698L30.2816 23.9726Z" fill="white"></path>
@@ -509,27 +587,27 @@ var page = {"PAGE_SCOPE":"individual","HOME_PAGE":false,"DINE_PAGE":false,"BOOK_
 <ul id='hotelList__dropdown' class="dropdown-menu" aria-labelledby="menu-item-dropdown-175612"><div class='container hotel_resorts_dropdown'>
 	<li id="menu-item-175613" class="nav-indentation-class nav-link menu-item menu-item-type-custom menu-item-object-custom menu-item-175613 nav-item"><a href="#" class="dropdown-item">United Arab Emirates</a></li>
 	<li id="menu-item-175614" class="dropdown-item hotel-nav-sub-heading menu-item menu-item-type-custom menu-item-object-custom menu-item-175614 nav-item"><a href="#" class="dropdown-item">Dubai</a></li>
-	<li id="menu-item-175615" class="dropdown-item menu-item menu-item-type-custom menu-item-object-custom menu-item-175615 nav-item"><a href="https://www.addresshotels.com/en/resorts/address-beach-resort/" class="dropdown-item">Address Beach Resort</a></li>
-	<li id="menu-item-175616" class="dropdown-item menu-item menu-item-type-custom menu-item-object-custom menu-item-175616 nav-item"><a href="https://www.addresshotels.com/en/hotels/address-downtown/" class="dropdown-item">Address Downtown</a></li>
-	<li id="menu-item-175617" class="dropdown-item menu-item menu-item-type-custom menu-item-object-custom menu-item-175617 nav-item"><a href="https://www.addresshotels.com/en/hotels/address-dubai-mall/" class="dropdown-item">Address Dubai Mall</a></li>
-	<li id="menu-item-175618" class="dropdown-item menu-item menu-item-type-custom menu-item-object-custom menu-item-175618 nav-item"><a href="https://www.addresshotels.com/en/hotels/address-creek-harbour/" class="dropdown-item">Address Creek Harbour</a></li>
-	<li id="menu-item-175619" class="dropdown-item menu-item menu-item-type-custom menu-item-object-custom menu-item-175619 nav-item"><a href="https://www.addresshotels.com/en/hotels/address-montgomerie/" class="dropdown-item">Address Montgomerie</a></li>
+	<li id="menu-item-175615" class="dropdown-item menu-item menu-item-type-custom menu-item-object-custom menu-item-175615 nav-item"><a href="/en/resorts/address-beach-resort/" class="dropdown-item">Address Beach Resort</a></li>
+	<li id="menu-item-175616" class="dropdown-item menu-item menu-item-type-custom menu-item-object-custom menu-item-175616 nav-item"><a href="/en/hotels/address-downtown/" class="dropdown-item">Address Downtown</a></li>
+	<li id="menu-item-175617" class="dropdown-item menu-item menu-item-type-custom menu-item-object-custom menu-item-175617 nav-item"><a href="/en/hotels/address-dubai-mall/" class="dropdown-item">Address Dubai Mall</a></li>
+	<li id="menu-item-175618" class="dropdown-item menu-item menu-item-type-custom menu-item-object-custom menu-item-175618 nav-item"><a href="/en/hotels/address-creek-harbour/" class="dropdown-item">Address Creek Harbour</a></li>
+	<li id="menu-item-175619" class="dropdown-item menu-item menu-item-type-custom menu-item-object-custom menu-item-175619 nav-item"><a href="/en/hotels/address-montgomerie/" class="dropdown-item">Address Montgomerie</a></li>
 	<li id="menu-item-175621" class="dropdown-item menu-item menu-item-type-custom menu-item-object-custom menu-item-175621 nav-item"><a href="/pages/en/hotels/address-sky-view/index.php" class="dropdown-item">Address Sky View</a></li>
-	<li id="menu-item-175624" class="dropdown-item menu-item menu-item-type-custom menu-item-object-custom menu-item-175624 nav-item"><a href="https://www.addresshotels.com/en/hotels/palace-downtown/" class="dropdown-item">Palace Downtown</a></li>
-	<li id="menu-item-175625" class="dropdown-item menu-item menu-item-type-custom menu-item-object-custom menu-item-175625 nav-item"><a href="https://www.addresshotels.com/en/hotels/palace-dubai-creek-harbour/" class="dropdown-item">Palace Dubai Creek Harbour</a></li>
+	<li id="menu-item-175624" class="dropdown-item menu-item menu-item-type-custom menu-item-object-custom menu-item-175624 nav-item"><a href="/en/hotels/palace-downtown/" class="dropdown-item">Palace Downtown</a></li>
+	<li id="menu-item-175625" class="dropdown-item menu-item menu-item-type-custom menu-item-object-custom menu-item-175625 nav-item"><a href="/en/hotels/palace-dubai-creek-harbour/" class="dropdown-item">Palace Dubai Creek Harbour</a></li>
 	<li id="menu-item-175627" class="dropdown-item hotel-nav-sub-heading menu-item menu-item-type-custom menu-item-object-custom menu-item-175627 nav-item"><a href="#" class="dropdown-item">Fujairah</a></li>
-	<li id="menu-item-175628" class="dropdown-item menu-item menu-item-type-custom menu-item-object-custom menu-item-175628 nav-item"><a href="https://www.addresshotels.com/en/resorts/address-beach-resort-fujairah/" class="dropdown-item">Address Beach Resort Fujairah</a></li>
-	<li id="menu-item-175668" class="dropdown-item menu-item menu-item-type-custom menu-item-object-custom menu-item-175668 nav-item"><a href="https://www.addresshotels.com/en/resorts/palace-beach-resort-fujairah/" class="dropdown-item">Palace Beach Resort Fujairah</a></li>
+	<li id="menu-item-175628" class="dropdown-item menu-item menu-item-type-custom menu-item-object-custom menu-item-175628 nav-item"><a href="/en/resorts/address-beach-resort-fujairah/" class="dropdown-item">Address Beach Resort Fujairah</a></li>
+	<li id="menu-item-175668" class="dropdown-item menu-item menu-item-type-custom menu-item-object-custom menu-item-175668 nav-item"><a href="/en/resorts/palace-beach-resort-fujairah/" class="dropdown-item">Palace Beach Resort Fujairah</a></li>
 	<li id="menu-item-175669" class="nav-indentation-class nav-linking menu-item menu-item-type-custom menu-item-object-custom menu-item-175669 nav-item"><a href="#" class="dropdown-item">Bahrain</a></li>
-	<li id="menu-item-175670" class="dropdown-item menu-item menu-item-type-custom menu-item-object-custom menu-item-175670 nav-item"><a href="https://www.addresshotels.com/en/resorts/address-beach-resort-bahrain/" class="dropdown-item">Address Beach Resort Bahrain</a></li>
+	<li id="menu-item-175670" class="dropdown-item menu-item menu-item-type-custom menu-item-object-custom menu-item-175670 nav-item"><a href="/en/resorts/address-beach-resort-bahrain/" class="dropdown-item">Address Beach Resort Bahrain</a></li>
 	<li id="menu-item-175671" class="dropdown-item hotel-nav-sub-heading menu-item menu-item-type-custom menu-item-object-custom menu-item-175671 nav-item"><a href="#" class="dropdown-item">Egypt</a></li>
-	<li id="menu-item-175672" class="dropdown-item menu-item menu-item-type-custom menu-item-object-custom menu-item-175672 nav-item"><a href="https://www.addresshotels.com/en/resorts/address-marassi-golf-resort/" class="dropdown-item">Address Marassi Golf Resort</a></li>
-	<li id="menu-item-175673" class="dropdown-item menu-item menu-item-type-custom menu-item-object-custom menu-item-175673 nav-item"><a href="https://www.addresshotels.com/en/resorts/address-beach-resort-marassi/" class="dropdown-item">Address Beach Resort Marassi</a></li>
-	<li id="menu-item-201444" class="dropdown-item menu-item menu-item-type-post_type menu-item-object-page menu-item-201444 nav-item"><a href="https://www.addresshotels.com/en/resorts/palace-beach-resort/" class="dropdown-item">Palace Beach Resort</a></li>
+	<li id="menu-item-175672" class="dropdown-item menu-item menu-item-type-custom menu-item-object-custom menu-item-175672 nav-item"><a href="/en/resorts/address-marassi-golf-resort/" class="dropdown-item">Address Marassi Golf Resort</a></li>
+	<li id="menu-item-175673" class="dropdown-item menu-item menu-item-type-custom menu-item-object-custom menu-item-175673 nav-item"><a href="/en/resorts/address-beach-resort-marassi/" class="dropdown-item">Address Beach Resort Marassi</a></li>
+	<li id="menu-item-201444" class="dropdown-item menu-item menu-item-type-post_type menu-item-object-page menu-item-201444 nav-item"><a href="/en/resorts/palace-beach-resort/" class="dropdown-item">Palace Beach Resort</a></li>
 	<li id="menu-item-175674" class="dropdown-item hotel-nav-sub-heading menu-item menu-item-type-custom menu-item-object-custom menu-item-175674 nav-item"><a href="#" class="dropdown-item">Saudi Arabia</a></li>
-	<li id="menu-item-175675" class="dropdown-item menu-item menu-item-type-custom menu-item-object-custom menu-item-175675 nav-item"><a href="https://www.addresshotels.com/en/hotels/address-jabal-omar-makkah/" class="dropdown-item">Address Jabal Omar Makkah</a></li>
+	<li id="menu-item-175675" class="dropdown-item menu-item menu-item-type-custom menu-item-object-custom menu-item-175675 nav-item"><a href="/en/hotels/address-jabal-omar-makkah/" class="dropdown-item">Address Jabal Omar Makkah</a></li>
 	<li id="menu-item-175676" class="dropdown-item hotel-nav-sub-heading menu-item menu-item-type-custom menu-item-object-custom menu-item-175676 nav-item"><a href="#" class="dropdown-item">Turkey</a></li>
-	<li id="menu-item-175638" class="dropdown-item menu-item menu-item-type-custom menu-item-object-custom menu-item-175638 nav-item"><a href="https://www.addresshotels.com/en/hotels/address-istanbul/" class="dropdown-item">Address Istanbul</a></li>
+	<li id="menu-item-175638" class="dropdown-item menu-item menu-item-type-custom menu-item-object-custom menu-item-175638 nav-item"><a href="/en/hotels/address-istanbul/" class="dropdown-item">Address Istanbul</a></li>
 </div></ul>
 </li>
 <li id="menu-item-29631" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-29631 nav-item"><a href="/pages/en/hotels/address-sky-view/rooms-and-suites/index.php" class="nav-link">Rooms and Suites</a></li>
@@ -545,7 +623,7 @@ var page = {"PAGE_SCOPE":"individual","HOME_PAGE":false,"DINE_PAGE":false,"BOOK_
                             <li id="menu-item-175954" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-175954 nav-item"><a href="/pages/en/hotels/address-sky-view/photos-and-videos/index.php" class="nav-link">Gallery</a></li>
 <li id="menu-item-175955" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-175955 nav-item"><a href="/pages/en/hotels/address-sky-view/offers/index.php" class="nav-link">Offers</a></li>
 <li id="menu-item-175956" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-175956 nav-item"><a href="/pages/en/hotels/address-sky-view/amenities/index.php" class="nav-link">Amenities</a></li>
-<li id="menu-item-175965" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-175965 nav-item"><a target="_blank" rel="noopener noreferrer" href="https://www.google.co.in/maps/place/Address+Sky+View/@25.2015914,55.2683494,17z/data=!3m1!4b1!4m8!3m7!1s0x3e5f43859586ed13:0xe1103d783cf1f2f1!5m2!4m1!1i2!8m2!3d25.2015914!4d55.2705381" class="nav-link">Location</a></li>
+<li id="menu-item-175965" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-175965 nav-item"><a target="_blank" rel="noopener noreferrer" href="javascript:void(0);" class="nav-link">Location</a></li>
 <li id="menu-item-175968" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-175968 nav-item"><a href="/pages/en/hotels/address-sky-view/address-sky-view-360-tour/index.php" class="nav-link">360 Tour</a></li>
                         </ul>
                     </div>
@@ -570,7 +648,7 @@ var page = {"PAGE_SCOPE":"individual","HOME_PAGE":false,"DINE_PAGE":false,"BOOK_
                             <a class="nav-link px-lg-0" href="/en/modify-booking-stay-dine/">Manage Booking                            </a>
                         </li>
                                                    <li class="nav-item d-xl-block d-none">
-                          <a href="https://api.whatsapp.com/send?phone=97142488553&text=Hi Address Sky View" class="nav-link" target="_blank">
+                          <a href="javascript:void(0);" class="nav-link" target="_blank">
                               <svg width="22" height="22" viewbox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M20.4664 2.43597C10.9087 2.43597 3.13672 10.1492 3.13672 19.6315C3.13672 23.3917 4.36218 26.8781 6.43721 29.7133L4.27275 36.0977L10.931 33.9821C13.667 35.7777 16.9437 36.8243 20.4664 36.8243C30.02 36.8243 37.7947 29.111 37.7947 19.6301C37.7947 10.1492 30.02 2.43457 20.4664 2.43457V2.43597Z" fill="url(#paint0_linear_2)"></path>
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M40.0014 19.4844C40.0014 30.2438 31.2094 38.9688 20.3647 38.9688C16.9203 38.9688 13.6855 38.0898 10.8726 36.5444L0 40L3.54363 29.5466C1.75505 26.6094 0.726612 23.1664 0.726612 19.4858C0.726612 8.72354 9.51862 0 20.3647 0C31.2108 0 40.0014 8.72354 40.0014 19.4858V19.4844ZM20.3661 3.10208C11.2597 3.10208 3.85524 10.4506 3.85524 19.4844C3.85524 23.0671 5.02201 26.3872 6.99923 29.0896L4.93817 35.1722L11.2821 33.1573C13.8881 34.8676 17.0111 35.8653 20.3661 35.8653C29.4683 35.8653 36.8756 28.5167 36.8756 19.4844C36.8756 10.452 29.4683 3.10208 20.3661 3.10208ZM30.2816 23.9726C30.16 23.7728 29.8386 23.654 29.3593 23.4151C28.8772 23.1761 26.5102 22.0205 26.0686 21.8612C25.6285 21.702 25.3043 21.6223 24.9857 22.1002C24.6643 22.5781 23.7421 23.654 23.4598 23.9726C23.1803 24.2926 22.8995 24.3303 22.4188 24.0914C21.9367 23.8524 20.3843 23.3466 18.5468 21.7215C17.1173 20.4541 16.1504 18.8919 15.8681 18.414C15.5886 17.9361 15.8401 17.679 16.0791 17.4401C16.2957 17.2249 16.5612 16.8826 16.8015 16.6045C17.0432 16.325 17.1229 16.1238 17.2836 15.8052C17.4443 15.4866 17.3646 15.2086 17.2431 14.9696C17.1243 14.7307 16.1601 12.3804 15.7591 11.4232C15.3609 10.4688 14.9584 10.5037 14.6762 10.5037C14.3939 10.5037 13.8769 10.5876 13.8769 10.5876C13.8769 10.5876 12.9113 10.7064 12.4712 11.1842C12.031 11.6621 10.7874 12.8177 10.7874 15.1666C10.7874 17.5155 12.5103 19.789 12.752 20.1062C12.9938 20.4262 16.0805 25.4063 20.9753 27.3178C25.8688 29.2294 25.8688 28.5922 26.7519 28.5111C27.6336 28.4329 29.5997 27.3569 30.0007 26.2405C30.4017 25.1254 30.4017 24.1682 30.283 23.9698L30.2816 23.9726Z" fill="white"></path>
@@ -620,31 +698,31 @@ var page = {"PAGE_SCOPE":"individual","HOME_PAGE":false,"DINE_PAGE":false,"BOOK_
 			<ul class="js-wpml-ls-sub-menu wpml-ls-sub-menu">
 				
 					<li class="wpml-ls-slot-shortcode_actions wpml-ls-item wpml-ls-item-ar">
-						<a href="https://www.addresshotels.com/ar/hotels/address-sky-view/residences/" class="wpml-ls-link">
+						<a href="/ar/hotels/address-sky-view/residences/" class="wpml-ls-link">
                                                                 <img width="18" height="12" class="wpml-ls-flag" src="/dependencies/img/wp-content/plugins/sitepress-multilingual-cms/res/flags/ar.svg" alt=""><span class="wpml-ls-native" lang="ar">AR</span></a>
 					</li>
 
 				
 					<li class="wpml-ls-slot-shortcode_actions wpml-ls-item wpml-ls-item-zh-hans">
-						<a href="https://www.addresshotels.com/zh-hans/hotels/address-sky-view/residences/" class="wpml-ls-link">
+						<a href="/zh-hans/hotels/address-sky-view/residences/" class="wpml-ls-link">
                                                                 <img width="18" height="12" class="wpml-ls-flag" src="/dependencies/img/wp-content/plugins/sitepress-multilingual-cms/res/flags/zh-hans.svg" alt=""><span class="wpml-ls-native" lang="zh-hans">ZH</span></a>
 					</li>
 
 				
 					<li class="wpml-ls-slot-shortcode_actions wpml-ls-item wpml-ls-item-fr">
-						<a href="https://www.addresshotels.com/fr/hotels/address-sky-view/residences/" class="wpml-ls-link">
+						<a href="/fr/hotels/address-sky-view/residences/" class="wpml-ls-link">
                                                                 <img width="18" height="12" class="wpml-ls-flag" src="/dependencies/img/wp-content/plugins/sitepress-multilingual-cms/res/flags/fr.svg" alt=""><span class="wpml-ls-native" lang="fr">FR</span></a>
 					</li>
 
 				
 					<li class="wpml-ls-slot-shortcode_actions wpml-ls-item wpml-ls-item-de">
-						<a href="https://www.addresshotels.com/de/hotels/address-sky-view/residences/" class="wpml-ls-link">
+						<a href="/de/hotels/address-sky-view/residences/" class="wpml-ls-link">
                                                                 <img width="18" height="12" class="wpml-ls-flag" src="/dependencies/img/wp-content/plugins/sitepress-multilingual-cms/res/flags/de.svg" alt=""><span class="wpml-ls-native" lang="de">DE</span></a>
 					</li>
 
 				
 					<li class="wpml-ls-slot-shortcode_actions wpml-ls-item wpml-ls-item-ru wpml-ls-last-item">
-						<a href="https://www.addresshotels.com/ru/hotels/address-sky-view/residences/" class="wpml-ls-link">
+						<a href="/ru/hotels/address-sky-view/residences/" class="wpml-ls-link">
                                                                 <img width="18" height="12" class="wpml-ls-flag" src="/dependencies/img/wp-content/plugins/sitepress-multilingual-cms/res/flags/ru.svg" alt=""><span class="wpml-ls-native" lang="ru">RU</span></a>
 					</li>
 
@@ -666,7 +744,7 @@ var page = {"PAGE_SCOPE":"individual","HOME_PAGE":false,"DINE_PAGE":false,"BOOK_
         </div><!-- . container -->
         <a class="nav-link d-none d-lg-block manageBooking-global manageBooking-desktop managebooking-individual " href="/en/modify-booking-stay-dine/">Manage Booking</a>
         <div class="global-home-link-dropdown-box dropdown">
-            <a class="dropdown-toggle global-home-link-dropdown global-home-link /en/" id="dropdownMenuButton1" href="https://www.addresshotels.com/en/">
+            <a class="dropdown-toggle global-home-link-dropdown global-home-link /en/" id="dropdownMenuButton1" href="/en/">
                 Address Hotels + Resorts</a>
             <ul class="dropdown-menu d-none" aria-labelledby="dropdownMenuButton1">
                 <div class="container global-home-link-dropdown-inner">
@@ -680,26 +758,26 @@ var page = {"PAGE_SCOPE":"individual","HOME_PAGE":false,"DINE_PAGE":false,"BOOK_
 
                             <li id="menu-item-17822" class="nav-indentation-class nav-link menu-item menu-item-type-custom menu-item-object-custom menu-item-17822 nav-item"><a href="#" class="nav-link">United Arab Emirates</a></li>
 <li id="menu-item-17824" class="dropdown-item nav-link hotel-nav-sub-heading menu-item menu-item-type-custom menu-item-object-custom menu-item-17824 nav-item"><a href="#" class="nav-link">Dubai</a></li>
-<li id="menu-item-17834" class="dropdown-item menu-item menu-item-type-post_type menu-item-object-page menu-item-17834 nav-item"><a href="https://www.addresshotels.com/en/resorts/address-beach-resort/" class="nav-link">Address Beach Resort</a></li>
-<li id="menu-item-17826" class="dropdown-item menu-item menu-item-type-post_type menu-item-object-page menu-item-17826 nav-item"><a href="https://www.addresshotels.com/en/hotels/address-downtown/" class="nav-link">Address Downtown</a></li>
-<li id="menu-item-17838" class="dropdown-item menu-item menu-item-type-post_type menu-item-object-page menu-item-17838 nav-item"><a href="https://www.addresshotels.com/en/hotels/address-dubai-mall/" class="nav-link">Address Dubai Mall</a></li>
-<li id="menu-item-96332" class="dropdown-item menu-item menu-item-type-post_type menu-item-object-page menu-item-96332 nav-item"><a href="https://www.addresshotels.com/en/hotels/address-creek-harbour/" class="nav-link">Address Creek Harbour</a></li>
-<li id="menu-item-17828" class="dropdown-item menu-item menu-item-type-post_type menu-item-object-page menu-item-17828 nav-item"><a href="https://www.addresshotels.com/en/hotels/address-montgomerie/" class="nav-link">Address Montgomerie</a></li>
+<li id="menu-item-17834" class="dropdown-item menu-item menu-item-type-post_type menu-item-object-page menu-item-17834 nav-item"><a href="/en/resorts/address-beach-resort/" class="nav-link">Address Beach Resort</a></li>
+<li id="menu-item-17826" class="dropdown-item menu-item menu-item-type-post_type menu-item-object-page menu-item-17826 nav-item"><a href="/en/hotels/address-downtown/" class="nav-link">Address Downtown</a></li>
+<li id="menu-item-17838" class="dropdown-item menu-item menu-item-type-post_type menu-item-object-page menu-item-17838 nav-item"><a href="/en/hotels/address-dubai-mall/" class="nav-link">Address Dubai Mall</a></li>
+<li id="menu-item-96332" class="dropdown-item menu-item menu-item-type-post_type menu-item-object-page menu-item-96332 nav-item"><a href="/en/hotels/address-creek-harbour/" class="nav-link">Address Creek Harbour</a></li>
+<li id="menu-item-17828" class="dropdown-item menu-item menu-item-type-post_type menu-item-object-page menu-item-17828 nav-item"><a href="/en/hotels/address-montgomerie/" class="nav-link">Address Montgomerie</a></li>
 <li id="menu-item-17836" class="dropdown-item menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor menu-item-17836 nav-item"><a href="/pages/en/hotels/address-sky-view/index.php" class="nav-link">Address Sky View</a></li>
-<li id="menu-item-17843" class="dropdown-item menu-item menu-item-type-post_type menu-item-object-page menu-item-17843 nav-item"><a href="https://www.addresshotels.com/en/hotels/palace-downtown/" class="nav-link">Palace Downtown</a></li>
-<li id="menu-item-156297" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-156297 nav-item"><a href="https://www.addresshotels.com/en/hotels/palace-dubai-creek-harbour/" class="nav-link">Palace Dubai Creek Harbour</a></li>
+<li id="menu-item-17843" class="dropdown-item menu-item menu-item-type-post_type menu-item-object-page menu-item-17843 nav-item"><a href="/en/hotels/palace-downtown/" class="nav-link">Palace Downtown</a></li>
+<li id="menu-item-156297" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-156297 nav-item"><a href="/en/hotels/palace-dubai-creek-harbour/" class="nav-link">Palace Dubai Creek Harbour</a></li>
 <li id="menu-item-19776" class="dropdown-item nav-link hotel-nav-sub-heading menu-item menu-item-type-custom menu-item-object-custom menu-item-19776 nav-item"><a href="#" class="nav-link">Fujairah</a></li>
-<li id="menu-item-19777" class="dropdown-item menu-item menu-item-type-post_type menu-item-object-page menu-item-19777 nav-item"><a href="https://www.addresshotels.com/en/resorts/address-beach-resort-fujairah/" class="nav-link">Address Beach Resort Fujairah</a></li>
-<li id="menu-item-82068" class="dropdown-item menu-item menu-item-type-post_type menu-item-object-page menu-item-82068 nav-item"><a href="https://www.addresshotels.com/en/resorts/palace-beach-resort-fujairah/" class="nav-link">Palace Beach Resort Fujairah</a></li>
+<li id="menu-item-19777" class="dropdown-item menu-item menu-item-type-post_type menu-item-object-page menu-item-19777 nav-item"><a href="/en/resorts/address-beach-resort-fujairah/" class="nav-link">Address Beach Resort Fujairah</a></li>
+<li id="menu-item-82068" class="dropdown-item menu-item menu-item-type-post_type menu-item-object-page menu-item-82068 nav-item"><a href="/en/resorts/palace-beach-resort-fujairah/" class="nav-link">Palace Beach Resort Fujairah</a></li>
 <li id="menu-item-93194" class="nav-indentation-class nav-link menu-item menu-item-type-custom menu-item-object-custom menu-item-93194 nav-item"><a href="#" class="nav-link">Bahrain</a></li>
-<li id="menu-item-93195" class="dropdown-item menu-item menu-item-type-custom menu-item-object-custom menu-item-93195 nav-item"><a href="https://www.addresshotels.com/en/resorts/address-beach-resort-bahrain/" class="nav-link">Address Beach Resort Bahrain</a></li>
+<li id="menu-item-93195" class="dropdown-item menu-item menu-item-type-custom menu-item-object-custom menu-item-93195 nav-item"><a href="/en/resorts/address-beach-resort-bahrain/" class="nav-link">Address Beach Resort Bahrain</a></li>
 <li id="menu-item-17844" class="dropdown-item nav-link hotel-nav-sub-heading menu-bottom-border menu-item menu-item-type-custom menu-item-object-custom menu-item-17844 nav-item"><a href="#" class="nav-link">Egypt</a></li>
-<li id="menu-item-17842" class="dropdown-item menu-item menu-item-type-post_type menu-item-object-page menu-item-17842 nav-item"><a href="https://www.addresshotels.com/en/resorts/address-marassi-golf-resort/" class="nav-link">Address Marassi Golf Resort</a></li>
-<li id="menu-item-157066" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-157066 nav-item"><a href="https://www.addresshotels.com/en/resorts/address-beach-resort-marassi/" class="nav-link">Address Beach Resort Marassi</a></li>
+<li id="menu-item-17842" class="dropdown-item menu-item menu-item-type-post_type menu-item-object-page menu-item-17842 nav-item"><a href="/en/resorts/address-marassi-golf-resort/" class="nav-link">Address Marassi Golf Resort</a></li>
+<li id="menu-item-157066" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-157066 nav-item"><a href="/en/resorts/address-beach-resort-marassi/" class="nav-link">Address Beach Resort Marassi</a></li>
 <li id="menu-item-118756" class="dropdown-item nav-link hotel-nav-sub-heading menu-bottom-border menu-item menu-item-type-custom menu-item-object-custom menu-item-118756 nav-item"><a href="#" class="nav-link">Saudi Arabia</a></li>
-<li id="menu-item-118757" class="dropdown-item menu-item menu-item-type-post_type menu-item-object-page menu-item-118757 nav-item"><a href="https://www.addresshotels.com/en/hotels/address-jabal-omar-makkah/" class="nav-link">Address Jabal Omar Makkah</a></li>
+<li id="menu-item-118757" class="dropdown-item menu-item menu-item-type-post_type menu-item-object-page menu-item-118757 nav-item"><a href="/en/hotels/address-jabal-omar-makkah/" class="nav-link">Address Jabal Omar Makkah</a></li>
 <li id="menu-item-22451" class="nav-indentation-class nav-link menu-item menu-item-type-custom menu-item-object-custom menu-item-22451 nav-item"><a href="#" class="nav-link">Turkey</a></li>
-<li id="menu-item-22452" class="dropdown-item menu-item menu-item-type-post_type menu-item-object-page menu-item-22452 nav-item"><a href="https://www.addresshotels.com/en/hotels/address-istanbul/" class="nav-link">Address Istanbul</a></li>
+<li id="menu-item-22452" class="dropdown-item menu-item menu-item-type-post_type menu-item-object-page menu-item-22452 nav-item"><a href="/en/hotels/address-istanbul/" class="nav-link">Address Istanbul</a></li>
 
                         </ul>
                     </div>
@@ -1803,46 +1881,46 @@ if (globalHomeLinkDropdownBox) {
           <div class="col-lg-3 col-md-2 col-sm-6  col-5 links  ml-lg-5 ">
             <ul class=" p-0">
               <li id="menu-item-153680" class="dropdown-item nav-link hotel-nav-sub-heading footer-hotel-sub-heading menu-item menu-item-type-custom menu-item-object-custom menu-item-153680"><a>United Arab Emirates</a></li>
-<li id="menu-item-137864" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-137864"><a href="https://www.addresshotels.com/en/hotels-in-dubai/">Hotels In Dubai</a></li>
-<li id="menu-item-137865" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-137865"><a href="https://www.addresshotels.com/en/hotels-in-downtown-dubai/">Hotels In Downtown Dubai</a></li>
-<li id="menu-item-137861" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-137861"><a href="https://www.addresshotels.com/en/hotels-in-dubai-creek-harbour/">Hotels in Dubai Creek Harbour</a></li>
-<li id="menu-item-137862" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-137862"><a href="https://www.addresshotels.com/en/hotels-in-dubai-marina/">Hotels in Dubai Marina &#038; JBR</a></li>
-<li id="menu-item-141485" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-141485"><a href="https://www.addresshotels.com/en/hotels-in-emirates-hills/">Hotels in Emirates Hills</a></li>
-<li id="menu-item-137866" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-137866"><a href="https://www.addresshotels.com/en/5-star-hotels-in-dubai/">5-star hotels in Dubai</a></li>
-<li id="menu-item-137863" class="dropdown-item nav-link hotel-nav-sub-heading footer-hotel-sub-heading menu-item menu-item-type-post_type menu-item-object-page menu-item-137863"><a href="https://www.addresshotels.com/en/hotels-in-fujairah/">Hotels in Fujairah</a></li>
+<li id="menu-item-137864" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-137864"><a href="/en/hotels-in-dubai/">Hotels In Dubai</a></li>
+<li id="menu-item-137865" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-137865"><a href="/en/hotels-in-downtown-dubai/">Hotels In Downtown Dubai</a></li>
+<li id="menu-item-137861" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-137861"><a href="/en/hotels-in-dubai-creek-harbour/">Hotels in Dubai Creek Harbour</a></li>
+<li id="menu-item-137862" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-137862"><a href="/en/hotels-in-dubai-marina/">Hotels in Dubai Marina &#038; JBR</a></li>
+<li id="menu-item-141485" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-141485"><a href="/en/hotels-in-emirates-hills/">Hotels in Emirates Hills</a></li>
+<li id="menu-item-137866" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-137866"><a href="/en/5-star-hotels-in-dubai/">5-star hotels in Dubai</a></li>
+<li id="menu-item-137863" class="dropdown-item nav-link hotel-nav-sub-heading footer-hotel-sub-heading menu-item menu-item-type-post_type menu-item-object-page menu-item-137863"><a href="/en/hotels-in-fujairah/">Hotels in Fujairah</a></li>
             </ul>
           </div>
           <div class="col-lg-2 col-md-2  col-sm-6  col-6 links footer-hotel-list-custom">
             <ul class=" p-0">
               <li id="menu-item-153672" class="dropdown-item nav-link hotel-nav-sub-heading footer-hotel-sub-heading menu-item menu-item-type-custom menu-item-object-custom menu-item-153672"><a>Saudia Arabia</a></li>
-<li id="menu-item-153673" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-153673"><a href="https://www.addresshotels.com/en/hotels-in-makkah/">Hotels in Makkah</a></li>
+<li id="menu-item-153673" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-153673"><a href="/en/hotels-in-makkah/">Hotels in Makkah</a></li>
 <li id="menu-item-153674" class="dropdown-item nav-link hotel-nav-sub-heading footer-hotel-sub-heading menu-item menu-item-type-custom menu-item-object-custom menu-item-153674"><a>Egypt</a></li>
-<li id="menu-item-153675" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-153675"><a href="https://www.addresshotels.com/en/hotels-in-egypt/">Hotels in Egypt</a></li>
+<li id="menu-item-153675" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-153675"><a href="/en/hotels-in-egypt/">Hotels in Egypt</a></li>
 <li id="menu-item-153676" class="dropdown-item nav-link hotel-nav-sub-heading footer-hotel-sub-heading menu-item menu-item-type-custom menu-item-object-custom menu-item-153676"><a>Turkey</a></li>
-<li id="menu-item-153677" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-153677"><a href="https://www.addresshotels.com/en/hotels-in-istanbul/">Hotels in Istanbul</a></li>
+<li id="menu-item-153677" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-153677"><a href="/en/hotels-in-istanbul/">Hotels in Istanbul</a></li>
 <li id="menu-item-153678" class="dropdown-item nav-link hotel-nav-sub-heading footer-hotel-sub-heading menu-item menu-item-type-custom menu-item-object-custom menu-item-153678"><a>Bahrain</a></li>
-<li id="menu-item-153679" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-153679"><a href="https://www.addresshotels.com/en/hotels-in-bahrain/">Hotels in Bahrain</a></li>
+<li id="menu-item-153679" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-153679"><a href="/en/hotels-in-bahrain/">Hotels in Bahrain</a></li>
             </ul>
           </div>
           <div class="col-lg-2 col-md-2  col-sm-6  col-5 links ">
             <ul class=" p-0">
-              <li id="menu-item-6079" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6079"><a href="https://www.addresshotels.com/en/dine/">Dining</a></li>
-<li id="menu-item-6080" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6080"><a href="https://www.addresshotels.com/en/wellness/">Wellness</a></li>
-<li id="menu-item-6081" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6081"><a href="https://www.addresshotels.com/en/offers-global/">Offers</a></li>
-<li id="menu-item-6082" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6082"><a href="https://www.addresshotels.com/en/events/">Events</a></li>
-<li id="menu-item-8277" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8277"><a href="https://www.addresshotels.com/en/about-u-by-emaar/">U By Emaar</a></li>
-<li id="menu-item-165998" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-165998"><a href="https://www.addresshotels.com/en/hotels/sustainability/">Sustainability</a></li>
-<li id="menu-item-162563" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-162563"><a href="https://www.addresshotels.com/en/blogs/">Blogs</a></li>
+              <li id="menu-item-6079" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6079"><a href="/en/dine/">Dining</a></li>
+<li id="menu-item-6080" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6080"><a href="/en/wellness/">Wellness</a></li>
+<li id="menu-item-6081" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6081"><a href="/en/offers-global/">Offers</a></li>
+<li id="menu-item-6082" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6082"><a href="/en/events/">Events</a></li>
+<li id="menu-item-8277" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8277"><a href="/en/about-u-by-emaar/">U By Emaar</a></li>
+<li id="menu-item-165998" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-165998"><a href="/en/hotels/sustainability/">Sustainability</a></li>
+<li id="menu-item-162563" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-162563"><a href="/en/blogs/">Blogs</a></li>
             </ul>
           </div>
           <div class="col-6 col-md-12 col-lg-12 links footer-page-links">
             <ul class="d-flex align-items-md-center justify-content-center m-md-0 flex-column flex-md-row">
-              <li id="menu-item-2827" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2827"><a href="https://www.addresshotels.com/en/about-us/">About Address</a></li>
-<li id="menu-item-4691" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4691"><a target="_blank" rel="noopener" href="https://www.emaarhospitality.com/en/gdpr/privacypolicy/">Privacy Policy</a></li>
-<li id="menu-item-2659" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2659"><a href="https://www.addresshotels.com/en/terms-and-conditions/">Terms &#038; Conditions</a></li>
-<li id="menu-item-2657" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2657"><a href="https://www.addresshotels.com/en/faq/">FAQ</a></li>
-<li id="menu-item-2655" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2655"><a href="https://www.addresshotels.com/en/contact-us/">Contact Us</a></li>
-<li id="menu-item-141314" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-141314"><a href="https://www.addresshotels.com/en/sitemap/">Sitemap</a></li>
+              <li id="menu-item-2827" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2827"><a href="/en/about-us/">About Address</a></li>
+<li id="menu-item-4691" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4691"><a target="_blank" rel="noopener" href="javascript:void(0);">Privacy Policy</a></li>
+<li id="menu-item-2659" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2659"><a href="/en/terms-and-conditions/">Terms &#038; Conditions</a></li>
+<li id="menu-item-2657" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2657"><a href="/en/faq/">FAQ</a></li>
+<li id="menu-item-2655" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2655"><a href="/en/contact-us/">Contact Us</a></li>
+<li id="menu-item-141314" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-141314"><a href="/en/sitemap/">Sitemap</a></li>
             </ul>
           </div>
         </div>
@@ -1852,80 +1930,80 @@ if (globalHomeLinkDropdownBox) {
             <div class="row no-gutters g-0 footer_sidebar-links justify-content-between px-3">
               <!-- Column 1 -->
                               <div class="col-sm-5 col-lg-2">
-                  <li id="menu-item-30242" class="bold-heading footer-hotel-sub-heading menu-item menu-item-type-custom menu-item-object-custom menu-item-30242"><a target="_blank" rel="noopener" href="https://properties.emaar.com/en/">Properties</a></li>
-<li id="menu-item-30244" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-30244"><a target="_blank" rel="noopener" href="https://properties.emaar.com/en/our-communities/the-oasis/">The Oasis</a></li>
-<li id="menu-item-30246" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-30246"><a target="_blank" rel="noopener" href="https://properties.emaar.com/en/our-communities/downtown-dubai/">Downtown Dubai</a></li>
-<li id="menu-item-174528" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-174528"><a target="_blank" rel="noopener" href="https://properties.emaar.com/en/our-communities/dubai-marina/">Dubai Marina</a></li>
-<li id="menu-item-174529" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-174529"><a href="https://properties.emaar.com/en/our-communities/dubai-hills-estate/">Dubai Hills Estate</a></li>
-<li id="menu-item-174530" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-174530"><a target="_blank" rel="noopener" href="https://properties.emaar.com/en/our-communities/dubai-creek-harbour/">Dubai Creek Harbour</a></li>
-<li id="menu-item-174531" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-174531"><a target="_blank" rel="noopener" href="https://properties.emaar.com/en/our-communities/arabian-ranches-iii/">Arabian Ranches III</a></li>
-<li id="menu-item-174532" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-174532"><a target="_blank" rel="noopener" href="https://properties.emaar.com/en/our-communities/emaar-south/">Emaar South</a></li>
-<li id="menu-item-174533" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-174533"><a target="_blank" rel="noopener" href="https://properties.emaar.com/en/our-communities/the-valley/">The Valley</a></li>
-<li id="menu-item-174534" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-174534"><a href="https://properties.emaar.com/en/our-communities/emaar-beachfront/">Emaar Beachfront</a></li>
+                  <li id="menu-item-30242" class="bold-heading footer-hotel-sub-heading menu-item menu-item-type-custom menu-item-object-custom menu-item-30242"><a target="_blank" rel="noopener" href="javascript:void(0);">Properties</a></li>
+<li id="menu-item-30244" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-30244"><a target="_blank" rel="noopener" href="javascript:void(0);">The Oasis</a></li>
+<li id="menu-item-30246" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-30246"><a target="_blank" rel="noopener" href="javascript:void(0);">Downtown Dubai</a></li>
+<li id="menu-item-174528" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-174528"><a target="_blank" rel="noopener" href="javascript:void(0);">Dubai Marina</a></li>
+<li id="menu-item-174529" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-174529"><a href="javascript:void(0);">Dubai Hills Estate</a></li>
+<li id="menu-item-174530" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-174530"><a target="_blank" rel="noopener" href="javascript:void(0);">Dubai Creek Harbour</a></li>
+<li id="menu-item-174531" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-174531"><a target="_blank" rel="noopener" href="javascript:void(0);">Arabian Ranches III</a></li>
+<li id="menu-item-174532" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-174532"><a target="_blank" rel="noopener" href="javascript:void(0);">Emaar South</a></li>
+<li id="menu-item-174533" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-174533"><a target="_blank" rel="noopener" href="javascript:void(0);">The Valley</a></li>
+<li id="menu-item-174534" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-174534"><a href="javascript:void(0);">Emaar Beachfront</a></li>
                 </div>
               
               <!-- Column 2 -->
                               <div class="col-sm-5 col-lg-2">
-                  <li id="menu-item-30251" class="footer-hotel-sub-heading menu-item menu-item-type-custom menu-item-object-custom menu-item-30251"><a target="_blank" rel="noopener" href="https://www.emaarhospitality.com/en/">Hospitality</a></li>
-<li id="menu-item-30253" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-30253"><a target="_blank" rel="noopener" href="https://www.addresshotels.com/">Address Hotels + Resorts</a></li>
-<li id="menu-item-30255" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-30255"><a target="_blank" rel="noopener" href="https://www.vidahotels.com/en/">Vida Hotels and Resorts</a></li>
-<li id="menu-item-174553" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-174553"><a href="https://www.alalameinhotel.com/en/">Al Alamein Hotel Egypt</a></li>
-<li id="menu-item-174554" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-174554"><a href="https://www.armanihotels.com/en/">Armani Hotel Dubai</a></li>
-<li id="menu-item-174555" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-174555"><a href="https://www.rovehotels.com/en/">Rove Hotels</a></li>
-<li id="menu-item-174556" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-174556"><a href="https://www.emaarhospitality.com/en/">Emaar Hospitality Group</a></li>
-<li id="menu-item-174557" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-174557"><a href="https://www.veofitness.com/en/">VEO Fitness</a></li>
-<li id="menu-item-174558" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-174558"><a href="https://www.atmosphereburjkhalifa.com/">Atmosphere Burj Khalifa</a></li>
-<li id="menu-item-174559" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-174559"><a href="https://www.weddingsbyemaar.com/">Weddings by Emaar</a></li>
-<li id="menu-item-174560" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-174560"><a href="https://www.ubyemaar.com/en-ae/">U By Emaar</a></li>
+                  <li id="menu-item-30251" class="footer-hotel-sub-heading menu-item menu-item-type-custom menu-item-object-custom menu-item-30251"><a target="_blank" rel="noopener" href="javascript:void(0);">Hospitality</a></li>
+<li id="menu-item-30253" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-30253"><a target="_blank" rel="noopener" href="/">Address Hotels + Resorts</a></li>
+<li id="menu-item-30255" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-30255"><a target="_blank" rel="noopener" href="javascript:void(0);">Vida Hotels and Resorts</a></li>
+<li id="menu-item-174553" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-174553"><a href="javascript:void(0);">Al Alamein Hotel Egypt</a></li>
+<li id="menu-item-174554" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-174554"><a href="javascript:void(0);">Armani Hotel Dubai</a></li>
+<li id="menu-item-174555" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-174555"><a href="javascript:void(0);">Rove Hotels</a></li>
+<li id="menu-item-174556" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-174556"><a href="javascript:void(0);">Emaar Hospitality Group</a></li>
+<li id="menu-item-174557" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-174557"><a href="javascript:void(0);">VEO Fitness</a></li>
+<li id="menu-item-174558" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-174558"><a href="javascript:void(0);">Atmosphere Burj Khalifa</a></li>
+<li id="menu-item-174559" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-174559"><a href="javascript:void(0);">Weddings by Emaar</a></li>
+<li id="menu-item-174560" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-174560"><a href="javascript:void(0);">U By Emaar</a></li>
                 </div>
               
               <!-- Column 3 -->
                               <div class="col-sm-5 col-lg-2">
-                  <li id="menu-item-174561" class="footer-hotel-sub-heading menu-item menu-item-type-custom menu-item-object-custom menu-item-174561"><a href="https://entertainment.emaar.com/en-ae/">Entertainment</a></li>
-<li id="menu-item-174562" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-174562"><a target="_blank" rel="noopener" href="https://entertainment.emaar.com/en-ae/attraction/burj-khalifa">Burj Khalifa</a></li>
-<li id="menu-item-174563" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-174563"><a target="_blank" rel="noopener" href="https://tickets.atthetop.ae/atthetop/ar-ae">At The Top</a></li>
-<li id="menu-item-30258" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-30258"><a target="_blank" rel="noopener" href="https://reelcinemas.com/en-ae/">Reel Cinemas</a></li>
-<li id="menu-item-174564" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-174564"><a href="https://www.dubaiopera.com/en-US/home">Dubai Opera</a></li>
-<li id="menu-item-174567" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-174567"><a target="_blank" rel="noopener" href="https://dubai.kidzania.com/en-ae/">Kidzania Dubai</a></li>
-<li id="menu-item-30259" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-30259"><a target="_blank" rel="noopener" href="https://www.dubaiicerink.com/en/">Dubai Ice Rink</a></li>
-<li id="menu-item-174568" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-174568"><a href="https://abudhabi.kidzania.com/en-ae/">Kidzania Abu Dhabi</a></li>
-<li id="menu-item-174569" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-174569"><a href="https://www.ekartzabeel.ae/">Ekart Zabeel</a></li>
-<li id="menu-item-30261" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-30261"><a target="_blank" rel="noopener" href="https://entertainment.emaar.com/en-ae/attraction/play-dxb">Play Dxb</a></li>
-<li id="menu-item-174572" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-174572"><a href="https://www.skyviewsdubai.com/">Sky Views Dubai</a></li>
+                  <li id="menu-item-174561" class="footer-hotel-sub-heading menu-item menu-item-type-custom menu-item-object-custom menu-item-174561"><a href="javascript:void(0);">Entertainment</a></li>
+<li id="menu-item-174562" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-174562"><a target="_blank" rel="noopener" href="javascript:void(0);">Burj Khalifa</a></li>
+<li id="menu-item-174563" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-174563"><a target="_blank" rel="noopener" href="javascript:void(0);">At The Top</a></li>
+<li id="menu-item-30258" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-30258"><a target="_blank" rel="noopener" href="javascript:void(0);">Reel Cinemas</a></li>
+<li id="menu-item-174564" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-174564"><a href="javascript:void(0);">Dubai Opera</a></li>
+<li id="menu-item-174567" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-174567"><a target="_blank" rel="noopener" href="javascript:void(0);">Kidzania Dubai</a></li>
+<li id="menu-item-30259" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-30259"><a target="_blank" rel="noopener" href="javascript:void(0);">Dubai Ice Rink</a></li>
+<li id="menu-item-174568" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-174568"><a href="javascript:void(0);">Kidzania Abu Dhabi</a></li>
+<li id="menu-item-174569" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-174569"><a href="javascript:void(0);">Ekart Zabeel</a></li>
+<li id="menu-item-30261" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-30261"><a target="_blank" rel="noopener" href="javascript:void(0);">Play Dxb</a></li>
+<li id="menu-item-174572" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-174572"><a href="javascript:void(0);">Sky Views Dubai</a></li>
                 </div>
               
               <!-- Column 4 -->
                               <div class="col-sm-5 col-lg-2">
-                  <li id="menu-item-30263" class="footer-hotel-sub-heading menu-item menu-item-type-custom menu-item-object-custom menu-item-30263"><a target="_blank" rel="noopener" href="https://www.emaarmalls.ae/">Malls</a></li>
-<li id="menu-item-174574" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-174574"><a target="_blank" rel="noopener" href="https://thedubaimall.com/">Dubai Mall</a></li>
-<li id="menu-item-174579" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-174579"><a target="_blank" rel="noopener" href="https://www.dubaihillsmall.ae/">Dubai Hills Mall</a></li>
-<li id="menu-item-174580" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-174580"><a target="_blank" rel="noopener" href="https://www.dubaimarinamall.com/">Dubai Marina Mall</a></li>
-<li id="menu-item-174581" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-174581"><a target="_blank" rel="noopener" href="https://www.emaarmalls.ae/malls/gold-and-diamond-park/">Gold and Diamond Park</a></li>
-<li id="menu-item-174583" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-174583"><a target="_blank" rel="noopener" href="https://www.emaarmalls.ae/malls/souk-al-bahar/">Soul Al Bahar</a></li>
-<li id="menu-item-174584" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-174584"><a target="_blank" rel="noopener" href="https://www.emaarmalls.ae/malls/the-springs-souk/">The Spring Souk</a></li>
+                  <li id="menu-item-30263" class="footer-hotel-sub-heading menu-item menu-item-type-custom menu-item-object-custom menu-item-30263"><a target="_blank" rel="noopener" href="javascript:void(0);">Malls</a></li>
+<li id="menu-item-174574" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-174574"><a target="_blank" rel="noopener" href="javascript:void(0);">Dubai Mall</a></li>
+<li id="menu-item-174579" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-174579"><a target="_blank" rel="noopener" href="javascript:void(0);">Dubai Hills Mall</a></li>
+<li id="menu-item-174580" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-174580"><a target="_blank" rel="noopener" href="javascript:void(0);">Dubai Marina Mall</a></li>
+<li id="menu-item-174581" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-174581"><a target="_blank" rel="noopener" href="javascript:void(0);">Gold and Diamond Park</a></li>
+<li id="menu-item-174583" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-174583"><a target="_blank" rel="noopener" href="javascript:void(0);">Soul Al Bahar</a></li>
+<li id="menu-item-174584" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-174584"><a target="_blank" rel="noopener" href="javascript:void(0);">The Spring Souk</a></li>
                 </div>
               
               <!-- Column 5 -->
                               <div class="col-sm-5 col-lg-2">
                   <li id="menu-item-174585" class="footer-hotel-sub-heading menu-item menu-item-type-custom menu-item-object-custom menu-item-174585"><a target="_blank" rel="noopener" href="#">International</a></li>
-<li id="menu-item-174587" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-174587"><a href="https://in.emaar.com/en/">India</a></li>
-<li id="menu-item-174590" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-174590"><a href="https://pk.emaar.com/en/">Pakistan</a></li>
-<li id="menu-item-174591" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-174591"><a href="https://www.emaarmisr.com/en/">Egypt</a></li>
-<li id="menu-item-174592" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-174592"><a href="https://ma.emaar.com/en/">Morocco</a></li>
-<li id="menu-item-174593" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-174593"><a href="https://tr.emaar.com/en/">Turkey</a></li>
-<li id="menu-item-174594" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-174594"><a href="https://www.dubaiemaar.cn/">China</a></li>
+<li id="menu-item-174587" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-174587"><a href="javascript:void(0);">India</a></li>
+<li id="menu-item-174590" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-174590"><a href="javascript:void(0);">Pakistan</a></li>
+<li id="menu-item-174591" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-174591"><a href="javascript:void(0);">Egypt</a></li>
+<li id="menu-item-174592" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-174592"><a href="javascript:void(0);">Morocco</a></li>
+<li id="menu-item-174593" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-174593"><a href="javascript:void(0);">Turkey</a></li>
+<li id="menu-item-174594" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-174594"><a href="javascript:void(0);">China</a></li>
                 </div>
               
               <!-- Column 6 -->
                               <div class="col-sm-5 col-lg-2">
                   <li id="menu-item-174595" class="footer-hotel-sub-heading menu-item menu-item-type-custom menu-item-object-custom menu-item-174595"><a href="#">Leisure</a></li>
-<li id="menu-item-174596" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-174596"><a href="https://www.poloclubdubai.com/">Dubai Polo &#038; Equestrian Club</a></li>
-<li id="menu-item-174597" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-174597"><a href="https://www.arabianranchesgolfclub.com/">Arabian Ranches Golf Club</a></li>
-<li id="menu-item-174598" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-174598"><a href="https://www.dubaihillsgolfclub.com/">Dubai Hills Golf Club</a></li>
-<li id="menu-item-174599" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-174599"><a href="https://www.dubaimarinayachtclub.com/">Dubai Marina Yacht Club</a></li>
-<li id="menu-item-174600" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-174600"><a href="https://www.creekmarinayachtclub.com/">Creek Marina Yacht Club</a></li>
-<li id="menu-item-174601" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-174601"><a href="https://www.montgomeriegolfclubdubai.com/">Montgomorie Golf Club Dubai</a></li>
-<li id="menu-item-174602" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-174602"><a href="https://www.marassimarinayachtclub.com/en/">Marassi Marina Yacht Club</a></li>
+<li id="menu-item-174596" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-174596"><a href="javascript:void(0);">Dubai Polo &#038; Equestrian Club</a></li>
+<li id="menu-item-174597" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-174597"><a href="javascript:void(0);">Arabian Ranches Golf Club</a></li>
+<li id="menu-item-174598" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-174598"><a href="javascript:void(0);">Dubai Hills Golf Club</a></li>
+<li id="menu-item-174599" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-174599"><a href="javascript:void(0);">Dubai Marina Yacht Club</a></li>
+<li id="menu-item-174600" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-174600"><a href="javascript:void(0);">Creek Marina Yacht Club</a></li>
+<li id="menu-item-174601" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-174601"><a href="javascript:void(0);">Montgomorie Golf Club Dubai</a></li>
+<li id="menu-item-174602" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-174602"><a href="javascript:void(0);">Marassi Marina Yacht Club</a></li>
                 </div>
                           </div>
           </div>
@@ -1938,17 +2016,17 @@ if (globalHomeLinkDropdownBox) {
             </a>
           </div>
                       <ul class="social-pet px-0 d-lg-none social-pet-icons-mobile">
-              <li><a href="https://www.facebook.com/addressskyview" rel="nofollow" title="facebook" target="_BLANK"><i class="fab fa-facebook-square darkgrey"></i></a></li>
+              <li><a href="javascript:void(0);" rel="nofollow" title="facebook" target="_BLANK"><i class="fab fa-facebook-square darkgrey"></i></a></li>
 
-              <li><a href="https://www.instagram.com/addressskyview/" rel="nofollow" title="instagram" target="_BLANK"><i class="fab fa-instagram darkgrey"></i></a></li>
+              <li><a href="javascript:void(0);" rel="nofollow" title="instagram" target="_BLANK"><i class="fab fa-instagram darkgrey"></i></a></li>
 
-              <li><a href="https://www.youtube.com/@AddressHotels" rel="nofollow" title="youtube" target="_BLANK"><i class="fab fa-youtube darkgrey"></i></a></li>
+              <li><a href="javascript:void(0);" rel="nofollow" title="youtube" target="_BLANK"><i class="fab fa-youtube darkgrey"></i></a></li>
 
-              <li><a href="https://www.tiktok.com/@addresshotels" rel="nofollow" title="tiktok" target="_BLANK"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512" style="height:12px;">
+              <li><a href="javascript:void(0);" rel="nofollow" title="tiktok" target="_BLANK"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512" style="height:12px;">
                     <path d="M448 209.9a210.1 210.1 0 0 1 -122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88 0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z"></path>
                   </svg></a></li>
 
-              <li><a href="https://www.linkedin.com/company/address-hotels-and-resorts" rel="nofollow" title="linkedin" target="_BLANK"><i class="fab fa-linkedin darkgrey"></i></a></li>
+              <li><a href="javascript:void(0);" rel="nofollow" title="linkedin" target="_BLANK"><i class="fab fa-linkedin darkgrey"></i></a></li>
              
               <li class="d-md-none">
                 <hr class="vhr-dark">
@@ -1956,29 +2034,29 @@ if (globalHomeLinkDropdownBox) {
             </ul>
                   </div>
         <div class="col-xl-1 col-lg-2 col-1 col-md-1 emaarLogo-footer  px-0 ">
-          <!-- <img width="1267" height="272" class="emaar_footer_logo" src="https://www-addresshotels-com.azureedge.net/wp-content/themes/emaar-projects/img/emaar-text-logo.svg" alt="Emaar"> -->
+          <!-- <img width="1267" height="272" class="emaar_footer_logo" src="" alt="Emaar"> -->
           <img width="1267" height="272" class="emaar_footer_logo" src="/dependencies/img/wp-content/themes/emaar-projects/img/emaar-new-logo.svg" alt="Emaar">
         </div>
         <div class="d-lg-inline-flex justify-content-lg-between justify-content-xl-end col-xl-9  col-lg-7  col-md-11 col-11 text-right px-0 order-lg-last  order-lg-3 ">
                       <ul class="social-pet px-0 d-none d-lg-block social-pet-icons-desktop">
-              <li><a href="https://www.facebook.com/addressskyview" rel="nofollow" title="facebook" target="_BLANK"><i class="fab fa-facebook-square darkgrey"></i></a></li>
+              <li><a href="javascript:void(0);" rel="nofollow" title="facebook" target="_BLANK"><i class="fab fa-facebook-square darkgrey"></i></a></li>
 
-              <li><a href="https://www.instagram.com/addressskyview/" rel="nofollow" title="instagram" target="_BLANK"><i class="fab fa-instagram darkgrey"></i></a></li>
+              <li><a href="javascript:void(0);" rel="nofollow" title="instagram" target="_BLANK"><i class="fab fa-instagram darkgrey"></i></a></li>
 
-              <li><a href="https://www.youtube.com/@AddressHotels" rel="nofollow" title="youtube" target="_BLANK"><i class="fab fa-youtube darkgrey"></i></a></li>
+              <li><a href="javascript:void(0);" rel="nofollow" title="youtube" target="_BLANK"><i class="fab fa-youtube darkgrey"></i></a></li>
 
-              <li><a href="https://www.tiktok.com/@addresshotels" rel="nofollow" title="tiktok" target="_BLANK"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512" style="height:12px;">
+              <li><a href="javascript:void(0);" rel="nofollow" title="tiktok" target="_BLANK"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512" style="height:12px;">
                     <path d="M448 209.9a210.1 210.1 0 0 1 -122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88 0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z"></path>
                   </svg></a></li>
 
-              <li><a href="https://www.linkedin.com/company/address-hotels-and-resorts" rel="nofollow" title="linkedin" target="_BLANK"><i class="fab fa-linkedin darkgrey"></i></a></li>
+              <li><a href="javascript:void(0);" rel="nofollow" title="linkedin" target="_BLANK"><i class="fab fa-linkedin darkgrey"></i></a></li>
                <li class="d-none d-lg-inline-block">
                 <hr class="vhr-dark">
               </li>
               
             </ul>
                     <ul class="footer-pet p-0 ">
-              <li><a href="https://api.whatsapp.com/send?phone=97142488553&text=Hi Address Sky View" rel="nofollow" title="whatsapp" target="_BLANK" class="blacklink">
+              <li><a href="javascript:void(0);" rel="nofollow" title="whatsapp" target="_BLANK" class="blacklink">
                     <svg width="22" height="22" viewbox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-bottom:5px;">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M20.4664 2.43597C10.9087 2.43597 3.13672 10.1492 3.13672 19.6315C3.13672 23.3917 4.36218 26.8781 6.43721 29.7133L4.27275 36.0977L10.931 33.9821C13.667 35.7777 16.9437 36.8243 20.4664 36.8243C30.02 36.8243 37.7947 29.111 37.7947 19.6301C37.7947 10.1492 30.02 2.43457 20.4664 2.43457V2.43597Z" fill="url(#paint0_linear_1)"></path>
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M40.0014 19.4844C40.0014 30.2438 31.2094 38.9688 20.3647 38.9688C16.9203 38.9688 13.6855 38.0898 10.8726 36.5444L0 40L3.54363 29.5466C1.75505 26.6094 0.726612 23.1664 0.726612 19.4858C0.726612 8.72354 9.51862 0 20.3647 0C31.2108 0 40.0014 8.72354 40.0014 19.4858V19.4844ZM20.3661 3.10208C11.2597 3.10208 3.85524 10.4506 3.85524 19.4844C3.85524 23.0671 5.02201 26.3872 6.99923 29.0896L4.93817 35.1722L11.2821 33.1573C13.8881 34.8676 17.0111 35.8653 20.3661 35.8653C29.4683 35.8653 36.8756 28.5167 36.8756 19.4844C36.8756 10.452 29.4683 3.10208 20.3661 3.10208ZM30.2816 23.9726C30.16 23.7728 29.8386 23.654 29.3593 23.4151C28.8772 23.1761 26.5102 22.0205 26.0686 21.8612C25.6285 21.702 25.3043 21.6223 24.9857 22.1002C24.6643 22.5781 23.7421 23.654 23.4598 23.9726C23.1803 24.2926 22.8995 24.3303 22.4188 24.0914C21.9367 23.8524 20.3843 23.3466 18.5468 21.7215C17.1173 20.4541 16.1504 18.8919 15.8681 18.414C15.5886 17.9361 15.8401 17.679 16.0791 17.4401C16.2957 17.2249 16.5612 16.8826 16.8015 16.6045C17.0432 16.325 17.1229 16.1238 17.2836 15.8052C17.4443 15.4866 17.3646 15.2086 17.2431 14.9696C17.1243 14.7307 16.1601 12.3804 15.7591 11.4232C15.3609 10.4688 14.9584 10.5037 14.6762 10.5037C14.3939 10.5037 13.8769 10.5876 13.8769 10.5876C13.8769 10.5876 12.9113 10.7064 12.4712 11.1842C12.031 11.6621 10.7874 12.8177 10.7874 15.1666C10.7874 17.5155 12.5103 19.789 12.752 20.1062C12.9938 20.4262 16.0805 25.4063 20.9753 27.3178C25.8688 29.2294 25.8688 28.5922 26.7519 28.5111C27.6336 28.4329 29.5997 27.3569 30.0007 26.2405C30.4017 25.1254 30.4017 24.1682 30.283 23.9698L30.2816 23.9726Z" fill="white"></path>
@@ -3674,9 +3752,9 @@ if (globalHomeLinkDropdownBox) {
                               <div class="row">
 
                                 <div class="col-md-12 small-text px-1 pt-lg-3">
-                                  Powered by Eat App. By completing this reservation, you agree to Eat App's <a class="bluelink small-text" rel="nofollow" href="https://restaurant.eatapp.co/terms" target="_blank">Terms of Use</a> and <a class="bluelink small-text" href="https://restaurant.eatapp.co/privacy" rel="nofollow" target="_blank">Privacy Policy </a>
+                                  Powered by Eat App. By completing this reservation, you agree to Eat App's <a class="bluelink small-text" rel="nofollow" href="javascript:void(0);" target="_blank">Terms of Use</a> and <a class="bluelink small-text" href="javascript:void(0);" rel="nofollow" target="_blank">Privacy Policy </a>
                                 </div>
-                                <div class="col-md-12 small-text px-1">Please visit our <a target="_blank" class="bluelink small-text" href="https://www.emaarhospitality.com/en/gdpr/privacypolicy/">Privacy Policy</a>
+                                <div class="col-md-12 small-text px-1">Please visit our <a target="_blank" class="bluelink small-text" href="javascript:void(0);">Privacy Policy</a>
                                   to understand how we handle your personal data.
                                 </div>
 
@@ -3822,25 +3900,25 @@ var dynamic_ajax_call_obj = {"ajax_url":"https:\/\/www.addresshotels.com\/wp-adm
 const site_constants = {"gtm_key":"GTM-T5Q9VQ"}
 /* ]]> */
 </script>
-<script type="text/javascript" src="/dependencies/js/wp-content/themes/emaar-projects/vendor/js/window-onload.js?ver=1747292584" id="window-onload-js"></script>
-<script type="text/javascript" src="/dependencies/js/wp-content/themes/emaar-projects/vendor/js/login.js?ver=1766562220" id="login-js"></script>
+
+
 <script type="text/javascript" src="/dependencies/js/wp-includes/js/dist/vendor/moment.min.js?ver=2.29.4" id="moment-js"></script>
 <script type="text/javascript" id="moment-js-after">
 /* <![CDATA[ */
 moment.updateLocale( 'en', {"months":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthsShort":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"weekdaysShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"week":{"dow":0},"longDateFormat":{"LT":"g:i A","LTS":null,"L":null,"LL":"F j, Y","LLL":"F j, Y g:i a","LLLL":null}} );
 /* ]]> */
 </script>
-<script type="text/javascript" src="/dependencies/js/wp-content/themes/emaar-projects/vendor/js/bootstrap-select.min.js?ver=1.13.0" id="bootstrap-select-js"></script>
+
 <script type="text/javascript" src="/dependencies/js/wp-content/themes/emaar-projects/template-parts/navbars/js/navbar.js?ver=1732686194" id="navbar-js-js"></script>
 <script type="text/javascript" src="/dependencies/js/wp-content/themes/emaar-projects/vendor/js/jquery.plugin.min.js?ver=1707315139" id="jquery-plugin-min-js"></script>
 <script type="text/javascript" src="/dependencies/js/wp-content/themes/emaar-projects/vendor/js/jquery.datepick.js?ver=1740461485" id="jquery-datepick-js"></script>
-<script type="text/javascript" src="/dependencies/js/wp-content/themes/emaar-projects/vendor/js/global-booking-modal.js?ver=1746687266" id="global-booking-modal-js"></script>
-<script type="text/javascript" src="/dependencies/js/wp-content/themes/emaar-projects/vendor/js/dinebooking.js?ver=1761568325" id="dinebooking-js"></script>
-<script type="text/javascript" src="/dependencies/js/wp-content/themes/emaar-projects/vendor/js/spabooking.js?ver=1709702027" id="spabooking-js-js"></script>
+
+
+
 <script>window.lazyLoadOptions={elements_selector:"iframe[data-lazy-src]",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,callback_loaded:function(element){if(element.tagName==="IFRAME"&&element.dataset.rocketLazyload=="fitvidscompatible"){if(element.classList.contains("lazyloaded")){if(typeof window.jQuery!="undefined"){if(jQuery.fn.fitVids){jQuery(element).parent().fitVids()}}}}}};window.addEventListener('LazyLoad::Initialized',function(e){var lazyLoadInstance=e.detail.instance;if(window.MutationObserver){var observer=new MutationObserver(function(mutations){var image_count=0;var iframe_count=0;var rocketlazy_count=0;mutations.forEach(function(mutation){for(var i=0;i<mutation.addedNodes.length;i++){if(typeof mutation.addedNodes[i].getElementsByTagName!=='function'){continue}
 if(typeof mutation.addedNodes[i].getElementsByClassName!=='function'){continue}
 images=mutation.addedNodes[i].getElementsByTagName('img');is_image=mutation.addedNodes[i].tagName=="IMG";iframes=mutation.addedNodes[i].getElementsByTagName('iframe');is_iframe=mutation.addedNodes[i].tagName=="IFRAME";rocket_lazy=mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');image_count+=images.length;iframe_count+=iframes.length;rocketlazy_count+=rocket_lazy.length;if(is_image){image_count+=1}
-if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_count>0){lazyLoadInstance.update()}});var b=document.getElementsByTagName("body")[0];var config={childList:!0,subtree:!0};observer.observe(b,config)}},!1)</script><script data-no-minify="1" async="" src="/dependencies/js/wp-content/plugins/wp-rocket/assets/js/lazyload/17.8.3/lazyload.min.js"></script><script>function lazyLoadThumb(e,alt,l){var t='<img src="https://i.ytimg.com/vi_webp/ID/hqdefault.webp" alt="" width="480" height="360">',a='<button class="play" aria-label="play Youtube video"></button>';if(l){t=t.replace('data-lazy-','');t=t.replace('loading="lazy"','');t=t.replace(/<noscript>.*?<\/noscript>/g,'');}t=t.replace('alt=""','alt="'+alt+'"');return t.replace("ID",e)+a}function lazyLoadYoutubeIframe(){var e=document.createElement("iframe"),t="ID?autoplay=1";t+=0===this.parentNode.dataset.query.length?"":"&"+this.parentNode.dataset.query;e.setAttribute("src",t.replace("ID",this.parentNode.dataset.src)),e.setAttribute("frameborder","0"),e.setAttribute("allowfullscreen","1"),e.setAttribute("allow","accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"),this.parentNode.parentNode.replaceChild(e,this.parentNode)}document.addEventListener("DOMContentLoaded",function(){var exclusions=["wpml-ls-flag"];var e,t,p,u,l,a=document.getElementsByClassName("rll-youtube-player");for(t=0;t<a.length;t++)(e=document.createElement("div")),(u='https://i.ytimg.com/vi_webp/ID/hqdefault.webp'),(u=u.replace('ID',a[t].dataset.id)),(l=exclusions.some(exclusion=>u.includes(exclusion))),e.setAttribute("data-id",a[t].dataset.id),e.setAttribute("data-query",a[t].dataset.query),e.setAttribute("data-src",a[t].dataset.src),(e.innerHTML=lazyLoadThumb(a[t].dataset.id,a[t].dataset.alt,l)),a[t].appendChild(e),(p=e.querySelector(".play")),(p.onclick=lazyLoadYoutubeIframe)});</script>
+if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_count>0){lazyLoadInstance.update()}});var b=document.getElementsByTagName("body")[0];var config={childList:!0,subtree:!0};observer.observe(b,config)}},!1)</script><script data-no-minify="1" async="" src="/dependencies/js/wp-content/plugins/wp-rocket/assets/js/lazyload/17.8.3/lazyload.min.js"></script><script>function lazyLoadThumb(e,alt,l){var t='<img src="" alt="" width="480" height="360">',a='<button class="play" aria-label="play Youtube video"></button>';if(l){t=t.replace('data-lazy-','');t=t.replace('loading="lazy"','');t=t.replace(/<noscript>.*?<\/noscript>/g,'');}t=t.replace('alt=""','alt="'+alt+'"');return t.replace("ID",e)+a}function lazyLoadYoutubeIframe(){var e=document.createElement("iframe"),t="ID?autoplay=1";t+=0===this.parentNode.dataset.query.length?"":"&"+this.parentNode.dataset.query;e.setAttribute("src",t.replace("ID",this.parentNode.dataset.src)),e.setAttribute("frameborder","0"),e.setAttribute("allowfullscreen","1"),e.setAttribute("allow","accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"),this.parentNode.parentNode.replaceChild(e,this.parentNode)}document.addEventListener("DOMContentLoaded",function(){var exclusions=["wpml-ls-flag"];var e,t,p,u,l,a=document.getElementsByClassName("rll-youtube-player");for(t=0;t<a.length;t++)(e=document.createElement("div")),(u='https://i.ytimg.com/vi_webp/ID/hqdefault.webp'),(u=u.replace('ID',a[t].dataset.id)),(l=exclusions.some(exclusion=>u.includes(exclusion))),e.setAttribute("data-id",a[t].dataset.id),e.setAttribute("data-query",a[t].dataset.query),e.setAttribute("data-src",a[t].dataset.src),(e.innerHTML=lazyLoadThumb(a[t].dataset.id,a[t].dataset.alt,l)),a[t].appendChild(e),(p=e.querySelector(".play")),(p.onclick=lazyLoadYoutubeIframe)});</script>
 <style>
   .color-inherit {
     color: inherit !important;
