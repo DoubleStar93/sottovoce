@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PSBV5NNP');</script>
+<!-- End Google Tag Manager -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="elemis">
+    <title>Address</title>
+    <link rel="shortcut icon" href="./assets/img/favicon.png">
+    <link rel="stylesheet" href="./assets/css/plugins.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/global17202203.css">
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PSBV5NNP"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+    <div class="content-wrapper">
+     <div class="navbar-hamburger btn-sc-m"><button class="hamburger plain"
+                data-toggle="offcanvas-info"><span></span></button></div>
+        <div class="offcanvas-info text-inverse justify-content-center open d-flex align-items-center">
+            <div class="w-100">
+                <button type="button" class="btn-close btn-close-white offcanvas-close offcanvas-info-close"
+                    aria-label="Close"></button>
+                <div class="mb-3 mb-md-6">
+                    <a class="mn-logo" href="./index"><img
+                            src="./assets/img/address-HR-logo@SVG@SVG-1.svg"
+                            alt="" /></a>
+                </div>
+                <div class="widget my-md-12">
+                    <ul class="accordion list-unstyled" id="mns-sc">
+                        <li class="">
+                            <a class="collapsed" data-bs-toggle="collapse" data-bs-target="#mns2"
+                                aria-expanded="true" aria-controls="mns2"> Spa <i class="uil uil-angle-down"></i></a>
+                            <!--/.card-header -->
+                            <div id="mns2" class="accordion-collapse collapse"
+                                aria-labelledby="headingSimpleOne" data-bs-parent="#mns-sc">
+                                <ul class="list-unstyled">
+                                    <li><a href="index">Sky View Spa Lounge</a></li>
+                                    <li><a href="sky-view-couple-suite">Sky View Couple Suite</a></li>
+                                    <li><a href="sky-view-vitality-pool">Sky View Vitality Pool</a></li>
+                                    <li><a href="sky-view-spa-treatment-room">Sky View Spa Treatment Room</a></li>
+                                </ul>
+                            </div>
+                            <!--/.accordion-collapse -->
+                        </li>
+                        <!--/.accordion-item -->
+                        <li class="">
+                            <a class="collapsed" data-bs-toggle="collapse" data-bs-target="#collapseSimpleTwo"
+                                aria-expanded="false" aria-controls="collapseSimpleTwo"> Rooms & Suites<i class="uil uil-angle-down"></i></a>
+                            <!--/.card-header -->
+                            <div id="collapseSimpleTwo" class="accordion-collapse collapse"
+                                aria-labelledby="headingSimpleTwo" data-bs-parent="#mns-sc">
+                                <ul class="list-unstyled">
+                                    <li><a href="sky-view-executive-suite">Executive Suite</a></li>
+                                    <li><a href="sky-view-junior-suite">Junior Suite</a></li>
+                                    <li><a href="sky-view-club-room-burj-view">Club Room Burj View</a></li>
+                                    <li><a href="sky-view-premier-sky-room-509">Premier Sky Room</a></li>
+                                    <li><a href="sky-view-premier-sky-room-506">Premier Sky Room</a></li>
+                                    <li><a href="sky-view-premier-sky-room-twin-beds">Premier Sky Room Twin Beds</a></li>
+                        
+                                    <li><a href="sky-view-premier-sky-room-1503">Panoramic Suite</a></li>
+                                    <li><a href="sky-view-premier-sky-room-1513">Panoramic Suite</a></li>
+                                    <li><a href="sky-view-premier-sky-room-1514">Premier Room Twin Beds</a></li>
+                                    <li><a href="sky-view-premier-sky-room-1508">Presidential Suite</a></li>
+                                </ul>
+                                <!--/.card-body -->
+                            </div>
+                            <!--/.accordion-collapse -->
+                        </li>
+                        <li class="">
+                            <a class="collapsed" data-bs-toggle="collapse" data-bs-target="#dining"
+                                aria-expanded="false" aria-controls="dining"> Dining <i class="uil uil-angle-down"></i></a>
+                            <!--/.card-header -->
+                            <div id="dining" class="accordion-collapse collapse"
+                                aria-labelledby="headingSimpleTwo" data-bs-parent="#mns-sc">
+                                <ul class="list-unstyled">
+                                     <li class=""><a href="sky-view-the-restaurant">The Restaurant at Address Sky View  </a></li>
+                                     <li class=""><a href="infinity-pool">Deck Too - Pool Lounge  </a></li>
+                                </ul>
+                                <!--/.card-body -->
+                            </div>
+                            <!--/.accordion-collapse -->
+                        </li>
+                        <li class="">
+                            <a class="collapsed" data-bs-toggle="collapse" data-bs-target="#facilities"
+                                aria-expanded="false" aria-controls="facilities"> Facilities <i class="uil uil-angle-down"></i></a>
+                            <!--/.card-header -->
+                            <div id="facilities" class="accordion-collapse collapse"
+                                aria-labelledby="headingSimpleTwo" data-bs-parent="#mns-sc">
+                                <ul class="list-unstyled">
+                                         
+                                        <li class=""><a href="adult-pool">Adult Pool </a></li>
+                                        <li class=""><a href="sky-view-deck-kids-club">Sky View Kids Club </a></li>
+                                
+                                        <li class=""><a href="sky-view-gym">Sky View Gym </a></li>
+                                </ul>
+                                <!--/.card-body -->
+                            </div>
+                            <!--/.accordion-collapse -->
+                        </li>
+                   
+                        <!--/.accordion-item -->
+
+                    </ul>
+                    <!--/.accordion -->
+                </div>
+                <!-- /.widget -->
+                <div class="widget">
+                    <nav class="nav social">
+                    <a target="_blank" href="https://www.facebook.com/addresshotelsandresorts/"><i class="uil uil-facebook-f"></i></a>
+                        <a target="_blank" href="https://twitter.com/Address_Hotels/"><i class="uil uil-twitter"></i></a>
+                        <a target="_blank" href="https://instagram.com/addresshotels/"><i class="uil uil-instagram"></i></a>
+                        <a target="_blank" href="https://www.youtube.com/c/AddressHotels"><i class="uil uil-youtube"></i></a>
+                    </nav>
+                    <!-- /.social -->
+                </div>
+                <!-- /.widget -->
+                <p class="author">Created by Globalsurf</p>
+            </div>
+        </div>
+        <!-- /.offcanvas-info -->        <section class="wrapper">
+            <iframe width='100%' height='100%' src='https://my.matterport.com/show/?m=ahooRH3744u&play=1'
+                frameborder='0' allowfullscreen allow='vr'></iframe>
+        </section>
+        <!-- /section -->
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous"></script>
+    <script src="./assets/js/plugins.js"></script>
+    <script src="./assets/js/theme.js"></script>
+</body>
+
+</html>

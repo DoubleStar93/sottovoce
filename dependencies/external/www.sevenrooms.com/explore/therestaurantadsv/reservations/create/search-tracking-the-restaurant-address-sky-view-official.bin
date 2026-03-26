@@ -1,0 +1,19 @@
+<!DOCTYPE html><html lang="en" translate="no"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google" content="notranslate">
+    <meta property="og:type" content="website">
+    <title>SevenRooms</title>
+    <script type="module" crossorigin="" src="https://www.sevenrooms.com/static2/reservations/index-CdsO3Wb0-67364.js" integrity="sha512-wDlYS0HQoqEC2bn4GvA6R/tyktSctcVjx9gb9lfsLeTang+qvHra2P4wACGUsi4C2s7UXntSiHzc5dCePLQ/tg=="></script>
+    <link rel="modulepreload" crossorigin="" href="https://www.sevenrooms.com/static2/reservations/vendor1-Zs0OJRFw-67364.js" integrity="sha512-XdKbOZ9POK+8gExotkCQURJOiE8GPKNCJEnFex5k5DNyC1e0dxJ64Ny/LH7d6+XNRQqRO87sgheFGu+0u3iq2Q==">
+    <link rel="modulepreload" crossorigin="" href="https://www.sevenrooms.com/static2/reservations/vendor2-XgohXo8S-67364.js" integrity="sha512-QS/z08Y3laLbh810p+LWEs8oVKHcAYHgKpxDxZwj1z+RyMvkjSbNFMI+UERISfZHZ5WfN0NbziCrHfINdI/IiA==">
+    <link rel="modulepreload" crossorigin="" href="https://www.sevenrooms.com/static2/reservations/vendor3-xydEx4j1-67364.js" integrity="sha512-xm2ZhrV9aal2xbBBCx2m8OQmkmfMCkciE52xXV0Tc0tRZjCjMzJ3btVtr/qMKJv3qApxRLR72hIKMytJmS+Uyw==">
+    <link rel="modulepreload" crossorigin="" href="https://www.sevenrooms.com/static2/reservations/vendor4-DIrCJn6T-67364.js" integrity="sha512-OE1FwuWgpkwc4xWF2ot3iQRqcFVHOXQiSbe6hp5Nw20QR6/CVrdE3RIDfMBMYiiom8ncSifg+g39hYWrMyjXqQ==">
+    <link rel="stylesheet" crossorigin="" href="https://www.sevenrooms.com/static2/reservations/vendor4-B26YC_Re-67364.css" integrity="sha512-IGoRKl6xbbOsRWinE8fXlu51z3nqeytErDbmH9GXm/N3fPyPDy1wOd98U7F4SCoC1G7Vnx26WkvX90jd2vG+CQ==">
+    <link rel="stylesheet" crossorigin="" href="https://www.sevenrooms.com/static2/reservations/index-BJDqrSM3-67364.css" integrity="sha512-N1ipripupucLST/T12BlZoG27E5KpC0L4Fl5HWwcMcypMSSRTBXcVKBRjxrh0zFN46anDVhK7k523UHP3fUPZA==">
+  </head>
+  <body>
+    <div id="app-root"></div>
+  
+
+</body></html>

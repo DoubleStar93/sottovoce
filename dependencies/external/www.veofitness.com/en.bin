@@ -1,0 +1,839 @@
+<!doctype html>
+<html lang="en-US">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="profile" href="https://gmpg.org/xfn/11">
+
+  <!-- Favicons Start -->
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="https://veofitness.azureedge.net/wp-content/themes/bootscore-child-custom/img/favicon/sites/1/apple-touch-icon.png?ver=1759314299">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://veofitness.azureedge.net/wp-content/themes/bootscore-child-custom/img/favicon/sites/1/favicon-32x32.png?ver=1759314299">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://veofitness.azureedge.net/wp-content/themes/bootscore-child-custom/img/favicon/sites/1/favicon-16x16.png?ver=1759314299">
+  <link rel="mask-icon" href="https://veofitness.azureedge.net/wp-content/themes/bootscore-child-custom/img/favicon/sites/1/safari-pinned-tab.svg?ver=1759314299" color="#1f0a54">
+  <link rel="shortcut icon" href="https://veofitness.azureedge.net/wp-content/themes/bootscore-child-custom/img/favicon/sites/1/favicon.ico?ver=1759314299">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-config" content="https://veofitness.azureedge.net/wp-content/themes/bootscore-child-custom/img/favicon/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+
+  <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+<link rel="alternate" hreflang="en" href="https://www.veofitness.com/en/" />
+<link rel="alternate" hreflang="x-default" href="https://www.veofitness.com/en/" />
+
+	<!-- This site is optimized with the Yoast SEO plugin v23.0 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Veo Fitness Dubai | Premium, community-focused fitness center in Dubai</title>
+<link rel="preload" as="font" href="https://veofitness.azureedge.net/wp-content/themes/bootscore-child-custom/fonts/Manrope-Bold.woff2" crossorigin>
+<link rel="preload" as="font" href="https://veofitness.azureedge.net/wp-content/themes/bootscore-child-custom/fonts/Manrope-Light.woff2" crossorigin>
+<link rel="preload" as="font" href="https://veofitness.azureedge.net/wp-content/themes/bootscore-child-custom/fonts/Manrope-Medium.woff2" crossorigin>
+<link rel="preload" as="font" href="https://veofitness.azureedge.net/wp-content/themes/bootscore-child-custom/fonts/Manrope-Regular.woff2" crossorigin>
+<link rel="preload" as="font" href="https://veofitness.azureedge.net/wp-content/themes/bootscore-child-custom/fonts/Manrope-SemiBold.woff2" crossorigin><link rel="preload" as="image" href="https://veofitness.azureedge.net/wp-content/themes/bootscore-child-custom/img/veo-lg.png" fetchpriority="high">
+	<meta name="description" content="Discover Veo Fitness Dubai, your premium community-focused fitness center. Experience top-notch facilities and expert guidance for your fitness journey." />
+	<link rel="canonical" href="https://www.veofitness.com/en/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Veo Fitness Dubai | Premium, community-focused fitness center in Dubai" />
+	<meta property="og:description" content="Discover Veo Fitness Dubai, your premium community-focused fitness center. Experience top-notch facilities and expert guidance for your fitness journey." />
+	<meta property="og:url" content="https://www.veofitness.com/en/" />
+	<meta property="og:site_name" content="Veo Fitnesss Dubai" />
+	<meta property="article:modified_time" content="2025-01-06T12:54:59+00:00" />
+	<meta property="og:image" content="https://veofitness.azureedge.net/wp-content/uploads/2025/01/MAIN-IMAGE.jpg" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://www.veofitness.com/en/","url":"https://www.veofitness.com/en/","name":"Veo Fitness Dubai | Premium, community-focused fitness center in Dubai","isPartOf":{"@id":"https://www.veofitness.com/en/#website"},"about":{"@id":"https://www.veofitness.com/en/#organization"},"primaryImageOfPage":{"@id":"https://www.veofitness.com/en/#primaryimage"},"image":{"@id":"https://www.veofitness.com/en/#primaryimage"},"thumbnailUrl":"https://veofitness.azureedge.net/wp-content/uploads/2025/01/MAIN-IMAGE.jpg","datePublished":"2024-02-02T04:57:19+00:00","dateModified":"2025-01-06T12:54:59+00:00","description":"Discover Veo Fitness Dubai, your premium community-focused fitness center. Experience top-notch facilities and expert guidance for your fitness journey.","breadcrumb":{"@id":"https://www.veofitness.com/en/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://www.veofitness.com/en/"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://www.veofitness.com/en/#primaryimage","url":"https://veofitness.azureedge.net/wp-content/uploads/2025/01/MAIN-IMAGE.jpg","contentUrl":"https://veofitness.azureedge.net/wp-content/uploads/2025/01/MAIN-IMAGE.jpg"},{"@type":"BreadcrumbList","@id":"https://www.veofitness.com/en/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home"}]},{"@type":"WebSite","@id":"https://www.veofitness.com/en/#website","url":"https://www.veofitness.com/en/","name":"Veo Fitnesss","description":"Premium, community-focused fitness center in Dubai","publisher":{"@id":"https://www.veofitness.com/en/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.veofitness.com/en/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"Organization","@id":"https://www.veofitness.com/en/#organization","name":"Veo Fitnesss","url":"https://www.veofitness.com/en/","logo":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://www.veofitness.com/en/#/schema/logo/image/","url":"https://www.veofitness.com/wp-content/uploads/2024/01/Veo-Identity_Transparent_Black.png","contentUrl":"https://www.veofitness.com/wp-content/uploads/2024/01/Veo-Identity_Transparent_Black.png","width":2323,"height":1383,"caption":"Veo Fitnesss"},"image":{"@id":"https://www.veofitness.com/en/#/schema/logo/image/"}}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//veofitness.azureedge.net' />
+
+<link href='https://veofitness.azureedge.net' rel='preconnect' />
+<link rel="alternate" type="application/rss+xml" title="Veo Fitnesss Dubai &raquo; Feed" href="https://www.veofitness.com/en/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Veo Fitnesss Dubai &raquo; Comments Feed" href="https://www.veofitness.com/en/comments/feed/" />
+
+<style id='wp-emoji-styles-inline-css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<link rel='stylesheet' id='wp-block-library-css' href='https://veofitness.azureedge.net/wp-includes/css/dist/block-library/style.min.css?ver=6.5.7' media='all' />
+<style id='classic-theme-styles-inline-css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id='global-styles-inline-css'>
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}body .is-layout-grid{display: grid;}body .is-layout-grid > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+</style>
+<link data-minify="1" rel='stylesheet' id='wpml-blocks-css' href='https://veofitness.azureedge.net/wp-content/cache/min/1/wp-content/plugins/sitepress-multilingual-cms/dist/css/blocks/styles.css?ver=1763703577' media='all' />
+<link rel='stylesheet' id='wpml-legacy-horizontal-list-0-css' href='https://veofitness.azureedge.net/wp-content/plugins/sitepress-multilingual-cms/templates/language-switchers/legacy-list-horizontal/style.min.css?ver=1' media='all' />
+<style id='wpml-legacy-horizontal-list-0-inline-css'>
+.wpml-ls-statics-footer a, .wpml-ls-statics-footer .wpml-ls-sub-menu a, .wpml-ls-statics-footer .wpml-ls-sub-menu a:link, .wpml-ls-statics-footer li:not(.wpml-ls-current-language) .wpml-ls-link, .wpml-ls-statics-footer li:not(.wpml-ls-current-language) .wpml-ls-link:link {color:#444444;background-color:#ffffff;}.wpml-ls-statics-footer a, .wpml-ls-statics-footer .wpml-ls-sub-menu a:hover,.wpml-ls-statics-footer .wpml-ls-sub-menu a:focus, .wpml-ls-statics-footer .wpml-ls-sub-menu a:link:hover, .wpml-ls-statics-footer .wpml-ls-sub-menu a:link:focus {color:#000000;background-color:#eeeeee;}.wpml-ls-statics-footer .wpml-ls-current-language > a {color:#444444;background-color:#ffffff;}.wpml-ls-statics-footer .wpml-ls-current-language:hover>a, .wpml-ls-statics-footer .wpml-ls-current-language>a:focus {color:#000000;background-color:#eeeeee;}
+</style>
+<link rel='stylesheet' id='bootscore-style-css' href='https://veofitness.azureedge.net/wp-content/themes/bootscore-main/style.css?ver=1730296133' media='all' />
+<link data-minify="1" rel='stylesheet' id='main-css' href='https://veofitness.azureedge.net/wp-content/cache/min/1/wp-content/themes/bootscore-child-custom/css/sites/1/main.css?ver=1763703577' media='all' />
+<script id="wpml-cookie-js-extra">
+var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":"\/"}};
+var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":"\/"}};
+</script>
+
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.veofitness.com/xmlrpc.php?rsd" />
+<link rel='shortlink' href='https://www.veofitness.com/en/' />
+<meta name="generator" content="WPML ver:4.6.11 stt:5,1;" />
+<link rel="icon" href="https://veofitness.azureedge.net/wp-content/uploads/2024/03/cropped-MicrosoftTeams-image-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://veofitness.azureedge.net/wp-content/uploads/2024/03/cropped-MicrosoftTeams-image-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://veofitness.azureedge.net/wp-content/uploads/2024/03/cropped-MicrosoftTeams-image-180x180.png" />
+<meta name="msapplication-TileImage" content="https://veofitness.azureedge.net/wp-content/uploads/2024/03/cropped-MicrosoftTeams-image-270x270.png" />
+<noscript><style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}</style></noscript></head>
+
+
+<body class="home page-template page-template-page-templates page-template-page-blank page-template-page-templatespage-blank-php page page-id-132 no-sidebar">   <div id="page" class="site">
+
+    <header>
+      <nav class="navbar navbar-expand-lg fixed-top p-0 secondary">
+        <div class="container-fluid justify-content-sm-start p-0 mx-0">
+          <div class="menu-close d-flex flex-row justify-content-between mx-3 py-3 mx-sm-6 py-sm-4 my-0 px-0">
+            <a href="https://www.veofitness.com/en/" class="navbar-brand navbar-brand-top order-sm-2 order-lg-1 p-0 m-0">
+
+                          </a>
+            <button class="navbar-toggler order-sm-2 order-lg-2 p-0 border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+              <div class="navbar-toggler-icon d-flex flex-column justify-content-end">
+
+                <img width="32" height="32" class="hamburger-menu" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3C/svg%3E" alt="" data-lazy-src="https://veofitness.azureedge.net/wp-content/themes/bootscore-child-custom/img/icons/hamburgerMenu.svg"><noscript><img width="32" height="32" class="hamburger-menu" src="https://veofitness.azureedge.net/wp-content/themes/bootscore-child-custom/img/icons/hamburgerMenu.svg" alt=""></noscript>
+                <img width="32" height="32" class="close-menu d-none" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3C/svg%3E" alt="" data-lazy-src="https://veofitness.azureedge.net/wp-content/themes/bootscore-child-custom/img/icons/XClose.svg"><noscript><img width="32" height="32" class="close-menu d-none" src="https://veofitness.azureedge.net/wp-content/themes/bootscore-child-custom/img/icons/XClose.svg" alt=""></noscript>
+                <img width="32" height="32" class="hamburger-white-menu d-none" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3C/svg%3E" alt="" data-lazy-src="https://veofitness.azureedge.net/wp-content/themes/bootscore-child-custom/img/icons/hamburgerMenu-white.svg"><noscript><img width="32" height="32" class="hamburger-white-menu d-none" src="https://veofitness.azureedge.net/wp-content/themes/bootscore-child-custom/img/icons/hamburgerMenu-white.svg" alt=""></noscript>
+              </div>
+            </button>
+          </div>
+          <div class="collapse navbar-collapse order-sm-4" id="navbarTogglerDemo02">
+                          <ul class="navbar-nav d-flex justify-content-end align-items-start gap-6 flex-row">
+                <li  id="menu-item-12" class="menu-item menu-item-type-custom menu-item-object-custom nav-item nav-item-12"><a href="https://www.veofitness.com/en/locations/" class="nav-link ">Locations</a></li>
+<li  id="menu-item-13" class="menu-item menu-item-type-custom menu-item-object-custom nav-item nav-item-13"><a href="https://www.veofitness.com/en/classes/" class="nav-link ">Classes</a></li>
+<li  id="menu-item-14" class="menu-item menu-item-type-custom menu-item-object-custom nav-item nav-item-14"><a href="https://www.veofitness.com/en/movements/" class="nav-link ">Movements</a></li>
+<li  id="menu-item-15" class="menu-item menu-item-type-custom menu-item-object-custom nav-item nav-item-15"><a href="https://www.veofitness.com/en/timetable/" class="nav-link ">Timetable</a></li>
+<li  id="menu-item-16" class="menu-item menu-item-type-custom menu-item-object-custom nav-item nav-item-16"><a href="https://www.veofitness.com/en/membership/" class="nav-link ">Membership</a></li>
+<li  id="menu-item-18" class="menu-item menu-item-type-custom menu-item-object-custom nav-item nav-item-18"><a href="https://www.veofitness.com/en/personal-training/" class="nav-link ">Personal Training</a></li>
+<li  id="menu-item-1990" class="menu-item menu-item-type-post_type menu-item-object-page nav-item nav-item-1990"><a href="https://www.veofitness.com/en/u-by-emaar/" class="nav-link ">U By Emaar</a></li>
+              </ul>
+                        <div class="social-links mt-12 mt-md-0">
+              <div class="social-logo gap-3 d-none justify-content-end py-4 px-6 w-100">
+                                                              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+  <div id="content" class="site-content">
+    <div id="primary" class="content-area">
+
+      <!-- Hook to add something nice -->
+      
+      <main id="main" class="site-main">
+
+        <div class="entry-content">
+                    
+<div class="homepage-banner">
+	<img fetchpriority="high" decoding="async" width="1296" height="558" src="https://veofitness.azureedge.net/wp-content/uploads/2025/01/MAIN-IMAGE.jpg" class="desktop-bg background-image d-none d-sm-block" alt="" srcset="https://veofitness.azureedge.net/wp-content/uploads/2025/01/MAIN-IMAGE.jpg 1296w, https://veofitness.azureedge.net/wp-content/uploads/2025/01/MAIN-IMAGE-300x129.jpg 300w, https://veofitness.azureedge.net/wp-content/uploads/2025/01/MAIN-IMAGE-1024x441.jpg 1024w, https://veofitness.azureedge.net/wp-content/uploads/2025/01/MAIN-IMAGE-768x331.jpg 768w" sizes="(max-width: 1296px) 100vw, 1296px" />	<img decoding="async" width="689" height="800" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20689%20800'%3E%3C/svg%3E" class="mobile-bg background-image d-sm-none" alt="" data-lazy-srcset="https://veofitness.azureedge.net/wp-content/uploads/2025/01/MAIN-IMAGE-MOBILE.jpg 689w, https://veofitness.azureedge.net/wp-content/uploads/2025/01/MAIN-IMAGE-MOBILE-258x300.jpg 258w" data-lazy-sizes="(max-width: 689px) 100vw, 689px" data-lazy-src="https://veofitness.azureedge.net/wp-content/uploads/2025/01/MAIN-IMAGE-MOBILE.jpg" /><noscript><img decoding="async" width="689" height="800" src="https://veofitness.azureedge.net/wp-content/uploads/2025/01/MAIN-IMAGE-MOBILE.jpg" class="mobile-bg background-image d-sm-none" alt="" srcset="https://veofitness.azureedge.net/wp-content/uploads/2025/01/MAIN-IMAGE-MOBILE.jpg 689w, https://veofitness.azureedge.net/wp-content/uploads/2025/01/MAIN-IMAGE-MOBILE-258x300.jpg 258w" sizes="(max-width: 689px) 100vw, 689px" /></noscript>	<img width="3014" height="1500" decoding="async" class="foreground-image fg-xl d-none d-xl-block" src="https://veofitness.azureedge.net/wp-content/themes/bootscore-child-custom/img/veo-lg.png" alt="">
+	<img width="1024" height="900" decoding="async" class="foreground-image fg-lg d-none d-md-block d-xl-none" src="https://veofitness.azureedge.net/wp-content/themes/bootscore-child-custom/img/veo-md.png" alt="">
+	<img width="320" height="717" decoding="async" class="foreground-image fg-sm d-sm-none" style="object-fit: cover;" src="https://veofitness.azureedge.net/wp-content/themes/bootscore-child-custom/img/veo-md-sm-new.png" alt="">
+	<img width="768" height="1024" decoding="async" class="foreground-image fg-md d-none d-sm-block d-md-none" src="https://veofitness.azureedge.net/wp-content/themes/bootscore-child-custom/img/veo-sm.png" alt="">
+
+	<div class="middle-section third-frame primary-container mx-xl-15">
+		<div class="">
+			<p class="subtitle scroller"><span class="scroller-text text-uppercase text-secondary-3 s2 s3-md">
+												STRENGTH<br />												WELLNESS<br />												MOVEMENT<br />												COMMUNITY<br />												LIFESTYLE									</span></p>
+			<h2 class="mt-5 text-white h2 h3-lg h4-md heading">A holistic community focused on active living, fitness and personal well-being.</h2>			<div class="cta mt-8">
+							</div>
+		</div>
+	</div>
+	<div class="bottom-section-wrapper primary-container mx-xl-15">
+		<div class="t-box mb-0 pb-lg-2 d-flex flex-column flex-sm-row justify-content-between align-items-sm-end">
+			<div class="text-inner slide-up">
+				<h5 class="h5 b1-sm t-box-subtitle d-flex flex-column flex-sm-row gap-2"><span class="t2 s1-sm left-sub">Salveo |</span><span class="right-sub">To live in good health.</span></h5>
+				<h1 class="h3 h4-lg h5-md mt-5">Where the mind and body unite and your wellness comes first</h1>			</div>
+			<div class="cta slide-up pe-4 mt-8 mt-sm-0">
+							</div>
+		</div>
+	</div>
+</div>
+<section class="gradient-section">
+	<div class="gradient-box d-flex align-items-center justify-content-center">
+		<span class="vertical-line"></span>
+	</div>
+	<div class="highlight-box position-relative px-3 px-sm-6 d-flex flex-column align-items-center justify-content-center w-100">
+		<div class="primary-container">
+			<h3 class="text-center text-white h3 h4-lg h5-sm">Welcome to Veo by Emaar Hospitality Group. We shape lives through state-of-the-art facilities and transformational classes.</h3>
+		</div>
+		<div class="d-flex align-items-center justify-content-center w-100">
+			<span class="green-blob"></span>
+		</div>
+	</div>
+</section>
+
+ 
+<section class="about-block z-2 pb-9 pb-md-10 pb-lg-11 pt-18 pt-sm-27 pt-md-24 pt-lg-26 bg-bg-one">
+  <div class="primary-container">
+    
+   <div class="media-left-content-right border-bottom-secondary overflow-hidden">
+
+     <div class="d-flex flex-column flex-md-row gap-8 gap-md-12 gap-lg-16 align-items-md-center">
+       <div class="about-img flex-shrink-0">
+         <img decoding="async" width="764" height="548" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20764%20548'%3E%3C/svg%3E" class="hero-image" alt="" data-lazy-srcset="https://veofitness.azureedge.net/wp-content/uploads/2025/01/ABOUT-VEO.jpg 764w, https://veofitness.azureedge.net/wp-content/uploads/2025/01/ABOUT-VEO-300x215.jpg 300w" data-lazy-sizes="(max-width: 764px) 100vw, 764px" data-lazy-src="https://veofitness.azureedge.net/wp-content/uploads/2025/01/ABOUT-VEO.jpg" /><noscript><img decoding="async" width="764" height="548" src="https://veofitness.azureedge.net/wp-content/uploads/2025/01/ABOUT-VEO.jpg" class="hero-image" alt="" srcset="https://veofitness.azureedge.net/wp-content/uploads/2025/01/ABOUT-VEO.jpg 764w, https://veofitness.azureedge.net/wp-content/uploads/2025/01/ABOUT-VEO-300x215.jpg 300w" sizes="(max-width: 764px) 100vw, 764px" /></noscript>       </div>
+       <div class="about-text">
+         <h2 class="h3 h4-lg h5-sm">A vibrant fitness community, passionate about leading healthier lives. </h2><p class="b2 b3-lg b4-sm mt-5 mt-lg-6">Welcome to VEO. Our state-of-the-art equipment and facilities offer a holistic and enriching lifestyle for all members.</p>                </div>
+     </div>
+   </div>
+
+   </div>
+</section>
+
+<section class="movement py-9 py-md-10 py-lg-11 bg-bg-one">
+	<div class="primary-container">
+		<p class="s4 text-secondary pb-3 text-uppercase card-subtitle">MOVEMENT</p>		<div class="main-content pt-5 pt-lg-6">
+			<h2 class="h3 h4-lg h5-sm">Movement</h2>			<div class="tab-section mt-8 mt-md-9 mt-lg-10">
+				<nav style="height: auto;">
+					<div class="nav tab-container d-flex" id="nav-tab" role="tablist" style="height: auto; padding: 5px 0;">
+														<div class="movement-tab" id="nav-tab-1" data-bs-toggle="tab" data-bs-target="#nav-1" type="button" role="tab" aria-controls="nav-" aria-selected="true">
+																			<img width="33" height="32" decoding="async" class="tab-icon" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2033%2032'%3E%3C/svg%3E" alt="Racket Sports" data-lazy-src="https://veofitness.azureedge.net/wp-content/uploads/2024/03/Racket-Sports.svg"><noscript><img width="33" height="32" decoding="async" class="tab-icon" src="https://veofitness.azureedge.net/wp-content/uploads/2024/03/Racket-Sports.svg" alt="Racket Sports"></noscript>
+																		<p class="b4">Racket Sports</p>
+									<div class="progress position-absolute left-0 bottom-0 w-100">
+										<div class="progress-bar bg-secondary" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+								</div>
+														<div class="movement-tab" id="nav-tab-2" data-bs-toggle="tab" data-bs-target="#nav-2" type="button" role="tab" aria-controls="nav-" aria-selected="true">
+																			<img width="33" height="32" decoding="async" class="tab-icon" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2033%2032'%3E%3C/svg%3E" alt="Strength" data-lazy-src="https://veofitness.azureedge.net/wp-content/uploads/2024/03/strength.svg"><noscript><img width="33" height="32" decoding="async" class="tab-icon" src="https://veofitness.azureedge.net/wp-content/uploads/2024/03/strength.svg" alt="Strength"></noscript>
+																		<p class="b4">Strength</p>
+									<div class="progress position-absolute left-0 bottom-0 w-100">
+										<div class="progress-bar bg-secondary" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+								</div>
+														<div class="movement-tab" id="nav-tab-3" data-bs-toggle="tab" data-bs-target="#nav-3" type="button" role="tab" aria-controls="nav-" aria-selected="true">
+																			<img width="33" height="32" decoding="async" class="tab-icon" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2033%2032'%3E%3C/svg%3E" alt="Gym" data-lazy-src="https://veofitness.azureedge.net/wp-content/uploads/2024/03/gym.svg"><noscript><img width="33" height="32" decoding="async" class="tab-icon" src="https://veofitness.azureedge.net/wp-content/uploads/2024/03/gym.svg" alt="Gym"></noscript>
+																		<p class="b4">Gym</p>
+									<div class="progress position-absolute left-0 bottom-0 w-100">
+										<div class="progress-bar bg-secondary" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+								</div>
+														<div class="movement-tab" id="nav-tab-4" data-bs-toggle="tab" data-bs-target="#nav-4" type="button" role="tab" aria-controls="nav-" aria-selected="true">
+																			<img width="33" height="32" decoding="async" class="tab-icon" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2033%2032'%3E%3C/svg%3E" alt="Martial Arts" data-lazy-src="https://veofitness.azureedge.net/wp-content/uploads/2024/02/Martial-Arts.svg"><noscript><img width="33" height="32" decoding="async" class="tab-icon" src="https://veofitness.azureedge.net/wp-content/uploads/2024/02/Martial-Arts.svg" alt="Martial Arts"></noscript>
+																		<p class="b4">Martial Arts</p>
+									<div class="progress position-absolute left-0 bottom-0 w-100">
+										<div class="progress-bar bg-secondary" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+								</div>
+														<div class="movement-tab" id="nav-tab-5" data-bs-toggle="tab" data-bs-target="#nav-5" type="button" role="tab" aria-controls="nav-" aria-selected="true">
+																			<img width="32" height="32" decoding="async" class="tab-icon" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3C/svg%3E" alt="Mindfulness" data-lazy-src="https://veofitness.azureedge.net/wp-content/uploads/2024/02/Mindfulness.svg"><noscript><img width="32" height="32" decoding="async" class="tab-icon" src="https://veofitness.azureedge.net/wp-content/uploads/2024/02/Mindfulness.svg" alt="Mindfulness"></noscript>
+																		<p class="b4">Mindfulness</p>
+									<div class="progress position-absolute left-0 bottom-0 w-100">
+										<div class="progress-bar bg-secondary" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+								</div>
+														<div class="movement-tab" id="nav-tab-6" data-bs-toggle="tab" data-bs-target="#nav-6" type="button" role="tab" aria-controls="nav-" aria-selected="true">
+																			<img width="33" height="32" decoding="async" class="tab-icon" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2033%2032'%3E%3C/svg%3E" alt="Aquatics" data-lazy-src="https://veofitness.azureedge.net/wp-content/uploads/2024/02/Aquatics.svg"><noscript><img width="33" height="32" decoding="async" class="tab-icon" src="https://veofitness.azureedge.net/wp-content/uploads/2024/02/Aquatics.svg" alt="Aquatics"></noscript>
+																		<p class="b4">Aquatics</p>
+									<div class="progress position-absolute left-0 bottom-0 w-100">
+										<div class="progress-bar bg-secondary" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+								</div>
+														<div class="movement-tab" id="nav-tab-7" data-bs-toggle="tab" data-bs-target="#nav-7" type="button" role="tab" aria-controls="nav-" aria-selected="true">
+																			<img width="33" height="32" decoding="async" class="tab-icon" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2033%2032'%3E%3C/svg%3E" alt="Cardio" data-lazy-src="https://veofitness.azureedge.net/wp-content/uploads/2024/02/Cardio.svg"><noscript><img width="33" height="32" decoding="async" class="tab-icon" src="https://veofitness.azureedge.net/wp-content/uploads/2024/02/Cardio.svg" alt="Cardio"></noscript>
+																		<p class="b4">Cardio</p>
+									<div class="progress position-absolute left-0 bottom-0 w-100">
+										<div class="progress-bar bg-secondary" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+								</div>
+														<div class="movement-tab" id="nav-tab-8" data-bs-toggle="tab" data-bs-target="#nav-8" type="button" role="tab" aria-controls="nav-" aria-selected="true">
+																			<img width="33" height="32" decoding="async" class="tab-icon" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2033%2032'%3E%3C/svg%3E" alt="Dance" data-lazy-src="https://veofitness.azureedge.net/wp-content/uploads/2024/02/Dance.svg"><noscript><img width="33" height="32" decoding="async" class="tab-icon" src="https://veofitness.azureedge.net/wp-content/uploads/2024/02/Dance.svg" alt="Dance"></noscript>
+																		<p class="b4">Dance</p>
+									<div class="progress position-absolute left-0 bottom-0 w-100">
+										<div class="progress-bar bg-secondary" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+								</div>
+														<div class="movement-tab" id="nav-tab-9" data-bs-toggle="tab" data-bs-target="#nav-9" type="button" role="tab" aria-controls="nav-" aria-selected="true">
+																			<img width="33" height="32" decoding="async" class="tab-icon" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2033%2032'%3E%3C/svg%3E" alt="Cycling" data-lazy-src="https://veofitness.azureedge.net/wp-content/uploads/2024/02/Indoor-Cycling.svg"><noscript><img width="33" height="32" decoding="async" class="tab-icon" src="https://veofitness.azureedge.net/wp-content/uploads/2024/02/Indoor-Cycling.svg" alt="Cycling"></noscript>
+																		<p class="b4">Cycling</p>
+									<div class="progress position-absolute left-0 bottom-0 w-100">
+										<div class="progress-bar bg-secondary" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+								</div>
+											</div>
+				</nav>
+				<div class="tab-content" id="nav-tabContent">
+												<div class="tab-pane slide-down" id="nav-1" role="tabpanel" aria-labelledby="nav-tab-1" tabindex="0">
+								<div class="tab-data mt-6 mt-sm-8 d-flex flex-column flex-sm-row gap-8 align-items-sm-end align-items-start justify-content-between">
+									<div>
+										<p class="s1 s2-lg s3-sm tab-title">Racket Sports</p>
+										<p class="b2 b3-lg b4-sm tab-desc mt-3 mt-sm-4">Rally your way to fitness at VEO Fitness Centers with our exhilarating racket sports experiences. From intense tennis matches to fast-paced squash games, our top-notch facilities ensure an unmatched thrill on the court, propelling you towards your fitness goals with every swing and serve.</p>
+									</div>
+																			<a class="btn btn-primary" href="https://www.veofitness.com/en/movements/racket-sports/" >
+											View details										</a>
+																	</div>
+								<div class="tab-media mt-8 mt-sm-9">
+																			<img width="1152" height="496" decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201152%20496'%3E%3C/svg%3E" alt="Racket Sports" data-lazy-src="https://veofitness.azureedge.net/wp-content/uploads/2024/03/RACKETS-AT-VEO.jpg"><noscript><img width="1152" height="496" decoding="async" src="https://veofitness.azureedge.net/wp-content/uploads/2024/03/RACKETS-AT-VEO.jpg" alt="Racket Sports"></noscript>
+																	</div>
+							</div>
+												<div class="tab-pane slide-down" id="nav-2" role="tabpanel" aria-labelledby="nav-tab-2" tabindex="0">
+								<div class="tab-data mt-6 mt-sm-8 d-flex flex-column flex-sm-row gap-8 align-items-sm-end align-items-start justify-content-between">
+									<div>
+										<p class="s1 s2-lg s3-sm tab-title">Strength</p>
+										<p class="b2 b3-lg b4-sm tab-desc mt-3 mt-sm-4">Experience unparalleled strength training at our fitness centres. Our dynamic workouts blend cardio, mobility, and conditioning to unleash your full potential, sculpting lean muscle, boosting endurance, and empowering you to conquer every challenge with confidence and finesse.</p>
+									</div>
+																			<a class="btn btn-primary" href="https://www.veofitness.com/en/movements/strength/" >
+											View details										</a>
+																	</div>
+								<div class="tab-media mt-8 mt-sm-9">
+																			<img width="1440" height="620" decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201440%20620'%3E%3C/svg%3E" alt="Strength" data-lazy-src="https://veofitness.azureedge.net/wp-content/uploads/2024/03/STRENGTH-AT-VEO.jpg"><noscript><img width="1440" height="620" decoding="async" src="https://veofitness.azureedge.net/wp-content/uploads/2024/03/STRENGTH-AT-VEO.jpg" alt="Strength"></noscript>
+																	</div>
+							</div>
+												<div class="tab-pane slide-down" id="nav-3" role="tabpanel" aria-labelledby="nav-tab-3" tabindex="0">
+								<div class="tab-data mt-6 mt-sm-8 d-flex flex-column flex-sm-row gap-8 align-items-sm-end align-items-start justify-content-between">
+									<div>
+										<p class="s1 s2-lg s3-sm tab-title">Gym</p>
+										<p class="b2 b3-lg b4-sm tab-desc mt-3 mt-sm-4">Achieve your ideal physique at VEO Fitness Centres through our specialised bodybuilding classes, prioritising muscle development and sculpting. Under the expert guidance of our trainers, you&#8217;ll receive personalised instruction to maximise your results and unlock your full potential.</p>
+									</div>
+																			<a class="btn btn-primary" href="https://www.veofitness.com/en/movements/gym/" >
+											View details										</a>
+																	</div>
+								<div class="tab-media mt-8 mt-sm-9">
+																			<img width="1152" height="496" decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201152%20496'%3E%3C/svg%3E" alt="Gym" data-lazy-src="https://veofitness.azureedge.net/wp-content/uploads/2024/03/GYM-AT-VEO.jpg"><noscript><img width="1152" height="496" decoding="async" src="https://veofitness.azureedge.net/wp-content/uploads/2024/03/GYM-AT-VEO.jpg" alt="Gym"></noscript>
+																	</div>
+							</div>
+												<div class="tab-pane slide-down" id="nav-4" role="tabpanel" aria-labelledby="nav-tab-4" tabindex="0">
+								<div class="tab-data mt-6 mt-sm-8 d-flex flex-column flex-sm-row gap-8 align-items-sm-end align-items-start justify-content-between">
+									<div>
+										<p class="s1 s2-lg s3-sm tab-title">Martial Arts</p>
+										<p class="b2 b3-lg b4-sm tab-desc mt-3 mt-sm-4">Transform your fitness journey with specialized martial arts training and unlock a new level of strength, agility, and self-discipline. Experience improved cardiovascular health, enhanced flexibility, and heightened mental focus as you hone your skills with our certified trainers.</p>
+									</div>
+																			<a class="btn btn-primary" href="https://www.veofitness.com/en/movements/martial-arts/" >
+											View details										</a>
+																	</div>
+								<div class="tab-media mt-8 mt-sm-9">
+																			<img width="1440" height="620" decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201440%20620'%3E%3C/svg%3E" alt="Martial Arts" data-lazy-src="https://veofitness.azureedge.net/wp-content/uploads/2024/02/MARTIAL-ARTS-VEO-BY-EMAAR.jpg"><noscript><img width="1440" height="620" decoding="async" src="https://veofitness.azureedge.net/wp-content/uploads/2024/02/MARTIAL-ARTS-VEO-BY-EMAAR.jpg" alt="Martial Arts"></noscript>
+																	</div>
+							</div>
+												<div class="tab-pane slide-down" id="nav-5" role="tabpanel" aria-labelledby="nav-tab-5" tabindex="0">
+								<div class="tab-data mt-6 mt-sm-8 d-flex flex-column flex-sm-row gap-8 align-items-sm-end align-items-start justify-content-between">
+									<div>
+										<p class="s1 s2-lg s3-sm tab-title">Mindfulness</p>
+										<p class="b2 b3-lg b4-sm tab-desc mt-3 mt-sm-4">Find solace and rejuvenation through our mindfulness and wellness sessions, immersing yourself in meditation, yin yoga, and sound healing designed to cultivate inner peace, alleviate stress, and enhance mental acuity, promoting overall well-being and balance.</p>
+									</div>
+																			<a class="btn btn-primary" href="https://www.veofitness.com/en/movements/mindfulness/" >
+											View details										</a>
+																	</div>
+								<div class="tab-media mt-8 mt-sm-9">
+																			<img width="1440" height="620" decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201440%20620'%3E%3C/svg%3E" alt="Mindfulness" data-lazy-src="https://veofitness.azureedge.net/wp-content/uploads/2024/02/MINDFULNESS-AT-VEO.jpg"><noscript><img width="1440" height="620" decoding="async" src="https://veofitness.azureedge.net/wp-content/uploads/2024/02/MINDFULNESS-AT-VEO.jpg" alt="Mindfulness"></noscript>
+																	</div>
+							</div>
+												<div class="tab-pane slide-down" id="nav-6" role="tabpanel" aria-labelledby="nav-tab-6" tabindex="0">
+								<div class="tab-data mt-6 mt-sm-8 d-flex flex-column flex-sm-row gap-8 align-items-sm-end align-items-start justify-content-between">
+									<div>
+										<p class="s1 s2-lg s3-sm tab-title">Aquatics</p>
+										<p class="b2 b3-lg b4-sm tab-desc mt-3 mt-sm-4">Immerse yourself in the transformative essence of aquatics, where movement merges seamlessly with water&#8217;s fluidity to elevate both strength and mindfulness. Join our Aquatics sessions thoughtfully crafted to nurture your holistic well-being.</p>
+									</div>
+																			<a class="btn btn-primary" href="https://www.veofitness.com/en/movements/aquatics/" >
+											View details										</a>
+																	</div>
+								<div class="tab-media mt-8 mt-sm-9">
+																			<img width="1267" height="384" decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201267%20384'%3E%3C/svg%3E" alt="Aquatics" data-lazy-src="https://veofitness.azureedge.net/wp-content/uploads/2024/02/AQUATICS-AT-VEO.jpg"><noscript><img width="1267" height="384" decoding="async" src="https://veofitness.azureedge.net/wp-content/uploads/2024/02/AQUATICS-AT-VEO.jpg" alt="Aquatics"></noscript>
+																	</div>
+							</div>
+												<div class="tab-pane slide-down" id="nav-7" role="tabpanel" aria-labelledby="nav-tab-7" tabindex="0">
+								<div class="tab-data mt-6 mt-sm-8 d-flex flex-column flex-sm-row gap-8 align-items-sm-end align-items-start justify-content-between">
+									<div>
+										<p class="s1 s2-lg s3-sm tab-title">Cardio</p>
+										<p class="b2 b3-lg b4-sm tab-desc mt-3 mt-sm-4">Cardio Boost your energy and invigorate your spirit with our Cardio sessions, featuring dynamic workouts that elevate your heart rate and enhance cardiovascular health. Dive into high-intensity interval training (HIIT), exhilarating dance cardio, and pulse-pounding circuits designed to ignite calorie burn, increase endurance, and elevate mood, fostering vitality and holistic wellness.</p>
+									</div>
+																			<a class="btn btn-primary" href="https://www.veofitness.com/en/movements/cardio/" >
+											View details										</a>
+																	</div>
+								<div class="tab-media mt-8 mt-sm-9">
+																			<img width="1791" height="650" decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201791%20650'%3E%3C/svg%3E" alt="Cardio" data-lazy-src="https://veofitness.azureedge.net/wp-content/uploads/2024/02/cardio-ed.jpg"><noscript><img width="1791" height="650" decoding="async" src="https://veofitness.azureedge.net/wp-content/uploads/2024/02/cardio-ed.jpg" alt="Cardio"></noscript>
+																	</div>
+							</div>
+												<div class="tab-pane slide-down" id="nav-8" role="tabpanel" aria-labelledby="nav-tab-8" tabindex="0">
+								<div class="tab-data mt-6 mt-sm-8 d-flex flex-column flex-sm-row gap-8 align-items-sm-end align-items-start justify-content-between">
+									<div>
+										<p class="s1 s2-lg s3-sm tab-title">Dance</p>
+										<p class="b2 b3-lg b4-sm tab-desc mt-3 mt-sm-4">Engage in our dynamic dance sessions for a well-rounded fitness regimen, blending lively choreography and rhythmic tunes to support weight loss, muscle toning, and stress relief, ensuring functional benefits with a touch of fun and vitality.</p>
+									</div>
+																			<a class="btn btn-primary" href="https://www.veofitness.com/en/movements/dance/" >
+											View details										</a>
+																	</div>
+								<div class="tab-media mt-8 mt-sm-9">
+																			<img width="1440" height="620" decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201440%20620'%3E%3C/svg%3E" alt="Dance" data-lazy-src="https://veofitness.azureedge.net/wp-content/uploads/2024/02/ZUMBA-VEO-BY-EMAAR.jpg"><noscript><img width="1440" height="620" decoding="async" src="https://veofitness.azureedge.net/wp-content/uploads/2024/02/ZUMBA-VEO-BY-EMAAR.jpg" alt="Dance"></noscript>
+																	</div>
+							</div>
+												<div class="tab-pane slide-down" id="nav-9" role="tabpanel" aria-labelledby="nav-tab-9" tabindex="0">
+								<div class="tab-data mt-6 mt-sm-8 d-flex flex-column flex-sm-row gap-8 align-items-sm-end align-items-start justify-content-between">
+									<div>
+										<p class="s1 s2-lg s3-sm tab-title">Cycling</p>
+										<p class="b2 b3-lg b4-sm tab-desc mt-3 mt-sm-4">Feel the ultimate thrill with our indoor cycling experience. Engage in high-energy classes set to exhilarating beats, where you&#8217;ll burn calories, boost endurance, and sculpt lean muscle in a stimulating ambience designed to keep you pushing your limits, session after session.	Feel the ultimate thrill with our indoor cycling experience. Engage in high-energy classes set to exhilarating beats, where you&#8217;ll burn calories, boost endurance, and sculpt lean muscle in a stimulating ambience designed to keep you pushing your limits, session after session.</p>
+									</div>
+																			<a class="btn btn-primary" href="https://www.veofitness.com/en/movements/cycling/" >
+											View details										</a>
+																	</div>
+								<div class="tab-media mt-8 mt-sm-9">
+																			<img width="1440" height="620" decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201440%20620'%3E%3C/svg%3E" alt="Cycling" data-lazy-src="https://veofitness.azureedge.net/wp-content/uploads/2024/02/CYCLING-AT-VEO.jpg"><noscript><img width="1440" height="620" decoding="async" src="https://veofitness.azureedge.net/wp-content/uploads/2024/02/CYCLING-AT-VEO.jpg" alt="Cycling"></noscript>
+																	</div>
+							</div>
+									</div>
+			</div>
+		</div>
+</section>
+
+
+<section class="membership py-8 py-md-10 py-lg-11 bg-bg-one">
+  <div class="primary-container">
+    <p class="s4 text-secondary pb-3 text-uppercase card-subtitle">MEMBERSHIP</p>    <div class="main-content pt-6">
+      <div class="text-content d-flex align-items-center justify-content-between">
+        <div class="text-box w-100">
+          <h2 class="h3 h4-md h5-sm">Fitness redefined</h2>        </div>
+        <div class="cta">
+                      <a class="btn btn-primary" href="https://www.veofitness.com/en/membership/" >
+              View Details            </a>
+                  </div>
+      </div>
+      <div class="membership-content mt-8 mt-md-14 mt-lg-16 d-flex gap-4">
+        <div class="membership-container-lg d-none d-sm-grid">
+                        <div class="membership-card px-4 pt-5 pb-6">
+                <div class="card-header">
+                  <img width="122" height="40" decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20122%2040'%3E%3C/svg%3E" alt="" class="card-logo" data-lazy-src="https://veofitness.azureedge.net/wp-content/themes/bootscore-child-custom/img/icons/veo.svg"><noscript><img width="122" height="40" decoding="async" src="https://veofitness.azureedge.net/wp-content/themes/bootscore-child-custom/img/icons/veo.svg" alt="" class="card-logo"></noscript>
+                  <p class="s1 s2-lg text-light mt-1">Teens Membership</p>
+                </div>
+                <div class="card-body">
+                  <p class="b3 b4-lg text-light mt-4">Refers to a membership plan for teenagers ages 13-15</p>
+                  <a href="https://www.veofitness.com/en/membership/" class="btn arrow-straight mt-5"></a>
+                </div>
+                <div class="card-footer">
+                                      <img width="508" height="652" decoding="async" class="membership-img" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20508%20652'%3E%3C/svg%3E" alt="Teens Membership" data-lazy-src="https://veofitness.azureedge.net/wp-content/uploads/2024/03/Kids-Club-Membership.png"><noscript><img width="508" height="652" decoding="async" class="membership-img" src="https://veofitness.azureedge.net/wp-content/uploads/2024/03/Kids-Club-Membership.png" alt="Teens Membership"></noscript>
+                                  </div>
+              </div>
+                        <div class="membership-card px-4 pt-5 pb-6">
+                <div class="card-header">
+                  <img width="122" height="40" decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20122%2040'%3E%3C/svg%3E" alt="" class="card-logo" data-lazy-src="https://veofitness.azureedge.net/wp-content/themes/bootscore-child-custom/img/icons/veo.svg"><noscript><img width="122" height="40" decoding="async" src="https://veofitness.azureedge.net/wp-content/themes/bootscore-child-custom/img/icons/veo.svg" alt="" class="card-logo"></noscript>
+                  <p class="s1 s2-lg text-light mt-1">Single Club Membership</p>
+                </div>
+                <div class="card-body">
+                  <p class="b3 b4-lg text-light mt-4">Refers to a membership plan that grants access to one specific gym location or club</p>
+                  <a href="https://www.veofitness.com/en/membership/" class="btn arrow-straight mt-5"></a>
+                </div>
+                <div class="card-footer">
+                                      <img width="624" height="656" decoding="async" class="membership-img" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20624%20656'%3E%3C/svg%3E" alt="Single Club Membership" data-lazy-src="https://veofitness.azureedge.net/wp-content/uploads/2024/01/Single-Club-Membership.png"><noscript><img width="624" height="656" decoding="async" class="membership-img" src="https://veofitness.azureedge.net/wp-content/uploads/2024/01/Single-Club-Membership.png" alt="Single Club Membership"></noscript>
+                                  </div>
+              </div>
+                        <div class="membership-card px-4 pt-5 pb-6">
+                <div class="card-header">
+                  <img width="122" height="40" decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20122%2040'%3E%3C/svg%3E" alt="" class="card-logo" data-lazy-src="https://veofitness.azureedge.net/wp-content/themes/bootscore-child-custom/img/icons/veo.svg"><noscript><img width="122" height="40" decoding="async" src="https://veofitness.azureedge.net/wp-content/themes/bootscore-child-custom/img/icons/veo.svg" alt="" class="card-logo"></noscript>
+                  <p class="s1 s2-lg text-light mt-1">Double Membership</p>
+                </div>
+                <div class="card-body">
+                  <p class="b3 b4-lg text-light mt-4">Refers to a membership plan that grants access to 2 gym locations or clubs</p>
+                  <a href="https://www.veofitness.com/en/membership/" class="btn arrow-straight mt-5"></a>
+                </div>
+                <div class="card-footer">
+                                      <img width="1041" height="1323" decoding="async" class="membership-img" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201041%201323'%3E%3C/svg%3E" alt="Double Membership" data-lazy-src="https://veofitness.azureedge.net/wp-content/uploads/2024/01/DOUBLE-MEMBERSHIP-AT-VEO-1.png"><noscript><img width="1041" height="1323" decoding="async" class="membership-img" src="https://veofitness.azureedge.net/wp-content/uploads/2024/01/DOUBLE-MEMBERSHIP-AT-VEO-1.png" alt="Double Membership"></noscript>
+                                  </div>
+              </div>
+                        <div class="membership-card px-4 pt-5 pb-6">
+                <div class="card-header">
+                  <img width="122" height="40" decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20122%2040'%3E%3C/svg%3E" alt="" class="card-logo" data-lazy-src="https://veofitness.azureedge.net/wp-content/themes/bootscore-child-custom/img/icons/veo.svg"><noscript><img width="122" height="40" decoding="async" src="https://veofitness.azureedge.net/wp-content/themes/bootscore-child-custom/img/icons/veo.svg" alt="" class="card-logo"></noscript>
+                  <p class="s1 s2-lg text-light mt-1">Duo Club Membership</p>
+                </div>
+                <div class="card-body">
+                  <p class="b3 b4-lg text-light mt-4">Refers to a membership plan for 2 related individuals who opt to access all clubs and get additional discount by joining together</p>
+                  <a href="https://www.veofitness.com/en/membership/" class="btn arrow-straight mt-5"></a>
+                </div>
+                <div class="card-footer">
+                                      <img width="544" height="620" decoding="async" class="membership-img" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20544%20620'%3E%3C/svg%3E" alt="Duo Club Membership" data-lazy-src="https://veofitness.azureedge.net/wp-content/uploads/2024/01/Duo-Club-Membership.png"><noscript><img width="544" height="620" decoding="async" class="membership-img" src="https://veofitness.azureedge.net/wp-content/uploads/2024/01/Duo-Club-Membership.png" alt="Duo Club Membership"></noscript>
+                                  </div>
+              </div>
+                        <div class="membership-card px-4 pt-5 pb-6">
+                <div class="card-header">
+                  <img width="122" height="40" decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20122%2040'%3E%3C/svg%3E" alt="" class="card-logo" data-lazy-src="https://veofitness.azureedge.net/wp-content/themes/bootscore-child-custom/img/icons/veo.svg"><noscript><img width="122" height="40" decoding="async" src="https://veofitness.azureedge.net/wp-content/themes/bootscore-child-custom/img/icons/veo.svg" alt="" class="card-logo"></noscript>
+                  <p class="s1 s2-lg text-light mt-1">Premium Membership</p>
+                </div>
+                <div class="card-body">
+                  <p class="b3 b4-lg text-light mt-4">Refers to a membership plan that grants access to all Veo gym locations or clubs</p>
+                  <a href="https://www.veofitness.com/en/membership/" class="btn arrow-straight mt-5"></a>
+                </div>
+                <div class="card-footer">
+                                      <img width="584" height="628" decoding="async" class="membership-img" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20584%20628'%3E%3C/svg%3E" alt="Premium Membership" data-lazy-src="https://veofitness.azureedge.net/wp-content/uploads/2024/01/Premium-Club-Membership.png"><noscript><img width="584" height="628" decoding="async" class="membership-img" src="https://veofitness.azureedge.net/wp-content/uploads/2024/01/Premium-Club-Membership.png" alt="Premium Membership"></noscript>
+                                  </div>
+              </div>
+                  </div>
+        <div class="membership-container-sm d-sm-none w-100">
+          <div class="membership-swiper">
+            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                    <div class="membership-card px-4 pt-5 pb-6">
+                      <div class="card-header">
+                        <img width="122" height="40" decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20122%2040'%3E%3C/svg%3E" alt="" class="card-logo" data-lazy-src="https://veofitness.azureedge.net/wp-content/themes/bootscore-child-custom/img/icons/veo.svg"><noscript><img width="122" height="40" decoding="async" src="https://veofitness.azureedge.net/wp-content/themes/bootscore-child-custom/img/icons/veo.svg" alt="" class="card-logo"></noscript>
+                        <p class="s1 s2-lg text-light mt-1">Teens Membership</p>
+                      </div>
+                      <div class="card-body">
+                        <p class="b3 b4-lg text-light mt-4">Refers to a membership plan for teenagers ages 13-15</p>
+                        <a href="https://www.veofitness.com/en/membership/" class="btn arrow-straight mt-5"></a>
+                      </div>
+                      <div class="card-footer">
+                                                  <img width="508" height="652" decoding="async" class="membership-img" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20508%20652'%3E%3C/svg%3E" alt="Teens Membership" data-lazy-src="https://veofitness.azureedge.net/wp-content/uploads/2024/03/Kids-Club-Membership.png"><noscript><img width="508" height="652" decoding="async" class="membership-img" src="https://veofitness.azureedge.net/wp-content/uploads/2024/03/Kids-Club-Membership.png" alt="Teens Membership"></noscript>
+                                              </div>
+                    </div>
+                  </div>
+                                <div class="swiper-slide">
+                    <div class="membership-card px-4 pt-5 pb-6">
+                      <div class="card-header">
+                        <img width="122" height="40" decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20122%2040'%3E%3C/svg%3E" alt="" class="card-logo" data-lazy-src="https://veofitness.azureedge.net/wp-content/themes/bootscore-child-custom/img/icons/veo.svg"><noscript><img width="122" height="40" decoding="async" src="https://veofitness.azureedge.net/wp-content/themes/bootscore-child-custom/img/icons/veo.svg" alt="" class="card-logo"></noscript>
+                        <p class="s1 s2-lg text-light mt-1">Single Club Membership</p>
+                      </div>
+                      <div class="card-body">
+                        <p class="b3 b4-lg text-light mt-4">Refers to a membership plan that grants access to one specific gym location or club</p>
+                        <a href="https://www.veofitness.com/en/membership/" class="btn arrow-straight mt-5"></a>
+                      </div>
+                      <div class="card-footer">
+                                                  <img width="624" height="656" decoding="async" class="membership-img" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20624%20656'%3E%3C/svg%3E" alt="Single Club Membership" data-lazy-src="https://veofitness.azureedge.net/wp-content/uploads/2024/01/Single-Club-Membership.png"><noscript><img width="624" height="656" decoding="async" class="membership-img" src="https://veofitness.azureedge.net/wp-content/uploads/2024/01/Single-Club-Membership.png" alt="Single Club Membership"></noscript>
+                                              </div>
+                    </div>
+                  </div>
+                                <div class="swiper-slide">
+                    <div class="membership-card px-4 pt-5 pb-6">
+                      <div class="card-header">
+                        <img width="122" height="40" decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20122%2040'%3E%3C/svg%3E" alt="" class="card-logo" data-lazy-src="https://veofitness.azureedge.net/wp-content/themes/bootscore-child-custom/img/icons/veo.svg"><noscript><img width="122" height="40" decoding="async" src="https://veofitness.azureedge.net/wp-content/themes/bootscore-child-custom/img/icons/veo.svg" alt="" class="card-logo"></noscript>
+                        <p class="s1 s2-lg text-light mt-1">Double Membership</p>
+                      </div>
+                      <div class="card-body">
+                        <p class="b3 b4-lg text-light mt-4">Refers to a membership plan that grants access to 2 gym locations or clubs</p>
+                        <a href="https://www.veofitness.com/en/membership/" class="btn arrow-straight mt-5"></a>
+                      </div>
+                      <div class="card-footer">
+                                                  <img width="1041" height="1323" decoding="async" class="membership-img" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201041%201323'%3E%3C/svg%3E" alt="Double Membership" data-lazy-src="https://veofitness.azureedge.net/wp-content/uploads/2024/01/DOUBLE-MEMBERSHIP-AT-VEO-1.png"><noscript><img width="1041" height="1323" decoding="async" class="membership-img" src="https://veofitness.azureedge.net/wp-content/uploads/2024/01/DOUBLE-MEMBERSHIP-AT-VEO-1.png" alt="Double Membership"></noscript>
+                                              </div>
+                    </div>
+                  </div>
+                                <div class="swiper-slide">
+                    <div class="membership-card px-4 pt-5 pb-6">
+                      <div class="card-header">
+                        <img width="122" height="40" decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20122%2040'%3E%3C/svg%3E" alt="" class="card-logo" data-lazy-src="https://veofitness.azureedge.net/wp-content/themes/bootscore-child-custom/img/icons/veo.svg"><noscript><img width="122" height="40" decoding="async" src="https://veofitness.azureedge.net/wp-content/themes/bootscore-child-custom/img/icons/veo.svg" alt="" class="card-logo"></noscript>
+                        <p class="s1 s2-lg text-light mt-1">Duo Club Membership</p>
+                      </div>
+                      <div class="card-body">
+                        <p class="b3 b4-lg text-light mt-4">Refers to a membership plan for 2 related individuals who opt to access all clubs and get additional discount by joining together</p>
+                        <a href="https://www.veofitness.com/en/membership/" class="btn arrow-straight mt-5"></a>
+                      </div>
+                      <div class="card-footer">
+                                                  <img width="544" height="620" decoding="async" class="membership-img" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20544%20620'%3E%3C/svg%3E" alt="Duo Club Membership" data-lazy-src="https://veofitness.azureedge.net/wp-content/uploads/2024/01/Duo-Club-Membership.png"><noscript><img width="544" height="620" decoding="async" class="membership-img" src="https://veofitness.azureedge.net/wp-content/uploads/2024/01/Duo-Club-Membership.png" alt="Duo Club Membership"></noscript>
+                                              </div>
+                    </div>
+                  </div>
+                                <div class="swiper-slide">
+                    <div class="membership-card px-4 pt-5 pb-6">
+                      <div class="card-header">
+                        <img width="122" height="40" decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20122%2040'%3E%3C/svg%3E" alt="" class="card-logo" data-lazy-src="https://veofitness.azureedge.net/wp-content/themes/bootscore-child-custom/img/icons/veo.svg"><noscript><img width="122" height="40" decoding="async" src="https://veofitness.azureedge.net/wp-content/themes/bootscore-child-custom/img/icons/veo.svg" alt="" class="card-logo"></noscript>
+                        <p class="s1 s2-lg text-light mt-1">Premium Membership</p>
+                      </div>
+                      <div class="card-body">
+                        <p class="b3 b4-lg text-light mt-4">Refers to a membership plan that grants access to all Veo gym locations or clubs</p>
+                        <a href="https://www.veofitness.com/en/membership/" class="btn arrow-straight mt-5"></a>
+                      </div>
+                      <div class="card-footer">
+                                                  <img width="584" height="628" decoding="async" class="membership-img" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20584%20628'%3E%3C/svg%3E" alt="Premium Membership" data-lazy-src="https://veofitness.azureedge.net/wp-content/uploads/2024/01/Premium-Club-Membership.png"><noscript><img width="584" height="628" decoding="async" class="membership-img" src="https://veofitness.azureedge.net/wp-content/uploads/2024/01/Premium-Club-Membership.png" alt="Premium Membership"></noscript>
+                                              </div>
+                    </div>
+                  </div>
+                          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="dine py-9 py-md-10 py-lg-11 bg-bg-one">
+  <div class="primary-container">
+    <p class="s4 text-secondary pb-3 text-uppercase card-subtitle">NUTRITION</p>    <div class="main-content pt-5 pt-lg-6">
+      <div class="text-content d-flex align-items-end justify-content-between">
+        <div class="text-box w-100">
+          <div class="d-flex align-items-center justify-content-between">
+            <h2 class="h3 h4-md h5-sm">Café</h2>                          <a class="btn btn-primary d-md-none" href="https://www.veofitness.com/en/cafe/" >
+                View Details              </a>
+                      </div>
+          <p class="b2 b3-md b4-sm mt-5 mt-lg-6">Designated indoor and outdoor dining areas provide a wide selection of food beverage options with menus that offer clean, wholesome ingredients and support our members’ wellness goals.</p>        </div>
+        <div class="cta d-none d-md-block">
+                      <a class="btn btn-primary" href="https://www.veofitness.com/en/cafe/" >
+              View Details            </a>
+                  </div>
+      </div>
+      <div class="media-content mt-10 mt-md-14 mt-lg-16 d-flex gap-4">
+        <img decoding="async" width="630" height="360" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20630%20360'%3E%3C/svg%3E" class="" alt="" data-lazy-srcset="https://veofitness.azureedge.net/wp-content/uploads/2024/03/Nutrition-1.jpeg 630w,https://veofitness.azureedge.net/wp-content/uploads/2024/03/Nutrition-1-300x171.jpeg.webp 300w" data-lazy-sizes="(max-width: 630px) 100vw, 630px" data-lazy-src="https://veofitness.azureedge.net/wp-content/uploads/2024/03/Nutrition-1.jpeg" /><noscript><img decoding="async" width="630" height="360" src="https://veofitness.azureedge.net/wp-content/uploads/2024/03/Nutrition-1.jpeg" class="" alt="" srcset="https://veofitness.azureedge.net/wp-content/uploads/2024/03/Nutrition-1.jpeg 630w,https://veofitness.azureedge.net/wp-content/uploads/2024/03/Nutrition-1-300x171.jpeg.webp 300w" sizes="(max-width: 630px) 100vw, 630px" /></noscript><img decoding="async" width="630" height="360" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20630%20360'%3E%3C/svg%3E" class="" alt="" data-lazy-srcset="https://veofitness.azureedge.net/wp-content/uploads/2024/03/Nutrition-2.jpeg 630w,https://veofitness.azureedge.net/wp-content/uploads/2024/03/Nutrition-2-300x171.jpeg.webp 300w" data-lazy-sizes="(max-width: 630px) 100vw, 630px" data-lazy-src="https://veofitness.azureedge.net/wp-content/uploads/2024/03/Nutrition-2.jpeg" /><noscript><img decoding="async" width="630" height="360" src="https://veofitness.azureedge.net/wp-content/uploads/2024/03/Nutrition-2.jpeg" class="" alt="" srcset="https://veofitness.azureedge.net/wp-content/uploads/2024/03/Nutrition-2.jpeg 630w,https://veofitness.azureedge.net/wp-content/uploads/2024/03/Nutrition-2-300x171.jpeg.webp 300w" sizes="(max-width: 630px) 100vw, 630px" /></noscript>      </div>
+    </div>
+  </div>
+</section>
+
+<section class="general-about-section bg-bg-one">
+  <div class="general-about-block-container primary-container  pt-sm-3 pt-md-8 pb-md-8 pb-sm-3 pb-15">
+    <div class="general-about-block border-bottom-secondary overflow-hidden">
+      <p class="s4 text-secondary pb-3 text-uppercase block-subtitle">Partnership</p>      <div class="row g-0 pt-6 pt-lg-10">
+        <div class="col-12 col-md-6 order-2 order-md-2 ps-md-5 ps-lg-6 ">
+          <h2 class="h5-sm h4-lg h3 pb-md-6 pb-5 pt-6 pt-md-0">Get fit to the fullest with Vida hotels and Resorts</h2><p class="b4-sm b3-lg b2 mt-md-0">We partnered with Vida Hotels and Resorts to bring you premium wellness experiences, to live the good life, alive and inspired.</p>            <a class="btn mt-6 mt-lg-9 btn-arrow-square-out b3" href="https://www.vidahotels.com/en/" target="_blank">
+              Learn More            </a>
+                  </div>
+        <div class="col-12 col-md-6  order-1 order-md-1 pe-md-5 pe-lg-6">
+          <img decoding="async" width="764" height="548" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20764%20548'%3E%3C/svg%3E" class="object-fit-cover rounded-4 image-bg h-100 w-100" alt="" data-lazy-srcset="https://veofitness.azureedge.net/wp-content/uploads/2024/03/VIDA-HOTELS-X-VEO-FITNESS.jpg 764w,https://veofitness.azureedge.net/wp-content/uploads/2024/03/VIDA-HOTELS-X-VEO-FITNESS-300x215.jpg.webp 300w" data-lazy-sizes="(max-width: 764px) 100vw, 764px" data-lazy-src="https://veofitness.azureedge.net/wp-content/uploads/2024/03/VIDA-HOTELS-X-VEO-FITNESS.jpg" /><noscript><img decoding="async" width="764" height="548" src="https://veofitness.azureedge.net/wp-content/uploads/2024/03/VIDA-HOTELS-X-VEO-FITNESS.jpg" class="object-fit-cover rounded-4 image-bg h-100 w-100" alt="" srcset="https://veofitness.azureedge.net/wp-content/uploads/2024/03/VIDA-HOTELS-X-VEO-FITNESS.jpg 764w,https://veofitness.azureedge.net/wp-content/uploads/2024/03/VIDA-HOTELS-X-VEO-FITNESS-300x215.jpg.webp 300w" sizes="(max-width: 764px) 100vw, 764px" /></noscript>        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="location py-9 py-md-10 py-lg-11 bg-bg-one">
+	<div class="primary-container">
+		<div class="main-content pt-6">
+			<div class="text-content d-flex align-items-end justify-content-between">
+				<div class="w-100 d-flex align-items-center justify-content-between">
+					<h2 class="h3 h4-md h5-sm">Locations</h2>						<a class="btn btn-primary" href="https://www.veofitness.com/en/locations/" >
+							View Details						</a>
+									</div>
+			</div>
+			<div class="swiper-navigation cards-swiper-header mt-7">
+				<div class="swipper-container d-flex justify-content-between">
+					<button class="swiper-button-prev"></button>
+					<button class="swiper-button-next"></button>
+				</div>
+			</div>
+			<div class="location-cards mt-10 mt-md-2 d-flex gap-4">
+				<div class="location-swiper">
+					<div class="swiper-wrapper">
+														<div class="swiper-slide">
+									<div data-lat="25.0315" data-lng=" 55.2713" class="location-card rounded-4 h-100 bg-white px-4 px-lg-6 pb-6 pb-lg-8 pt-8 pt-md-9 position-relative">
+										<span class="card-counter h2 text-secondary-3">1</span>
+										<p class="s1 s2-md s3-sm">VEO Arabian Ranches 2</p>
+										<div class="d-flex gap-sm flex-column mt-5">
+																							<p class="d-flex gap-sm align-items-start b4">
+													<img width="24" height="24" decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3E%3C/svg%3E" class="card-icon" data-lazy-src="https://veofitness.azureedge.net/wp-content/themes/bootscore-child-custom/img/icons/map-pin.svg"><noscript><img width="24" height="24" decoding="async" src="https://veofitness.azureedge.net/wp-content/themes/bootscore-child-custom/img/icons/map-pin.svg" class="card-icon"></noscript><span class="line-clamp">
+																												<a href="https://www.google.com/maps/place/Veo+Arabian+Ranches+2/@25.0312058,55.2710108,17z/data=!3m1!4b1!4m6!3m5!1s0x3e5f6f5e385e5821:0x986319f21b5acbed!8m2!3d25.0312058!4d55.2710108!16s%2Fg%2F11lyzz80j1?entry=ttu&amp;g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="email-link b4">The Leisure centre &#8211; Arabian Ranches 2 &#8211; Dubai</a>
+													</span>
+												</p>
+																							<p class="d-flex gap-sm align-items-start b4">
+													<img width="24" height="24" decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3E%3C/svg%3E" class="card-icon" data-lazy-src="https://veofitness.azureedge.net/wp-content/themes/bootscore-child-custom/img/icons/phone.svg"><noscript><img width="24" height="24" decoding="async" src="https://veofitness.azureedge.net/wp-content/themes/bootscore-child-custom/img/icons/phone.svg" class="card-icon"></noscript><span><a href="tel:800836496">800 VEO GYM</a>													</span>
+												</p>
+																					</div>
+									</div>
+								</div>
+														<div class="swiper-slide">
+									<div data-lat="25.05450621176881" data-lng="55.17055565959022" class="location-card rounded-4 h-100 bg-white px-4 px-lg-6 pb-6 pb-lg-8 pt-8 pt-md-9 position-relative">
+										<span class="card-counter h2 text-secondary-3">2</span>
+										<p class="s1 s2-md s3-sm">VEO Meadows Town Center</p>
+										<div class="d-flex gap-sm flex-column mt-5">
+																							<p class="d-flex gap-sm align-items-start b4">
+													<img width="24" height="24" decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3E%3C/svg%3E" class="card-icon" data-lazy-src="https://veofitness.azureedge.net/wp-content/themes/bootscore-child-custom/img/icons/map-pin.svg"><noscript><img width="24" height="24" decoding="async" src="https://veofitness.azureedge.net/wp-content/themes/bootscore-child-custom/img/icons/map-pin.svg" class="card-icon"></noscript><span class="line-clamp">
+																												<a href="https://www.google.com/maps/place/25%C2%B003'16.0%22N+55%C2%B010'14.0%22E/@25.0543179,55.1700219,19z/data=!4m4!3m3!8m2!3d25.0544444!4d55.1705556?entry=ttu" target="_blank" class="email-link b4">The Town Center, Dubai, UAE, PO Box 9440,</a>
+													</span>
+												</p>
+																							<p class="d-flex gap-sm align-items-start b4">
+													<img width="24" height="24" decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3E%3C/svg%3E" class="card-icon" data-lazy-src="https://veofitness.azureedge.net/wp-content/themes/bootscore-child-custom/img/icons/phone.svg"><noscript><img width="24" height="24" decoding="async" src="https://veofitness.azureedge.net/wp-content/themes/bootscore-child-custom/img/icons/phone.svg" class="card-icon"></noscript><span><a href="tel:800836496">800 VEO GYM</a>													</span>
+												</p>
+																					</div>
+									</div>
+								</div>
+														<div class="swiper-slide">
+									<div data-lat="25.081774846124272" data-lng="55.16676851817334" class="location-card rounded-4 h-100 bg-white px-4 px-lg-6 pb-6 pb-lg-8 pt-8 pt-md-9 position-relative">
+										<span class="card-counter h2 text-secondary-3">3</span>
+										<p class="s1 s2-md s3-sm">VEO Hayya Lakes</p>
+										<div class="d-flex gap-sm flex-column mt-5">
+																							<p class="d-flex gap-sm align-items-start b4">
+													<img width="24" height="24" decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3E%3C/svg%3E" class="card-icon" data-lazy-src="https://veofitness.azureedge.net/wp-content/themes/bootscore-child-custom/img/icons/map-pin.svg"><noscript><img width="24" height="24" decoding="async" src="https://veofitness.azureedge.net/wp-content/themes/bootscore-child-custom/img/icons/map-pin.svg" class="card-icon"></noscript><span class="line-clamp">
+																												<a href="https://www.google.com/maps/dir/25.1068416,55.181312/veo+hayya+lakes/@25.0877605,55.1348395,13z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x3e5f6d5b39989d07:0xfd7331bd84dbb09c!2m2!1d55.1673124!2d25.0790286?entry=ttu" target="_blank" class="email-link b4">Living Community Lakes, The Lakes Dubai, Dubai, UAE</a>
+													</span>
+												</p>
+																							<p class="d-flex gap-sm align-items-start b4">
+													<img width="24" height="24" decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3E%3C/svg%3E" class="card-icon" data-lazy-src="https://veofitness.azureedge.net/wp-content/themes/bootscore-child-custom/img/icons/phone.svg"><noscript><img width="24" height="24" decoding="async" src="https://veofitness.azureedge.net/wp-content/themes/bootscore-child-custom/img/icons/phone.svg" class="card-icon"></noscript><span><a href="tel:800836496">800 VEO GYM</a>													</span>
+												</p>
+																					</div>
+									</div>
+								</div>
+														<div class="swiper-slide">
+									<div data-lat="25.191115889192673" data-lng="55.27848172281583" class="location-card rounded-4 h-100 bg-white px-4 px-lg-6 pb-6 pb-lg-8 pt-8 pt-md-9 position-relative">
+										<span class="card-counter h2 text-secondary-3">4</span>
+										<p class="s1 s2-md s3-sm">VEO Manzil</p>
+										<div class="d-flex gap-sm flex-column mt-5">
+																							<p class="d-flex gap-sm align-items-start b4">
+													<img width="24" height="24" decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3E%3C/svg%3E" class="card-icon" data-lazy-src="https://veofitness.azureedge.net/wp-content/themes/bootscore-child-custom/img/icons/map-pin.svg"><noscript><img width="24" height="24" decoding="async" src="https://veofitness.azureedge.net/wp-content/themes/bootscore-child-custom/img/icons/map-pin.svg" class="card-icon"></noscript><span class="line-clamp">
+																												<a href="https://www.google.com/maps/place/Veo+Manzil/@25.1908732,55.2785461,17z/data=!3m1!4b1!4m6!3m5!1s0x3e5f692e3dc1f8c5:0xae65662ca608bad1!8m2!3d25.1908732!4d55.2785461!16s%2Fg%2F11ld52_p12?entry=ttu" target="_blank" class="email-link b4">Downtown Dubai Community, Old Town in Al Manzil District, Dubai, UAE PO Box 9440</a>
+													</span>
+												</p>
+																							<p class="d-flex gap-sm align-items-start b4">
+													<img width="24" height="24" decoding="async" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3E%3C/svg%3E" class="card-icon" data-lazy-src="https://veofitness.azureedge.net/wp-content/themes/bootscore-child-custom/img/icons/phone.svg"><noscript><img width="24" height="24" decoding="async" src="https://veofitness.azureedge.net/wp-content/themes/bootscore-child-custom/img/icons/phone.svg" class="card-icon"></noscript><span><a href="tel:800836496">800 VEO GYM</a>													</span>
+												</p>
+																					</div>
+									</div>
+								</div>
+											</div>
+				</div>
+			</div>
+			<div class="map-box mt-10"></div>
+		</div>
+	</div>
+</section>
+
+
+
+        </div>
+
+      </main>
+
+    </div>
+  </div>
+
+
+<footer class="footer bg-light px-0 pb-0 border-top border-gray-disabled">
+  <div class="primary-container ">
+    <div class="footer-top-container d-xl-flex justify-content-xl-between gap-14">
+      <div class="footer-top-logo-wrapper d-flex justify-content-between flex-xl-column justify-content-xl-start gap-xl-14 mb-11">
+        <div class="veo-logo-box">
+                  </div>
+        <div class="social-logo-box d-flex gap-3">
+                                      </div>
+      </div>
+      <div class="footer-links-container d-flex flex-wrap gap-4 align-items-start pb-0 justify-content-between">
+        <div class="single-footer-link-box d-flex flex-column align-items-start footer-1">
+                      <p class="s3 single-footer-link-box-heading mb-4 mb-sm-5">Quick Links</p>
+            <ul class="single-footer-links p-0">
+            <li  id="menu-item-361" class="menu-item menu-item-type-custom menu-item-object-custom nav-item nav-item-361"><a href="https://www.veofitness.com/en/locations/" class="nav-link ">Locations</a></li>
+<li  id="menu-item-362" class="menu-item menu-item-type-custom menu-item-object-custom nav-item nav-item-362"><a href="https://www.veofitness.com/en/classes/" class="nav-link ">Classes</a></li>
+<li  id="menu-item-363" class="menu-item menu-item-type-custom menu-item-object-custom nav-item nav-item-363"><a href="https://www.veofitness.com/en/personal-training/" class="nav-link ">Personal Training</a></li>
+<li  id="menu-item-364" class="menu-item menu-item-type-custom menu-item-object-custom nav-item nav-item-364"><a href="https://www.veofitness.com/en/timetable/" class="nav-link ">Timetable</a></li>
+<li  id="menu-item-365" class="menu-item menu-item-type-custom menu-item-object-custom nav-item nav-item-365"><a href="https://www.veofitness.com/en/membership/" class="nav-link ">Membership</a></li>
+<li  id="menu-item-367" class="menu-item menu-item-type-custom menu-item-object-custom nav-item nav-item-367"><a href="https://www.veofitness.com/en/cafe/" class="nav-link ">Café</a></li>
+<li  id="menu-item-792" class="menu-item menu-item-type-post_type menu-item-object-page nav-item nav-item-792"><a href="https://www.veofitness.com/en/veo-fitness-app/" class="nav-link ">Veo Fitness App</a></li>
+            </ul>
+        </div>
+        <div class="single-footer-link-box d-flex flex-column align-items-start footer-2">
+                      <p class="s3 single-footer-link-box-heading mb-4 mb-sm-5">Movements</p>
+            <ul class="single-footer-links p-0">
+            <li  id="menu-item-23" class="menu-item menu-item-type-custom menu-item-object-custom nav-item nav-item-23"><a href="https://www.veofitness.com/en/movements/aquatics/" class="nav-link ">Aquatics</a></li>
+<li  id="menu-item-24" class="menu-item menu-item-type-custom menu-item-object-custom nav-item nav-item-24"><a href="https://www.veofitness.com/en/movements/cardio/" class="nav-link ">Cardio</a></li>
+<li  id="menu-item-25" class="menu-item menu-item-type-custom menu-item-object-custom nav-item nav-item-25"><a href="https://www.veofitness.com/en/movements/dance/" class="nav-link ">Dance</a></li>
+<li  id="menu-item-26" class="menu-item menu-item-type-custom menu-item-object-custom nav-item nav-item-26"><a href="https://www.veofitness.com/en/movements/martial-arts/" class="nav-link ">Martial Arts</a></li>
+<li  id="menu-item-27" class="menu-item menu-item-type-custom menu-item-object-custom nav-item nav-item-27"><a href="https://www.veofitness.com/en/movements/mindfulness/" class="nav-link ">Mindfulness</a></li>
+<li  id="menu-item-28" class="menu-item menu-item-type-custom menu-item-object-custom nav-item nav-item-28"><a href="https://www.veofitness.com/en/movements/cycling/" class="nav-link ">Indoor Cycling</a></li>
+<li  id="menu-item-1385" class="menu-item menu-item-type-post_type menu-item-object-movements nav-item nav-item-1385"><a href="https://www.veofitness.com/en/movements/strength/" class="nav-link ">Strength</a></li>
+<li  id="menu-item-1384" class="menu-item menu-item-type-post_type menu-item-object-movements nav-item nav-item-1384"><a href="https://www.veofitness.com/en/movements/racket-sports/" class="nav-link ">Racket Sports</a></li>
+            </ul>
+        </div>
+        <div class="single-footer-link-box d-flex flex-column align-items-start footer-3">
+                      <p class="s3 single-footer-link-box-heading mb-4 mb-sm-5">About VEO</p>
+            <ul class="single-footer-links p-0 ">
+            <li  id="menu-item-30" class="menu-item menu-item-type-custom menu-item-object-custom nav-item nav-item-30"><a href="https://www.veofitness.com/en/contact-us/" class="nav-link ">Contact Us</a></li>
+<li  id="menu-item-31" class="menu-item menu-item-type-custom menu-item-object-custom nav-item nav-item-31"><a href="https://www.veofitness.com/en/faq/" class="nav-link ">FAQ</a></li>
+<li  id="menu-item-32" class="menu-item menu-item-type-custom menu-item-object-custom nav-item nav-item-32"><a target="_blank" href="https://emhm.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/requisitions?sortBy=POSTING_DATES_DESC&amp;keyword=HOSPITALITY" class="nav-link ">Careers</a></li>
+<li  id="menu-item-1989" class="menu-item menu-item-type-post_type menu-item-object-page nav-item nav-item-1989"><a href="https://www.veofitness.com/en/u-by-emaar/" class="nav-link ">U By Emaar</a></li>
+            </ul>
+        </div>
+      </div>
+    </div>
+    <div class="view-all-dropup position-relative close-view">
+      <img width="24" height="24" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3E%3C/svg%3E" class="view-all--close mt-2 position-absolute top-0 w-5 h-5 cursor-pointer" alt="" data-lazy-src="https://veofitness.azureedge.net/wp-content/themes/bootscore-child-custom/img/icons/XSquare.svg"><noscript><img width="24" height="24" src="https://veofitness.azureedge.net/wp-content/themes/bootscore-child-custom/img/icons/XSquare.svg" class="view-all--close mt-2 position-absolute top-0 w-5 h-5 cursor-pointer" alt=""></noscript>
+      <ul class="view-all-list footer-4 ps-0 pb-4 pt-8 mb-0 d-grid justify-content-between">
+        <li  id="menu-item-35" class="menu-item menu-item-type-custom menu-item-object-custom nav-item nav-item-35"><a target="_blank" href="https://properties.emaar.com/en/" class="nav-link ">Properties</a></li>
+<li  id="menu-item-38" class="menu-item menu-item-type-custom menu-item-object-custom nav-item nav-item-38"><a target="_blank" href="https://www.burjkhalifa.ae/en/index.aspx" class="nav-link ">Burj Khalifa</a></li>
+<li  id="menu-item-41" class="menu-item menu-item-type-custom menu-item-object-custom nav-item nav-item-41"><a target="_blank" href="https://reelcinemas.com/en-ae/" class="nav-link ">Reel Cinemas</a></li>
+<li  id="menu-item-44" class="menu-item menu-item-type-custom menu-item-object-custom nav-item nav-item-44"><a target="_blank" href="https://dubai.kidzania.com/en-ae" class="nav-link ">KidZania</a></li>
+<li  id="menu-item-36" class="menu-item menu-item-type-custom menu-item-object-custom nav-item nav-item-36"><a target="_blank" href="https://www.emaarhospitality.com/en/" class="nav-link ">Hospitality</a></li>
+<li  id="menu-item-39" class="menu-item menu-item-type-custom menu-item-object-custom nav-item nav-item-39"><a target="_blank" href="https://www.dubaiopera.com/en-US/home" class="nav-link ">Dubai Opera</a></li>
+<li  id="menu-item-42" class="menu-item menu-item-type-custom menu-item-object-custom nav-item nav-item-42"><a target="_blank" href="https://www.dubaiicerink.com/" class="nav-link ">Dubai Ice Rink</a></li>
+<li  id="menu-item-45" class="menu-item menu-item-type-custom menu-item-object-custom nav-item nav-item-45"><a target="_blank" href="https://www.thedubaiaquarium.com/" class="nav-link ">Dubai Aquarium and Underwater Zoo</a></li>
+<li  id="menu-item-37" class="menu-item menu-item-type-custom menu-item-object-custom nav-item nav-item-37"><a target="_blank" href="https://www.emaarmalls.ae/" class="nav-link ">Malls</a></li>
+<li  id="menu-item-40" class="menu-item menu-item-type-custom menu-item-object-custom nav-item nav-item-40"><a target="_blank" href="https://www.emaarhospitality.com/en/" class="nav-link ">Industries and Investments</a></li>
+<li  id="menu-item-43" class="menu-item menu-item-type-custom menu-item-object-custom nav-item nav-item-43"><a target="_blank" href="https://entertainment.emaar.com/attraction/play-dxb" class="nav-link ">Play Dxb</a></li>
+<li  id="menu-item-46" class="menu-item menu-item-type-custom menu-item-object-custom nav-item nav-item-46"><a target="_blank" href="https://www.ubyemaar.com/" class="nav-link ">U by Emaar</a></li>
+      </ul>
+    </div>
+    <div id="bottomFooter" class="bottom-footer d-flex flex-column gap-6  flex-lg-row justify-content-lg-between justify-content-between">
+      <div class="bottom-footer-left d-flex justify-content-between gap-sm-8 justify-content-sm-start align-items-center">
+        <img width="1267" height="272" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201267%20272'%3E%3C/svg%3E" class="bottom-footer--logo" alt="" data-lazy-src="https://veofitness.azureedge.net/wp-content/themes/bootscore-child-custom/img/icons/emaar-new-logo.svg"><noscript><img width="1267" height="272" src="https://veofitness.azureedge.net/wp-content/themes/bootscore-child-custom/img/icons/emaar-new-logo.svg" class="bottom-footer--logo" alt=""></noscript>
+                  <p class="b4 d-flex gap-2 view_all_footer_btn cursor-pointer">View All Groups Entities<img width="17" height="16" src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2017%2016'%3E%3C/svg%3E" class="footer_chevron_down w-1rem h-1rem" alt="" data-lazy-src="https://veofitness.azureedge.net/wp-content/themes/bootscore-child-custom/img/icons/CaretUp.svg"><noscript><img width="17" height="16" src="https://veofitness.azureedge.net/wp-content/themes/bootscore-child-custom/img/icons/CaretUp.svg" class="footer_chevron_down w-1rem h-1rem" alt=""></noscript></p>
+      </div>
+      <ul class="bottom-footer-right d-flex footer-5 m-0 p-0">
+      <li  id="menu-item-47" class="menu-item menu-item-type-custom menu-item-object-custom nav-item nav-item-47"><a href="https://www.veofitness.com/en/terms-and-conditions/" class="nav-link ">Terms &#038; Conditions</a></li>
+<li  id="menu-item-48" class="menu-item menu-item-type-custom menu-item-object-custom nav-item nav-item-48"><a target="_blank" href="https://www.emaarhospitality.com/en/privacy-policy/?_ga=2.50056239.888711124.1710147897-1191159096.1698921059" class="nav-link ">Privacy Policy</a></li>
+<li  id="menu-item-1930" class="menu-item menu-item-type-post_type menu-item-object-page nav-item nav-item-1930"><a href="https://www.veofitness.com/en/sitemap/" class="nav-link ">Sitemap</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+
+<div class="wpml-ls-statics-footer wpml-ls wpml-ls-legacy-list-horizontal">
+	<ul><li class="wpml-ls-slot-footer wpml-ls-item wpml-ls-item-en wpml-ls-current-language wpml-ls-first-item wpml-ls-last-item wpml-ls-item-legacy-list-horizontal">
+				<a href="https://www.veofitness.com/en/" class="wpml-ls-link">
+                                                        <img width="18" height="12"
+            class="wpml-ls-flag"
+            src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2018%2012'%3E%3C/svg%3E"
+            alt=""
+           
+           
+    data-lazy-src="https://veofitness.azureedge.net/wp-content/plugins/sitepress-multilingual-cms/res/flags/en.svg" /><noscript><img width="18" height="12"
+            class="wpml-ls-flag"
+            src="https://veofitness.azureedge.net/wp-content/plugins/sitepress-multilingual-cms/res/flags/en.svg"
+            alt=""
+           
+           
+    /></noscript><span class="wpml-ls-native">English</span></a>
+			</li></ul>
+</div>
+<link data-minify="1" rel='stylesheet' id='header-css' href='https://veofitness.azureedge.net/wp-content/cache/min/1/wp-content/themes/bootscore-child-custom/css/header.css?ver=1763703577' media='all' />
+<link data-minify="1" rel='stylesheet' id='_banner-homepage-css' href='https://veofitness.azureedge.net/wp-content/cache/min/1/wp-content/themes/bootscore-child-custom/dynamic-blocks/render/css/_banner-homepage.css?ver=1763703577' media='all' />
+<link data-minify="1" rel='stylesheet' id='media-left-content-right-css' href='https://veofitness.azureedge.net/wp-content/cache/min/1/wp-content/themes/bootscore-child-custom/components/layouts/media-left-content-right/index.css?ver=1763703577' media='all' />
+<link data-minify="1" rel='stylesheet' id='_movement-block-css' href='https://veofitness.azureedge.net/wp-content/cache/min/1/wp-content/themes/bootscore-child-custom/dynamic-blocks/render/css/_movement-block.css?ver=1763703577' media='all' />
+<link data-minify="1" rel='stylesheet' id='swiper-css' href='https://veofitness.azureedge.net/wp-content/cache/min/1/wp-content/themes/bootscore-child-custom/css/lib/swiper-bundle.min.css?ver=1763703577' media='all' />
+<link data-minify="1" rel='stylesheet' id='_membership-block-css' href='https://veofitness.azureedge.net/wp-content/cache/min/1/wp-content/themes/bootscore-child-custom/dynamic-blocks/render/css/_membership-block.css?ver=1763703577' media='all' />
+<link data-minify="1" rel='stylesheet' id='_dine-homepage-css' href='https://veofitness.azureedge.net/wp-content/cache/min/1/wp-content/themes/bootscore-child-custom/dynamic-blocks/render/css/_dine-homepage.css?ver=1763703577' media='all' />
+<link data-minify="1" rel='stylesheet' id='general-about-block-css' href='https://veofitness.azureedge.net/wp-content/cache/min/1/wp-content/themes/bootscore-child-custom/dynamic-blocks/render/css/general-about-block.css?ver=1763703577' media='all' />
+<link data-minify="1" rel='stylesheet' id='_location-header-css' href='https://veofitness.azureedge.net/wp-content/cache/min/1/wp-content/themes/bootscore-child-custom/dynamic-blocks/render/css/_location-header.css?ver=1763703577' media='all' />
+<link data-minify="1" rel='stylesheet' id='footer-css' href='https://veofitness.azureedge.net/wp-content/cache/min/1/wp-content/themes/bootscore-child-custom/css/footer.css?ver=1763703577' media='all' />
+<script id="rocket-browser-checker-js-after">
+"use strict";var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||!1,descriptor.configurable=!0,"value"in descriptor&&(descriptor.writable=!0),Object.defineProperty(target,descriptor.key,descriptor)}}return function(Constructor,protoProps,staticProps){return protoProps&&defineProperties(Constructor.prototype,protoProps),staticProps&&defineProperties(Constructor,staticProps),Constructor}}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor))throw new TypeError("Cannot call a class as a function")}var RocketBrowserCompatibilityChecker=function(){function RocketBrowserCompatibilityChecker(options){_classCallCheck(this,RocketBrowserCompatibilityChecker),this.passiveSupported=!1,this._checkPassiveOption(this),this.options=!!this.passiveSupported&&options}return _createClass(RocketBrowserCompatibilityChecker,[{key:"_checkPassiveOption",value:function(self){try{var options={get passive(){return!(self.passiveSupported=!0)}};window.addEventListener("test",null,options),window.removeEventListener("test",null,options)}catch(err){self.passiveSupported=!1}}},{key:"initRequestIdleCallback",value:function(){!1 in window&&(window.requestIdleCallback=function(cb){var start=Date.now();return setTimeout(function(){cb({didTimeout:!1,timeRemaining:function(){return Math.max(0,50-(Date.now()-start))}})},1)}),!1 in window&&(window.cancelIdleCallback=function(id){return clearTimeout(id)})}},{key:"isDataSaverModeOn",value:function(){return"connection"in navigator&&!0===navigator.connection.saveData}},{key:"supportsLinkPrefetch",value:function(){var elem=document.createElement("link");return elem.relList&&elem.relList.supports&&elem.relList.supports("prefetch")&&window.IntersectionObserver&&"isIntersecting"in IntersectionObserverEntry.prototype}},{key:"isSlowConnection",value:function(){return"connection"in navigator&&"effectiveType"in navigator.connection&&("2g"===navigator.connection.effectiveType||"slow-2g"===navigator.connection.effectiveType)}}]),RocketBrowserCompatibilityChecker}();
+</script>
+<script id="rocket-preload-links-js-extra">
+var RocketPreloadLinksConfig = {"excludeUris":"\/(?:.+\/)?feed(?:\/(?:.+\/?)?)?$|\/(?:.+\/)?embed\/|\/(index.php\/)?(.*)wp-json(\/.*|$)|\/refer\/|\/go\/|\/recommend\/|\/recommends\/","usesTrailingSlash":"1","imageExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php","fileExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php|html|htm","siteUrl":"https:\/\/www.veofitness.com\/en\/","onHoverDelay":"100","rateThrottle":"3"};
+</script>
+<script id="rocket-preload-links-js-after">
+(function() {
+"use strict";var r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e=function(){function i(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(e,t,n){return t&&i(e.prototype,t),n&&i(e,n),e}}();function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var t=function(){function n(e,t){i(this,n),this.browser=e,this.config=t,this.options=this.browser.options,this.prefetched=new Set,this.eventTime=null,this.threshold=1111,this.numOnHover=0}return e(n,[{key:"init",value:function(){!this.browser.supportsLinkPrefetch()||this.browser.isDataSaverModeOn()||this.browser.isSlowConnection()||(this.regex={excludeUris:RegExp(this.config.excludeUris,"i"),images:RegExp(".("+this.config.imageExt+")$","i"),fileExt:RegExp(".("+this.config.fileExt+")$","i")},this._initListeners(this))}},{key:"_initListeners",value:function(e){-1<this.config.onHoverDelay&&document.addEventListener("mouseover",e.listener.bind(e),e.listenerOptions),document.addEventListener("mousedown",e.listener.bind(e),e.listenerOptions),document.addEventListener("touchstart",e.listener.bind(e),e.listenerOptions)}},{key:"listener",value:function(e){var t=e.target.closest("a"),n=this._prepareUrl(t);if(null!==n)switch(e.type){case"mousedown":case"touchstart":this._addPrefetchLink(n);break;case"mouseover":this._earlyPrefetch(t,n,"mouseout")}}},{key:"_earlyPrefetch",value:function(t,e,n){var i=this,r=setTimeout(function(){if(r=null,0===i.numOnHover)setTimeout(function(){return i.numOnHover=0},1e3);else if(i.numOnHover>i.config.rateThrottle)return;i.numOnHover++,i._addPrefetchLink(e)},this.config.onHoverDelay);t.addEventListener(n,function e(){t.removeEventListener(n,e,{passive:!0}),null!==r&&(clearTimeout(r),r=null)},{passive:!0})}},{key:"_addPrefetchLink",value:function(i){return this.prefetched.add(i.href),new Promise(function(e,t){var n=document.createElement("link");n.rel="prefetch",n.href=i.href,n.onload=e,n.onerror=t,document.head.appendChild(n)}).catch(function(){})}},{key:"_prepareUrl",value:function(e){if(null===e||"object"!==(void 0===e?"undefined":r(e))||!1 in e||-1===["http:","https:"].indexOf(e.protocol))return null;var t=e.href.substring(0,this.config.siteUrl.length),n=this._getPathname(e.href,t),i={original:e.href,protocol:e.protocol,origin:t,pathname:n,href:t+n};return this._isLinkOk(i)?i:null}},{key:"_getPathname",value:function(e,t){var n=t?e.substring(this.config.siteUrl.length):e;return n.startsWith("/")||(n="/"+n),this._shouldAddTrailingSlash(n)?n+"/":n}},{key:"_shouldAddTrailingSlash",value:function(e){return this.config.usesTrailingSlash&&!e.endsWith("/")&&!this.regex.fileExt.test(e)}},{key:"_isLinkOk",value:function(e){return null!==e&&"object"===(void 0===e?"undefined":r(e))&&(!this.prefetched.has(e.href)&&e.origin===this.config.siteUrl&&-1===e.href.indexOf("?")&&-1===e.href.indexOf("#")&&!this.regex.excludeUris.test(e.href)&&!this.regex.images.test(e.href))}}],[{key:"run",value:function(){"undefined"!=typeof RocketPreloadLinksConfig&&new n(new RocketBrowserCompatibilityChecker({capture:!0,passive:!0}),RocketPreloadLinksConfig).init()}}]),n}();t.run();
+}());
+</script>
+<script id="gtm-js-before">
+window.google_apps = {"recaptcha_site_key":"6Ld_JNIbAAAAAPu9Dbv8WgBHfIYmdKBzNh-7w72X","gtm_key":"GTM-NLRN25HQ","google_map_key":"AIzaSyDmjm6sgCRzXdQ4GaMYVEyaI9OESK1Pl9E"}
+</script>
+
+
+
+<script src="https://veofitness.azureedge.net/wp-content/themes/bootscore-child-custom/js/lib/gsap.min.js?ver=1" id="gsap-js"></script>
+<script src="https://veofitness.azureedge.net/wp-content/themes/bootscore-child-custom/dynamic-blocks/render/js/_banner-homepage.js?ver=1730296133" id="_banner-homepage-js"></script>
+
+
+
+
+
+
+
+<script>window.lazyLoadOptions=[{elements_selector:"img[data-lazy-src],.rocket-lazyload",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,callback_loaded:function(element){if(element.tagName==="IFRAME"&&element.dataset.rocketLazyload=="fitvidscompatible"){if(element.classList.contains("lazyloaded")){if(typeof window.jQuery!="undefined"){if(jQuery.fn.fitVids){jQuery(element).parent().fitVids()}}}}}},{elements_selector:".rocket-lazyload",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,}];window.addEventListener('LazyLoad::Initialized',function(e){var lazyLoadInstance=e.detail.instance;if(window.MutationObserver){var observer=new MutationObserver(function(mutations){var image_count=0;var iframe_count=0;var rocketlazy_count=0;mutations.forEach(function(mutation){for(var i=0;i<mutation.addedNodes.length;i++){if(typeof mutation.addedNodes[i].getElementsByTagName!=='function'){continue}
+if(typeof mutation.addedNodes[i].getElementsByClassName!=='function'){continue}
+images=mutation.addedNodes[i].getElementsByTagName('img');is_image=mutation.addedNodes[i].tagName=="IMG";iframes=mutation.addedNodes[i].getElementsByTagName('iframe');is_iframe=mutation.addedNodes[i].tagName=="IFRAME";rocket_lazy=mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');image_count+=images.length;iframe_count+=iframes.length;rocketlazy_count+=rocket_lazy.length;if(is_image){image_count+=1}
+if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_count>0){lazyLoadInstance.update()}});var b=document.getElementsByTagName("body")[0];var config={childList:!0,subtree:!0};observer.observe(b,config)}},!1)</script><script data-no-minify="1" async src="https://veofitness.azureedge.net/wp-content/plugins/wp-rocket/assets/js/lazyload/17.8.3/lazyload.min.js"></script>
+<script src="https://veofitness.azureedge.net/wp-content/cache/min/1/23a2f355129f286c62ae4f41d5f19feb.js" data-minify="1"></script></body>
+
+</html><!-- Rocket has webp -->
+<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me -->

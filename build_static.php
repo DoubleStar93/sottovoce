@@ -160,9 +160,12 @@ foreach ($htmlFiles as $htmlFile) {
 
     $pageDirRelative = normalizePath(dirname($htmlRelative));
     $htmlContent = rewriteLinks($htmlContent, $pageDirRelative, $assetRouteMap, $assetFileMap, $assetFullUrlMap);
+    $htmlContent = localizeExternalAssets($htmlContent);
     $htmlContent = sanitizeExternalReferences($htmlContent, $pageDirRelative, $assetRouteMap, $assetFileMap, $assetFullUrlMap);
+    $htmlContent = keepVisualScriptsOnly($htmlContent);
     $htmlContent = ensureCoreLocalScripts($htmlContent);
     $htmlContent = injectInternalOnlyRuntimeGuard($htmlContent);
+    $htmlContent = ensureValidDocumentSkeleton($htmlContent);
     $htmlContent = removeBom($htmlContent);
 
     $targetPageDir = OUTPUT_PAGES_ROOT . DIRECTORY_SEPARATOR . str_replace('/', DIRECTORY_SEPARATOR, $pageDirRelative);
@@ -363,6 +366,10 @@ function sanitizeExternalReferences(string $html, string $pageDir, array $assetR
 
     // Remove preconnect/prefetch hints to external hosts.
     $html = preg_replace('/<link\b[^>]*\brel=("|\')(dns-prefetch|preconnect)\1[^>]*>/i', '', $html) ?? $html;
+    // Remove dynamic typekit font-face stylesheets (cause OTS warnings offline).
+    $html = preg_replace('/<link\b[^>]*\bid=("|\')dynamic-font-faces(?:-1)?-css\1[^>]*>/i', '', $html) ?? $html;
+    // Remove New Relic inline bootstrap block entirely.
+    $html = preg_replace('/<script\b[^>]*\bid=("|\')new-relic-script\1[^>]*>[\s\S]*?<\/script>/i', '', $html) ?? $html;
 
     $html = preg_replace_callback(
         '/\b(href|src|content)=("|\')(.*?)\2/i',
@@ -401,6 +408,16 @@ function sanitizeExternalReferences(string $html, string $pageDir, array $assetR
         },
         $html
     ) ?? $html;
+
+    // Neutralize external endpoints embedded in inline JS strings.
+    $html = str_replace('https://www.addresshotels.com/wp-admin/admin-ajax.php', '/internal/admin-ajax-disabled', $html);
+    $html = str_replace('http://www.addresshotels.com/wp-admin/admin-ajax.php', '/internal/admin-ajax-disabled', $html);
+    $html = str_replace('https:\/\/www.addresshotels.com\/wp-admin\/admin-ajax.php', '/internal/admin-ajax-disabled', $html);
+    $html = str_replace('http:\/\/www.addresshotels.com\/wp-admin\/admin-ajax.php', '/internal/admin-ajax-disabled', $html);
+    $html = str_replace('"/wp-admin/admin-ajax.php"', '"/internal/admin-ajax-disabled"', $html);
+    $html = str_replace("'/wp-admin/admin-ajax.php'", "'/internal/admin-ajax-disabled'", $html);
+    // Silence debug-only logs to keep console clean.
+    $html = preg_replace('/^\s*console\.log\(.*?\)\s*;?\s*$/mi', '', $html) ?? $html;
 
     return $html;
 }
@@ -615,6 +632,176 @@ function ensureCoreLocalScripts(string $html): string
         }
         return $jqueryTag . $html;
     }
+
+    return $html;
+}
+
+function ensureValidDocumentSkeleton(string $html): string
+{
+    $hasHeadClose = stripos($html, '</head>') !== false;
+    $hasBodyOpen = stripos($html, '<body') !== false;
+
+    if (!$hasHeadClose) {
+        $candidates = [
+            '<div class="col-12 col-lg-7 mt-0">',
+            '<section ',
+            '<header ',
+            '<main ',
+            '<div id="page"',
+        ];
+        foreach ($candidates as $needle) {
+            $pos = stripos($html, $needle);
+            if ($pos !== false) {
+                $html = substr($html, 0, $pos) . "</head>\n<body>\n" . substr($html, $pos);
+                $hasHeadClose = true;
+                $hasBodyOpen = true;
+                break;
+            }
+        }
+    }
+
+    if ($hasHeadClose && !$hasBodyOpen) {
+        $html = preg_replace('/<\/head>/i', "</head>\n<body>", $html, 1) ?? $html;
+        $hasBodyOpen = true;
+    }
+
+    if ($hasBodyOpen && stripos($html, '</body>') === false) {
+        $html = preg_replace('/<\/html>/i', "</body>\n</html>", $html, 1) ?? $html;
+    }
+
+    return $html;
+}
+
+function localizeExternalAssets(string $html): string
+{
+    return preg_replace_callback(
+        '/\b(href|src)=("|\')(https?:\/\/[^"\']+|\/\/[^"\']+)\2/i',
+        function (array $matches): string {
+            $attr = $matches[1];
+            $quote = $matches[2];
+            $url = $matches[3];
+
+            $normalized = str_starts_with($url, '//') ? ('https:' . $url) : $url;
+            $parts = parse_url($normalized);
+            if (!is_array($parts)) {
+                return $matches[0];
+            }
+
+            $scheme = strtolower($parts['scheme'] ?? 'https');
+            $host = strtolower($parts['host'] ?? '');
+            $path = $parts['path'] ?? '/';
+            $query = isset($parts['query']) ? ('?' . $parts['query']) : '';
+            $fragment = isset($parts['fragment']) ? ('#' . $parts['fragment']) : '';
+
+            if ($host === '' || ($scheme !== 'http' && $scheme !== 'https')) {
+                return $matches[0];
+            }
+
+            // Keep same-site canonical external URLs handled by rewrite logic.
+            if ($host === 'www.addresshotels.com' || $host === 'addresshotels.com') {
+                return $matches[0];
+            }
+
+            $downloaded = downloadExternalAsset($scheme . '://' . $host . $path . $query);
+            if ($downloaded === null) {
+                return $matches[0];
+            }
+
+            return $attr . '=' . $quote . $downloaded . $fragment . $quote;
+        },
+        $html
+    ) ?? $html;
+}
+
+function downloadExternalAsset(string $url): ?string
+{
+    $parts = parse_url($url);
+    if (!is_array($parts)) {
+        return null;
+    }
+
+    $host = strtolower($parts['host'] ?? '');
+    $path = $parts['path'] ?? '/';
+    $query = isset($parts['query']) ? ('?' . $parts['query']) : '';
+    if ($host === '') {
+        return null;
+    }
+
+    $normalizedPath = normalizePath(ltrim($path, '/'));
+    if ($normalizedPath === '') {
+        $normalizedPath = 'index.bin';
+    }
+
+    $ext = strtolower(pathinfo($normalizedPath, PATHINFO_EXTENSION));
+    if ($ext === '') {
+        $ext = 'bin';
+        $normalizedPath .= '.bin';
+    }
+
+    $querySuffix = '';
+    if ($query !== '') {
+        $raw = ltrim($query, '?');
+        $clean = preg_replace('/[^a-zA-Z0-9_-]+/', '-', $raw) ?? '';
+        $clean = trim($clean, '-');
+        if ($clean !== '') {
+            $querySuffix = '-' . $clean;
+        }
+    }
+
+    $dir = normalizePath(dirname($normalizedPath));
+    $name = pathinfo($normalizedPath, PATHINFO_FILENAME) . $querySuffix . '.' . $ext;
+    $relative = $dir === '.'
+        ? normalizePath('external/' . $host . '/' . $name)
+        : normalizePath('external/' . $host . '/' . $dir . '/' . $name);
+
+    $target = OUTPUT_DEPENDENCIES_ROOT . DIRECTORY_SEPARATOR . str_replace('/', DIRECTORY_SEPARATOR, $relative);
+    if (!is_file($target)) {
+        ensureDir(dirname($target));
+        $content = fetchRemoteAsset($url);
+        if ($content === null) {
+            return null;
+        }
+        file_put_contents($target, $content);
+    }
+
+    return '/dependencies/' . $relative;
+}
+
+function keepVisualScriptsOnly(string $html): string
+{
+    $html = preg_replace_callback(
+        '/<script\b([^>]*)\bsrc=("|\')(.*?)\2([^>]*)>\s*<\/script>/is',
+        function (array $m): string {
+            $src = strtolower(trim($m[3]));
+            $blocked = [
+                'googletagmanager',
+                'hotjar',
+                'nr-spa',
+                'newrelic',
+                'digital-vouchers',
+                'recaptcha/api.js',
+                'dynamic-calendar-ajax.js',
+                'window-onload.js',
+                'global-homepage-booking-widget.js',
+                'global-booking-modal.js',
+                'bootstrap-select.min.js',
+                'dinebooking.js',
+                'spabooking.js',
+                'individual-home.js',
+                'login.js',
+                'utils-single',
+                'utils-matcher',
+            ];
+            foreach ($blocked as $needle) {
+                if (str_contains($src, $needle)) {
+                    return '';
+                }
+            }
+            // Keep all other local scripts to preserve visual effects.
+            return $m[0];
+        },
+        $html
+    ) ?? $html;
 
     return $html;
 }

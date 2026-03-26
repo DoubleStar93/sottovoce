@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+<meta charset="UTF-8">
+<meta http-equiv="refresh" content="3600">
+<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
+<meta charset="UTF-8" />
+<title>Sky Views Dubai</title>
+<link rel="pingback" href="https://www.skyviewsdubai.com/xmlrpc.php" />
+
+<!-- stylesheets -->
+	<link rel="stylesheet" href="https://www.skyviewsdubai.com/wp-content/themes/skyviews/css/skyviews/style.css?v=1.3" type="text/css">
+<!-- Icons - favicons -->
+
+<link rel="apple-touch-icon" sizes="57x57" href="https://www.skyviewsdubai.com/wp-content/themes/skyviews/images/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="https://www.skyviewsdubai.com/wp-content/themes/skyviews/images/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="https://www.skyviewsdubai.com/wp-content/themes/skyviews/images/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="https://www.skyviewsdubai.com/wp-content/themes/skyviews/images/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="https://www.skyviewsdubai.com/wp-content/themes/skyviews/images/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="https://www.skyviewsdubai.com/wp-content/themes/skyviews/images/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="https://www.skyviewsdubai.com/wp-content/themes/skyviews/images/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="https://www.skyviewsdubai.com/wp-content/themes/skyviews/images/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://www.skyviewsdubai.com/wp-content/themes/skyviews/images/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="https://www.skyviewsdubai.com/wp-content/themes/skyviews/images/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://www.skyviewsdubai.com/wp-content/themes/skyviews/images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="https://www.skyviewsdubai.com/wp-content/themes/skyviews/images/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://www.skyviewsdubai.com/wp-content/themes/skyviews/images/favicon/favicon-16x16.png">
+<link rel="manifest" href="https://www.skyviewsdubai.com/wp-content/themes/skyviews/images/favicon/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="https://www.skyviewsdubai.com/wp-content/themes/skyviews/images/favicon/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+<!-- end stylesheets -->
+<script type="text/javascript">
+var base_url = 'https://www.skyviewsdubai.com';
+var ICL_LANGUAGE_CODE = "en";
+var page_name = "";
+    page_name = "home";
+
+var currentTime = new Date();
+currentTime = currentTime.getHours()+currentTime.getSeconds();
+if(page_name!="tickets" && page_name!="booking"){
+    window.sessionStorage.removeItem("sv_session");
+    window.sessionStorage.removeItem("timer_started");
+}
+var session_id = null;
+
+if(window.sessionStorage.getItem("sv_session")!=null && window.sessionStorage.getItem("sv_session")!="undefined"){
+    session_id = window.sessionStorage.getItem("sv_session");
+    }
+
+</script>
+<script src="https://www.google.com/recaptcha/api.js?render=6LeIpZ0pAAAAAOk6sReq7yzioSvGwNeiiR_TefkK" async defer></script>
+
+
+<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+	<style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
+	<link rel="alternate" hreflang="en" href="https://www.skyviewsdubai.com" />
+<link rel="alternate" hreflang="ar" href="https://www.skyviewsdubai.com/ar/" />
+<link rel="alternate" hreflang="x-default" href="https://www.skyviewsdubai.com" />
+
+	<!-- This site is optimized with the Yoast SEO plugin v24.6 - https://yoast.com/wordpress/plugins/seo/ -->
+	<link rel="canonical" href="https://www.skyviewsdubai.com/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Home - Sky Views Dubai" />
+	<meta property="og:url" content="https://www.skyviewsdubai.com/" />
+	<meta property="og:site_name" content="Sky Views Dubai" />
+	<meta property="article:modified_time" content="2026-03-18T08:12:16+00:00" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://www.skyviewsdubai.com/","url":"https://www.skyviewsdubai.com/","name":"Home - Sky Views Dubai","isPartOf":{"@id":"https://www.skyviewsdubai.com/#website"},"datePublished":"2020-03-18T06:44:00+00:00","dateModified":"2026-03-18T08:12:16+00:00","breadcrumb":{"@id":"https://www.skyviewsdubai.com/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://www.skyviewsdubai.com/"]}]},{"@type":"BreadcrumbList","@id":"https://www.skyviewsdubai.com/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home"}]},{"@type":"WebSite","@id":"https://www.skyviewsdubai.com/#website","url":"https://www.skyviewsdubai.com/","name":"Sky Views Dubai","description":"","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.skyviewsdubai.com/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-US"}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//www.google.com' />
+<link rel="alternate" type="application/rss+xml" title="Sky Views Dubai &raquo; Home Comments Feed" href="https://www.skyviewsdubai.com/home/feed/" />
+<script type="text/javascript">
+/* <![CDATA[ */
+window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.skyviewsdubai.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.7.4"}};
+/*! This file is auto-generated */
+!function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r[t]})}function u(e,t,n){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\uddfa\ud83c\uddf3","\ud83c\uddfa\u200b\ud83c\uddf3")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!n(e,"\ud83d\udc26\u200d\u2b1b","\ud83d\udc26\u200b\u2b1b")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o[e]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=["flag","emoji"],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),p.toString()].join(",")+"));",r=new Blob([e],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports[t]=e[t],n.supports.everything=n.supports.everything&&n.supports[t],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports[t]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window._wpemojiSettings);
+/* ]]> */
+</script>
+<style id='wp-emoji-styles-inline-css' type='text/css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+</style>
+<link rel='stylesheet' id='wp-block-library-css' href='https://www.skyviewsdubai.com/wp-includes/css/dist/block-library/style.min.css?ver=6.7.4' type='text/css' media='all' />
+<style id='classic-theme-styles-inline-css' type='text/css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
+<style id='global-styles-inline-css' type='text/css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+</style>
+<script type="text/javascript" id="skyviews-api-js-extra">
+/* <![CDATA[ */
+var skyviewsapi = {"ajaxurl":"https:\/\/www.skyviewsdubai.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.skyviewsdubai.com/wp-content/plugins/skyviews-api/js/skyviews-api.js?ver=6.7.4" id="skyviews-api-js"></script>
+<link rel="https://api.w.org/" href="https://www.skyviewsdubai.com/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://www.skyviewsdubai.com/wp-json/wp/v2/pages/2" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.skyviewsdubai.com/xmlrpc.php?rsd" />
+<link rel='shortlink' href='https://www.skyviewsdubai.com/' />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://www.skyviewsdubai.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.skyviewsdubai.com%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://www.skyviewsdubai.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.skyviewsdubai.com%2F&#038;format=xml" />
+<meta name="generator" content="WPML ver:4.6.4 stt:5,1;" />
+		<style type="text/css" id="wp-custom-css">
+			body.page-id-1474 .text_row .copy.left{
+	float:right !important;
+}
+body.page-id-1474 .text_row .image.right{
+	float:left !important;
+}
+body.page-id-1490 .text_row .copy.left{
+	float:left !important;
+}
+body.page-id-1490 .text_row .image.right{
+	float:right !important;
+}
+.number{
+	font-weight: unset;
+}
+.text_row .copy ul{
+	margin-bottom:10px;
+}
+.banner .page_slider .img {
+	background-position:top center;
+}		</style>
+		
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PB7QCKF" height="0" width="0" style="display: none; visibility: hidden"></iframe></noscript>
+	
+
+<script> (function (w, d, s, l, i) {
+	w[l] = w[l] || []; w[l].push({'gtm.start':new Date().getTime(), event: 'gtm.js'}); 
+	var f = d.getElementsByTagName(s)[0],j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+	j.async = true; j.src ='//www.googletagmanager.com/gtm.js?id=' + i + dl;
+	f.parentNode.insertBefore(j, f);
+	})(window, document, 'script', 'dataLayer', 'GTM-PB7QCKF');
+</script>
+
+</head>
+
+<body class="home page-template page-template-page-templates page-template-front-page page-template-page-templatesfront-page-php page page-id-2">
+<div id="mobile"></div>
+<div id="ipad"></div>
+<div id="desktop"></div>
+<div id="bigScreen"></div>
+
+<div id="main">
+	<!-- load header if it is not homepage -->
+	
+    <div id="booking_loader">
+    <div class="loader_content">
+        
+                    <svg id="booking_loader_layer" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 403.2 369.1" style="enable-background:new 0 0 403.2 369.1;" xml:space="preserve">
+                <g>
+                    <g>
+                        <path d="M201.6,19.6c-45.3,0-82.2,36.9-82.2,82.2c0,45.3,36.9,82.2,82.2,82.2s82.2-36.9,82.2-82.2
+                            C283.8,56.5,246.9,19.6,201.6,19.6z M201.6,179.7c-43,0-77.9-35-77.9-77.9c0-43,35-77.9,77.9-77.9s77.9,35,77.9,77.9
+                            C279.5,144.8,244.6,179.7,201.6,179.7z"/>
+                        <rect x="38.9" y="155.5" width="325.5" height="4.3"/>
+                        <polygon points="107.6,200 301.6,6 301.6,0 101.6,200 		"/>
+                    </g>
+                    <g>
+                        <path d="M17,250c-5.7-1.4-10.7-2.7-10.7-6.8c0-3.8,4-6.6,9.6-6.6c5,0,9.1,1.6,11.9,4.7l0.3,0.3l3.1-3.1l-0.3-0.3
+                            c-3.6-3.7-8.6-5.5-14.8-5.5c-8.4,0-14.5,4.5-14.5,10.7c0,7.3,7.4,9.2,14,10.9c6,1.5,11.7,2.9,11.7,8c0,3.5-2.8,7.2-10.8,7.2
+                            c-6.8,0-11.1-3.4-13-5.4L3,263.6l-3,3.1l0.3,0.3c3.7,4,9.4,6.2,16,6.2c11.5,0,15.7-5.9,15.7-11.3C31.9,253.8,24,251.8,17,250z"/>
+                        <path d="M388.2,250c-5.7-1.4-10.7-2.7-10.7-6.8c0-3.8,4-6.6,9.6-6.6c5,0,9.1,1.6,11.9,4.7l0.3,0.3l3.1-3.1l-0.3-0.3
+                            c-3.6-3.7-8.6-5.5-14.8-5.5c-8.4,0-14.5,4.5-14.5,10.7c0,7.3,7.4,9.2,14,10.9c6,1.5,11.7,2.9,11.7,8c0,3.5-2.8,7.2-10.8,7.2
+                            c-6.8,0-11.1-3.4-13-5.4l-0.3-0.3l-3,3.1l0.3,0.3c3.7,4,9.4,6.2,16,6.2c11.5,0,15.7-5.9,15.7-11.3
+                            C403.2,253.8,395.2,251.8,388.2,250z"/>
+                        <polygon points="79.3,233.3 73.4,233.3 53.3,253.7 53.3,233.3 48.8,233.3 48.8,272.6 53.3,272.6 53.3,258.9 57.6,254.7 
+                            75.1,272.6 81.1,272.6 60.7,252.1 		"/>
+                        <polygon points="112.5,251.9 98.4,233.5 98.3,233.3 92.8,233.3 110.2,255.9 110.2,272.6 114.8,272.6 114.8,255.9 132.3,233.3 
+                            126.8,233.3 		"/>
+                        <polygon points="195.4,267.4 180.3,233.6 180.2,233.3 174.9,233.3 192.7,272.4 192.9,272.6 198,272.6 215.9,233.3 210.7,233.3 		
+                            "/>
+                        <rect x="233.9" y="233.3" width="4.6" height="39.3"/>
+                        <polygon points="261.1,272.6 289.1,272.6 289.1,268.7 265.6,268.7 265.6,254.4 288.7,254.4 288.7,250.5 265.6,250.5 265.6,237.2 
+                            289.1,237.2 289.1,233.3 261.1,233.3 		"/>
+                        <polygon points="354.3,233.3 344.3,266 334.2,233.3 330.2,233.3 320,266 310.1,233.6 310,233.3 304.9,233.3 317.4,272.6 
+                            322.2,272.6 332.2,240.7 342.1,272.6 346.9,272.6 359.3,233.3 		"/>
+                    </g>
+                    <g>
+                        <path d="M178.8,369c0.3-1.9,0.3-3.8,0-5.6l-2-15.1L165.7,369h-2.1l-11.3-21.6l-2.2,16.4c-0.2,1.8-0.3,3.5-0.1,5.3h-4
+                            c0.8-1.6,1.2-3.3,1.3-5l3.6-27h1.8l13.2,25.2l13.2-25.2h1.4l3.8,26.9c0.2,1.8,0.6,3.5,1.4,5.1L178.8,369z"/>
+                        <path d="M144.3,365.8l-0.5,3.2h-22.9c0.7-1.6,1-3.3,0.9-5v-22c0.1-1.7-0.2-3.5-0.9-5h22.4v3.2l-1.1-0.4c-1-0.4-2-0.6-3-0.6h-12.1
+                            v12.6h14.4l-0.7,2.5h-13.7v12.6h13c1.5-0.1,3-0.5,4.4-1.2L144.3,365.8L144.3,365.8z"/>
+                        <path d="M260.1,352.5v-13.7c10.1-0.4,11.1,4.6,11.2,6.9c0.3,2.7-1.3,5.3-3.9,6.3l0,0h-0.1C265.8,352.8,260.1,352.5,260.1,352.5
+                            M267,354l1.3-0.1c4.5-0.7,8.4-3.3,8.4-8.2c0-9.3-11.1-8.8-15.8-8.8H254c0.7,1.6,1,3.3,0.9,5v22c0.1,1.7-0.2,3.5-0.9,5h7
+                            c-0.7-1.6-1-3.3-0.9-5v-9.9c0.7,0,1.7,0.2,3.2,2c3.9,4.6,8,8.9,12.5,12.9h6.5L267,354"/>
+                        <path d="M230.7,355l4.3-9.6l4.3,9.6H230.7z M248.9,363.8L236.7,337h-1.4L223,364.6c-0.7,1.6-1.6,3.1-2.7,4.5h4.1l5.2-11.7h10.6
+                            l5.3,11.7h7C250.9,367.6,249.7,365.8,248.9,363.8"/>
+                        <path d="M197.4,355l4.3-9.6l4.3,9.6H197.4z M215.6,363.8L203.4,337H202l-12.4,27.6c-0.7,1.6-1.6,3.1-2.7,4.5h4.2l5.2-11.7H207
+                            l5.3,11.7h7C217.7,367.6,216.4,365.8,215.6,363.8"/>
+                    </g>
+                </g>
+            </svg>
+                <p>Loading...</p>
+    </div>
+</div>
+
+<div class="home" id="home_blocks">
+    <div class="home_block first main">
+        <div id="menu_btn" class="menu_btn">
+            <div class="bar b1"></div>
+            <div class="bar b2"></div>
+            <div class="bar b3"></div>
+        </div>
+        
+        <div class="main_menu" id="main_menu">
+            <ul id="menu-main-menu-en" class="menu"><li id="menu-item-463" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-463"><a href="https://www.skyviewsdubai.com/about-us/">About Us</a></li>
+<li id="menu-item-340" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-340"><a href="https://www.skyviewsdubai.com/observatory/">Observatory</a></li>
+<li id="menu-item-338" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-338"><a href="https://www.skyviewsdubai.com/edge-walk/">Edge Walk</a></li>
+<li id="menu-item-339" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-339"><a href="https://www.skyviewsdubai.com/glass-slide/">Glass Slide</a></li>
+<li id="menu-item-1509" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1509"><a href="https://www.skyviewsdubai.com/sky-views-gold-collection-menu/">GOLD MENU</a></li>
+<li id="menu-item-2180" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2180"><a href="https://www.skyviewsdubai.com/sky-52-restaurant/">Sky 52 Restaurant</a></li>
+<li id="menu-item-1230" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1230"><a href="https://www.skyviewsdubai.com/sky-views-ultimate-experience/">Ultimate Experience</a></li>
+<li id="menu-item-342" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-342"><a href="https://www.skyviewsdubai.com/the-towers/">The Towers</a></li>
+<li class="menu-item"><a href="https://www.skyviewsdubai.com/ar/" class="lang_switcher"> العربية</a></li></ul>            <a href="https://www.skyviewsdubai.com" class="logo">
+                                    <img src="https://www.skyviewsdubai.com/wp-content/themes/skyviews/images/logos/sv-dubai-en.svg" alt="">
+                            </a>
+        </div>
+        <div class="hover">
+            <div class="content">
+                <div class="logo">
+                                            <img src="https://www.skyviewsdubai.com/wp-content/themes/skyviews/images/logos/sv-emaar-en.svg" alt="">
+                                    </div>
+                                    <h2>A NEW VIEW<span class="only_mobile"> </span><span class="not_in_mobile"><br></span>OF DUBAI</h2>
+                    <p>Dubai's essential attraction takes city sightseeing to new heights.</p>
+                                <div class="clr"></div>
+                <a href="https://www.skyviewsdubai.com/booking" class="booking_btn_home">Book Now</a>
+                <div class="clr"></div>
+                <img src="https://www.skyviewsdubai.com/wp-content/themes/skyviews/images//ta-2025.png" alt="" style="margin:15% auto 0 auto; max-width:120px; float: none;">
+            </div>
+        </div>
+    </div>
+    <div class="home_block page_block observatory">
+                <img src="https://www.skyviewsdubai.com/wp-content/uploads/2026/01/EEG-SV-25-019-SVO-Digital-Refresh-January_web-banners_512x1080.jpg" alt="" class="front_hide">
+        <div class="img" style="background-image: url('https://www.skyviewsdubai.com/wp-content/uploads/2026/01/EEG-SV-25-019-SVO-Digital-Refresh-January_web-banners_512x1080.jpg');">
+            <img src="https://www.skyviewsdubai.com/wp-content/uploads/2026/01/EEG-SV-25-019-SVO-Digital-Refresh-January_web-banners_1920x1080px.jpg" alt="">
+        </div>
+        <div class="hover">
+            <div class="content">
+                <div class="logo">
+                                            <img src="https://www.skyviewsdubai.com/wp-content/themes/skyviews/images/logos/sv-observatory-en.svg" alt="">
+                                    </div>
+                <div class="text">
+                    <p>Get a whole new perspective on Dubai – with spellbinding 360° vistas from 219.5 metres above Downtown Dubai.</p>
+                    <div class="links">
+                        <p><a href="https://www.skyviewsdubai.com/observatory">Find out more</a></p>
+                                                    <p><a href="https://www.skyviewsdubai.com/booking?experience=264" class="booking_btn direct_cart_link" data-id="264">Book Now</a></p>
+                                            </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="home_block page_block walk">
+                <img src="https://www.skyviewsdubai.com/wp-content/uploads/2026/03/SVO-Eid-Offer-26_SVO-EID-26-512-x-1080.jpg" alt="" class="front_hide">
+        <div class="img" style="background-image: url('https://www.skyviewsdubai.com/wp-content/uploads/2026/03/SVO-Eid-Offer-26_SVO-EID-26-512-x-1080.jpg');">
+            <img src="https://www.skyviewsdubai.com/wp-content/uploads/2026/03/SVO-Eid-Offer-26_SVO-EID-26-1920-x-1080-scaled.jpg" alt="">
+        </div>
+        <div class="hover">
+            <div class="content">
+                <div class="logo">
+                                            <img src="https://www.skyviewsdubai.com/wp-content/themes/skyviews/images/logos/sv-edge-walk-en.svg" alt="">
+                                    </div>
+                <div class="text">
+                    <p>Dare to look down – brave a heart-stopping hands-free leap of faith 53 floors above the ground.</p>
+                    <div class="links">
+                        <p><a href="https://www.skyviewsdubai.com/edge-walk">Find out more</a></p>
+                                                    <p><a href="https://www.skyviewsdubai.com/booking?experience=1809" class="booking_btn direct_cart_link" data-id="1809">Book Now</a></p>
+                                            </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="home_block page_block slide">
+                <img src="https://www.skyviewsdubai.com/wp-content/uploads/2025/04/image.jpg" alt="" class="front_hide">
+        <div class="img" style="background-image: url('https://www.skyviewsdubai.com/wp-content/uploads/2025/04/image.jpg');">
+            <img src="https://www.skyviewsdubai.com/wp-content/uploads/2025/04/Bannernew-scaled.jpg" alt="">
+        </div>
+        <div class="hover">
+            <div class="content">
+                <div class="logo">
+                                            <!-- <img src="https://www.skyviewsdubai.com/wp-content/themes/skyviews/images/logos/sv-glass-slide-en.svg" alt=""> -->
+                        <img src="https://www.skyviewsdubai.com/wp-content/themes/skyviews/images/logos/sv-emaar-en.svg" alt="">
+                                    </div>
+                <div class="text">
+                    <p>Sky-High Luxury: Sky Views Observatory & The Gold Collection Indulgence. Walk on air, slide through the sky, and indulge in exquisite 24K gold-infused delights.</p>
+                    <div class="links">
+                        <p><a href="https://www.skyviewsdubai.com/sky-views-gold-collection-menu">Find out more</a></p>
+                                                    <p><a href="https://www.skyviewsdubai.com/booking?experience=1467" class="booking_btn direct_cart_link" data-id="1467">Book Now</a></p>
+                                            </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="home_block page_block last restaurant">
+                <img src="https://www.skyviewsdubai.com/wp-content/uploads/2026/03/EEG-SV-26-003-SVO-Ultimate-Experience_web-banners_512x1080.jpg" alt="" class="front_hide">
+        <div class="img" style="background-image: url('https://www.skyviewsdubai.com/wp-content/uploads/2026/03/EEG-SV-26-003-SVO-Ultimate-Experience_web-banners_512x1080.jpg');">
+            <img src="https://www.skyviewsdubai.com/wp-content/uploads/2026/03/EEG-SV-26-003-SVO-Ultimate-Experience_web-banners_1920x1080px.jpg" alt="">
+        </div>
+        <div class="hover">
+            <div class="content">
+            <div class="logo">
+                                                <img src="https://www.skyviewsdubai.com/wp-content/themes/skyviews/images/logos/sv-emaar-en.svg" alt="">
+                                        </div>
+                <div class="text">
+                    <p>Sky Views Ultimate Experience: Dine, slide & take home a souvenir!</p>
+                    <div class="links">
+                                                        <p><a href="https://www.skyviewsdubai.com/sky-views-ultimate-experience/">Find out more</a></p>    
+                                                        <p><a href="https://www.skyviewsdubai.com/booking?experience=1221" class="booking_btn direct_cart_link" data-id="1221">Book Now</a></p>
+                                                
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+	
+<div class="page_footer mg-t-0" style="background-color:#f5f5f5;">
+    <div class="container">
+        <pre class="ti-widget" style="display: none"><template id="trustindex-google-widget-html"><div class="ti-widget ti-goog ti-show-rating-text ti-review-text-mode-readmore ti-text-align-left" data-no-translation="true" data-layout-id="13" data-layout-category="slider" data-set-id="drop-shadow" data-pid="" data-language="en" data-review-target-width="275" data-css-version="2" data-review-text-mode="readmore" data-reply-by-locale="Owner's reply" data-pager-autoplay-timeout="6" > <div class="ti-widget-container ti-col-4"> <div class="ti-footer source-Google"> <div class="ti-row"> <div class="ti-profile-img"> <trustindex-image data-imgurl="https://lh3.googleusercontent.com/-6trZaKp_ob0/AAAAAAAAAAI/AAAAAAAAAAA/W4JMTHBQeLA/s160-p-k-no-ns-nd/photo.jpg" data-imgurlset="https://lh3.googleusercontent.com/-6trZaKp_ob0/AAAAAAAAAAI/AAAAAAAAAAA/W4JMTHBQeLA/s160-p-k-no-ns-nd/photo.jpg 2x" alt="Sky Views Observatory" loading="lazy" ></trustindex-image> </div> <div class="ti-profile-details"> <div class="ti-name"> Sky Views Observatory</div> <span class="ti-stars"><trustindex-image class="ti-star" data-imgurl="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google" width="17" height="17" loading="lazy" ></trustindex-image><trustindex-image class="ti-star" data-imgurl="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google" width="17" height="17" loading="lazy" ></trustindex-image><trustindex-image class="ti-star" data-imgurl="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google" width="17" height="17" loading="lazy" ></trustindex-image><trustindex-image class="ti-star" data-imgurl="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google" width="17" height="17" loading="lazy" ></trustindex-image><trustindex-image class="ti-star" data-imgurl="https://cdn.trustindex.io/assets/platform/Google/star/h.svg" alt="Google" width="17" height="17" loading="lazy" ></trustindex-image></span> <div class="ti-rating-text"> <span class="nowrap"><strong>3716 Google reviews</strong></span> </div> <div class="ti-header-write-btn-container"> <a href="https://admin.trustindex.io/api/googleWriteReview?place-id=ChIJTVkwQ6xDXz4RiuQ5eA5GfVM" class="ti-header-write-btn" role="button" aria-label="Write a review to Google" target="_blank" rel="noopener nofollow" >Write a review</a> </div>  </div> </div> </div> <div class="ti-reviews-container"> <div class="ti-controls"> <div class="ti-next" aria-label="Next review" role="button"></div> <div class="ti-prev" aria-label="Previous review" role="button"></div> </div> <div class="ti-reviews-container-wrapper">  <div data-empty="1" class="ti-review-item source-Google ti-image-layout-thumbnail" data-id="cfcd208495d565ef66e7dff9f98764da" > <div class="ti-inner"> <div class="ti-review-header"> <trustindex-image class="ti-platform-icon" data-imgurl="https://cdn.trustindex.io/assets/platform/Google/icon.svg" alt="Google" width="20" height="20" loading="lazy" ></trustindex-image> <div class="ti-profile-img"> <trustindex-image data-imgurl="https://lh3.googleusercontent.com/a-/ALV-UjU7xrwZJmW_l-aBN1X-eddHLFD5tqZLO8xParfu3w1fLE45SF0d=w40-h40-c-rp-mo-ba3-br100" data-imgurlset="https://lh3.googleusercontent.com/a-/ALV-UjU7xrwZJmW_l-aBN1X-eddHLFD5tqZLO8xParfu3w1fLE45SF0d=w80-h80-c-rp-mo-ba3-br100 2x" alt="Jasmine Akgul profile picture" loading="lazy" ></trustindex-image> </div> <div class="ti-profile-details"> <div class="ti-name"> Jasmine Akgul </div> <div class="ti-date"></div> </div> </div> <span class="ti-stars"><trustindex-image class="ti-star" data-imgurl="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google" width="17" height="17" loading="lazy" ></trustindex-image><trustindex-image class="ti-star" data-imgurl="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google" width="17" height="17" loading="lazy" ></trustindex-image><trustindex-image class="ti-star" data-imgurl="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google" width="17" height="17" loading="lazy" ></trustindex-image><trustindex-image class="ti-star" data-imgurl="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google" width="17" height="17" loading="lazy" ></trustindex-image><trustindex-image class="ti-star" data-imgurl="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google" width="17" height="17" loading="lazy" ></trustindex-image><span class="ti-verified-review ti-verified-platform"><span class="ti-verified-tooltip">Trustindex verifies that the original source of the review is Google.</span></span></span> <div class="ti-review-text-container ti-review-content"><!-- R-CONTENT --><!-- R-CONTENT --></div> <span class="ti-read-more" data-container=".ti-review-content" data-collapse-text="Hide" data-open-text="Read more" ></span> </div> </div>  <div data-empty="0" class="ti-review-item source-Google ti-image-layout-thumbnail" data-id="cfcd208495d565ef66e7dff9f98764da" > <div class="ti-inner"> <div class="ti-review-header"> <trustindex-image class="ti-platform-icon" data-imgurl="https://cdn.trustindex.io/assets/platform/Google/icon.svg" alt="Google" width="20" height="20" loading="lazy" ></trustindex-image> <div class="ti-profile-img"> <trustindex-image data-imgurl="https://lh3.googleusercontent.com/a/ACg8ocKdpIssFCuRAKf49PpUVV4vZL7tz_I0dRZjH2lKOGhmW7K3lA=w40-h40-c-rp-mo-ba4-br100" data-imgurlset="https://lh3.googleusercontent.com/a/ACg8ocKdpIssFCuRAKf49PpUVV4vZL7tz_I0dRZjH2lKOGhmW7K3lA=w80-h80-c-rp-mo-ba4-br100 2x" alt="Marco Dionisi profile picture" loading="lazy" ></trustindex-image> </div> <div class="ti-profile-details"> <div class="ti-name"> Marco Dionisi </div> <div class="ti-date"></div> </div> </div> <span class="ti-stars"><trustindex-image class="ti-star" data-imgurl="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google" width="17" height="17" loading="lazy" ></trustindex-image><trustindex-image class="ti-star" data-imgurl="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google" width="17" height="17" loading="lazy" ></trustindex-image><trustindex-image class="ti-star" data-imgurl="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google" width="17" height="17" loading="lazy" ></trustindex-image><trustindex-image class="ti-star" data-imgurl="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google" width="17" height="17" loading="lazy" ></trustindex-image><trustindex-image class="ti-star" data-imgurl="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google" width="17" height="17" loading="lazy" ></trustindex-image><span class="ti-verified-review ti-verified-platform"><span class="ti-verified-tooltip">Trustindex verifies that the original source of the review is Google.</span></span></span> <div class="ti-review-text-container ti-review-content"><!-- R-CONTENT -->Si vede benissimo il Burj Khalifa. Vendono in biglietto combinato che ti dà accesso alla terrazza panoramica, allo scivolo e a un pasto al ristorante in alto.<!-- R-CONTENT --></div> <span class="ti-read-more" data-container=".ti-review-content" data-collapse-text="Hide" data-open-text="Read more" ></span> </div> </div>  <div data-empty="0" class="ti-review-item source-Google ti-image-layout-thumbnail" data-id="cfcd208495d565ef66e7dff9f98764da" > <div class="ti-inner"> <div class="ti-review-header"> <trustindex-image class="ti-platform-icon" data-imgurl="https://cdn.trustindex.io/assets/platform/Google/icon.svg" alt="Google" width="20" height="20" loading="lazy" ></trustindex-image> <div class="ti-profile-img"> <trustindex-image data-imgurl="https://lh3.googleusercontent.com/a-/ALV-UjXbS2klBGh0iaFCR9lKZVZPchPKUvauF0eafnMelBB7aAvBA6k=w40-h40-c-rp-mo-ba2-br100" data-imgurlset="https://lh3.googleusercontent.com/a-/ALV-UjXbS2klBGh0iaFCR9lKZVZPchPKUvauF0eafnMelBB7aAvBA6k=w80-h80-c-rp-mo-ba2-br100 2x" alt="Jack Perry profile picture" loading="lazy" ></trustindex-image> </div> <div class="ti-profile-details"> <div class="ti-name"> Jack Perry </div> <div class="ti-date"></div> </div> </div> <span class="ti-stars"><trustindex-image class="ti-star" data-imgurl="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google" width="17" height="17" loading="lazy" ></trustindex-image><trustindex-image class="ti-star" data-imgurl="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google" width="17" height="17" loading="lazy" ></trustindex-image><trustindex-image class="ti-star" data-imgurl="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google" width="17" height="17" loading="lazy" ></trustindex-image><trustindex-image class="ti-star" data-imgurl="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google" width="17" height="17" loading="lazy" ></trustindex-image><trustindex-image class="ti-star" data-imgurl="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google" width="17" height="17" loading="lazy" ></trustindex-image><span class="ti-verified-review ti-verified-platform"><span class="ti-verified-tooltip">Trustindex verifies that the original source of the review is Google.</span></span></span> <div class="ti-review-text-container ti-review-content"><!-- R-CONTENT -->Awesme view i have ever seen<!-- R-CONTENT --></div> <span class="ti-read-more" data-container=".ti-review-content" data-collapse-text="Hide" data-open-text="Read more" ></span> </div> </div>  <div data-empty="0" class="ti-review-item source-Google ti-image-layout-thumbnail" data-id="cfcd208495d565ef66e7dff9f98764da" > <div class="ti-inner"> <div class="ti-review-header"> <trustindex-image class="ti-platform-icon" data-imgurl="https://cdn.trustindex.io/assets/platform/Google/icon.svg" alt="Google" width="20" height="20" loading="lazy" ></trustindex-image> <div class="ti-profile-img"> <trustindex-image data-imgurl="https://lh3.googleusercontent.com/a-/ALV-UjUP6q-WFH0F0go2IdsQgGHrJ4g6N5iHEBnlAqkDR4agDj9ZY7Pb=w40-h40-c-rp-mo-ba3-br100" data-imgurlset="https://lh3.googleusercontent.com/a-/ALV-UjUP6q-WFH0F0go2IdsQgGHrJ4g6N5iHEBnlAqkDR4agDj9ZY7Pb=w80-h80-c-rp-mo-ba3-br100 2x" alt="Harshad Ranganathan profile picture" loading="lazy" ></trustindex-image> </div> <div class="ti-profile-details"> <div class="ti-name"> Harshad Ranganathan </div> <div class="ti-date"></div> </div> </div> <span class="ti-stars"><trustindex-image class="ti-star" data-imgurl="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google" width="17" height="17" loading="lazy" ></trustindex-image><trustindex-image class="ti-star" data-imgurl="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google" width="17" height="17" loading="lazy" ></trustindex-image><trustindex-image class="ti-star" data-imgurl="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google" width="17" height="17" loading="lazy" ></trustindex-image><trustindex-image class="ti-star" data-imgurl="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google" width="17" height="17" loading="lazy" ></trustindex-image><trustindex-image class="ti-star" data-imgurl="https://cdn.trustindex.io/assets/platform/Google/star/e.svg" alt="Google" width="17" height="17" loading="lazy" ></trustindex-image><span class="ti-verified-review ti-verified-platform"><span class="ti-verified-tooltip">Trustindex verifies that the original source of the review is Google.</span></span></span> <div class="ti-review-text-container ti-review-content"><!-- R-CONTENT -->Nice observation deck with glass view on the floors - glass slide felt too short - pillars obstruct the views<!-- R-CONTENT --></div> <span class="ti-read-more" data-container=".ti-review-content" data-collapse-text="Hide" data-open-text="Read more" ></span> </div> </div>  <div data-empty="0" class="ti-review-item source-Google ti-image-layout-thumbnail" data-id="cfcd208495d565ef66e7dff9f98764da" > <div class="ti-inner"> <div class="ti-review-header"> <trustindex-image class="ti-platform-icon" data-imgurl="https://cdn.trustindex.io/assets/platform/Google/icon.svg" alt="Google" width="20" height="20" loading="lazy" ></trustindex-image> <div class="ti-profile-img"> <trustindex-image data-imgurl="https://lh3.googleusercontent.com/a-/ALV-UjVb6ulQcsNVK1zsHsLC4elJ3aiLzHIHNfBanQ_P3_mXfiPcFpds=w40-h40-c-rp-mo-ba4-br100" data-imgurlset="https://lh3.googleusercontent.com/a-/ALV-UjVb6ulQcsNVK1zsHsLC4elJ3aiLzHIHNfBanQ_P3_mXfiPcFpds=w80-h80-c-rp-mo-ba4-br100 2x" alt="Thiago De Araujo profile picture" loading="lazy" ></trustindex-image> </div> <div class="ti-profile-details"> <div class="ti-name"> Thiago De Araujo </div> <div class="ti-date"></div> </div> </div> <span class="ti-stars"><trustindex-image class="ti-star" data-imgurl="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google" width="17" height="17" loading="lazy" ></trustindex-image><trustindex-image class="ti-star" data-imgurl="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google" width="17" height="17" loading="lazy" ></trustindex-image><trustindex-image class="ti-star" data-imgurl="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google" width="17" height="17" loading="lazy" ></trustindex-image><trustindex-image class="ti-star" data-imgurl="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google" width="17" height="17" loading="lazy" ></trustindex-image><trustindex-image class="ti-star" data-imgurl="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google" width="17" height="17" loading="lazy" ></trustindex-image><span class="ti-verified-review ti-verified-platform"><span class="ti-verified-tooltip">Trustindex verifies that the original source of the review is Google.</span></span></span> <div class="ti-review-text-container ti-review-content"><!-- R-CONTENT -->Visitei o Sky Views Observatory em outubro de 2025 e foi uma experiência incrível. A vista panorâmica do Burj Khalifa e do centro de Dubai é espetacular. A passarela de vidro e as atrações de adrenalina tornam o passeio ainda mais emocionante. Estrutura moderna e bem organizada.<!-- R-CONTENT --></div> <span class="ti-read-more" data-container=".ti-review-content" data-collapse-text="Hide" data-open-text="Read more" ></span> </div> </div>  <div data-empty="0" class="ti-review-item source-Google ti-image-layout-thumbnail" data-id="cfcd208495d565ef66e7dff9f98764da" > <div class="ti-inner"> <div class="ti-review-header"> <trustindex-image class="ti-platform-icon" data-imgurl="https://cdn.trustindex.io/assets/platform/Google/icon.svg" alt="Google" width="20" height="20" loading="lazy" ></trustindex-image> <div class="ti-profile-img"> <trustindex-image data-imgurl="https://lh3.googleusercontent.com/a-/ALV-UjV3Rlw0ztqEdtDg3jC2p5N2f0ZJdbMxKNsx7PBxTQ7WrPBtSCwk=w40-h40-c-rp-mo-ba3-br100" data-imgurlset="https://lh3.googleusercontent.com/a-/ALV-UjV3Rlw0ztqEdtDg3jC2p5N2f0ZJdbMxKNsx7PBxTQ7WrPBtSCwk=w80-h80-c-rp-mo-ba3-br100 2x" alt="Bappy Chowdhury profile picture" loading="lazy" ></trustindex-image> </div> <div class="ti-profile-details"> <div class="ti-name"> Bappy Chowdhury </div> <div class="ti-date"></div> </div> </div> <span class="ti-stars"><trustindex-image class="ti-star" data-imgurl="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google" width="17" height="17" loading="lazy" ></trustindex-image><trustindex-image class="ti-star" data-imgurl="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google" width="17" height="17" loading="lazy" ></trustindex-image><trustindex-image class="ti-star" data-imgurl="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google" width="17" height="17" loading="lazy" ></trustindex-image><trustindex-image class="ti-star" data-imgurl="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google" width="17" height="17" loading="lazy" ></trustindex-image><trustindex-image class="ti-star" data-imgurl="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google" width="17" height="17" loading="lazy" ></trustindex-image><span class="ti-verified-review ti-verified-platform"><span class="ti-verified-tooltip">Trustindex verifies that the original source of the review is Google.</span></span></span> <div class="ti-review-text-container ti-review-content"><!-- R-CONTENT -->🇧🇩Love have you getting requests from   Don't mind  please let me know here weather video I sold call you fast📱📲<!-- R-CONTENT --></div> <span class="ti-read-more" data-container=".ti-review-content" data-collapse-text="Hide" data-open-text="Read more" ></span> </div> </div>  <div data-empty="1" class="ti-review-item source-Google ti-image-layout-thumbnail" data-id="cfcd208495d565ef66e7dff9f98764da" > <div class="ti-inner"> <div class="ti-review-header"> <trustindex-image class="ti-platform-icon" data-imgurl="https://cdn.trustindex.io/assets/platform/Google/icon.svg" alt="Google" width="20" height="20" loading="lazy" ></trustindex-image> <div class="ti-profile-img"> <trustindex-image data-imgurl="https://lh3.googleusercontent.com/a-/ALV-UjUUZSQ1hmICC_tZ-ns7NwRPdKOjfhhKFAiH6XbmjeSz9hQt7ys=w40-h40-c-rp-mo-ba3-br100" data-imgurlset="https://lh3.googleusercontent.com/a-/ALV-UjUUZSQ1hmICC_tZ-ns7NwRPdKOjfhhKFAiH6XbmjeSz9hQt7ys=w80-h80-c-rp-mo-ba3-br100 2x" alt="Kacper Jasniewski profile picture" loading="lazy" ></trustindex-image> </div> <div class="ti-profile-details"> <div class="ti-name"> Kacper Jasniewski </div> <div class="ti-date"></div> </div> </div> <span class="ti-stars"><trustindex-image class="ti-star" data-imgurl="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google" width="17" height="17" loading="lazy" ></trustindex-image><trustindex-image class="ti-star" data-imgurl="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google" width="17" height="17" loading="lazy" ></trustindex-image><trustindex-image class="ti-star" data-imgurl="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google" width="17" height="17" loading="lazy" ></trustindex-image><trustindex-image class="ti-star" data-imgurl="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google" width="17" height="17" loading="lazy" ></trustindex-image><trustindex-image class="ti-star" data-imgurl="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google" width="17" height="17" loading="lazy" ></trustindex-image><span class="ti-verified-review ti-verified-platform"><span class="ti-verified-tooltip">Trustindex verifies that the original source of the review is Google.</span></span></span> <div class="ti-review-text-container ti-review-content"><!-- R-CONTENT --><!-- R-CONTENT --></div> <span class="ti-read-more" data-container=".ti-review-content" data-collapse-text="Hide" data-open-text="Read more" ></span> </div> </div>  <div data-empty="1" class="ti-review-item source-Google ti-image-layout-thumbnail" data-id="cfcd208495d565ef66e7dff9f98764da" > <div class="ti-inner"> <div class="ti-review-header"> <trustindex-image class="ti-platform-icon" data-imgurl="https://cdn.trustindex.io/assets/platform/Google/icon.svg" alt="Google" width="20" height="20" loading="lazy" ></trustindex-image> <div class="ti-profile-img"> <trustindex-image data-imgurl="https://lh3.googleusercontent.com/a-/ALV-UjVhaRJcBA16ojR8v0rRbCu8Tt_plAKAdCzRUtSFDIaboulNUrI3=w40-h40-c-rp-mo-br100" data-imgurlset="https://lh3.googleusercontent.com/a-/ALV-UjVhaRJcBA16ojR8v0rRbCu8Tt_plAKAdCzRUtSFDIaboulNUrI3=w80-h80-c-rp-mo-br100 2x" alt="Memz Aldossri profile picture" loading="lazy" ></trustindex-image> </div> <div class="ti-profile-details"> <div class="ti-name"> Memz Aldossri </div> <div class="ti-date"></div> </div> </div> <span class="ti-stars"><trustindex-image class="ti-star" data-imgurl="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google" width="17" height="17" loading="lazy" ></trustindex-image><trustindex-image class="ti-star" data-imgurl="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google" width="17" height="17" loading="lazy" ></trustindex-image><trustindex-image class="ti-star" data-imgurl="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google" width="17" height="17" loading="lazy" ></trustindex-image><trustindex-image class="ti-star" data-imgurl="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google" width="17" height="17" loading="lazy" ></trustindex-image><trustindex-image class="ti-star" data-imgurl="https://cdn.trustindex.io/assets/platform/Google/star/e.svg" alt="Google" width="17" height="17" loading="lazy" ></trustindex-image><span class="ti-verified-review ti-verified-platform"><span class="ti-verified-tooltip">Trustindex verifies that the original source of the review is Google.</span></span></span> <div class="ti-review-text-container ti-review-content"><!-- R-CONTENT --><!-- R-CONTENT --></div> <span class="ti-read-more" data-container=".ti-review-content" data-collapse-text="Hide" data-open-text="Read more" ></span> </div> </div>  <div data-empty="0" class="ti-review-item source-Google ti-image-layout-thumbnail" data-id="cfcd208495d565ef66e7dff9f98764da" > <div class="ti-inner"> <div class="ti-review-header"> <trustindex-image class="ti-platform-icon" data-imgurl="https://cdn.trustindex.io/assets/platform/Google/icon.svg" alt="Google" width="20" height="20" loading="lazy" ></trustindex-image> <div class="ti-profile-img"> <trustindex-image data-imgurl="https://lh3.googleusercontent.com/a/ACg8ocI8SQ727j3YBX69YKx4-o6yRRAfY7M9X1wMFKqYTkdPfFqwOQ=w40-h40-c-rp-mo-ba5-br100" data-imgurlset="https://lh3.googleusercontent.com/a/ACg8ocI8SQ727j3YBX69YKx4-o6yRRAfY7M9X1wMFKqYTkdPfFqwOQ=w80-h80-c-rp-mo-ba5-br100 2x" alt="tabish k profile picture" loading="lazy" ></trustindex-image> </div> <div class="ti-profile-details"> <div class="ti-name"> tabish k </div> <div class="ti-date"></div> </div> </div> <span class="ti-stars"><trustindex-image class="ti-star" data-imgurl="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google" width="17" height="17" loading="lazy" ></trustindex-image><trustindex-image class="ti-star" data-imgurl="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google" width="17" height="17" loading="lazy" ></trustindex-image><trustindex-image class="ti-star" data-imgurl="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google" width="17" height="17" loading="lazy" ></trustindex-image><trustindex-image class="ti-star" data-imgurl="https://cdn.trustindex.io/assets/platform/Google/star/f.svg" alt="Google" width="17" height="17" loading="lazy" ></trustindex-image><trustindex-image class="ti-star" data-imgurl="https://cdn.trustindex.io/assets/platform/Google/star/e.svg" alt="Google" width="17" height="17" loading="lazy" ></trustindex-image><span class="ti-verified-review ti-verified-platform"><span class="ti-verified-tooltip">Trustindex verifies that the original source of the review is Google.</span></span></span> <div class="ti-review-text-container ti-review-content"><!-- R-CONTENT -->Great experience. Walking on glass bridge and slide were good. Wish there could be something else as well to engage kids for a bit more. But all in all, experience worth having<!-- R-CONTENT --></div> <span class="ti-read-more" data-container=".ti-review-content" data-collapse-text="Hide" data-open-text="Read more" ></span> </div> </div>  </div> <div class="ti-controls-line"> <div class="dot"></div> </div>   </div> </div> </div> </template></pre><div data-src="https://cdn.trustindex.io/loader.js?wp-widget" data-template-id="trustindex-google-widget-html" data-css-url="https://www.skyviewsdubai.com/wp-content/uploads/trustindex-google-widget.css?1756361489"></div>    </div>
+</div>
+<footer class="page_footer mg-t-0">
+    <div class="container">
+        <a class="emaar" href="https://www.emaar.com/" target="_blank"><img src="https://www.skyviewsdubai.com/wp-content/themes/skyviews/images/emaar.png" alt=""></a>
+        <div class="footer_menu">
+            <ul id="menu-footer-menu-1-en" class="menu"><li id="menu-item-464" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-464"><a href="https://www.skyviewsdubai.com/the-towers/">The Towers</a></li>
+<li id="menu-item-467" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-467"><a href="https://www.skyviewsdubai.com/observatory/">Observatory</a></li>
+<li id="menu-item-465" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-465"><a href="https://www.skyviewsdubai.com/edge-walk/">Edge Walk</a></li>
+<li id="menu-item-466" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-466"><a href="https://www.skyviewsdubai.com/glass-slide/">Glass Slide</a></li>
+</ul>            <ul id="menu-footer-menu-2-en" class="menu"><li id="menu-item-473" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-473"><a href="https://www.skyviewsdubai.com/sky-52-restaurant/">SKY 52 RESTAURANT</a></li>
+<li id="menu-item-474" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-474"><a href="https://www.skyviewsdubai.com/contact-us/">Contact Us</a></li>
+<li id="menu-item-475" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-475"><a rel="privacy-policy" href="https://www.skyviewsdubai.com/privacy-policy/">Privacy Policy</a></li>
+<li id="menu-item-476" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-476"><a href="https://www.skyviewsdubai.com/terms-conditions/">Terms &#038; Conditions</a></li>
+</ul>            <ul id="menu-footer-menu-3-en" class="menu"><li id="menu-item-489" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-489"><a href="https://www.skyviewsdubai.com/faqs/">FAQs</a></li>
+<li id="menu-item-492" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-492"><a href="https://www.burjkhalifa.ae/en/">Burj Khalifa</a></li>
+<li id="menu-item-2183" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2183"><a href="https://www.skyviewsdubai.com/sky-views-hotel-dining/">Hotel Dining</a></li>
+<li id="menu-item-493" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-493"><a href="https://www.addresshotels.com">Address Hotels + Resorts</a></li>
+</ul>        </div>
+
+        <div class="newsletter">
+            <h3>Sign up for email alerts</h3>
+            <form class="input_group" id="newsletter_form">
+                <input type="email" name="email" placeholder="Email address" autocomplete="off">
+                <input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response">
+                <button type="submit" data-sitekey="6LeIpZ0pAAAAAOk6sReq7yzioSvGwNeiiR_TefkK"  class="btn g-recaptcha" data-callback="verifyCaptcha">Sign up</button>
+            </form>
+            <p class="email_error" id="newsletter_email_error"></p>
+
+            <div class="social_media">
+                <h4>Connect with us</h4>
+                <a href="https://www.facebook.com/SkyViewsDubai" target="_blank" class="fab fa-facebook-f"></a>
+                <a href="https://www.instagram.com/skyviewsobservatory/" target="_blank" class="fab fa-instagram"></a>
+                <!--<a href="https://twitter.com/skyviewsdubai" target="_blank" class="fab fa-twitter"></a>-->
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+<script src="https://www.skyviewsdubai.com/wp-content/themes/skyviews/js/libs.js?v=1.1"></script>
+<script src="https://www.skyviewsdubai.com/wp-content/themes/skyviews/js/functions.js?v=1.3"></script>
+
+
+<script type="text/javascript" id="google-invisible-recaptcha-js-before">
+/* <![CDATA[ */
+var renderInvisibleReCaptcha = function() {
+
+    for (var i = 0; i < document.forms.length; ++i) {
+        var form = document.forms[i];
+        var holder = form.querySelector('.inv-recaptcha-holder');
+
+        if (null === holder) continue;
+		holder.innerHTML = '';
+
+         (function(frm){
+			var cf7SubmitElm = frm.querySelector('.wpcf7-submit');
+            var holderId = grecaptcha.render(holder,{
+                'sitekey': '6LeIpZ0pAAAAAOk6sReq7yzioSvGwNeiiR_TefkK', 'size': 'invisible', 'badge' : 'bottomright',
+                'callback' : function (recaptchaToken) {
+					if((null !== cf7SubmitElm) && (typeof jQuery != 'undefined')){jQuery(frm).submit();grecaptcha.reset(holderId);return;}
+					 HTMLFormElement.prototype.submit.call(frm);
+                },
+                'expired-callback' : function(){grecaptcha.reset(holderId);}
+            });
+
+			if(null !== cf7SubmitElm && (typeof jQuery != 'undefined') ){
+				jQuery(cf7SubmitElm).off('click').on('click', function(clickEvt){
+					clickEvt.preventDefault();
+					grecaptcha.execute(holderId);
+				});
+			}
+			else
+			{
+				frm.onsubmit = function (evt){evt.preventDefault();grecaptcha.execute(holderId);};
+			}
+
+
+        })(form);
+    }
+};
+/* ]]> */
+</script>
+<script type="text/javascript" async defer src="https://www.google.com/recaptcha/api.js?onload=renderInvisibleReCaptcha&amp;render=explicit" id="google-invisible-recaptcha-js"></script>
+<script type="text/javascript" src="https://cdn.trustindex.io/loader.js" id="trustindex-loader-js-js" async="async" data-wp-strategy="async"></script>
+
+</div>
+<!-- end main -->
+</body>
+</html>
