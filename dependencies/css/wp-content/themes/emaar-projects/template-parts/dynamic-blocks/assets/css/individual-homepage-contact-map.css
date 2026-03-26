@@ -1,0 +1,47 @@
+.individual-homepage-contact-map-section {
+    background: #f9f9f9;
+    padding: 120px 0;
+}
+
+.individual-homepage-contact-map {
+    padding: 60px;
+    background: #fff;
+    max-width: 1204px !important;
+}
+
+.contact-details p {
+    display: table;
+    /* text-align: left; */
+    margin-bottom: 12px;
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: 0;
+    line-height: 24px;
+    color: #25282d;
+}
+
+.is-visible {
+    opacity: 1;
+    -webkit-transform: translate3d(0px, 0px, 0px) rotateZ(0deg);
+    -moz-transform: translate3d(0px, 0px, 0px) rotateZ(0deg);
+    transform: translate3d(0px, 0px, 0px) rotateZ(0deg);
+}
+
+.individual-homepage-contact-map hr {
+    margin: 50px auto;
+}
+
+@media screen and (max-width: 992px) {
+    .individual-homepage-contact-map-section {
+        padding: 120px 60px;
+    }
+    .individual-homepage-contact-map {
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .individual-homepage-contact-map-section {
+        padding: 60px 0 40px;
+    }
+}

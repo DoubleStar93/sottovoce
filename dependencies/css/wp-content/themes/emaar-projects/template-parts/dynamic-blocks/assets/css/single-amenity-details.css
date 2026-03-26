@@ -1,0 +1,85 @@
+.amenities-large-img {
+  width: 100%;
+  max-height: 375px;
+  padding: 0 20px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.amenities-title-box {
+  position: absolute;
+  bottom: 0;
+  background: #fff;
+  width: 720px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+     -moz-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+       -o-transform: translateX(-50%);
+          transform: translateX(-50%);
+  padding: 30px;
+  text-align: center;
+}
+.amenities-list-col {
+  max-width: 860px;
+}
+.amenities-title-box-hr {
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+     -moz-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+       -o-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 55%;
+}
+.amenities-list {
+    max-width: 670px;
+    margin: 40px auto 0 auto;
+    padding: 0;
+    display: -ms-grid;
+    display: grid;
+    grid-column-gap: 60px;
+    -ms-grid-columns: -webkit-max-content 60px -webkit-max-content;
+    -ms-grid-columns: max-content 60px max-content;
+    grid-template-columns: -webkit-max-content -webkit-max-content;
+    grid-template-columns: max-content max-content;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+  }
+  .amenities-title-box-position{
+    position: inherit;
+  }
+/* .generic-icon {
+  content: url("/wp-content/uploads/2021/06/generic-icon.svg");
+} */
+/* .amenities-list li::before{
+    content: url(/wp-content/uploads/2021/06/generic-icon.svg);
+    vertical-align: middle;
+    margin: 10px;
+} */
+
+/*Media Queries*/
+@media (max-width: 900px) {
+    .amenities-large-img {
+        height: 170px;
+      }
+      .amenities-list {
+        display: block;
+        max-width: 300px;
+        margin: 40px 0 0;
+    }
+      .amenities-title-box{
+          width: 100%;
+          position: initial;
+          -webkit-transform: initial;
+             -moz-transform: initial;
+              -ms-transform: initial;
+               -o-transform: initial;
+                  transform: initial;
+      }
+      .amenities-title-box-hr{
+        width: 100%;
+      }
+}

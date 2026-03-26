@@ -1,0 +1,46 @@
+.individual-homepage-content-section {
+  position: absolute;
+  bottom: 11.5rem;
+  z-index: 3;
+}
+
+.individual-homepage-content-section h2,
+.individual-homepage-content-section p,
+.individual-homepage-content-section a,
+.individual-homepage-content-section span {
+  color: #fff;
+}
+
+.individual-homepage-content-section p,
+.individual-homepage-content-section a {
+  letter-spacing: 2px;
+  font-size: 16px;
+}
+
+p.homepage-content-address {
+  max-width: 432px;
+}
+
+.homepage-content-conact-links {
+  display: flex;
+  gap: 20px;
+  text-decoration: underline;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.individual-homepage-contact-map-section {
+  scroll-margin-top: 6em;
+}
+
+@media (max-width: 991px) {
+  .individual-homepage-content-section {
+    bottom: 10.5rem;
+  }
+  .homepage-content-conact-links {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
