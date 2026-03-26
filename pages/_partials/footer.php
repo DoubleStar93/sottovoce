@@ -1,3 +1,14 @@
+<?php
+declare(strict_types=1);
+require_once dirname(__DIR__, 2) . '/config.php';
+
+$footerAddressLine1 = appEnv('FOOTER_ADDRESS_LINE1', 'Via IX Febbraio, 1');
+$footerAddressLine2 = appEnv('FOOTER_ADDRESS_LINE2', '48121 Ravenna (RA)');
+$footerHoursLinkUrl = appEnv('FOOTER_HOURS_LINK_URL', '/pages/index.php#contact-details');
+$footerPhone = appEnv('FOOTER_PHONE', '+39 331 125 3525');
+$footerEmail = appEnv('FOOTER_EMAIL', 'info@valentinoravenna.com');
+$footerPiva = appEnv('FOOTER_PIVA', '');
+?>
 <footer class="">
   <div class=" footer">
     <div class="container-fluid ft-btm-link">
@@ -42,49 +53,27 @@
             <ul class=" p-0">
                           </ul>
           </div>
-          <div class="col-lg-3 col-md-2 col-sm-6  col-5 links  ml-lg-5 ">
-            <ul class=" p-0">
-              <li id="menu-item-153680" class="dropdown-item nav-link hotel-nav-sub-heading footer-hotel-sub-heading menu-item menu-item-type-custom menu-item-object-custom menu-item-153680"><a>United Arab Emirates</a></li>
-<li id="menu-item-137864" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-137864"><a href="/en/hotels-in-dubai/">Hotels In Dubai</a></li>
-<li id="menu-item-137865" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-137865"><a href="/en/hotels-in-downtown-dubai/">Hotels In Downtown Dubai</a></li>
-<li id="menu-item-137861" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-137861"><a href="/en/hotels-in-dubai-creek-harbour/">Hotels in Dubai Creek Harbour</a></li>
-<li id="menu-item-137862" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-137862"><a href="/en/hotels-in-dubai-marina/">Hotels in Dubai Marina &#038; JBR</a></li>
-<li id="menu-item-141485" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-141485"><a href="/en/hotels-in-emirates-hills/">Hotels in Emirates Hills</a></li>
-<li id="menu-item-137866" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-137866"><a href="/en/5-star-hotels-in-dubai/">5-star hotels in Dubai</a></li>
-<li id="menu-item-137863" class="dropdown-item nav-link hotel-nav-sub-heading footer-hotel-sub-heading menu-item menu-item-type-post_type menu-item-object-page menu-item-137863"><a href="/en/hotels-in-fujairah/">Hotels in Fujairah</a></li>
+          <div class="col-12 col-md-6 col-lg-4 links mt-4 mt-lg-0">
+            <ul class="p-0">
+              <li class="footer-hotel-sub-heading"><a>Dove siamo</a></li>
+              <li><a><?= htmlspecialchars($footerAddressLine1, ENT_QUOTES) ?></a></li>
+              <li><a><?= htmlspecialchars($footerAddressLine2, ENT_QUOTES) ?></a></li>
+              <li><a href="<?= htmlspecialchars($footerHoursLinkUrl, ENT_QUOTES) ?>">CLICCA QUI PER SCOPRIRLI</a></li>
             </ul>
           </div>
-          <div class="col-lg-2 col-md-2  col-sm-6  col-6 links footer-hotel-list-custom">
-            <ul class=" p-0">
-              <li id="menu-item-153672" class="dropdown-item nav-link hotel-nav-sub-heading footer-hotel-sub-heading menu-item menu-item-type-custom menu-item-object-custom menu-item-153672"><a>Saudia Arabia</a></li>
-<li id="menu-item-153673" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-153673"><a href="/en/hotels-in-makkah/">Hotels in Makkah</a></li>
-<li id="menu-item-153674" class="dropdown-item nav-link hotel-nav-sub-heading footer-hotel-sub-heading menu-item menu-item-type-custom menu-item-object-custom menu-item-153674"><a>Egypt</a></li>
-<li id="menu-item-153675" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-153675"><a href="/en/hotels-in-egypt/">Hotels in Egypt</a></li>
-<li id="menu-item-153676" class="dropdown-item nav-link hotel-nav-sub-heading footer-hotel-sub-heading menu-item menu-item-type-custom menu-item-object-custom menu-item-153676"><a>Turkey</a></li>
-<li id="menu-item-153677" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-153677"><a href="/en/hotels-in-istanbul/">Hotels in Istanbul</a></li>
-<li id="menu-item-153678" class="dropdown-item nav-link hotel-nav-sub-heading footer-hotel-sub-heading menu-item menu-item-type-custom menu-item-object-custom menu-item-153678"><a>Bahrain</a></li>
-<li id="menu-item-153679" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-153679"><a href="/en/hotels-in-bahrain/">Hotels in Bahrain</a></li>
+          <div class="col-12 col-md-6 col-lg-4 links mt-4 mt-lg-0">
+            <ul class="p-0">
+              <li class="footer-hotel-sub-heading"><a>Contatti</a></li>
+              <li><a>Telefono</a></li>
+              <li><a href="tel:<?= htmlspecialchars(preg_replace('/\s+/', '', $footerPhone), ENT_QUOTES) ?>"><?= htmlspecialchars($footerPhone, ENT_QUOTES) ?></a></li>
+              <li><a href="mailto:<?= htmlspecialchars($footerEmail, ENT_QUOTES) ?>"><?= htmlspecialchars($footerEmail, ENT_QUOTES) ?></a></li>
             </ul>
           </div>
-          <div class="col-lg-2 col-md-2  col-sm-6  col-5 links ">
-            <ul class=" p-0">
-              <li id="menu-item-6079" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6079"><a href="/en/dine/">Dining</a></li>
-<li id="menu-item-6080" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6080"><a href="/en/wellness/">Wellness</a></li>
-<li id="menu-item-6081" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6081"><a href="/en/offers-global/">Offers</a></li>
-<li id="menu-item-6082" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6082"><a href="/en/events/">Events</a></li>
-<li id="menu-item-8277" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8277"><a href="/en/about-u-by-emaar/">U By Emaar</a></li>
-<li id="menu-item-165998" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-165998"><a href="/en/hotels/sustainability/">Sustainability</a></li>
-<li id="menu-item-162563" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-162563"><a href="/en/blogs/">Blogs</a></li>
-            </ul>
-          </div>
-          <div class="col-6 col-md-12 col-lg-12 links footer-page-links">
+          <div class="col-6 col-md-12 col-lg-12 links footer-page-links mt-4">
             <ul class="d-flex align-items-md-center justify-content-center m-md-0 flex-column flex-md-row">
-              <li id="menu-item-2827" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2827"><a href="/en/about-us/">About Address</a></li>
-<li id="menu-item-4691" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4691"><a target="_blank" rel="noopener" href="/dependencies/external/www.emaarhospitality.com/en/gdpr/privacypolicy.bin">Privacy Policy</a></li>
-<li id="menu-item-2659" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2659"><a href="/en/terms-and-conditions/">Terms &#038; Conditions</a></li>
-<li id="menu-item-2657" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2657"><a href="/en/faq/">FAQ</a></li>
-<li id="menu-item-2655" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2655"><a href="/en/contact-us/">Contact Us</a></li>
-<li id="menu-item-141314" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-141314"><a href="/en/sitemap/">Sitemap</a></li>
+              <li class="menu-item"><a href="javascript:void(0);">P.IVA <?= htmlspecialchars($footerPiva, ENT_QUOTES) ?></a></li>
+<li id="menu-item-4691" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4691"><a href="/privacy-policy.php">Privacy Policy</a></li>
+<li id="menu-item-2659" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2659"><a href="/cookie-policy.php">Cookie Policy</a></li>
             </ul>
           </div>
         </div>
@@ -172,73 +161,6 @@
                           </div>
           </div>
         </div>
-      </div>
-      <div class="row no-gutters emaarLogo verticleborderwhite1">
-        <div class="social-icon-drop-up-menu-mobile  col-lg-3  col-xl-2 col-md-12 col-12 px-0 text-right order-lg-2 d-flex justify-content-between mt-0">
-          <div class="btn-group dropup position-static text-nowrap">
-            <a class="ft-dropdown" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">View All Group Entities              <i class="fas fa-caret-down up"></i>
-            </a>
-          </div>
-                      <ul class="social-pet px-0 d-lg-none social-pet-icons-mobile">
-              <li><a href="/dependencies/external/www.facebook.com/addressskyview.bin" rel="nofollow" title="facebook" target="_BLANK"><i class="fab fa-facebook-square darkgrey"></i></a></li>
-
-              <li><a href="/dependencies/external/www.instagram.com/addressskyview.bin" rel="nofollow" title="instagram" target="_BLANK"><i class="fab fa-instagram darkgrey"></i></a></li>
-
-              <li><a href="/dependencies/external/www.youtube.com/@AddressHotels.bin" rel="nofollow" title="youtube" target="_BLANK"><i class="fab fa-youtube darkgrey"></i></a></li>
-
-              <li><a href="/dependencies/external/www.tiktok.com/@addresshotels.bin" rel="nofollow" title="tiktok" target="_BLANK"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512" style="height:12px;">
-                    <path d="M448 209.9a210.1 210.1 0 0 1 -122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88 0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z"></path>
-                  </svg></a></li>
-
-              <li><a href="/dependencies/external/www.linkedin.com/company/address-hotels-and-resorts.bin" rel="nofollow" title="linkedin" target="_BLANK"><i class="fab fa-linkedin darkgrey"></i></a></li>
-             
-              <li class="d-md-none">
-                <hr class="vhr-dark">
-              </li>
-            </ul>
-                  </div>
-        <div class="col-xl-1 col-lg-2 col-1 col-md-1 emaarLogo-footer  px-0 ">
-          <!-- <img width="1267" height="272" class="emaar_footer_logo" src="/dependencies/external/www-addresshotels-com.azureedge.net/wp-content/themes/emaar-projects/img/emaar-text-logo.svg" alt="Emaar"> -->
-          <img width="1267" height="272" class="emaar_footer_logo" src="/dependencies/img/wp-content/themes/emaar-projects/img/emaar-new-logo.svg" alt="Emaar">
-        </div>
-        <div class="d-lg-inline-flex justify-content-lg-between justify-content-xl-end col-xl-9  col-lg-7  col-md-11 col-11 text-right px-0 order-lg-last  order-lg-3 ">
-                      <ul class="social-pet px-0 d-none d-lg-block social-pet-icons-desktop">
-              <li><a href="/dependencies/external/www.facebook.com/addressskyview.bin" rel="nofollow" title="facebook" target="_BLANK"><i class="fab fa-facebook-square darkgrey"></i></a></li>
-
-              <li><a href="/dependencies/external/www.instagram.com/addressskyview.bin" rel="nofollow" title="instagram" target="_BLANK"><i class="fab fa-instagram darkgrey"></i></a></li>
-
-              <li><a href="/dependencies/external/www.youtube.com/@AddressHotels.bin" rel="nofollow" title="youtube" target="_BLANK"><i class="fab fa-youtube darkgrey"></i></a></li>
-
-              <li><a href="/dependencies/external/www.tiktok.com/@addresshotels.bin" rel="nofollow" title="tiktok" target="_BLANK"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512" style="height:12px;">
-                    <path d="M448 209.9a210.1 210.1 0 0 1 -122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88 0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z"></path>
-                  </svg></a></li>
-
-              <li><a href="/dependencies/external/www.linkedin.com/company/address-hotels-and-resorts.bin" rel="nofollow" title="linkedin" target="_BLANK"><i class="fab fa-linkedin darkgrey"></i></a></li>
-               <li class="d-none d-lg-inline-block">
-                <hr class="vhr-dark">
-              </li>
-              
-            </ul>
-                    <ul class="footer-pet p-0 ">
-              <li><a href="/dependencies/external/api.whatsapp.com/send-phone-97142488553-text-Hi-Address-Sky-View.bin" rel="nofollow" title="whatsapp" target="_BLANK" class="blacklink">
-                    <svg width="22" height="22" viewbox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-bottom:5px;">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M20.4664 2.43597C10.9087 2.43597 3.13672 10.1492 3.13672 19.6315C3.13672 23.3917 4.36218 26.8781 6.43721 29.7133L4.27275 36.0977L10.931 33.9821C13.667 35.7777 16.9437 36.8243 20.4664 36.8243C30.02 36.8243 37.7947 29.111 37.7947 19.6301C37.7947 10.1492 30.02 2.43457 20.4664 2.43457V2.43597Z" fill="url(#paint0_linear_1)"></path>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M40.0014 19.4844C40.0014 30.2438 31.2094 38.9688 20.3647 38.9688C16.9203 38.9688 13.6855 38.0898 10.8726 36.5444L0 40L3.54363 29.5466C1.75505 26.6094 0.726612 23.1664 0.726612 19.4858C0.726612 8.72354 9.51862 0 20.3647 0C31.2108 0 40.0014 8.72354 40.0014 19.4858V19.4844ZM20.3661 3.10208C11.2597 3.10208 3.85524 10.4506 3.85524 19.4844C3.85524 23.0671 5.02201 26.3872 6.99923 29.0896L4.93817 35.1722L11.2821 33.1573C13.8881 34.8676 17.0111 35.8653 20.3661 35.8653C29.4683 35.8653 36.8756 28.5167 36.8756 19.4844C36.8756 10.452 29.4683 3.10208 20.3661 3.10208ZM30.2816 23.9726C30.16 23.7728 29.8386 23.654 29.3593 23.4151C28.8772 23.1761 26.5102 22.0205 26.0686 21.8612C25.6285 21.702 25.3043 21.6223 24.9857 22.1002C24.6643 22.5781 23.7421 23.654 23.4598 23.9726C23.1803 24.2926 22.8995 24.3303 22.4188 24.0914C21.9367 23.8524 20.3843 23.3466 18.5468 21.7215C17.1173 20.4541 16.1504 18.8919 15.8681 18.414C15.5886 17.9361 15.8401 17.679 16.0791 17.4401C16.2957 17.2249 16.5612 16.8826 16.8015 16.6045C17.0432 16.325 17.1229 16.1238 17.2836 15.8052C17.4443 15.4866 17.3646 15.2086 17.2431 14.9696C17.1243 14.7307 16.1601 12.3804 15.7591 11.4232C15.3609 10.4688 14.9584 10.5037 14.6762 10.5037C14.3939 10.5037 13.8769 10.5876 13.8769 10.5876C13.8769 10.5876 12.9113 10.7064 12.4712 11.1842C12.031 11.6621 10.7874 12.8177 10.7874 15.1666C10.7874 17.5155 12.5103 19.789 12.752 20.1062C12.9938 20.4262 16.0805 25.4063 20.9753 27.3178C25.8688 29.2294 25.8688 28.5922 26.7519 28.5111C27.6336 28.4329 29.5997 27.3569 30.0007 26.2405C30.4017 25.1254 30.4017 24.1682 30.283 23.9698L30.2816 23.9726Z" fill="white"></path>
-                    <defs>
-                    <lineargradient id="paint0_linear_1" x1="20.465" y1="2.43597" x2="20.465" y2="36.8257" gradientunits="userSpaceOnUse">
-                    <stop stop-color="#4AC14B"></stop>
-                    <stop offset="1" stop-color="#06853A"></stop>
-                    </lineargradient>
-                    </defs>
-                    </svg>
-
-                    Chat with us</a></li>              <li><a class="blacklink" href="tel:8002337377">UAE: 800 ADDRESS (2337377) </a>
-            </li>
-            <li><a class="blacklink" href="tel:8008971470">KSA: 8008971470</a>
-            </li>
-          </ul>
-        </div>
-
       </div>
     </div>
 </div></footer>
