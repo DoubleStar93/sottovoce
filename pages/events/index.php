@@ -3,9 +3,9 @@
 <html lang="en">
 
 
-<?php include dirname(__DIR__, 4) . '/_partials/head.php'; ?>
+<?php include dirname(__DIR__, 1) . '/_partials/head.php'; ?>
 
-<body class="page-template-default page page-id-2772 page-parent page-child parent-pageid-3739">
+<body class="page-template-default page page-id-2776 page-child parent-pageid-3739">
   <!-- Preloader -->
   <!-- Preloader End -->
   <div id="page" class="site">
@@ -32,7 +32,7 @@ var page = {"PAGE_SCOPE":"individual","HOME_PAGE":false,"DINE_PAGE":false,"BOOK_
 </noscript> -->
 
 
-<?php include dirname(__DIR__, 4) . '/_partials/header.php'; ?><!-- #masthead -->
+<?php include dirname(__DIR__, 1) . '/_partials/header.php'; ?><!-- #masthead -->
 <style>
 #nav-main .right-nav-container {
     max-width: 400px !important;
@@ -846,240 +846,486 @@ if (globalHomeLinkDropdownBox) {
          <div class="col-md-12">
 
             <main id="main" class="site-main">
-               <header class="internal-page">
-  <div class="container-fluid p-0 header-banner-img-container header-2">
+               <!-- <link rel="stylesheet" href="/dependencies/css/wp-content/themes/emaar-projects/template-parts/dynamic-blocks/assets/css/global_dynamic_blocks_common.css"> -->
 
-    <div class="row no-gutters h-100 align-items-center  px-4 px-lg-0 pl-lg-5">
-      <div class="col-12 col-lg-8 header-banner-img-content-box pl-lg-5">
+<header class="internal-page">
 
-        
-        
+   <div class="container-fluid p-0 header-banner-img-container">
+
+      
+      <div class="row no-gutters h-100 align-items-center  px-4 px-lg-0 pl-lg-5">
+         <div class="col-12 col-lg-8 header-banner-img-content-box pl-lg-5">
+
+                           <h1 class="display-1-72 whitetext mt-0 font-56-mobile">Meetings &amp; Events at Address Sky View</h1>
+            
+
+                     </div>
       </div>
-    </div>
+   </div>
 
-  </div>
+   <style>
+      .header-banner-img-container {
+         background-image: linear-gradient(-105deg, rgba(37, 40, 45, 0) 18%, #000000 104%), radial-gradient(circle at 53% 100%, rgba(42, 60, 68, 0), rgba(42, 60, 68, 0) 53%, rgba(42, 60, 68, 0.6) 79%), url('../../../../wp-content/uploads/2020/10/EMAAR-Address-SkyView-by-Maddy-Christina-153-sur-171.jpg');
+      }
+   </style>
 </header>
 
-  <style>
-    .header-banner-img-container {
-      background-image: linear-gradient(-105deg, rgba(37, 40, 45, 0) 18%, #000000 104%), radial-gradient(circle at 53% 100%, rgba(42, 60, 68, 0), rgba(42, 60, 68, 0) 53%, rgba(42, 60, 68, 0.6) 79%), url('../../../../wp-content/uploads/2020/10/ADH_ADSVH_FACILITIES_SPA_FEMALE_VITALITY_POOL_AMBIENT_HR_09.jpg');
+<link rel="stylesheet" href="/dependencies/css/wp-content/themes/emaar-projects/template-parts/dynamic-blocks/assets/css/global-event-details.css">
 
-    }
-  </style>
-
-
-
-<div class="container spa-and-wellness-section text-center px-lg-0">
-   <div class="row no-gutters align-items-center text-center justify-content-between">
-      <div class="col-12 col-lg-6 content-box">
-
-                     <h6 class="eyebrow-dark text-center">SPA AND WELLNESS</h6>
-         
-                     <h2 class="display-1-72 text-center font-56-mobile my-4">Extraordinary Experiences</h2>
-         
-                     <p class="body-4 text-center my-4">Go on a journey of self-discovery at The Spa, or bolster your fitness regiment at the high-tech Fitness Centre. Either way, you’re guaranteed a memorable experience.</p>
-         
-
-         <div class="wellness_contact_Info body-4 text-center mt-md-4 p-lg-2">
-
-                           <p class="m-0">
-                  <i class="fal fa-clock pr-2 pl-4"></i>
-                  <span class="dir-ltr">10.00am to 10.00pm</span>
-               </p>
-            
-                           <p class="m-0">
-                  <i class="fal fa-envelope pr-2 pl-4"></i>
-                  <a href="mailto:spa.adsvh@addresshotels.com" class="bluelink">spa.adsvh@addresshotels.com</a>
-               </p>
-            
-                           <p class="m-0">
-                  <i class="fal fa-phone-alt pr-2 pl-4"></i>
-                  <span class="dir-ltr">+97148738888</span>
-               </p>
-            
-         </div>
-
-         <div class="cta-btns-inline my-5 my-lg-4 row no-gutters">
-                           <a class=" btn col-7 col-md-5 my-2 m-2 d-flex align-items-center justify-content-center black-btn-hvr sec-def-btn section-1-part-1-btn-view-more btn secondary-btn" href="/pages/en/hotels/address-sky-view/wellness/spa/index.php" target="_self">View More</a>
-
-            
-                           <a class=" btn col-7 col-md-5 m-2 d-flex align-items-center justify-content-center  white-btn-hvr prim-def-black-btn  section-1-part-1-btn-reserve-your-spa primary-btn btn-reserve-unique" href="/dependencies/external/emea.spatime.com/asv1969/5383409/home.bin" target="_self">Reserve Your Treatment</a>
-            
-         </div>
-
-      </div>
-
-      <div class="col-12 col-lg-5 img-box img-shadow px-0">
-                     <img width="804" height="748" decoding="async" src="/dependencies/img/wp-content/uploads/2020/10/AD_BRAND_SKY_VIEW_EGG_CHAIRS_2875_LIFESTYLE-copy.jpg" alt="" class="img-fluid h-100 w-100">
-               </div>
-
-   </div>
-</div>
-
-<!-- <link rel="stylesheet" href="/dependencies/external/www-addresshotels-com.azureedge.net/wp-content/themes/emaar-projects/template-parts/dynamic-blocks/assets/css/wellness-pool-details.css"> -->
-
-
-<div class="container-fluid wellness-pool-details text-center">
-   <div class="wellness-pool-img m-0">
-               <img width="1920" height="1024" decoding="async" src="/dependencies/img/wp-content/uploads/2020/10/AD_BRAND_SKY_VIEW_SKY_DECK_INFINITYPOOL_0714_LIFESTYLE-copy.jpg" alt="Swimming Pool at Address Sky View" class="img-fluid">
-         </div>
-
-   <div class="container wellness-pool-content-box ">
-
-               <h6 class="pt-2 eyebrow-dark">
-            <p>SWIMMING POOL</p>
-         </h6>
-      
-               <h2 class="pb-3 display-1-72 mt-3">Dubai’s Ultimate Pool</h2>
-      
-      <hr>
-      
-               <p class="body-4">With the iconic Sky Deck, enviable lounging areas and a refreshing pool bar, the Address Sky View infinity pool simply pushes the boundaries of imagination.</p>
-      
-      <ul class="list-two-col text-left body-4 d-flex flex-md-row flex-column flex-wrap">
-                              <li class="d-flex align-items-center"><span class="generic-icon px-2"></span>Panoramic city views</li>
-                                       <li class="d-flex align-items-center"><span class="generic-icon px-2"></span>Large sun-lunging deck</li>
-                                       <li class="d-flex align-items-center"><span class="generic-icon px-2"></span>Private cabanas</li>
-                                       <li class="d-flex align-items-center"><span class="generic-icon px-2"></span>Pool bar with pool seating and dry deck seating</li>
-                                       <li class="d-flex align-items-center"><span class="generic-icon px-2"></span>Access to hotel guests only.</li>
-                                       <li class="d-flex align-items-center"><span class="generic-icon px-2"></span>Access to 18 years and above.</li>
-                                       <li class="d-flex align-items-center"><span class="generic-icon px-2"></span>Timing: 9:00 AM to sunset </li>
-                        </ul>
-
-
-   </div>
-
-</div>
-
-
-<div class="container-fluid wellness-fitness-center">
-   <div class="row g-o">
-
-      <div class="col-12 col-lg-7 px-0">
-                     <img width="2100" height="1399" decoding="async" class="img-fluid w-100 h-100" src="/dependencies/img/wp-content/uploads/2024/01/FITNESS-GYM-ADDRESS-SKY-VIEW-1-4.jpg.webp">
-               </div>
-
-      <div class="col-12 col-lg-5 px-0 bg-dark flex-md-row text-white">
-         <div class="wellness-fitness-text-content">
-
-                           <h6 class="eyebrow-dark whitetext">FITNESS CENTRE</h6>
-            
-                           <h2 class="font-56-mobile display-1-72 whitetext">Get Fit In Style</h2>
-            
-                           <div>
-                  <p class="body-4 whitetext">
-                     With cutting-edge equipment, a dedicated team of trainers and powerfully motivating views, The Fitness Centre at Address Sky View offers you the workout you have always wanted.                  </p>
-               </div>
-            
-            <dl class="wellness_Icons_12 body-4 whitetext">
-
-                                 <dd class="d-flex align-items-center">
-                     <i class="fal fa-clock pr-2 pt40p"></i>
-                     Daily, 24 hours                   </dd>
+<div class="container event-details-box">
+   <div class="row section-one">
+                  <div class="col-xl-6 col-md-12 col-sm-10 pb-3 px-4 px-lg-1">
                
-                                 <dd class="d-flex align-items-center">
-                     <i class="fal fa-map-marker-alt pr-2"></i>
-                     1st Floor, Address Sky View                  </dd>
-               
-                                 <dd class="d-flex align-items-center">
-                     <i class="fal fa-phone-alt pr-2"></i>
-                     <span class="dir-ltr">
-                     <a class="text-white" href="tel:+97148738886">+97148738886</a>
-                     </span>
-                  </dd>
-               
-                                 <dd class="d-flex align-items-center">
-                     <i class="fal fa-envelope pr-2"></i>
-                     <a href="mailto:spa.adsvh@addresshotels.com" class="whitelink text-white">spa.adsvh@addresshotels.com</a>
-                  </dd>
-               
-            </dl>
+               <div class="address-content-box m-auto">
+                                       <img decoding="async" src="/dependencies/img/wp-content/uploads/2023/01/MEETING-AREA-MAJLIS-ADDRESS-SKY-VIEW.jpg" class="card-img-top1 imageshadow img-event">
+                  
+                  <div class="pb-3 imagebox">
+                     <div class="card-body px-0 pt-4 mt-3 pb-3">
 
-                           <a class="white-btn-hvr sec-white-btn section-get-fit-stay-fit-btn transparent-btn d-block" href="/dependencies/docs/wp-content/uploads/2024/01/ADSV_FITNESS_FLYER.pdf" rel="nofollow" target="">
-                  <i class="fal fa-arrow-to-bottom pr-2"></i>
-                  Brochure Pdf               </a>
-            
-         </div>
-      </div>
-   </div>
-</div>
+                                                   <h6 class="text-uppercase pb-3 eyebrow-dark">CORPORATE</h6>
+                        
+                                                   <h2 class="pb-3 display-2-48">Meet, Create &amp; Celebrate</h2>
+                        
+                                                   <ul class="bullet-features mt-3">
+                              
+                              <li>Sleek meeting rooms</li><li>Conference facilities</li><li>Gala dinners</li><li>Corporate seminars</li>                              
+                               
+                                 <li class="location-icons d-flex align-items-center">
+                                       <a class="" href="mailto:">
+                                          <i class="fal fa-envelope"></i>
+                                          <span><a href="mailto:meet.ADSVH@addresshotels.com" class="">meet.ADSVH@addresshotels.com</a></span>
+                                       </a>
+                                    </li>
+                              <!-- <li class="contact_email"></li> -->
 
+                              
+                                                         </ul>
+                                             </div>
 
-<div class="wp-block-group greyboxlight d-none"><div class="wp-block-group__inner-container is-layout-flow wp-block-group-is-layout-flow"></div></div>
-
-
-
-<div class="container wellness-fitness-features-main">
-
-   <div class="wellness-fitness-features-heading">
-               <h2 class="display-2-48">The Future of Fitness</h2>
-         </div>
-
-   <div class="wellness-fitness-features">
-      <div class="wellness-fitness-features-box">
-         <ul class="">
-            <li class="d-flex align-items-center"><span class="generic-icon px-2"></span><span class="text-left">State-of-the-art gym</span></li><li class="d-flex align-items-center"><span class="generic-icon px-2"></span><span class="text-left">High-tech equipment</span></li><li class="d-flex align-items-center"><span class="generic-icon px-2"></span><span class="text-left">Certified Personal Trainers</span></li><li class="d-flex align-items-center"><span class="generic-icon px-2"></span><span class="text-left">Yoga studio</span></li><li class="d-flex align-items-center"><span class="generic-icon px-2"></span><span class="text-left">Equipment-integrated TV</span></li><li class="d-flex align-items-center"><span class="generic-icon px-2"></span><span class="text-left">Positive atmosphere</span></li><li class="d-flex align-items-center"><span class="generic-icon px-2"></span><span class="text-left">Juice counter</span></li><li class="d-flex align-items-center"><span class="generic-icon px-2"></span><span class="text-left">Personal Training session</span></li><li class="d-flex align-items-center"><span class="generic-icon px-2"></span><span class="text-left">Fitness Classes</span></li><li class="d-flex align-items-center"><span class="generic-icon px-2"></span><span class="text-left">Views of Burj Khalifa</span></li>         </ul>
-      </div>
-   </div>
-</div>
-
-<script>
-   var total_offers = 1;
-</script>
-   <div class="container-fluid greyboxlight">
-      <div class="container py-4">
-         <h2 class="display-2-48">Featured Offers</h2>
-         <div class="row">
-            <div class="flickity_carousel w-100">
-               
-
-                     <div class="col-11 col-md-6 col-lg-4 px-lg-3 pl-0 card-container carousel-cell">
-                        <div class="card-image">
-                           <img width="1088" height="1088" decoding="async" class="img-fluid" src="/dependencies/img/wp-content/uploads/2021/10/PRIVATE-JACUZZI-TIME-AT-THE-SPA-ADDRESS-SKY-VIEW.jpg.webp" alt="Jacuzzi with stunning Downtown Dubai &#038; Burj Khalifa view at Address Hotels + Resorts">
-                        </div>
-                        <div class="card-data p-3">
-                           <div class="card-overlay">
-                              <h6 class="body-4 secondary-semibold mb-3 mx-1 text-capitalize"><a class="post_title w4pl_post_title body-4 secondary-semibold" href="/en/offers/private-jacuzzi-time-at-the-spa/" title="Private Jacuzzi Time at The Spa"> Private Jacuzzi Time at The Spa </a></h6>
-                              <i class="fal fa-map-marker-alt pr-2"></i>Address Sky View                              <p class="d-none d-lg-block">&nbsp;</p>
-
-                           </div>
-                           <div class="card-buttons d-flex w-100i">
-                              <a href="/en/offers/private-jacuzzi-time-at-the-spa/" class="btn whitebtnborder w-100 mr-2 secondary-btn secondary-small">
-                                 View Details</a>
-                                                         </div>
-                        </div>
+                     <div class="stay-overlay">
+                                                                           <a class="btn blackbtn primary-btn m-3" href="/en/events/events-request/?hotel=address-sky-view&event=corporate/">Submit Request</a>
+                        
                      </div>
-                           </div>
+
+                  </div>
+               </div>
+
+            </div>
+
+                  <div class="col-xl-6 col-md-12 col-sm-10 pb-3 px-4 px-lg-1">
+               
+               <div class="address-content-box m-auto">
+                                       <img decoding="async" src="/dependencies/img/wp-content/uploads/2023/01/EMAAR-Address-SkyView-by-Maddy-Christina-140-sur-171.jpg" class="card-img-top1 imageshadow img-event">
+                  
+                  <div class="pb-3 imagebox">
+                     <div class="card-body px-0 pt-4 mt-3 pb-3">
+
+                                                   <h6 class="text-uppercase pb-3 eyebrow-dark">LIFESTYLE</h6>
+                        
+                                                   <h2 class="pb-3 display-2-48">Your Perfect Day</h2>
+                        
+                                                   <ul class="bullet-features mt-3">
+                              
+                              <li>Weddings &amp; ceremonies</li><li>Iconic venues</li><li>Superlative service</li><li>Personalised catering</li>                              
+                               
+                                 <li class="location-icons d-flex align-items-center">
+                                       <a class="" href="mailto:">
+                                          <i class="fal fa-envelope"></i>
+                                          <span><a href="mailto:meet.ADSVH@addresshotels.com" class="">meet.ADSVH@addresshotels.com</a></span>
+                                       </a>
+                                    </li>
+                              <!-- <li class="contact_email"></li> -->
+
+                              
+                                                         </ul>
+                                             </div>
+
+                     <div class="stay-overlay">
+                                                                           <a class="btn blackbtn primary-btn m-3" href="/en/events/events-request/?hotel=address-sky-view&event=lifestyle">Submit Request</a>
+                        
+                     </div>
+
+                  </div>
+               </div>
+
+            </div>
+
+         </div>
+</div>
+
+
+
+
+
+<div class="container enough-on-plate-section">
+   <div class="cater-wrapper row no-gutters">
+      <div class="col-lg-4 col-12 px-0">
+                     <img decoding="async" src="/dependencies/img/wp-content/uploads/2023/01/H7A7936-Edit.jpg" class="card-img caterImg">
+               </div>
+      <div class="col-lg-8 col-12 d-flex align-items-center">
+         <div class="card-body text-center ">
+
+                           <h2 class="pt-4 display-2-48">Have Enough On Your Plate?</h2>
+            
+                           <div class="card-text pt-lg-4 pt-md-2 pb-1 title22">
+                  <p class="body-4">Catering by our world-class experience designers.</p>
+               </div>
+            
+            
+               <div class="row justify-content-around card-sub-text body-4">
+
+                                       <div class="col-lg-6 col-md-6 px-0"><i class="fal fa-envelope pr-2"></i>
+                        <a href="mailto:meet.ADSVH@addresshotels.com" class="blacklink">meet.ADSVH@addresshotels.com</a>
+                     
+                     </div>
+                  
+                                       <div class="col-lg-6 col-md-5 px-0 mob-pt-12 mx-0"><i class="fal fa-phone-alt pr-2"></i>+97148738836</div>
+                  
+               </div>
          </div>
       </div>
    </div>
+</div>
+
+<div class="container-fluid greyboxlight pt-5">
+
+    <div class="container">
+        
+                    <h3 class="display-2-48 m-0 py-4">Find A Venue</h3>
+                
+    </div>
+</div>
+
+<link rel="stylesheet" href="/dependencies/css/wp-content/themes/emaar-projects/template-parts/dynamic-blocks/assets/css/event-single-venue.css">
 
 
-<script>
-   $(document).ready(function() {
 
-      if (ICL == 'ar') {
-         $('.flickity_carousel').flickity({
-            // options
-            cellAlign: 'right',
-            contain: true,
-            prevNextButtons: false,
-            pageDots: false,
-            rightToLeft: true
-         });
-      } else {
+<div class="container-fluid greyboxlight events-container-section">
+   <div class="container events-container">
 
-         $('.flickity_carousel').flickity({
-            // options
-            cellAlign: 'left',
-            contain: true,
-            prevNextButtons: false,
-            pageDots: false,
+      <div class="common-card-shadow residence-list-item">
+         <div class="common-card events-card">
+            <div class="row common-card-row no-gutters">
+               <div class="col-12 col-md-5 common-card-col-1">
+                  <div class="carousel slide" id="carouselControls-Studio_events" data-interval="false">
+                     <div class="carousel-inner">
 
-         });
-      }
-   });
-</script>            </main><!-- #main -->
+                                                   <div class="carousel-item active"><img decoding="async" src="/dependencies/img/wp-content/uploads/2023/01/MEETING-AREA-MAJLIS-ADDRESS-SKY-VIEW.jpg" class="venue-img pb-3 pb-lg-0" alt="First slide"></div>
+                        
+                     </div>
+                  </div>
+               </div>
+               <div class="col-12 col-md-7 common-card-col-2">
+
+                                       <h3 class="mb-3 body-1">Majlis</h3>
+                  
+                                       <p class="mb-4 body-4">The Majlis is a quintessentially Middle Eastern space. Make guests feel at home in a luxuriant décor that is a tribute to the traditions of local interior design, combined with contemporary expressions. A must for business-savvy executives.</p>
+                  
+
+                  <ul class="list-two-col-icon body-4">
+                    
+                                                   <li class="body-4">
+                                 Conveniently located on the ground level                              </li>
+                                                   <li class="body-4">
+                                 Seats up to 16 guests                              </li>
+                                                   <li class="body-4">
+                                 Magnificent chandelier and plush carpeting                              </li>
+                                       </ul>
+
+                                       <div class="mt-4 btn-panel">
+                        <a class="btn btn-primary primary-btn w-48" href="/en/events/events-request/?hotel=address-sky-view&venue=majlis">Submit Request                        </a>
+                        <div class="clearfix"></div>
+                     </div>
+                                 </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+<link rel="stylesheet" href="/dependencies/css/wp-content/themes/emaar-projects/template-parts/dynamic-blocks/assets/css/event-single-venue.css">
+
+
+
+<div class="container-fluid greyboxlight events-container-section">
+   <div class="container events-container">
+
+      <div class="common-card-shadow residence-list-item">
+         <div class="common-card events-card">
+            <div class="row common-card-row no-gutters">
+               <div class="col-12 col-md-5 common-card-col-1">
+                  <div class="carousel slide" id="carouselControls-Studio_events" data-interval="false">
+                     <div class="carousel-inner">
+
+                                                   <div class="carousel-item active"><img decoding="async" src="/dependencies/img/wp-content/uploads/2020/10/EMAAR-Address-SkyView-by-Maddy-Christina-170-sur-171.jpg" class="venue-img pb-3 pb-lg-0" alt="First slide"></div>
+                        
+                     </div>
+                  </div>
+               </div>
+               <div class="col-12 col-md-7 common-card-col-2">
+
+                                       <h3 class="mb-3 body-1">Weddings at Address Sky View</h3>
+                  
+                                       <p class="mb-4 body-4">Contemporary and elegant, our wedding venues transcend the lavish to become legendary. Stunningly generous indoor and large spaces, like our pre-function lounge area, allow us to orchestrate every detail of your wedding to fulfil your dreams and enchant your guests.</p>
+                  
+
+                  <ul class="list-two-col-icon body-4">
+                    
+                                                   <li class="body-4">
+                                 Elaborate floral arrangements, tasteful décor, spectacular entertainment                              </li>
+                                                   <li class="body-4">
+                                 Accommodates up to 950 guests standing and 500 guests seated depending on the dining setup.                              </li>
+                                                   <li class="body-4">
+                                 A dedicated team of experience designers                              </li>
+                                       </ul>
+
+                                       <div class="mt-4 btn-panel">
+                        <a class="btn btn-primary primary-btn w-48" href="/en/events/events-request/?hotel=address-sky-view&venue=wedding-venues">Submit Request                        </a>
+                        <div class="clearfix"></div>
+                     </div>
+                                 </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+<link rel="stylesheet" href="/dependencies/css/wp-content/themes/emaar-projects/template-parts/dynamic-blocks/assets/css/event-single-venue.css">
+
+
+
+<div class="container-fluid greyboxlight events-container-section">
+   <div class="container events-container">
+
+      <div class="common-card-shadow residence-list-item">
+         <div class="common-card events-card">
+            <div class="row common-card-row no-gutters">
+               <div class="col-12 col-md-5 common-card-col-1">
+                  <div class="carousel slide" id="carouselControls-Studio_events" data-interval="false">
+                     <div class="carousel-inner">
+
+                                                   <div class="carousel-item active"><img decoding="async" src="/dependencies/img/wp-content/uploads/2020/10/DSC2525.jpg" class="venue-img pb-3 pb-lg-0" alt="First slide"></div>
+                        
+                     </div>
+                  </div>
+               </div>
+               <div class="col-12 col-md-7 common-card-col-2">
+
+                                       <h3 class="mb-3 body-1">The Ballroom</h3>
+                  
+                                       <p class="mb-4 body-4">When guests think of ideal places for corporate meetings, conferences and social events, they think of the Address Sky View Ballroom. Chic interiors, marble walls, exhilarating views of Downtown Dubai and an elegant pre-function room — we have everything you need to make your corporate meetings, conferences and social events legendary.</p>
+                  
+
+                  <ul class="list-two-col-icon body-4">
+                    
+                                                   <li class="body-4">
+                                 Capacity of up to 850 guests in theatre style and 500 guests in rounded tables style.                              </li>
+                                                   <li class="body-4">
+                                 Lounge-style seating and alfresco dining areas flooded in natural daylight                              </li>
+                                                   <li class="body-4">
+                                 Exclusive valet parking directly outside the venue                              </li>
+                                                   <li class="body-4">
+                                 Pre-function area is also available.                              </li>
+                                       </ul>
+
+                                       <div class="mt-4 btn-panel">
+                        <a class="btn btn-primary primary-btn w-48" href="/en/events/events-request/?hotel=address-sky-view&venue=ballroom">Submit Request                        </a>
+                        <div class="clearfix"></div>
+                     </div>
+                                 </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+<link rel="stylesheet" href="/dependencies/css/wp-content/themes/emaar-projects/template-parts/dynamic-blocks/assets/css/event-single-venue.css">
+
+
+
+<div class="container-fluid greyboxlight events-container-section">
+   <div class="container events-container">
+
+      <div class="common-card-shadow residence-list-item">
+         <div class="common-card events-card">
+            <div class="row common-card-row no-gutters">
+               <div class="col-12 col-md-5 common-card-col-1">
+                  <div class="carousel slide" id="carouselControls-Studio_events" data-interval="false">
+                     <div class="carousel-inner">
+
+                                                   <div class="carousel-item active"><img decoding="async" src="/dependencies/img/wp-content/uploads/2023/01/HOTEL-LOBBY-POOL-BURJ-VIEW-ADDRESS-SKY-VIEW-1.jpg" class="venue-img pb-3 pb-lg-0" alt="First slide"></div>
+                        
+                     </div>
+                  </div>
+               </div>
+               <div class="col-12 col-md-7 common-card-col-2">
+
+                                       <h3 class="mb-3 body-1">The Pool Deck</h3>
+                  
+                                       <p class="mb-4 body-4">Make unforgettable memories in this unique, open-air venue. Delight your guests in a semi-circular layout beautifully situated in front of the towers. With water features, greenery and breathtaking views of the Burj Khalifa, you are guaranteed a magical wedding day.</p>
+                  
+
+                  <ul class="list-two-col-icon body-4">
+                    
+                                                   <li class="body-4">
+                                 Accommodates up to 50 guests for banquets and 80 cocktail receptions                              </li>
+                                                   <li class="body-4">
+                                 Conveniently located at the lobby level                              </li>
+                                       </ul>
+
+                                       <div class="mt-4 btn-panel">
+                        <a class="btn btn-primary primary-btn w-48" href="/en/events/events-request/?hotel=address-sky-view&venue=the-pool-deck">Submit Request                        </a>
+                        <div class="clearfix"></div>
+                     </div>
+                                 </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+<link rel="stylesheet" href="/dependencies/css/wp-content/themes/emaar-projects/template-parts/dynamic-blocks/assets/css/event-single-venue.css">
+
+
+
+<div class="container-fluid greyboxlight events-container-section">
+   <div class="container events-container">
+
+      <div class="common-card-shadow residence-list-item">
+         <div class="common-card events-card">
+            <div class="row common-card-row no-gutters">
+               <div class="col-12 col-md-5 common-card-col-1">
+                  <div class="carousel slide" id="carouselControls-Studio_events" data-interval="false">
+                     <div class="carousel-inner">
+
+                                                   <div class="carousel-item active"><img decoding="async" src="/dependencies/img/wp-content/uploads/2020/10/MEETING-ROOM-1-WITH-FACILITIES-ADDRESS-SKY-VIEW.jpg" class="venue-img pb-3 pb-lg-0" alt="First slide"></div>
+                        
+                     </div>
+                  </div>
+               </div>
+               <div class="col-12 col-md-7 common-card-col-2">
+
+                                       <h3 class="mb-3 body-1">Skyview 1</h3>
+                  
+                                       <p class="mb-4 body-4">Designed primarily with the needs of business executives in mind, our Sky View 1 is fully equipped and versatile. With seating for up to 12 people and superior audio-visual technology, you can use it to suit your particular needs.</p>
+                  
+
+                  <ul class="list-two-col-icon body-4">
+                    
+                                                   <li class="body-4">
+                                 Comfortably seats up to 12 guests                              </li>
+                                                   <li class="body-4">
+                                 Well suited to medium-sized meetings and presentations                              </li>
+                                                   <li class="body-4">
+                                 Superior audio-visual technology                              </li>
+                                       </ul>
+
+                                       <div class="mt-4 btn-panel">
+                        <a class="btn btn-primary primary-btn w-48" href="/en/events/events-request/?hotel=address-sky-view&venue=skyview-1">Submit Request                        </a>
+                        <div class="clearfix"></div>
+                     </div>
+                                 </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+<link rel="stylesheet" href="/dependencies/css/wp-content/themes/emaar-projects/template-parts/dynamic-blocks/assets/css/event-single-venue.css">
+
+
+
+<div class="container-fluid greyboxlight events-container-section">
+   <div class="container events-container">
+
+      <div class="common-card-shadow residence-list-item">
+         <div class="common-card events-card">
+            <div class="row common-card-row no-gutters">
+               <div class="col-12 col-md-5 common-card-col-1">
+                  <div class="carousel slide" id="carouselControls-Studio_events" data-interval="false">
+                     <div class="carousel-inner">
+
+                                                   <div class="carousel-item active"><img decoding="async" src="/dependencies/img/wp-content/uploads/2020/10/ADH_ADSVH_EVENTS_MEETING-ROOM-2.jpg" class="venue-img pb-3 pb-lg-0" alt="First slide"></div>
+                        
+                     </div>
+                  </div>
+               </div>
+               <div class="col-12 col-md-7 common-card-col-2">
+
+                                       <h3 class="mb-3 body-1">Skyview 2</h3>
+                  
+                                       <p class="mb-4 body-4">If you’re looking for a versatile venue, Skyview 2 is perfect for you. A multi-purpose space for a wide range of event setups, for audio-visual screenings or for theatre-style events that are more intimate than those held in our Screening Room.</p>
+                  
+
+                  <ul class="list-two-col-icon body-4">
+                    
+                                                   <li class="body-4">
+                                 Accommodates up to 10 guests                              </li>
+                                                   <li class="body-4">
+                                 Well suited to medium-sized meetings and presentations                              </li>
+                                                   <li class="body-4">
+                                 Cutting-edge audio-visual technology                              </li>
+                                                   <li class="body-4">
+                                 Natural daylight is available                              </li>
+                                       </ul>
+
+                                       <div class="mt-4 btn-panel">
+                        <a class="btn btn-primary primary-btn w-48" href="/en/events/events-request/?hotel=address-sky-view&venue=skyview-2">Submit Request                        </a>
+                        <div class="clearfix"></div>
+                     </div>
+                                 </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+<link rel="stylesheet" href="/dependencies/css/wp-content/themes/emaar-projects/template-parts/dynamic-blocks/assets/css/event-single-venue.css">
+
+
+
+<div class="container-fluid greyboxlight events-container-section">
+   <div class="container events-container">
+
+      <div class="common-card-shadow residence-list-item">
+         <div class="common-card events-card">
+            <div class="row common-card-row no-gutters">
+               <div class="col-12 col-md-5 common-card-col-1">
+                  <div class="carousel slide" id="carouselControls-Studio_events" data-interval="false">
+                     <div class="carousel-inner">
+
+                                                   <div class="carousel-item active"><img decoding="async" src="/dependencies/img/wp-content/uploads/2020/11/ADH_ADSVH_EVENTS_AMBIENT_HR_03.jpg" class="venue-img pb-3 pb-lg-0" alt="First slide"></div>
+                        
+                     </div>
+                  </div>
+               </div>
+               <div class="col-12 col-md-7 common-card-col-2">
+
+                                       <h3 class="mb-3 body-1">Skyview 3 and Skyview 4</h3>
+                  
+                                       <p class="mb-4 body-4">Make a strong impression in a sophisticated meeting space with advanced audio-visual equipment. The Skyview3 and Skyview4&#8217;s atmosphere of prestige and refinement is matched only by its unique features.</p>
+                  
+
+                  <ul class="list-two-col-icon body-4">
+                    
+                                                   <li class="body-4">
+                                 Charming floor-to-ceiling bookshelves                              </li>
+                                                   <li class="body-4">
+                                 A built-in closet                              </li>
+                                                   <li class="body-4">
+                                 A separate seating area for tête-à-tête conversations                              </li>
+                                       </ul>
+
+                                       <div class="mt-4 btn-panel">
+                        <a class="btn btn-primary primary-btn w-48" href="/en/events/events-request/?hotel=address-sky-view&venue=skyview-3-skyview-4">Submit Request                        </a>
+                        <div class="clearfix"></div>
+                     </div>
+                                 </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>            </main><!-- #main -->
 
          </div><!-- col -->
       </div><!-- row -->
@@ -1087,9 +1333,8 @@ if (globalHomeLinkDropdownBox) {
    </div><!-- #primary -->
 </div><!-- #content -->
 
-<?php include dirname(__DIR__, 4) . '/_partials/footer.php'; ?>
-<?php include dirname(__DIR__, 4) . '/_partials/foot.php'; ?>
+<?php include dirname(__DIR__, 1) . '/_partials/footer.php'; ?>
+<?php include dirname(__DIR__, 1) . '/_partials/foot.php'; ?>
 </body>
 
-</html><!-- Rocket has webp -->
-<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me -->
+</html>

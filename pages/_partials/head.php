@@ -98,6 +98,67 @@
       return new OriginalEventSource(url, config);
     };
   }
+
+  // Restore legacy entrance animations without external dependencies.
+  function animateLegacySections() {
+    var scrollItems = Array.prototype.slice.call(document.querySelectorAll('.show-on-scroll'));
+    var aosItems = Array.prototype.slice.call(document.querySelectorAll('[data-aos]'));
+    if (scrollItems.length === 0 && aosItems.length === 0) {
+      return;
+    }
+
+    if (!document.getElementById('legacy-aos-fallback-style')) {
+      var style = document.createElement('style');
+      style.id = 'legacy-aos-fallback-style';
+      style.textContent =
+        '[data-aos]{opacity:0;transition-property:transform,opacity;transition-duration:.7s;transition-timing-function:ease;will-change:transform,opacity;}' +
+        '[data-aos="fade-left"]{transform:translate3d(32px,0,0);}' +
+        '[data-aos="fade-right"]{transform:translate3d(-32px,0,0);}' +
+        '[data-aos="fade-up"]{transform:translate3d(0,32px,0);}' +
+        '[data-aos="fade-down"]{transform:translate3d(0,-32px,0);}' +
+        '[data-aos="zoom-in"]{transform:scale(.96);}' +
+        '[data-aos].aos-animated{opacity:1;transform:translate3d(0,0,0) scale(1);}';
+      document.head.appendChild(style);
+    }
+
+    function showNode(node, isAos) {
+      if (!node) {
+        return;
+      }
+      node.classList.add('is-visible');
+      if (isAos) {
+        var duration = parseInt(node.getAttribute('data-aos-duration') || '700', 10);
+        if (!isNaN(duration) && duration > 0) {
+          node.style.transitionDuration = duration + 'ms';
+        }
+        node.classList.add('aos-animated');
+      }
+    }
+
+    if (typeof window.IntersectionObserver === 'function') {
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            showNode(entry.target, entry.target.hasAttribute('data-aos'));
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { rootMargin: '0px 0px -10% 0px', threshold: 0.08 });
+
+      scrollItems.forEach(function (node) { observer.observe(node); });
+      aosItems.forEach(function (node) { observer.observe(node); });
+      return;
+    }
+
+    scrollItems.forEach(function (node) { showNode(node, false); });
+    aosItems.forEach(function (node) { showNode(node, true); });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', animateLegacySections);
+  } else {
+    animateLegacySections();
+  }
 })();
 </script>
   <meta charset="UTF-8">
@@ -116,19 +177,19 @@
 
   
 <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'>
-<link rel="alternate" href="/pages/en/hotels/address-sky-view/index.php" hreflang="x-default">
-<link rel="alternate" hreflang="en" href="/pages/en/hotels/address-sky-view/index.php">
+<link rel="alternate" href="/pages/index.php" hreflang="x-default">
+<link rel="alternate" hreflang="en" href="/pages/index.php">
 
 
 
 
 
-<link rel="alternate" hreflang="x-default" href="/pages/en/hotels/address-sky-view/index.php">
+<link rel="alternate" hreflang="x-default" href="/pages/index.php">
 
 	<!-- This site is optimized with the Yoast SEO plugin v22.9 - https://yoast.com/wordpress/plugins/seo/ -->
 	<title>Address Sky View | Downtown Dubai | Address Hotels + Resorts</title>
 	<meta name="description" content="Stay above it all at Address Sky View, a luxury hotel in Downtown Dubai with iconic infinity pool, breathtaking views of Burj Khalifa, direct access to Dubai Mall.">
-	<link rel="canonical" href="/pages/en/hotels/address-sky-view/index.php">
+	<link rel="canonical" href="/pages/index.php">
 	<meta property="og:locale" content="en_US">
 	<meta property="og:type" content="article">
 	<meta property="og:title" content="Address Sky View | Downtown Dubai | Address Hotels + Resorts">
@@ -524,9 +585,4 @@ html[dir=rtl] .individual-homepage-experience-section .overlap-btn-new-block,htm
 		<noscript><style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}</style></noscript>  
   
   <!-- <link href="/dependencies/external/fonts.googleapis.com/css2-family-Lato-wght-300-400-display-swap.bin" rel="stylesheet">  -->
-<meta name="generator" content="WP Rocket 3.17.3.1" data-wpr-features="wpr_lazyload_iframes wpr_image_dimensions wpr_cache_webp wpr_cdn wpr_desktop wpr_dns_prefetch">
-<style>
-::selection { background: #d9c7a1 !important; color: #25282d !important; }
-::-moz-selection { background: #d9c7a1 !important; color: #25282d !important; }
-</style>
-</head>
+<meta name="generator" content="WP Rocket 3.17.3.1" data-wpr-features="wpr_lazyload_iframes wpr_image_dimensions wpr_cache_webp wpr_cdn wpr_desktop wpr_dns_prefetch"></head>

@@ -3,7 +3,7 @@
 <html lang="en">
 
 
-<?php include dirname(__DIR__, 3) . '/_partials/head.php'; ?>
+<?php include __DIR__ . '/_partials/head.php'; ?>
 
 <body class="page-template page-template-templates page-template-individual-home-custom-template page-template-templatesindividual-home-custom-template-php page page-id-3739 page-parent page-child parent-pageid-662">
   <!-- Preloader -->
@@ -18,7 +18,7 @@
     
 
 
-<?php include dirname(__DIR__, 3) . '/_partials/header.php'; ?><!-- #masthead -->
+<?php include __DIR__ . '/_partials/header.php'; ?><!-- #masthead -->
 <style>
 @media (min-width: 992px) {
   :lang(ar) .global-home-link-dropdown-box .dropdown-menu li {
@@ -2574,7 +2574,7 @@ if (globalHomeLinkDropdownBox) {
                                       <h3 class="whitetext m-0 display-4-32 secondary-normal mb-2">Rooms</h3>
                                     <div class="d-flex flex-column flex-md-row align-items-start align-md-items-center justify-content-between gap-2">
                                         <div class="overlap-btn mb-0 mb-md-auto">
-                                              <a class="btn alternate-btn small-btn" style="width: max-content;" href="/pages/en/hotels/address-sky-view/rooms-and-suites/index.php">Discover More</a>
+                                              <a class="btn alternate-btn small-btn" style="width: max-content;" href="/pages/rooms-and-suites/index.php">Discover More</a>
                                           </div>
 
                   </div>
@@ -2608,7 +2608,7 @@ if (globalHomeLinkDropdownBox) {
                                       <h3 class="whitetext m-0 display-4-32 secondary-normal mb-2">Residences </h3>
                                     <div class="d-flex flex-column flex-md-row align-items-start align-md-items-center justify-content-between gap-2">
                                         <div class="overlap-btn mb-0 mb-md-auto">
-                                              <a class="btn alternate-btn small-btn" style="width: max-content;" href="/pages/en/hotels/address-sky-view/residences/index.php">Discover More</a>
+                                              <a class="btn alternate-btn small-btn" style="width: max-content;" href="/pages/residences/index.php">Discover More</a>
                                           </div>
 
                   </div>
@@ -2673,13 +2673,13 @@ if (globalHomeLinkDropdownBox) {
                                                               <h3 class="whitetext m-0 display-4-32 secondary-normal ">Gourmet Dining</h3>
                                       </div>
                   <div class="overlap-btn">
-                                          <a class="btn alternate-btn small-btn" href="/pages/en/hotels/address-sky-view/dining/index.php">Explore</a>
+                                          <a class="btn alternate-btn small-btn" href="/pages/dining/index.php">Explore</a>
                                       </div>
                 </div>
                 <div class="overlap-below d-none mt-1">
                                   </div>
                 <div class="mobile-overlap-btn d-none">
-                                      <a class="btn alternate-btn small-btn" href="/pages/en/hotels/address-sky-view/dining/index.php">Explore</a>
+                                      <a class="btn alternate-btn small-btn" href="/pages/dining/index.php">Explore</a>
                   
                 </div>
 
@@ -2701,13 +2701,13 @@ if (globalHomeLinkDropdownBox) {
                                                               <h3 class="whitetext m-0 display-4-32 secondary-normal ">The Spa</h3>
                                       </div>
                   <div class="overlap-btn">
-                                          <a class="btn alternate-btn small-btn" href="/pages/en/hotels/address-sky-view/wellness/spa/index.php">Explore</a>
+                                          <a class="btn alternate-btn small-btn" href="/pages/wellness/spa/index.php">Explore</a>
                                       </div>
                 </div>
                 <div class="overlap-below d-none mt-1">
                                   </div>
                 <div class="mobile-overlap-btn d-none">
-                                      <a class="btn alternate-btn small-btn" href="/pages/en/hotels/address-sky-view/wellness/spa/index.php">Explore</a>
+                                      <a class="btn alternate-btn small-btn" href="/pages/wellness/spa/index.php">Explore</a>
                   
                 </div>
 
@@ -2729,13 +2729,13 @@ if (globalHomeLinkDropdownBox) {
                                                               <h3 class="whitetext m-0 display-4-32 secondary-normal ">Superb Recreation</h3>
                                       </div>
                   <div class="overlap-btn">
-                                          <a class="btn alternate-btn small-btn" href="/pages/en/hotels/address-sky-view/wellness/index.php">Explore</a>
+                                          <a class="btn alternate-btn small-btn" href="/pages/wellness/index.php">Explore</a>
                                       </div>
                 </div>
                 <div class="overlap-below d-none mt-1">
                                   </div>
                 <div class="mobile-overlap-btn d-none">
-                                      <a class="btn alternate-btn small-btn" href="/pages/en/hotels/address-sky-view/wellness/index.php">Explore</a>
+                                      <a class="btn alternate-btn small-btn" href="/pages/wellness/index.php">Explore</a>
                   
                 </div>
 
@@ -2757,13 +2757,13 @@ if (globalHomeLinkDropdownBox) {
                                                               <h3 class="whitetext m-0 display-4-32 secondary-normal ">Opulent Amenities</h3>
                                       </div>
                   <div class="overlap-btn">
-                                          <a class="btn alternate-btn small-btn" href="/pages/en/hotels/address-sky-view/amenities/index.php">Explore</a>
+                                          <a class="btn alternate-btn small-btn" href="/pages/amenities/index.php">Explore</a>
                                       </div>
                 </div>
                 <div class="overlap-below d-none mt-1">
                                   </div>
                 <div class="mobile-overlap-btn d-none">
-                                      <a class="btn alternate-btn small-btn" href="/pages/en/hotels/address-sky-view/amenities/index.php">Explore</a>
+                                      <a class="btn alternate-btn small-btn" href="/pages/amenities/index.php">Explore</a>
                   
                 </div>
 
@@ -2900,7 +2900,7 @@ if (globalHomeLinkDropdownBox) {
                               <p class="body-2 whitetext corporate-desc">Whether you’re celebrating your special day or conducting business in style, we have the perfect venue to make it memorable. </p>
               
               <div class="cta-btn">
-                                  <a class="btn transbtn mt15r cntplink transparent-btn" href="/pages/en/hotels/address-sky-view/events/index.php">View Details</a>
+                                  <a class="btn transbtn mt15r cntplink transparent-btn" href="/pages/events/index.php">View Details</a>
                               </div>
 
             </div>
@@ -3236,7 +3236,7 @@ if (globalHomeLinkDropdownBox) {
 
           <div id="collapse6591054840" class="collapse accordionFaq-card-content" aria-labelledby="heading0" data-parent="#accordionFaq659105484">
             <div class="card-body">
-            To secure your reservation with us at Address Sky View, you have multiple convenient options. You may initiate the booking process by accessing our official website at <a href="/pages/en/hotels/address-sky-view/index.php">https://www.addresshotels.com/en/hotels/address-sky-view/</a>. Alternatively, you can send us an email at <a href="mailto:stay@addresshotels.com">stay@addresshotels.com</a>. <br>For direct assistance and personalized service, feel free to contact our dedicated team by placing a call to us at +971 42 458 888.              <div class="cta-btn mt-4">
+            To secure your reservation with us at Address Sky View, you have multiple convenient options. You may initiate the booking process by accessing our official website at <a href="/pages/index.php">https://www.addresshotels.com/en/hotels/address-sky-view/</a>. Alternatively, you can send us an email at <a href="mailto:stay@addresshotels.com">stay@addresshotels.com</a>. <br>For direct assistance and personalized service, feel free to contact our dedicated team by placing a call to us at +971 42 458 888.              <div class="cta-btn mt-4">
               </div>
             </div>
           </div>
@@ -3268,7 +3268,7 @@ if (globalHomeLinkDropdownBox) {
 
           <div id="collapse6591054842" class="collapse accordionFaq-card-content" aria-labelledby="heading2" data-parent="#accordionFaq659105484">
             <div class="card-body">
-            Discover an array of picturesque accommodations at Address Sky View, featuring an exquisite selection of rooms and suites that cater to diverse preferences. Among the enticing choices are the Premier Room King, Premier Room Twin, Premier Burj View Room King, Premier Burj View Room Twin, Club Room King, Club Room Twin, Junior Suite, Executive Suite, and the opulent Presidential Suite. Each category is meticulously designed to provide a distinctive experience, ensuring a stay that exceeds expectations.<br>For a comprehensive insight into the distinctive characteristics and amenities offered by each of our room categories, we invite you to explore further details by visiting the following link: <a href="/pages/en/hotels/address-sky-view/rooms-and-suites/index.php">https://www.addresshotels.com/en/hotels/address-sky-view/rooms-and-suites/</a>. This resource provides an in-depth overview, allowing you to make an informed choice and tailor your stay at Address Sky View to your individual preferences and desires.              <div class="cta-btn mt-4">
+            Discover an array of picturesque accommodations at Address Sky View, featuring an exquisite selection of rooms and suites that cater to diverse preferences. Among the enticing choices are the Premier Room King, Premier Room Twin, Premier Burj View Room King, Premier Burj View Room Twin, Club Room King, Club Room Twin, Junior Suite, Executive Suite, and the opulent Presidential Suite. Each category is meticulously designed to provide a distinctive experience, ensuring a stay that exceeds expectations.<br>For a comprehensive insight into the distinctive characteristics and amenities offered by each of our room categories, we invite you to explore further details by visiting the following link: <a href="/pages/rooms-and-suites/index.php">https://www.addresshotels.com/en/hotels/address-sky-view/rooms-and-suites/</a>. This resource provides an in-depth overview, allowing you to make an informed choice and tailor your stay at Address Sky View to your individual preferences and desires.              <div class="cta-btn mt-4">
               </div>
             </div>
           </div>
@@ -3300,7 +3300,7 @@ if (globalHomeLinkDropdownBox) {
 
           <div id="collapse6591054844" class="collapse accordionFaq-card-content" aria-labelledby="heading4" data-parent="#accordionFaq659105484">
             <div class="card-body">
-            The highly sought-after infinity pool, offering breathtaking views of the iconic Burj Khalifa, is a privileged amenity exclusively accessible to our esteemed hotel guests. For those not staying with us, there&#8217;s an enticing option to relish the ambiance by choosing to dine at CÉ LA VI Dubai. However a dining experience at Ce La Vi, does not entail the use to the Infinity Pool.<br><br>For an unforgettable experience at Address Sky View, securing your stay is just a few clicks away. Explore the available accommodations, amenities, and services by visiting our website at <a href="/pages/en/hotels/address-sky-view/index.php">https://www.addresshotels.com/en/hotels/address-sky-view/</a>. To make a reservation, you can also reach out to us via email at <a href="mailto:stay@addresshotels.com">stay@addresshotels.com</a> or contact our dedicated team directly at +971 42 458 888. We look forward to making your stay with us truly exceptional.              <div class="cta-btn mt-4">
+            The highly sought-after infinity pool, offering breathtaking views of the iconic Burj Khalifa, is a privileged amenity exclusively accessible to our esteemed hotel guests. For those not staying with us, there&#8217;s an enticing option to relish the ambiance by choosing to dine at CÉ LA VI Dubai. However a dining experience at Ce La Vi, does not entail the use to the Infinity Pool.<br><br>For an unforgettable experience at Address Sky View, securing your stay is just a few clicks away. Explore the available accommodations, amenities, and services by visiting our website at <a href="/pages/index.php">https://www.addresshotels.com/en/hotels/address-sky-view/</a>. To make a reservation, you can also reach out to us via email at <a href="mailto:stay@addresshotels.com">stay@addresshotels.com</a> or contact our dedicated team directly at +971 42 458 888. We look forward to making your stay with us truly exceptional.              <div class="cta-btn mt-4">
               </div>
             </div>
           </div>
@@ -3505,8 +3505,8 @@ Each of these dining establishments contributes to the rich tapestry of gastrono
 </script>
 </div>
 
-<?php include dirname(__DIR__, 3) . '/_partials/footer.php'; ?>
-<?php include dirname(__DIR__, 3) . '/_partials/foot.php'; ?>
+<?php include __DIR__ . '/_partials/footer.php'; ?>
+<?php include __DIR__ . '/_partials/foot.php'; ?>
 </body>
 
 </html>

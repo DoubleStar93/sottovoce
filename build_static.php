@@ -608,6 +608,67 @@ function injectInternalOnlyRuntimeGuard(string $html): string
       return new OriginalEventSource(url, config);
     };
   }
+
+  // Restore legacy entrance animations without external dependencies.
+  function animateLegacySections() {
+    var scrollItems = Array.prototype.slice.call(document.querySelectorAll('.show-on-scroll'));
+    var aosItems = Array.prototype.slice.call(document.querySelectorAll('[data-aos]'));
+    if (scrollItems.length === 0 && aosItems.length === 0) {
+      return;
+    }
+
+    if (!document.getElementById('legacy-aos-fallback-style')) {
+      var style = document.createElement('style');
+      style.id = 'legacy-aos-fallback-style';
+      style.textContent =
+        '[data-aos]{opacity:0;transition-property:transform,opacity;transition-duration:.7s;transition-timing-function:ease;will-change:transform,opacity;}' +
+        '[data-aos="fade-left"]{transform:translate3d(32px,0,0);}' +
+        '[data-aos="fade-right"]{transform:translate3d(-32px,0,0);}' +
+        '[data-aos="fade-up"]{transform:translate3d(0,32px,0);}' +
+        '[data-aos="fade-down"]{transform:translate3d(0,-32px,0);}' +
+        '[data-aos="zoom-in"]{transform:scale(.96);}' +
+        '[data-aos].aos-animated{opacity:1;transform:translate3d(0,0,0) scale(1);}';
+      document.head.appendChild(style);
+    }
+
+    function showNode(node, isAos) {
+      if (!node) {
+        return;
+      }
+      node.classList.add('is-visible');
+      if (isAos) {
+        var duration = parseInt(node.getAttribute('data-aos-duration') || '700', 10);
+        if (!isNaN(duration) && duration > 0) {
+          node.style.transitionDuration = duration + 'ms';
+        }
+        node.classList.add('aos-animated');
+      }
+    }
+
+    if (typeof window.IntersectionObserver === 'function') {
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            showNode(entry.target, entry.target.hasAttribute('data-aos'));
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { rootMargin: '0px 0px -10% 0px', threshold: 0.08 });
+
+      scrollItems.forEach(function (node) { observer.observe(node); });
+      aosItems.forEach(function (node) { observer.observe(node); });
+      return;
+    }
+
+    scrollItems.forEach(function (node) { showNode(node, false); });
+    aosItems.forEach(function (node) { showNode(node, true); });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', animateLegacySections);
+  } else {
+    animateLegacySections();
+  }
 })();
 </script>
 HTML;

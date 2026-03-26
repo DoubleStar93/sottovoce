@@ -80,8 +80,7 @@
           <div class="col-6 col-md-12 col-lg-12 links footer-page-links">
             <ul class="d-flex align-items-md-center justify-content-center m-md-0 flex-column flex-md-row">
               <li id="menu-item-2827" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2827"><a href="/en/about-us/">About Address</a></li>
-<li id="menu-item-4691" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4691"><a href="/privacy-policy.php">Privacy Policy</a></li>
-<li id="menu-item-cookie-local" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-cookie-local"><a href="/cookie-policy.php">Cookie Policy</a></li>
+<li id="menu-item-4691" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4691"><a target="_blank" rel="noopener" href="/dependencies/external/www.emaarhospitality.com/en/gdpr/privacypolicy.bin">Privacy Policy</a></li>
 <li id="menu-item-2659" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2659"><a href="/en/terms-and-conditions/">Terms &#038; Conditions</a></li>
 <li id="menu-item-2657" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2657"><a href="/en/faq/">FAQ</a></li>
 <li id="menu-item-2655" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2655"><a href="/en/contact-us/">Contact Us</a></li>

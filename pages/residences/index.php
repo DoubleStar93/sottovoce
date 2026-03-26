@@ -3,9 +3,9 @@
 <html lang="en">
 
 
-<?php include dirname(__DIR__, 4) . '/_partials/head.php'; ?>
+<?php include dirname(__DIR__, 1) . '/_partials/head.php'; ?>
 
-<body class="page-template-default page page-id-2776 page-child parent-pageid-3739">
+<body class="page-template-default page page-id-2767 page-child parent-pageid-3739">
   <!-- Preloader -->
   <!-- Preloader End -->
   <div id="page" class="site">
@@ -32,7 +32,7 @@ var page = {"PAGE_SCOPE":"individual","HOME_PAGE":false,"DINE_PAGE":false,"BOOK_
 </noscript> -->
 
 
-<?php include dirname(__DIR__, 4) . '/_partials/header.php'; ?><!-- #masthead -->
+<?php include dirname(__DIR__, 1) . '/_partials/header.php'; ?><!-- #masthead -->
 <style>
 #nav-main .right-nav-container {
     max-width: 400px !important;
@@ -846,485 +846,232 @@ if (globalHomeLinkDropdownBox) {
          <div class="col-md-12">
 
             <main id="main" class="site-main">
-               <!-- <link rel="stylesheet" href="/dependencies/css/wp-content/themes/emaar-projects/template-parts/dynamic-blocks/assets/css/global_dynamic_blocks_common.css"> -->
-
-<header class="internal-page">
-
-   <div class="container-fluid p-0 header-banner-img-container">
-
-      
-      <div class="row no-gutters h-100 align-items-center  px-4 px-lg-0 pl-lg-5">
-         <div class="col-12 col-lg-8 header-banner-img-content-box pl-lg-5">
-
-                           <h1 class="display-1-72 whitetext mt-0 font-56-mobile">Meetings &amp; Events at Address Sky View</h1>
-            
-
-                     </div>
-      </div>
+               <div class="container-fluid p-0 header-banner-img-container header-3">
+   <div class="row no-gutters h-100 align-items-center  px-4 px-lg-0 pl-lg-5">
+      <div class="col-12 col-lg-8 header-banner-img-content-box pl-lg-5">
+         
+                     <h1 class="display-1-72 whitetext mt-0 font-56-mobile">Address Sky View Residences</h1>
+         
+                     <p class="body-2 whitetext">We believe in providing peerless service based on the philosophy that our residents deserve only the finest, and should want for nothing. Welcome to Address Residences Sky View.</p>
+               </div>
    </div>
+</div>
 
    <style>
       .header-banner-img-container {
-         background-image: linear-gradient(-105deg, rgba(37, 40, 45, 0) 18%, #000000 104%), radial-gradient(circle at 53% 100%, rgba(42, 60, 68, 0), rgba(42, 60, 68, 0) 53%, rgba(42, 60, 68, 0.6) 79%), url('../../../../wp-content/uploads/2020/10/EMAAR-Address-SkyView-by-Maddy-Christina-153-sur-171.jpg');
+         background-image: linear-gradient(-105deg, rgba(37, 40, 45, 0) 18%, #000000 104%), radial-gradient(circle at 53% 100%, rgba(42, 60, 68, 0), rgba(42, 60, 68, 0) 53%, rgba(42, 60, 68, 0.6) 79%), url('../../../../wp-content/uploads/2020/10/ADH_ADSVH_RESIDENCES_CATEGORY_AMBIENT_HR_10.jpg');
+
       }
    </style>
-</header>
-
-<link rel="stylesheet" href="/dependencies/css/wp-content/themes/emaar-projects/template-parts/dynamic-blocks/assets/css/global-event-details.css">
-
-<div class="container event-details-box">
-   <div class="row section-one">
-                  <div class="col-xl-6 col-md-12 col-sm-10 pb-3 px-4 px-lg-1">
-               
-               <div class="address-content-box m-auto">
-                                       <img decoding="async" src="/dependencies/img/wp-content/uploads/2023/01/MEETING-AREA-MAJLIS-ADDRESS-SKY-VIEW.jpg" class="card-img-top1 imageshadow img-event">
-                  
-                  <div class="pb-3 imagebox">
-                     <div class="card-body px-0 pt-4 mt-3 pb-3">
-
-                                                   <h6 class="text-uppercase pb-3 eyebrow-dark">CORPORATE</h6>
-                        
-                                                   <h2 class="pb-3 display-2-48">Meet, Create &amp; Celebrate</h2>
-                        
-                                                   <ul class="bullet-features mt-3">
-                              
-                              <li>Sleek meeting rooms</li><li>Conference facilities</li><li>Gala dinners</li><li>Corporate seminars</li>                              
-                               
-                                 <li class="location-icons d-flex align-items-center">
-                                       <a class="" href="mailto:">
-                                          <i class="fal fa-envelope"></i>
-                                          <span><a href="mailto:meet.ADSVH@addresshotels.com" class="">meet.ADSVH@addresshotels.com</a></span>
-                                       </a>
-                                    </li>
-                              <!-- <li class="contact_email"></li> -->
-
-                              
-                                                         </ul>
-                                             </div>
-
-                     <div class="stay-overlay">
-                                                                           <a class="btn blackbtn primary-btn m-3" href="/en/events/events-request/?hotel=address-sky-view&event=corporate/">Submit Request</a>
-                        
-                     </div>
-
-                  </div>
-               </div>
-
-            </div>
-
-                  <div class="col-xl-6 col-md-12 col-sm-10 pb-3 px-4 px-lg-1">
-               
-               <div class="address-content-box m-auto">
-                                       <img decoding="async" src="/dependencies/img/wp-content/uploads/2023/01/EMAAR-Address-SkyView-by-Maddy-Christina-140-sur-171.jpg" class="card-img-top1 imageshadow img-event">
-                  
-                  <div class="pb-3 imagebox">
-                     <div class="card-body px-0 pt-4 mt-3 pb-3">
-
-                                                   <h6 class="text-uppercase pb-3 eyebrow-dark">LIFESTYLE</h6>
-                        
-                                                   <h2 class="pb-3 display-2-48">Your Perfect Day</h2>
-                        
-                                                   <ul class="bullet-features mt-3">
-                              
-                              <li>Weddings &amp; ceremonies</li><li>Iconic venues</li><li>Superlative service</li><li>Personalised catering</li>                              
-                               
-                                 <li class="location-icons d-flex align-items-center">
-                                       <a class="" href="mailto:">
-                                          <i class="fal fa-envelope"></i>
-                                          <span><a href="mailto:meet.ADSVH@addresshotels.com" class="">meet.ADSVH@addresshotels.com</a></span>
-                                       </a>
-                                    </li>
-                              <!-- <li class="contact_email"></li> -->
-
-                              
-                                                         </ul>
-                                             </div>
-
-                     <div class="stay-overlay">
-                                                                           <a class="btn blackbtn primary-btn m-3" href="/en/events/events-request/?hotel=address-sky-view&event=lifestyle">Submit Request</a>
-                        
-                     </div>
-
-                  </div>
-               </div>
-
-            </div>
-
-         </div>
-</div>
 
 
 
 
+<div class="container-fluid residences-container-section">
+  <div class="container residences-container">
 
-<div class="container enough-on-plate-section">
-   <div class="cater-wrapper row no-gutters">
-      <div class="col-lg-4 col-12 px-0">
-                     <img decoding="async" src="/dependencies/img/wp-content/uploads/2023/01/H7A7936-Edit.jpg" class="card-img caterImg">
-               </div>
-      <div class="col-lg-8 col-12 d-flex align-items-center">
-         <div class="card-body text-center ">
-
-                           <h2 class="pt-4 display-2-48">Have Enough On Your Plate?</h2>
-            
-                           <div class="card-text pt-lg-4 pt-md-2 pb-1 title22">
-                  <p class="body-4">Catering by our world-class experience designers.</p>
-               </div>
-            
-            
-               <div class="row justify-content-around card-sub-text body-4">
-
-                                       <div class="col-lg-6 col-md-6 px-0"><i class="fal fa-envelope pr-2"></i>
-                        <a href="mailto:meet.ADSVH@addresshotels.com" class="blacklink">meet.ADSVH@addresshotels.com</a>
-                     
-                     </div>
-                  
-                                       <div class="col-lg-6 col-md-5 px-0 mob-pt-12 mx-0"><i class="fal fa-phone-alt pr-2"></i>+97148738836</div>
-                  
-               </div>
-         </div>
+    <div class="row no-gutters mb-4 pl-4 pl-lg-0">
+      <div class="col-12 col-lg-6">
+        <h2 class="display-2-48">Residences</h2>
       </div>
-   </div>
-</div>
 
-<div class="container-fluid greyboxlight pt-5">
-
-    <div class="container">
-        
-                    <h3 class="display-2-48 m-0 py-4">Find A Venue</h3>
-                
+      <div class="col-12 col-lg-6 residence-countbox">
+        <div class="residence-countbox-inner">
+          <span class="countbox"><span class="num">0</span> of</span> &nbsp;<span class="count"> 0</span>
+          <hr class="vhr-dark mx-3">
+          <a href="javascript:void(0)" id="misha_viewall" class="bluelink" onclick="ShowAllResidences()">All</a>
+        </div>
+      </div>
     </div>
-</div>
-
-<link rel="stylesheet" href="/dependencies/css/wp-content/themes/emaar-projects/template-parts/dynamic-blocks/assets/css/event-single-venue.css">
 
 
+            <div class="common-card-shadow residence-list-item">
+          <div class="common-card residences-card">
+            <div class="row no-gutters common-card-row">
 
-<div class="container-fluid greyboxlight events-container-section">
-   <div class="container events-container">
+              <div class="col-12 col-md-5 common-card-col-1">
+                <div class="carousel slide" id="carouselControls-Studio_Residences" data-interval="false">
+                  <div class="carousel-inner">
 
-      <div class="common-card-shadow residence-list-item">
-         <div class="common-card events-card">
-            <div class="row common-card-row no-gutters">
-               <div class="col-12 col-md-5 common-card-col-1">
-                  <div class="carousel slide" id="carouselControls-Studio_events" data-interval="false">
-                     <div class="carousel-inner">
-
-                                                   <div class="carousel-item active"><img decoding="async" src="/dependencies/img/wp-content/uploads/2023/01/MEETING-AREA-MAJLIS-ADDRESS-SKY-VIEW.jpg" class="venue-img pb-3 pb-lg-0" alt="First slide"></div>
-                        
-                     </div>
-                  </div>
-               </div>
-               <div class="col-12 col-md-7 common-card-col-2">
-
-                                       <h3 class="mb-3 body-1">Majlis</h3>
-                  
-                                       <p class="mb-4 body-4">The Majlis is a quintessentially Middle Eastern space. Make guests feel at home in a luxuriant décor that is a tribute to the traditions of local interior design, combined with contemporary expressions. A must for business-savvy executives.</p>
-                  
-
-                  <ul class="list-two-col-icon body-4">
+                                          <div class="carousel-item active"><img width="520" height="372" decoding="async" src="/dependencies/img/wp-content/uploads/2020/10/ADH_ADSVH_RESIDENCES_CATEGORY_AMBIENT_HR_07.jpg.webp" alt="First slide"></div>
                     
-                                                   <li class="body-4">
-                                 Conveniently located on the ground level                              </li>
-                                                   <li class="body-4">
-                                 Seats up to 16 guests                              </li>
-                                                   <li class="body-4">
-                                 Magnificent chandelier and plush carpeting                              </li>
-                                       </ul>
-
-                                       <div class="mt-4 btn-panel">
-                        <a class="btn btn-primary primary-btn w-48" href="/en/events/events-request/?hotel=address-sky-view&venue=majlis">Submit Request                        </a>
-                        <div class="clearfix"></div>
-                     </div>
-                                 </div>
-            </div>
-         </div>
-      </div>
-   </div>
-</div>
-
-<link rel="stylesheet" href="/dependencies/css/wp-content/themes/emaar-projects/template-parts/dynamic-blocks/assets/css/event-single-venue.css">
-
-
-
-<div class="container-fluid greyboxlight events-container-section">
-   <div class="container events-container">
-
-      <div class="common-card-shadow residence-list-item">
-         <div class="common-card events-card">
-            <div class="row common-card-row no-gutters">
-               <div class="col-12 col-md-5 common-card-col-1">
-                  <div class="carousel slide" id="carouselControls-Studio_events" data-interval="false">
-                     <div class="carousel-inner">
-
-                                                   <div class="carousel-item active"><img decoding="async" src="/dependencies/img/wp-content/uploads/2020/10/EMAAR-Address-SkyView-by-Maddy-Christina-170-sur-171.jpg" class="venue-img pb-3 pb-lg-0" alt="First slide"></div>
-                        
-                     </div>
                   </div>
-               </div>
-               <div class="col-12 col-md-7 common-card-col-2">
+                </div>
+              </div>
 
-                                       <h3 class="mb-3 body-1">Weddings at Address Sky View</h3>
-                  
-                                       <p class="mb-4 body-4">Contemporary and elegant, our wedding venues transcend the lavish to become legendary. Stunningly generous indoor and large spaces, like our pre-function lounge area, allow us to orchestrate every detail of your wedding to fulfil your dreams and enchant your guests.</p>
-                  
+              <div class="col-12 col-md-7 common-card-col-2">
 
-                  <ul class="list-two-col-icon body-4">
-                    
-                                                   <li class="body-4">
-                                 Elaborate floral arrangements, tasteful décor, spectacular entertainment                              </li>
-                                                   <li class="body-4">
-                                 Accommodates up to 950 guests standing and 500 guests seated depending on the dining setup.                              </li>
-                                                   <li class="body-4">
-                                 A dedicated team of experience designers                              </li>
-                                       </ul>
-
-                                       <div class="mt-4 btn-panel">
-                        <a class="btn btn-primary primary-btn w-48" href="/en/events/events-request/?hotel=address-sky-view&venue=wedding-venues">Submit Request                        </a>
-                        <div class="clearfix"></div>
-                     </div>
-                                 </div>
-            </div>
-         </div>
-      </div>
-   </div>
-</div>
-
-<link rel="stylesheet" href="/dependencies/css/wp-content/themes/emaar-projects/template-parts/dynamic-blocks/assets/css/event-single-venue.css">
-
-
-
-<div class="container-fluid greyboxlight events-container-section">
-   <div class="container events-container">
-
-      <div class="common-card-shadow residence-list-item">
-         <div class="common-card events-card">
-            <div class="row common-card-row no-gutters">
-               <div class="col-12 col-md-5 common-card-col-1">
-                  <div class="carousel slide" id="carouselControls-Studio_events" data-interval="false">
-                     <div class="carousel-inner">
-
-                                                   <div class="carousel-item active"><img decoding="async" src="/dependencies/img/wp-content/uploads/2020/10/DSC2525.jpg" class="venue-img pb-3 pb-lg-0" alt="First slide"></div>
-                        
-                     </div>
+                                  <h3 class="mb-3 body-1">1-Bedroom Residences</h3>
+                
+                                  <p class="mb-4 body-4">Warmth and class combine with exemplary flair across a broad range of unique layouts in our one-bedroom residences. In addition to plush furnishings and spacious environs, you can choose from a palette of features, including a study, balcony, and much more.</p>
+                
+                                  <ul class="list-two-col-icon body-4">
+                    <li>Luxurious one-bedroom residences</li><li> Size: 97.5 sqm</li><li> Up to 2 guests</li><li> City views</li><li> King-size bed &amp; built-in closets</li><li> Modern kitchen &amp; dining room</li><li> Two bathrooms</li><li> Separate bathtub, rain shower &amp; vanity area</li>                  </ul>
+                
+                                  <div class="mt-4 btn-panel">
+                    <a class="btn btn-primary primary-btn" href="/en/residences-request/?hotel=address-sky-views&bedrooms=1-bedroom" target="">
+                      Submit Request                    </a>
                   </div>
-               </div>
-               <div class="col-12 col-md-7 common-card-col-2">
-
-                                       <h3 class="mb-3 body-1">The Ballroom</h3>
-                  
-                                       <p class="mb-4 body-4">When guests think of ideal places for corporate meetings, conferences and social events, they think of the Address Sky View Ballroom. Chic interiors, marble walls, exhilarating views of Downtown Dubai and an elegant pre-function room — we have everything you need to make your corporate meetings, conferences and social events legendary.</p>
-                  
-
-                  <ul class="list-two-col-icon body-4">
-                    
-                                                   <li class="body-4">
-                                 Capacity of up to 850 guests in theatre style and 500 guests in rounded tables style.                              </li>
-                                                   <li class="body-4">
-                                 Lounge-style seating and alfresco dining areas flooded in natural daylight                              </li>
-                                                   <li class="body-4">
-                                 Exclusive valet parking directly outside the venue                              </li>
-                                                   <li class="body-4">
-                                 Pre-function area is also available.                              </li>
-                                       </ul>
-
-                                       <div class="mt-4 btn-panel">
-                        <a class="btn btn-primary primary-btn w-48" href="/en/events/events-request/?hotel=address-sky-view&venue=ballroom">Submit Request                        </a>
-                        <div class="clearfix"></div>
-                     </div>
-                                 </div>
+                              </div>
             </div>
-         </div>
-      </div>
-   </div>
-</div>
+          </div>
+        </div>
+            <div class="common-card-shadow residence-list-item">
+          <div class="common-card residences-card">
+            <div class="row no-gutters common-card-row">
 
-<link rel="stylesheet" href="/dependencies/css/wp-content/themes/emaar-projects/template-parts/dynamic-blocks/assets/css/event-single-venue.css">
+              <div class="col-12 col-md-5 common-card-col-1">
+                <div class="carousel slide" id="carouselControls-Studio_Residences" data-interval="false">
+                  <div class="carousel-inner">
 
-
-
-<div class="container-fluid greyboxlight events-container-section">
-   <div class="container events-container">
-
-      <div class="common-card-shadow residence-list-item">
-         <div class="common-card events-card">
-            <div class="row common-card-row no-gutters">
-               <div class="col-12 col-md-5 common-card-col-1">
-                  <div class="carousel slide" id="carouselControls-Studio_events" data-interval="false">
-                     <div class="carousel-inner">
-
-                                                   <div class="carousel-item active"><img decoding="async" src="/dependencies/img/wp-content/uploads/2023/01/HOTEL-LOBBY-POOL-BURJ-VIEW-ADDRESS-SKY-VIEW-1.jpg" class="venue-img pb-3 pb-lg-0" alt="First slide"></div>
-                        
-                     </div>
+                                          <div class="carousel-item active"><img width="520" height="372" decoding="async" src="/dependencies/img/wp-content/uploads/2020/10/ADH_ADSVH_RESIDENCES_CATEGORY_AMBIENT_HR_01.jpg.webp" alt="First slide"></div>
+                    
                   </div>
-               </div>
-               <div class="col-12 col-md-7 common-card-col-2">
+                </div>
+              </div>
 
-                                       <h3 class="mb-3 body-1">The Pool Deck</h3>
-                  
-                                       <p class="mb-4 body-4">Make unforgettable memories in this unique, open-air venue. Delight your guests in a semi-circular layout beautifully situated in front of the towers. With water features, greenery and breathtaking views of the Burj Khalifa, you are guaranteed a magical wedding day.</p>
-                  
+              <div class="col-12 col-md-7 common-card-col-2">
 
-                  <ul class="list-two-col-icon body-4">
-                    
-                                                   <li class="body-4">
-                                 Accommodates up to 50 guests for banquets and 80 cocktail receptions                              </li>
-                                                   <li class="body-4">
-                                 Conveniently located at the lobby level                              </li>
-                                       </ul>
-
-                                       <div class="mt-4 btn-panel">
-                        <a class="btn btn-primary primary-btn w-48" href="/en/events/events-request/?hotel=address-sky-view&venue=the-pool-deck">Submit Request                        </a>
-                        <div class="clearfix"></div>
-                     </div>
-                                 </div>
-            </div>
-         </div>
-      </div>
-   </div>
-</div>
-
-<link rel="stylesheet" href="/dependencies/css/wp-content/themes/emaar-projects/template-parts/dynamic-blocks/assets/css/event-single-venue.css">
-
-
-
-<div class="container-fluid greyboxlight events-container-section">
-   <div class="container events-container">
-
-      <div class="common-card-shadow residence-list-item">
-         <div class="common-card events-card">
-            <div class="row common-card-row no-gutters">
-               <div class="col-12 col-md-5 common-card-col-1">
-                  <div class="carousel slide" id="carouselControls-Studio_events" data-interval="false">
-                     <div class="carousel-inner">
-
-                                                   <div class="carousel-item active"><img decoding="async" src="/dependencies/img/wp-content/uploads/2020/10/MEETING-ROOM-1-WITH-FACILITIES-ADDRESS-SKY-VIEW.jpg" class="venue-img pb-3 pb-lg-0" alt="First slide"></div>
-                        
-                     </div>
+                                  <h3 class="mb-3 body-1">2-Bedroom Residences</h3>
+                
+                                  <p class="mb-4 body-4">Stunning views of the city and Burj Khalifa combine with modern expressions of luxury living in the two-bedroom residences. Come home to a suave, ingeniously laid-out abode with exquisite furnishings and superior comforts you and your family deserve.</p>
+                
+                                  <ul class="list-two-col-icon body-4">
+                    <li>Stunning two-bedroom residences</li><li> Size: 184.7sqm</li><li> Up to 4 guests</li><li> Views of the Burj Khalifa or the City</li><li> King-size bed &amp; built-in closets</li><li> Modern kitchen</li><li> Three bathrooms</li><li> Separate bathtub, rain shower &amp; vanity area</li><li> Balcony</li>                  </ul>
+                
+                                  <div class="mt-4 btn-panel">
+                    <a class="btn btn-primary primary-btn" href="/en/residences-request/?hotel=address-sky-views&bedrooms=2-bedrooms" target="">
+                      Submit Request                    </a>
                   </div>
-               </div>
-               <div class="col-12 col-md-7 common-card-col-2">
-
-                                       <h3 class="mb-3 body-1">Skyview 1</h3>
-                  
-                                       <p class="mb-4 body-4">Designed primarily with the needs of business executives in mind, our Sky View 1 is fully equipped and versatile. With seating for up to 12 people and superior audio-visual technology, you can use it to suit your particular needs.</p>
-                  
-
-                  <ul class="list-two-col-icon body-4">
-                    
-                                                   <li class="body-4">
-                                 Comfortably seats up to 12 guests                              </li>
-                                                   <li class="body-4">
-                                 Well suited to medium-sized meetings and presentations                              </li>
-                                                   <li class="body-4">
-                                 Superior audio-visual technology                              </li>
-                                       </ul>
-
-                                       <div class="mt-4 btn-panel">
-                        <a class="btn btn-primary primary-btn w-48" href="/en/events/events-request/?hotel=address-sky-view&venue=skyview-1">Submit Request                        </a>
-                        <div class="clearfix"></div>
-                     </div>
-                                 </div>
+                              </div>
             </div>
-         </div>
-      </div>
-   </div>
-</div>
+          </div>
+        </div>
+            <div class="common-card-shadow residence-list-item">
+          <div class="common-card residences-card">
+            <div class="row no-gutters common-card-row">
 
-<link rel="stylesheet" href="/dependencies/css/wp-content/themes/emaar-projects/template-parts/dynamic-blocks/assets/css/event-single-venue.css">
+              <div class="col-12 col-md-5 common-card-col-1">
+                <div class="carousel slide" id="carouselControls-Studio_Residences" data-interval="false">
+                  <div class="carousel-inner">
 
-
-
-<div class="container-fluid greyboxlight events-container-section">
-   <div class="container events-container">
-
-      <div class="common-card-shadow residence-list-item">
-         <div class="common-card events-card">
-            <div class="row common-card-row no-gutters">
-               <div class="col-12 col-md-5 common-card-col-1">
-                  <div class="carousel slide" id="carouselControls-Studio_events" data-interval="false">
-                     <div class="carousel-inner">
-
-                                                   <div class="carousel-item active"><img decoding="async" src="/dependencies/img/wp-content/uploads/2020/10/ADH_ADSVH_EVENTS_MEETING-ROOM-2.jpg" class="venue-img pb-3 pb-lg-0" alt="First slide"></div>
-                        
-                     </div>
+                                          <div class="carousel-item active"><img width="520" height="372" decoding="async" src="/dependencies/img/wp-content/uploads/2020/10/ADH_ADSVH_RESIDENCES_CATEGORY_AMBIENT_HR_05.jpg.webp" alt="First slide"></div>
+                    
                   </div>
-               </div>
-               <div class="col-12 col-md-7 common-card-col-2">
+                </div>
+              </div>
 
-                                       <h3 class="mb-3 body-1">Skyview 2</h3>
-                  
-                                       <p class="mb-4 body-4">If you’re looking for a versatile venue, Skyview 2 is perfect for you. A multi-purpose space for a wide range of event setups, for audio-visual screenings or for theatre-style events that are more intimate than those held in our Screening Room.</p>
-                  
+              <div class="col-12 col-md-7 common-card-col-2">
 
-                  <ul class="list-two-col-icon body-4">
-                    
-                                                   <li class="body-4">
-                                 Accommodates up to 10 guests                              </li>
-                                                   <li class="body-4">
-                                 Well suited to medium-sized meetings and presentations                              </li>
-                                                   <li class="body-4">
-                                 Cutting-edge audio-visual technology                              </li>
-                                                   <li class="body-4">
-                                 Natural daylight is available                              </li>
-                                       </ul>
-
-                                       <div class="mt-4 btn-panel">
-                        <a class="btn btn-primary primary-btn w-48" href="/en/events/events-request/?hotel=address-sky-view&venue=skyview-2">Submit Request                        </a>
-                        <div class="clearfix"></div>
-                     </div>
-                                 </div>
-            </div>
-         </div>
-      </div>
-   </div>
-</div>
-
-<link rel="stylesheet" href="/dependencies/css/wp-content/themes/emaar-projects/template-parts/dynamic-blocks/assets/css/event-single-venue.css">
-
-
-
-<div class="container-fluid greyboxlight events-container-section">
-   <div class="container events-container">
-
-      <div class="common-card-shadow residence-list-item">
-         <div class="common-card events-card">
-            <div class="row common-card-row no-gutters">
-               <div class="col-12 col-md-5 common-card-col-1">
-                  <div class="carousel slide" id="carouselControls-Studio_events" data-interval="false">
-                     <div class="carousel-inner">
-
-                                                   <div class="carousel-item active"><img decoding="async" src="/dependencies/img/wp-content/uploads/2020/11/ADH_ADSVH_EVENTS_AMBIENT_HR_03.jpg" class="venue-img pb-3 pb-lg-0" alt="First slide"></div>
-                        
-                     </div>
+                                  <h3 class="mb-3 body-1">3-Bedroom Residences</h3>
+                
+                                  <p class="mb-4 body-4">Superbly styled to align with the elegance of Downtown Dubai, our three-bedroom residences are endowed with an opulent living room, dining area, and large bedrooms. Not impressed? Draw the curtain and unveil striking views of Dubai’s marvellous skyline.</p>
+                
+                                  <ul class="list-two-col-icon body-4">
+                    <li>Exquisite 3-bedroom residences</li><li> Size: 614.7 sqm</li><li> Up to 6 guests</li><li> Views of the Burj Khalifa or the City</li><li> King- or twin-size beds and built-in closets</li><li> Modern kitchen &amp; dining area</li><li> Five bathrooms</li><li> Maid’s room</li>                  </ul>
+                
+                                  <div class="mt-4 btn-panel">
+                    <a class="btn btn-primary primary-btn" href="/en/residences-request/?hotel=address-sky-views&bedrooms=3-bedrooms" target="">
+                      Submit Request                    </a>
                   </div>
-               </div>
-               <div class="col-12 col-md-7 common-card-col-2">
-
-                                       <h3 class="mb-3 body-1">Skyview 3 and Skyview 4</h3>
-                  
-                                       <p class="mb-4 body-4">Make a strong impression in a sophisticated meeting space with advanced audio-visual equipment. The Skyview3 and Skyview4&#8217;s atmosphere of prestige and refinement is matched only by its unique features.</p>
-                  
-
-                  <ul class="list-two-col-icon body-4">
-                    
-                                                   <li class="body-4">
-                                 Charming floor-to-ceiling bookshelves                              </li>
-                                                   <li class="body-4">
-                                 A built-in closet                              </li>
-                                                   <li class="body-4">
-                                 A separate seating area for tête-à-tête conversations                              </li>
-                                       </ul>
-
-                                       <div class="mt-4 btn-panel">
-                        <a class="btn btn-primary primary-btn w-48" href="/en/events/events-request/?hotel=address-sky-view&venue=skyview-3-skyview-4">Submit Request                        </a>
-                        <div class="clearfix"></div>
-                     </div>
-                                 </div>
+                              </div>
             </div>
-         </div>
+          </div>
+        </div>
+            <div class="common-card-shadow residence-list-item">
+          <div class="common-card residences-card">
+            <div class="row no-gutters common-card-row">
+
+              <div class="col-12 col-md-5 common-card-col-1">
+                <div class="carousel slide" id="carouselControls-Studio_Residences" data-interval="false">
+                  <div class="carousel-inner">
+
+                                          <div class="carousel-item active"><img width="520" height="372" decoding="async" src="/dependencies/img/wp-content/uploads/2020/10/ADH_ADSVH_RESIDENCES_CATEGORY_AMBIENT_HR_08.jpg.webp" alt="First slide"></div>
+                    
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 col-md-7 common-card-col-2">
+
+                                  <h3 class="mb-3 body-1">4-Bedroom Residences</h3>
+                
+                                  <p class="mb-4 body-4">You are sure to love our generous, four-bedroom residences. In addition to wide, welcoming expanses, they offer scintillating perspectives on refined living and Dubai’s dazzling cityscape. The perfect base for your journey of discoveries.</p>
+                
+                                  <ul class="list-two-col-icon body-4">
+                    <li>Superior 4-bedroom duplex</li><li> Size: 201.7 sqm</li><li> Up to 8 guests</li><li> Views of the Burj Khalifa or the City</li><li> King- or twin-size beds and built-in closets</li><li> Modern kitchen &amp; dining area</li><li> Five bathrooms</li><li> Maid’s room</li>                  </ul>
+                
+                                  <div class="mt-4 btn-panel">
+                    <a class="btn btn-primary primary-btn" href="/en/residences-request/?hotel=address-sky-views&bedrooms=4-bedrooms" target="">
+                      Submit Request                    </a>
+                  </div>
+                              </div>
+            </div>
+          </div>
+        </div>
+            <div class="common-card-shadow residence-list-item">
+          <div class="common-card residences-card">
+            <div class="row no-gutters common-card-row">
+
+              <div class="col-12 col-md-5 common-card-col-1">
+                <div class="carousel slide" id="carouselControls-Studio_Residences" data-interval="false">
+                  <div class="carousel-inner">
+
+                                          <div class="carousel-item active"><img width="520" height="372" decoding="async" src="/dependencies/img/wp-content/uploads/2020/10/ADH_ADSVH_RESIDENCES_CATEGORY_AMBIENT_HR_06.jpg.webp" alt="First slide"></div>
+                    
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 col-md-7 common-card-col-2">
+
+                                  <h3 class="mb-3 body-1">5-Bedroom Residences</h3>
+                
+                                  <p class="mb-4 body-4">Situated on the highest levels of the taller skyscraper, there’s only ONE five-bedroom residence. A dedicated family area complements the four bedrooms on the lower level, while the lavish living and dining areas offer spectacular perspectives of the city.</p>
+                
+                                  <ul class="list-two-col-icon body-4">
+                    <li>One-of-a-kind 5-bedroom duplex</li><li> Size: 285.9 sqm</li><li> Up to 10 guests</li><li> Views of the Burj Khalifa or the City</li><li> King- or twin-size beds and built-in closets</li><li> Two balconies</li><li> Six bathrooms</li><li> Maid’s room</li>                  </ul>
+                
+                                  <div class="mt-4 btn-panel">
+                    <a class="btn btn-primary primary-btn" href="/en/residences-request/?hotel=address-sky-views&bedrooms=5-bedrooms" target="">
+                      Submit Request                    </a>
+                  </div>
+                              </div>
+            </div>
+          </div>
+        </div>
+            <div class="common-card-shadow residence-list-item">
+          <div class="common-card residences-card">
+            <div class="row no-gutters common-card-row">
+
+              <div class="col-12 col-md-5 common-card-col-1">
+                <div class="carousel slide" id="carouselControls-Studio_Residences" data-interval="false">
+                  <div class="carousel-inner">
+
+                                          <div class="carousel-item active"><img width="520" height="372" decoding="async" src="/dependencies/img/wp-content/uploads/2020/10/ADH_ADSVH_RESIDENCES_CATEGORY_AMBIENT_HR_02-1.jpg.webp" alt="First slide"></div>
+                    
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 col-md-7 common-card-col-2">
+
+                                  <h3 class="mb-3 body-1">6-Bedroom Residences</h3>
+                
+                                  <p class="mb-4 body-4">The only abode of its kind at Address Sky View, the six-bedroom residence is the crowning glory of our Sky Collection. Come home to the distinctive aesthetics and captivating views of the city and the world’s tallest tower. It’s simply the ultimate Address.</p>
+                
+                                  <ul class="list-two-col-icon body-4">
+                    <li>Immaculate 6-bedroom duplex</li><li> Size: 643.9sqm</li><li> Up to 12 guests</li><li> Views of the Burj Khalifa or the City</li><li> Comfortable family area on the lower level</li><li> Two vast balconies with lounge and dining areas</li><li> Seven bathrooms</li><li> Maid’s room &amp; more</li>                  </ul>
+                
+                                  <div class="mt-4 btn-panel">
+                    <a class="btn btn-primary primary-btn" href="/en/residences-request/?hotel=address-sky-views&bedrooms=6-bedrooms" target="">
+                      Submit Request                    </a>
+                  </div>
+                              </div>
+            </div>
+          </div>
+        </div>
       </div>
-   </div>
 </div>            </main><!-- #main -->
 
          </div><!-- col -->
@@ -1333,8 +1080,9 @@ if (globalHomeLinkDropdownBox) {
    </div><!-- #primary -->
 </div><!-- #content -->
 
-<?php include dirname(__DIR__, 4) . '/_partials/footer.php'; ?>
-<?php include dirname(__DIR__, 4) . '/_partials/foot.php'; ?>
+<?php include dirname(__DIR__, 1) . '/_partials/footer.php'; ?>
+<?php include dirname(__DIR__, 1) . '/_partials/foot.php'; ?>
 </body>
 
-</html>
+</html><!-- Rocket has webp -->
+<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me -->

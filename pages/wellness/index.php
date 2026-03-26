@@ -3,9 +3,9 @@
 <html lang="en">
 
 
-<?php include dirname(__DIR__, 4) . '/_partials/head.php'; ?>
+<?php include dirname(__DIR__, 1) . '/_partials/head.php'; ?>
 
-<body class="page-template-default page page-id-2767 page-child parent-pageid-3739">
+<body class="page-template-default page page-id-2772 page-parent page-child parent-pageid-3739">
   <!-- Preloader -->
   <!-- Preloader End -->
   <div id="page" class="site">
@@ -32,7 +32,7 @@ var page = {"PAGE_SCOPE":"individual","HOME_PAGE":false,"DINE_PAGE":false,"BOOK_
 </noscript> -->
 
 
-<?php include dirname(__DIR__, 4) . '/_partials/header.php'; ?><!-- #masthead -->
+<?php include dirname(__DIR__, 1) . '/_partials/header.php'; ?><!-- #masthead -->
 <style>
 #nav-main .right-nav-container {
     max-width: 400px !important;
@@ -846,233 +846,240 @@ if (globalHomeLinkDropdownBox) {
          <div class="col-md-12">
 
             <main id="main" class="site-main">
-               <div class="container-fluid p-0 header-banner-img-container header-3">
-   <div class="row no-gutters h-100 align-items-center  px-4 px-lg-0 pl-lg-5">
+               <header class="internal-page">
+  <div class="container-fluid p-0 header-banner-img-container header-2">
+
+    <div class="row no-gutters h-100 align-items-center  px-4 px-lg-0 pl-lg-5">
       <div class="col-12 col-lg-8 header-banner-img-content-box pl-lg-5">
-         
-                     <h1 class="display-1-72 whitetext mt-0 font-56-mobile">Address Sky View Residences</h1>
-         
-                     <p class="body-2 whitetext">We believe in providing peerless service based on the philosophy that our residents deserve only the finest, and should want for nothing. Welcome to Address Residences Sky View.</p>
-               </div>
-   </div>
-</div>
 
-   <style>
-      .header-banner-img-container {
-         background-image: linear-gradient(-105deg, rgba(37, 40, 45, 0) 18%, #000000 104%), radial-gradient(circle at 53% 100%, rgba(42, 60, 68, 0), rgba(42, 60, 68, 0) 53%, rgba(42, 60, 68, 0.6) 79%), url('../../../../wp-content/uploads/2020/10/ADH_ADSVH_RESIDENCES_CATEGORY_AMBIENT_HR_10.jpg');
-
-      }
-   </style>
-
-
-
-
-<div class="container-fluid residences-container-section">
-  <div class="container residences-container">
-
-    <div class="row no-gutters mb-4 pl-4 pl-lg-0">
-      <div class="col-12 col-lg-6">
-        <h2 class="display-2-48">Residences</h2>
-      </div>
-
-      <div class="col-12 col-lg-6 residence-countbox">
-        <div class="residence-countbox-inner">
-          <span class="countbox"><span class="num">0</span> of</span> &nbsp;<span class="count"> 0</span>
-          <hr class="vhr-dark mx-3">
-          <a href="javascript:void(0)" id="misha_viewall" class="bluelink" onclick="ShowAllResidences()">All</a>
-        </div>
+        
+        
       </div>
     </div>
 
+  </div>
+</header>
 
-            <div class="common-card-shadow residence-list-item">
-          <div class="common-card residences-card">
-            <div class="row no-gutters common-card-row">
+  <style>
+    .header-banner-img-container {
+      background-image: linear-gradient(-105deg, rgba(37, 40, 45, 0) 18%, #000000 104%), radial-gradient(circle at 53% 100%, rgba(42, 60, 68, 0), rgba(42, 60, 68, 0) 53%, rgba(42, 60, 68, 0.6) 79%), url('../../../../wp-content/uploads/2020/10/ADH_ADSVH_FACILITIES_SPA_FEMALE_VITALITY_POOL_AMBIENT_HR_09.jpg');
 
-              <div class="col-12 col-md-5 common-card-col-1">
-                <div class="carousel slide" id="carouselControls-Studio_Residences" data-interval="false">
-                  <div class="carousel-inner">
+    }
+  </style>
 
-                                          <div class="carousel-item active"><img width="520" height="372" decoding="async" src="/dependencies/img/wp-content/uploads/2020/10/ADH_ADSVH_RESIDENCES_CATEGORY_AMBIENT_HR_07.jpg.webp" alt="First slide"></div>
-                    
-                  </div>
-                </div>
-              </div>
 
-              <div class="col-12 col-md-7 common-card-col-2">
 
-                                  <h3 class="mb-3 body-1">1-Bedroom Residences</h3>
-                
-                                  <p class="mb-4 body-4">Warmth and class combine with exemplary flair across a broad range of unique layouts in our one-bedroom residences. In addition to plush furnishings and spacious environs, you can choose from a palette of features, including a study, balcony, and much more.</p>
-                
-                                  <ul class="list-two-col-icon body-4">
-                    <li>Luxurious one-bedroom residences</li><li> Size: 97.5 sqm</li><li> Up to 2 guests</li><li> City views</li><li> King-size bed &amp; built-in closets</li><li> Modern kitchen &amp; dining room</li><li> Two bathrooms</li><li> Separate bathtub, rain shower &amp; vanity area</li>                  </ul>
-                
-                                  <div class="mt-4 btn-panel">
-                    <a class="btn btn-primary primary-btn" href="/en/residences-request/?hotel=address-sky-views&bedrooms=1-bedroom" target="">
-                      Submit Request                    </a>
-                  </div>
-                              </div>
-            </div>
-          </div>
-        </div>
-            <div class="common-card-shadow residence-list-item">
-          <div class="common-card residences-card">
-            <div class="row no-gutters common-card-row">
+<div class="container spa-and-wellness-section text-center px-lg-0">
+   <div class="row no-gutters align-items-center text-center justify-content-between">
+      <div class="col-12 col-lg-6 content-box">
 
-              <div class="col-12 col-md-5 common-card-col-1">
-                <div class="carousel slide" id="carouselControls-Studio_Residences" data-interval="false">
-                  <div class="carousel-inner">
+                     <h6 class="eyebrow-dark text-center">SPA AND WELLNESS</h6>
+         
+                     <h2 class="display-1-72 text-center font-56-mobile my-4">Extraordinary Experiences</h2>
+         
+                     <p class="body-4 text-center my-4">Go on a journey of self-discovery at The Spa, or bolster your fitness regiment at the high-tech Fitness Centre. Either way, you’re guaranteed a memorable experience.</p>
+         
 
-                                          <div class="carousel-item active"><img width="520" height="372" decoding="async" src="/dependencies/img/wp-content/uploads/2020/10/ADH_ADSVH_RESIDENCES_CATEGORY_AMBIENT_HR_01.jpg.webp" alt="First slide"></div>
-                    
-                  </div>
-                </div>
-              </div>
+         <div class="wellness_contact_Info body-4 text-center mt-md-4 p-lg-2">
 
-              <div class="col-12 col-md-7 common-card-col-2">
+                           <p class="m-0">
+                  <i class="fal fa-clock pr-2 pl-4"></i>
+                  <span class="dir-ltr">10.00am to 10.00pm</span>
+               </p>
+            
+                           <p class="m-0">
+                  <i class="fal fa-envelope pr-2 pl-4"></i>
+                  <a href="mailto:spa.adsvh@addresshotels.com" class="bluelink">spa.adsvh@addresshotels.com</a>
+               </p>
+            
+                           <p class="m-0">
+                  <i class="fal fa-phone-alt pr-2 pl-4"></i>
+                  <span class="dir-ltr">+97148738888</span>
+               </p>
+            
+         </div>
 
-                                  <h3 class="mb-3 body-1">2-Bedroom Residences</h3>
-                
-                                  <p class="mb-4 body-4">Stunning views of the city and Burj Khalifa combine with modern expressions of luxury living in the two-bedroom residences. Come home to a suave, ingeniously laid-out abode with exquisite furnishings and superior comforts you and your family deserve.</p>
-                
-                                  <ul class="list-two-col-icon body-4">
-                    <li>Stunning two-bedroom residences</li><li> Size: 184.7sqm</li><li> Up to 4 guests</li><li> Views of the Burj Khalifa or the City</li><li> King-size bed &amp; built-in closets</li><li> Modern kitchen</li><li> Three bathrooms</li><li> Separate bathtub, rain shower &amp; vanity area</li><li> Balcony</li>                  </ul>
-                
-                                  <div class="mt-4 btn-panel">
-                    <a class="btn btn-primary primary-btn" href="/en/residences-request/?hotel=address-sky-views&bedrooms=2-bedrooms" target="">
-                      Submit Request                    </a>
-                  </div>
-                              </div>
-            </div>
-          </div>
-        </div>
-            <div class="common-card-shadow residence-list-item">
-          <div class="common-card residences-card">
-            <div class="row no-gutters common-card-row">
+         <div class="cta-btns-inline my-5 my-lg-4 row no-gutters">
+                           <a class=" btn col-7 col-md-5 my-2 m-2 d-flex align-items-center justify-content-center black-btn-hvr sec-def-btn section-1-part-1-btn-view-more btn secondary-btn" href="/pages/wellness/spa/index.php" target="_self">View More</a>
 
-              <div class="col-12 col-md-5 common-card-col-1">
-                <div class="carousel slide" id="carouselControls-Studio_Residences" data-interval="false">
-                  <div class="carousel-inner">
+            
+                           <a class=" btn col-7 col-md-5 m-2 d-flex align-items-center justify-content-center  white-btn-hvr prim-def-black-btn  section-1-part-1-btn-reserve-your-spa primary-btn btn-reserve-unique" href="/dependencies/external/emea.spatime.com/asv1969/5383409/home.bin" target="_self">Reserve Your Treatment</a>
+            
+         </div>
 
-                                          <div class="carousel-item active"><img width="520" height="372" decoding="async" src="/dependencies/img/wp-content/uploads/2020/10/ADH_ADSVH_RESIDENCES_CATEGORY_AMBIENT_HR_05.jpg.webp" alt="First slide"></div>
-                    
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-12 col-md-7 common-card-col-2">
-
-                                  <h3 class="mb-3 body-1">3-Bedroom Residences</h3>
-                
-                                  <p class="mb-4 body-4">Superbly styled to align with the elegance of Downtown Dubai, our three-bedroom residences are endowed with an opulent living room, dining area, and large bedrooms. Not impressed? Draw the curtain and unveil striking views of Dubai’s marvellous skyline.</p>
-                
-                                  <ul class="list-two-col-icon body-4">
-                    <li>Exquisite 3-bedroom residences</li><li> Size: 614.7 sqm</li><li> Up to 6 guests</li><li> Views of the Burj Khalifa or the City</li><li> King- or twin-size beds and built-in closets</li><li> Modern kitchen &amp; dining area</li><li> Five bathrooms</li><li> Maid’s room</li>                  </ul>
-                
-                                  <div class="mt-4 btn-panel">
-                    <a class="btn btn-primary primary-btn" href="/en/residences-request/?hotel=address-sky-views&bedrooms=3-bedrooms" target="">
-                      Submit Request                    </a>
-                  </div>
-                              </div>
-            </div>
-          </div>
-        </div>
-            <div class="common-card-shadow residence-list-item">
-          <div class="common-card residences-card">
-            <div class="row no-gutters common-card-row">
-
-              <div class="col-12 col-md-5 common-card-col-1">
-                <div class="carousel slide" id="carouselControls-Studio_Residences" data-interval="false">
-                  <div class="carousel-inner">
-
-                                          <div class="carousel-item active"><img width="520" height="372" decoding="async" src="/dependencies/img/wp-content/uploads/2020/10/ADH_ADSVH_RESIDENCES_CATEGORY_AMBIENT_HR_08.jpg.webp" alt="First slide"></div>
-                    
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-12 col-md-7 common-card-col-2">
-
-                                  <h3 class="mb-3 body-1">4-Bedroom Residences</h3>
-                
-                                  <p class="mb-4 body-4">You are sure to love our generous, four-bedroom residences. In addition to wide, welcoming expanses, they offer scintillating perspectives on refined living and Dubai’s dazzling cityscape. The perfect base for your journey of discoveries.</p>
-                
-                                  <ul class="list-two-col-icon body-4">
-                    <li>Superior 4-bedroom duplex</li><li> Size: 201.7 sqm</li><li> Up to 8 guests</li><li> Views of the Burj Khalifa or the City</li><li> King- or twin-size beds and built-in closets</li><li> Modern kitchen &amp; dining area</li><li> Five bathrooms</li><li> Maid’s room</li>                  </ul>
-                
-                                  <div class="mt-4 btn-panel">
-                    <a class="btn btn-primary primary-btn" href="/en/residences-request/?hotel=address-sky-views&bedrooms=4-bedrooms" target="">
-                      Submit Request                    </a>
-                  </div>
-                              </div>
-            </div>
-          </div>
-        </div>
-            <div class="common-card-shadow residence-list-item">
-          <div class="common-card residences-card">
-            <div class="row no-gutters common-card-row">
-
-              <div class="col-12 col-md-5 common-card-col-1">
-                <div class="carousel slide" id="carouselControls-Studio_Residences" data-interval="false">
-                  <div class="carousel-inner">
-
-                                          <div class="carousel-item active"><img width="520" height="372" decoding="async" src="/dependencies/img/wp-content/uploads/2020/10/ADH_ADSVH_RESIDENCES_CATEGORY_AMBIENT_HR_06.jpg.webp" alt="First slide"></div>
-                    
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-12 col-md-7 common-card-col-2">
-
-                                  <h3 class="mb-3 body-1">5-Bedroom Residences</h3>
-                
-                                  <p class="mb-4 body-4">Situated on the highest levels of the taller skyscraper, there’s only ONE five-bedroom residence. A dedicated family area complements the four bedrooms on the lower level, while the lavish living and dining areas offer spectacular perspectives of the city.</p>
-                
-                                  <ul class="list-two-col-icon body-4">
-                    <li>One-of-a-kind 5-bedroom duplex</li><li> Size: 285.9 sqm</li><li> Up to 10 guests</li><li> Views of the Burj Khalifa or the City</li><li> King- or twin-size beds and built-in closets</li><li> Two balconies</li><li> Six bathrooms</li><li> Maid’s room</li>                  </ul>
-                
-                                  <div class="mt-4 btn-panel">
-                    <a class="btn btn-primary primary-btn" href="/en/residences-request/?hotel=address-sky-views&bedrooms=5-bedrooms" target="">
-                      Submit Request                    </a>
-                  </div>
-                              </div>
-            </div>
-          </div>
-        </div>
-            <div class="common-card-shadow residence-list-item">
-          <div class="common-card residences-card">
-            <div class="row no-gutters common-card-row">
-
-              <div class="col-12 col-md-5 common-card-col-1">
-                <div class="carousel slide" id="carouselControls-Studio_Residences" data-interval="false">
-                  <div class="carousel-inner">
-
-                                          <div class="carousel-item active"><img width="520" height="372" decoding="async" src="/dependencies/img/wp-content/uploads/2020/10/ADH_ADSVH_RESIDENCES_CATEGORY_AMBIENT_HR_02-1.jpg.webp" alt="First slide"></div>
-                    
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-12 col-md-7 common-card-col-2">
-
-                                  <h3 class="mb-3 body-1">6-Bedroom Residences</h3>
-                
-                                  <p class="mb-4 body-4">The only abode of its kind at Address Sky View, the six-bedroom residence is the crowning glory of our Sky Collection. Come home to the distinctive aesthetics and captivating views of the city and the world’s tallest tower. It’s simply the ultimate Address.</p>
-                
-                                  <ul class="list-two-col-icon body-4">
-                    <li>Immaculate 6-bedroom duplex</li><li> Size: 643.9sqm</li><li> Up to 12 guests</li><li> Views of the Burj Khalifa or the City</li><li> Comfortable family area on the lower level</li><li> Two vast balconies with lounge and dining areas</li><li> Seven bathrooms</li><li> Maid’s room &amp; more</li>                  </ul>
-                
-                                  <div class="mt-4 btn-panel">
-                    <a class="btn btn-primary primary-btn" href="/en/residences-request/?hotel=address-sky-views&bedrooms=6-bedrooms" target="">
-                      Submit Request                    </a>
-                  </div>
-                              </div>
-            </div>
-          </div>
-        </div>
       </div>
-</div>            </main><!-- #main -->
+
+      <div class="col-12 col-lg-5 img-box img-shadow px-0">
+                     <img width="804" height="748" decoding="async" src="/dependencies/img/wp-content/uploads/2020/10/AD_BRAND_SKY_VIEW_EGG_CHAIRS_2875_LIFESTYLE-copy.jpg" alt="" class="img-fluid h-100 w-100">
+               </div>
+
+   </div>
+</div>
+
+<!-- <link rel="stylesheet" href="/dependencies/external/www-addresshotels-com.azureedge.net/wp-content/themes/emaar-projects/template-parts/dynamic-blocks/assets/css/wellness-pool-details.css"> -->
+
+
+<div class="container-fluid wellness-pool-details text-center">
+   <div class="wellness-pool-img m-0">
+               <img width="1920" height="1024" decoding="async" src="/dependencies/img/wp-content/uploads/2020/10/AD_BRAND_SKY_VIEW_SKY_DECK_INFINITYPOOL_0714_LIFESTYLE-copy.jpg" alt="Swimming Pool at Address Sky View" class="img-fluid">
+         </div>
+
+   <div class="container wellness-pool-content-box ">
+
+               <h6 class="pt-2 eyebrow-dark">
+            <p>SWIMMING POOL</p>
+         </h6>
+      
+               <h2 class="pb-3 display-1-72 mt-3">Dubai’s Ultimate Pool</h2>
+      
+      <hr>
+      
+               <p class="body-4">With the iconic Sky Deck, enviable lounging areas and a refreshing pool bar, the Address Sky View infinity pool simply pushes the boundaries of imagination.</p>
+      
+      <ul class="list-two-col text-left body-4 d-flex flex-md-row flex-column flex-wrap">
+                              <li class="d-flex align-items-center"><span class="generic-icon px-2"></span>Panoramic city views</li>
+                                       <li class="d-flex align-items-center"><span class="generic-icon px-2"></span>Large sun-lunging deck</li>
+                                       <li class="d-flex align-items-center"><span class="generic-icon px-2"></span>Private cabanas</li>
+                                       <li class="d-flex align-items-center"><span class="generic-icon px-2"></span>Pool bar with pool seating and dry deck seating</li>
+                                       <li class="d-flex align-items-center"><span class="generic-icon px-2"></span>Access to hotel guests only.</li>
+                                       <li class="d-flex align-items-center"><span class="generic-icon px-2"></span>Access to 18 years and above.</li>
+                                       <li class="d-flex align-items-center"><span class="generic-icon px-2"></span>Timing: 9:00 AM to sunset </li>
+                        </ul>
+
+
+   </div>
+
+</div>
+
+
+<div class="container-fluid wellness-fitness-center">
+   <div class="row g-o">
+
+      <div class="col-12 col-lg-7 px-0">
+                     <img width="2100" height="1399" decoding="async" class="img-fluid w-100 h-100" src="/dependencies/img/wp-content/uploads/2024/01/FITNESS-GYM-ADDRESS-SKY-VIEW-1-4.jpg.webp">
+               </div>
+
+      <div class="col-12 col-lg-5 px-0 bg-dark flex-md-row text-white">
+         <div class="wellness-fitness-text-content">
+
+                           <h6 class="eyebrow-dark whitetext">FITNESS CENTRE</h6>
+            
+                           <h2 class="font-56-mobile display-1-72 whitetext">Get Fit In Style</h2>
+            
+                           <div>
+                  <p class="body-4 whitetext">
+                     With cutting-edge equipment, a dedicated team of trainers and powerfully motivating views, The Fitness Centre at Address Sky View offers you the workout you have always wanted.                  </p>
+               </div>
+            
+            <dl class="wellness_Icons_12 body-4 whitetext">
+
+                                 <dd class="d-flex align-items-center">
+                     <i class="fal fa-clock pr-2 pt40p"></i>
+                     Daily, 24 hours                   </dd>
+               
+                                 <dd class="d-flex align-items-center">
+                     <i class="fal fa-map-marker-alt pr-2"></i>
+                     1st Floor, Address Sky View                  </dd>
+               
+                                 <dd class="d-flex align-items-center">
+                     <i class="fal fa-phone-alt pr-2"></i>
+                     <span class="dir-ltr">
+                     <a class="text-white" href="tel:+97148738886">+97148738886</a>
+                     </span>
+                  </dd>
+               
+                                 <dd class="d-flex align-items-center">
+                     <i class="fal fa-envelope pr-2"></i>
+                     <a href="mailto:spa.adsvh@addresshotels.com" class="whitelink text-white">spa.adsvh@addresshotels.com</a>
+                  </dd>
+               
+            </dl>
+
+                           <a class="white-btn-hvr sec-white-btn section-get-fit-stay-fit-btn transparent-btn d-block" href="/dependencies/docs/wp-content/uploads/2024/01/ADSV_FITNESS_FLYER.pdf" rel="nofollow" target="">
+                  <i class="fal fa-arrow-to-bottom pr-2"></i>
+                  Brochure Pdf               </a>
+            
+         </div>
+      </div>
+   </div>
+</div>
+
+
+<div class="wp-block-group greyboxlight d-none"><div class="wp-block-group__inner-container is-layout-flow wp-block-group-is-layout-flow"></div></div>
+
+
+
+<div class="container wellness-fitness-features-main">
+
+   <div class="wellness-fitness-features-heading">
+               <h2 class="display-2-48">The Future of Fitness</h2>
+         </div>
+
+   <div class="wellness-fitness-features">
+      <div class="wellness-fitness-features-box">
+         <ul class="">
+            <li class="d-flex align-items-center"><span class="generic-icon px-2"></span><span class="text-left">State-of-the-art gym</span></li><li class="d-flex align-items-center"><span class="generic-icon px-2"></span><span class="text-left">High-tech equipment</span></li><li class="d-flex align-items-center"><span class="generic-icon px-2"></span><span class="text-left">Certified Personal Trainers</span></li><li class="d-flex align-items-center"><span class="generic-icon px-2"></span><span class="text-left">Yoga studio</span></li><li class="d-flex align-items-center"><span class="generic-icon px-2"></span><span class="text-left">Equipment-integrated TV</span></li><li class="d-flex align-items-center"><span class="generic-icon px-2"></span><span class="text-left">Positive atmosphere</span></li><li class="d-flex align-items-center"><span class="generic-icon px-2"></span><span class="text-left">Juice counter</span></li><li class="d-flex align-items-center"><span class="generic-icon px-2"></span><span class="text-left">Personal Training session</span></li><li class="d-flex align-items-center"><span class="generic-icon px-2"></span><span class="text-left">Fitness Classes</span></li><li class="d-flex align-items-center"><span class="generic-icon px-2"></span><span class="text-left">Views of Burj Khalifa</span></li>         </ul>
+      </div>
+   </div>
+</div>
+
+<script>
+   var total_offers = 1;
+</script>
+   <div class="container-fluid greyboxlight">
+      <div class="container py-4">
+         <h2 class="display-2-48">Featured Offers</h2>
+         <div class="row">
+            <div class="flickity_carousel w-100">
+               
+
+                     <div class="col-11 col-md-6 col-lg-4 px-lg-3 pl-0 card-container carousel-cell">
+                        <div class="card-image">
+                           <img width="1088" height="1088" decoding="async" class="img-fluid" src="/dependencies/img/wp-content/uploads/2021/10/PRIVATE-JACUZZI-TIME-AT-THE-SPA-ADDRESS-SKY-VIEW.jpg.webp" alt="Jacuzzi with stunning Downtown Dubai &#038; Burj Khalifa view at Address Hotels + Resorts">
+                        </div>
+                        <div class="card-data p-3">
+                           <div class="card-overlay">
+                              <h6 class="body-4 secondary-semibold mb-3 mx-1 text-capitalize"><a class="post_title w4pl_post_title body-4 secondary-semibold" href="/en/offers/private-jacuzzi-time-at-the-spa/" title="Private Jacuzzi Time at The Spa"> Private Jacuzzi Time at The Spa </a></h6>
+                              <i class="fal fa-map-marker-alt pr-2"></i>Address Sky View                              <p class="d-none d-lg-block">&nbsp;</p>
+
+                           </div>
+                           <div class="card-buttons d-flex w-100i">
+                              <a href="/en/offers/private-jacuzzi-time-at-the-spa/" class="btn whitebtnborder w-100 mr-2 secondary-btn secondary-small">
+                                 View Details</a>
+                                                         </div>
+                        </div>
+                     </div>
+                           </div>
+         </div>
+      </div>
+   </div>
+
+
+<script>
+   $(document).ready(function() {
+
+      if (ICL == 'ar') {
+         $('.flickity_carousel').flickity({
+            // options
+            cellAlign: 'right',
+            contain: true,
+            prevNextButtons: false,
+            pageDots: false,
+            rightToLeft: true
+         });
+      } else {
+
+         $('.flickity_carousel').flickity({
+            // options
+            cellAlign: 'left',
+            contain: true,
+            prevNextButtons: false,
+            pageDots: false,
+
+         });
+      }
+   });
+</script>            </main><!-- #main -->
 
          </div><!-- col -->
       </div><!-- row -->
@@ -1080,8 +1087,8 @@ if (globalHomeLinkDropdownBox) {
    </div><!-- #primary -->
 </div><!-- #content -->
 
-<?php include dirname(__DIR__, 4) . '/_partials/footer.php'; ?>
-<?php include dirname(__DIR__, 4) . '/_partials/foot.php'; ?>
+<?php include dirname(__DIR__, 1) . '/_partials/footer.php'; ?>
+<?php include dirname(__DIR__, 1) . '/_partials/foot.php'; ?>
 </body>
 
 </html><!-- Rocket has webp -->

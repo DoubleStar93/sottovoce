@@ -3,7 +3,7 @@
 <html lang="en">
 
 
-<?php include dirname(__DIR__, 4) . '/_partials/head.php'; ?>
+<?php include dirname(__DIR__, 1) . '/_partials/head.php'; ?>
 
 <body class="page-template-default page page-id-2784 page-child parent-pageid-3739">
   <!-- Preloader -->
@@ -32,7 +32,7 @@ var page = {"PAGE_SCOPE":"individual","HOME_PAGE":false,"DINE_PAGE":false,"BOOK_
 </noscript> -->
 
 
-<?php include dirname(__DIR__, 4) . '/_partials/header.php'; ?><!-- #masthead -->
+<?php include dirname(__DIR__, 1) . '/_partials/header.php'; ?><!-- #masthead -->
 <style>
 #nav-main .right-nav-container {
     max-width: 400px !important;
@@ -2192,8 +2192,8 @@ if (globalHomeLinkDropdownBox) {
    </div><!-- #primary -->
 </div><!-- #content -->
 
-<?php include dirname(__DIR__, 4) . '/_partials/footer.php'; ?>
-<?php include dirname(__DIR__, 4) . '/_partials/foot.php'; ?>
+<?php include dirname(__DIR__, 1) . '/_partials/footer.php'; ?>
+<?php include dirname(__DIR__, 1) . '/_partials/foot.php'; ?>
 </body>
 
 </html><!-- Rocket has webp -->

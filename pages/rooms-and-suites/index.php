@@ -3,9 +3,9 @@
 <html lang="en">
 
 
-<?php include dirname(__DIR__, 4) . '/_partials/head.php'; ?>
+<?php include dirname(__DIR__, 1) . '/_partials/head.php'; ?>
 
-<body class="page-template-default page page-id-57607 page-child parent-pageid-3739">
+<body class="page-template page-template-templates page-template-roomsandsuites page-template-templatesroomsandsuites-php page page-id-5455 page-parent page-child parent-pageid-3739">
   <!-- Preloader -->
   <!-- Preloader End -->
   <div id="page" class="site">
@@ -17,12 +17,12 @@
 
     
 <script>
-var page = {"PAGE_SCOPE":"individual","HOME_PAGE":false,"DINE_PAGE":false,"BOOK_NOW_BTN":false,"HOTEL_TITLE":"Address Sky View","HOTEL_SLUG":"address-sky-view","HOTEL_ID":"18","TEMPLATE":"","HOTEL_URL":"https:\/\/www.addresshotels.com\/en\/hotels\/address-sky-view\/","DROPDOWN_POSITION":"dropup","DISABLE_BOOK_NOW":false,"FACEBOOK_SOCIAL_LINK":"https:\/\/www.facebook.com\/addressskyview","TWITTER_SOCIAL_LINK":"https:\/\/twitter.com\/Address_Hotels\/","YOUTUBE_SOCIAL_LINK":"https:\/\/www.youtube.com\/@AddressHotels","INSTAGRAM_SOCIAL_LINK":"https:\/\/www.instagram.com\/addressskyview\/","WHATSAPP_SOCIAL_LINK":"97142488553","POST_TYPE":"page"};
+var page = {"PAGE_SCOPE":"individual","HOME_PAGE":false,"DINE_PAGE":false,"BOOK_NOW_BTN":false,"HOTEL_TITLE":"Address Sky View","HOTEL_SLUG":"address-sky-view","HOTEL_ID":"18","TEMPLATE":"templates\/roomsandsuites.php","HOTEL_URL":"https:\/\/www.addresshotels.com\/en\/hotels\/address-sky-view\/","DROPDOWN_POSITION":"dropup","DISABLE_BOOK_NOW":false,"FACEBOOK_SOCIAL_LINK":"https:\/\/www.facebook.com\/addressskyview","TWITTER_SOCIAL_LINK":"https:\/\/twitter.com\/Address_Hotels\/","YOUTUBE_SOCIAL_LINK":"https:\/\/www.youtube.com\/@AddressHotels","INSTAGRAM_SOCIAL_LINK":"https:\/\/www.instagram.com\/addressskyview\/","WHATSAPP_SOCIAL_LINK":"97142488553","POST_TYPE":"page"};
 </script>
 
 
 
-<?php include dirname(__DIR__, 4) . '/_partials/header.php'; ?><!-- #masthead -->
+<?php include dirname(__DIR__, 1) . '/_partials/header.php'; ?><!-- #masthead -->
 
 <style>
 #nav-main .right-nav-container {
@@ -687,76 +687,346 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     </style>
 
-    
-<div id="content" class="site-content container-fluid p-0">
-   <div id="primary" class="content-area">
-
-      <div class="row no-gutters">
-         <div class="col-md-12">
-
-            <main id="main" class="site-main">
-               <header class="internal-page">
+    <script>
+  var hotel_id = 18;
+  var viewmorelg = "View More";
+  var booknowlg = "Book Now";
+  var peoplelg = "People";
+  var kingbedlg = "King Bed";
+  var kingbedslg = "King Beds";
+  var twinbedslg = "Twin Beds";
+  var errormsglg = "We are having trouble in fetching data right now. Please try again later.";
+  var linklg = "https://www.addresshotels.com/en/hotels/address-sky-view/rooms-and-suites/room-details/?room_details=";
+</script>
+<header class="internal-page">
   <div class="header-content">
-    
-  </div>
+      </div>
 </header>
+<div class="container-fluid room-page-content defcontent grey-background pt-80 mt-5">
+  <div class="row ">
+    <div class="col-lg-11 col-md-11 col-sm-12 m-auto p-0">
+      <div class="container px-lg-0 px-md-0 px-sm-0 pb-3 title-text">
+        <div class="row align-items-center roomsandsuites-content">
+          <div class="col-xl-7 col-lg-7 col-md-10 col-sm-12  px-lg-3 px-2 roomsandsuites-heading">
+            <h1 class="display-2-48">
+              Address Sky View Rooms &#038; Suites                              <span class="dropdown-icon"><i class="fas fa-chevron-down roomsandsuites-icon"></i></span>
+                          </h1>
 
-<div class="width-1204-p container whtcontent2">
-  <div class="row w-100 mx-auto pt-80">
-    <div class="col-lg-12">
-      <div class="wp-block-address-content-box-21 contact-us-titles body-4 secondary-medium">
-                    <h3 class="display-2-48 secondary-medium mb-5 text-center">360 Virtual Tour at Address Sky View  </h3>
+
+          </div>
+          <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12  p-y pr-0 pl-3  ">
+            <!-- Links -->
+            <div class="container  px-0">
+              <div class="row w-100 pl-md-15 pl-sm-0 pl-xs-0">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-ms-12 p-0 d-flex  align-items-center justify-content-end rooms-count invisible">
+                  <span><span class="countbox showing"></span> of <span class="countbox total"></span></span>
+                  <hr class="vhr-dark mx-3">
+                  <a href="javascript:void(0);" id="view-all-rooms" class=" meduimtext view-all invisible bluelink secondary-medium">
+                    <svg class="button-loader" style="display: none;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="200px" height="200px" viewbox="0 0 100 100" preserveaspectratio="xMidYMid">
+                      <circle cx="50" cy="50" fill="none" stroke="#483d8b" stroke-width="10" r="35" stroke-dasharray="164.93361431346415 56.97787143782138" transform="rotate(132.222 50 50)">
+                        <animatetransform attributename="transform" type="rotate" repeatcount="indefinite" dur="1s" values="0 50 50;360 50 50" keytimes="0;1"></animatetransform>
+                      </circle>
+                    </svg>
+                    View All                  </a>
+                  <div class="pricefilter filterbox d-flex px-3">
+                    <div id="showfilter" class="dropdown showfilter text-right">
+                      <a type="button" class="btn btn-light toggle" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" id="openFilter">
+                        <span id="filterText">Show Filter </span> <i class="fal fa-filter"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </div>
-    </div>
+            </div>
+          </div>
+          <div class="col-lg-12 col-md-12 col-sm-12  px-lg-3 px-2 ">
+            <div class="dropdown-menuus">
+              <p class="body-4">Elevated high above Downtown Dubai, Address Sky View redefines city luxury with its sleek rooms and suites, each crafted as a refined retreat with elegant interiors, seamless technology, and panoramic skyline perspectives. <br><br>
+Wake up to sweeping scenes from one of the top Burj Khalifa view hotels, with exclusive access to the Sky Bridge, the iconic infinity pool Dubai is known for, and the sophisticated Club Lounge. Guests also enjoy direct connectivity to Dubai Metro and Dubai Mall, making this an ideal hotel near Burj Khalifa for both leisure and business travel.<br><br>
+While staying in one of the most luxurious hotels in Downtown, take your experience further at the Sky View Observatory, or challenge your limits with the Glass Slide and Edge Walk. Cap your day with dinner in the clouds at Alto54 — the rooftop dining destination that pairs fine cuisine with unbeatable views.<br><br>
+Explore exclusive offers curated for your stay and immerse yourself in a city escape where elegance rises above expectation.
+</p>
+            </div>
+          </div>
+        </div>
 
-    <div class="col-lg-12 i-frame-height-adjustment">
-      <div class="embed-responsive embed-responsive-16by9 i-frame-responsiveness">
-        <iframe loading="lazy" class="embed-responsive-item" src="about:blank" frameborder="0" allowfullscreen="" allow="xr-spatial-tracking" data-rocket-lazyload="fitvidscompatible" data-lazy-src="/dependencies/external/dbnproduction.com/address-sky-view.bin"></iframe><noscript><iframe class="embed-responsive-item" src="/dependencies/external/dbnproduction.com/address-sky-view.bin" frameborder="0" allowfullscreen="" allow="xr-spatial-tracking"></iframe></noscript>      </div>
+        <div class="collapse filter-toggle" id="collapseExample">
+          <!-- //Show hide Based on Count of Cards if 0 then hide -->
+          <div class="card card-body">
+            <div class="row bedTypefilter-row">
+              <div class="bedTypefilter filterbox px-lg-3  ">
+                <h4 class="body-4 secondary-medium pb-1">Bed Type</h4>
+                <div id="bedTypefilter" class="dropdown pricefilter bedTypefilterList">
+
+                </div>
+              </div>
+              <div class="bedTypefilter filterbox px-lg-3  ">
+                <h4 class="body-4 secondary-medium pb-1">Room Type</h4>
+                <div id="bedTypefilter" class="dropdown pricefilter">
+                  <label class="filter_label">Residence<input type="checkbox" class="roomfilter" value="Residence"> </label>
+                                      <label class="filter_label">
+                      Room <input type="checkbox" class="roomfilter" value="Room">
+                    </label>
+                                          <label class="filter_label">
+                        Suite <input type="checkbox" class="roomfilter" value="Suite">
+                      </label>
+
+                                                        </div>
+              </div>
+              <div class="bedTypefilter filterbox px-lg-3  room-view-filter">
+                <h4 class="body-4 secondary-medium pb-1">Room View</h4>
+                <div id="bedTypefilter" class="dropdown pricefilter roomViewFilterList">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-11 col-md-11 col-ms-12 m-auto p-0">
+      <div class="container all-rooms-details p-0" id="misha_posts_wrap">
+      </div>
+      <div class="mt-5 col-lg-12 col-md-12 col-ms-12 text-center d-none" id="api-error">
+        <h3>We are having trouble in fetching data right now. Please try again later.</h3>
+      </div>
+      <!--Start: No Rooms Found when filters are selected - Ashutosh-->
+      <div class="container d-none text-center noRoomsFound" id="noRoomsFound">
+        <h2 id="roomHeading" class="rooms-list-header display-2-48  mx-lg-0"> No Rooms Found</h2>
+        <p> Unfortunately, no rooms with selected filters are available. To view the available rooms, clear one or more filters.</p>
+        <button class="btn blackbtn curchgrt primary-btn" id="clearFilter">
+          <b>Clear Filter</b>
+        </button>
+      </div>
+      <!-- End: No Rooms Found when filters are selected - Ashutosh-->
+       <!--Start: No rooms found on a successful response - Kaveri-->
+      <div class="container d-none text-center noRoomsFound" id="noRoomsFoundInResponse">
+        <h3 id="roomHeading" class="rooms-list-header display-2-48  mx-lg-0"> No Rooms Found</h3>
+        <p> Unfortunately, no rooms are available</p>
+      </div>
+      <!-- End: No rooms found on a successful response - Kaveri-->
+
+      <div class="container ">
+        <div class="row">
+          <div class="col-lg-4 col-md-4 col-ms-4 mx-auto my-4">
+            <div class="text-center py-4">
+              <button id="view-more-rooms" class="btn simplebtn view-more-button hide secondary-btn" data-count="" data-total="">
+                <svg class="button-loader" style="display: none;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="200px" height="200px" viewbox="0 0 100 100" preserveaspectratio="xMidYMid">
+                  <circle cx="50" cy="50" fill="none" stroke="#000" stroke-width="10" r="35" stroke-dasharray="164.93361431346415 56.97787143782138" transform="rotate(132.222 50 50)">
+                    <animatetransform attributename="transform" type="rotate" repeatcount="indefinite" dur="1s" values="0 50 50;360 50 50" keytimes="0;1"></animatetransform>
+                  </circle>
+                </svg>
+                <span class="viewmore">View More</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
+<form id="bookingform" name="bookingform" action="javascript:void(0);" method="get"><input type="hidden" id="id" name="id" value="all"><input type="hidden" id="hotelname" name="hotelname" value=""><input type="hidden" id="cid" name="cid" value=""><input type="hidden" id="cod" name="cod" value=""><input type="hidden" name="rooms" id="no_of_rooms" value="1"><input type="hidden" name="book_for_someone_else" id="book_for_someone_else" value=""><input type="hidden" name="adult" id="totadlt" value="1"><input type="hidden" name="child" id="totchld" value="0"><input type="hidden" name="type" id="cdname" value=""><input type="hidden" name="code" id="promocodevalue" value=""><input type="hidden" name="offerCode" id="offerCode" value=""><input type="hidden" name="offerStart" id="offerStart" value=""><input type="hidden" name="offerEnd" id="offerEnd" value=""><input type="hidden" name="roomtypecode" id="roomtypecode" value=""></form>
+
+<!-- Card -->
+<div class="common-card-shadow d-none" id="common_card">
+  <div class="common-card">
+    <div class="row m-0 offerboxdetails room-loading common-card-row">
+      <div class="col-lg-7 col-md-12 col-12">
+        <div id="carouselControls1" class="carousel slide room-images-container room-loading-container" data-ride="carousel" data-interval="false">
+          <ol class="carousel-indicators"></ol>
+           <style>
+
+  /* 360 logo overlay button */
+  .figma-logo-overlay {
+    position: absolute;
+    top: 10px;
+    right: 60px;
+    z-index: 15;
+  }
+  .figma-logo-overlay img {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+    cursor: pointer;
+    position: relative;
+    left: 3pc; /* shift a little from the right */
+  }
+
+  /* Modal close button */
+  .modal-close-btn {
+    position: fixed !important;   /* fixed so it stays visible */
+    top: 15px !important;
+    right: 20px !important;
+    z-index: 9999 !important;     /* stay on top of everything */
+    background: #fff;
+    color: #000;
+    font-size: 1.5rem;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .modal-close-btn span {
+    margin: 0;
+    line-height: 1;
+  }
+
+  /* Responsive full-height modal for mobile */
+  @media (max-width: 768px) {
+    .modal-dialog {
+      margin: 0;
+      max-width: 100%;
+      height: 100% !important;
+    }
+    .modal-content {
+      height: 100vh !important;
+      border-radius: 0;
+    }
+    .modal-body {
+      height: 100% !important;
+      padding: 0 !important;
+    }
+    .modal-body > div {
+      height: 100% !important;
+    }
+  }
+</style>
+
+      
+          <div id="virtual-tour-room">
+            <a href="javascript:void(0)" class="figma-logo-overlay" data-toggle="modal" data-target="#figmaModal">
+              <img width="48" height="48" decoding="async" src="/dependencies/img/wp-content/uploads/2025/09/360-degree.svg" alt="360 View">
+            </a>
+          </div>
+          <div class="carousel-inner"></div>
+          <button type="button" class="btn telescopeicon-rs showgal whitetext" id="galleryitem1" name="galleryroom1">
+            <i class="fal fa-search"></i>
+          </button>
+        </div>
+      </div>
+      <div class="col-lg-5 col-md-12 col-12">
+        <div class="row h-100">
+          <div class="col-lg-12 col-md-12 col-ms-12 room-details-container room-loading-container px-0 px-lg-3 ">
+            <h3 class="card-title m-0 d-flex d-inline-flex pt-lg-0 py-3 mb-1 room-title body-1 secondary-medium"></h3>
+            <p class="room-description body-4"></p>
+            <dl class="room-features">
+              <dd class="room-occupancy body-4"></dd>
+              <dd class="room-bed body-4"></dd>
+              <dd class="room-size body-4"></dd>
+            </dl>
+          </div>
+          <div class="col-lg-12 col-md-12 col-ms-12 mt-2 mx-md-0 mx-sm-15 d-lg-flex d-md-flex align-self-end w-100 p-0 booknowbtn room-cta-container room-loading-container">
+            <a href="javascript:void(0);" data-toggle="modal" data-target="#bookingModalGlobal" class="align-self-end btn blackbtn w-100 ml-lg-3 mr-lg-3 mt-3 room-cta room-book-link primary-btn mr-md-3">Book Now </a>
+            <a href="/pages/rooms-and-suites/index.php?room_details=" class="align-self-end mb-0 mt-3 btn whitebtn w-100 room-cta room-info-link secondary-btn ml-0 ml-lg-3"><svg class="button-loader" style="display: none;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="200px" height="200px" viewbox="0 0 100 100" preserveaspectratio="xMidYMid">
+                <circle cx="50" cy="50" fill="none" stroke="#232323" stroke-width="10" r="35" stroke-dasharray="164.93361431346415 56.97787143782138" transform="rotate(132.222 50 50)">
+                  <animatetransform attributename="transform" type="rotate" repeatcount="indefinite" dur="1s" values="0 50 50;360 50 50" keytimes="0;1"></animatetransform>
+                </circle>
+              </svg>View More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal gallerymodal rnsmodal room-images-modal" id="galleryitem2">
+    <button type="button" class="close closegal" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <div id="carouselControls2" class="carousel slide pr-md-3" data-ride="carousel" data-interval="false">
+      <ol class="carousel-indicators"></ol>
+      <div class="carousel-inner"></div>
+    </div>
+  </div>
+</div>
+<!-- 360 view -->
+
+ <div class="modal fade" id="figmaModal" tabindex="-1" role="dialog" aria-labelledby="figmaModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+    <div class="modal-content">
+
+      <!--  Top-right close button -->
+        <button type="button" class="modal-close-btn" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+
+      <!--  Iframe container -->
+      <div class="modal-body p-0">
+        <div id="iframe-container" class="w-100" style="height:80vh;"></div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+</div>
+<!-- Card -->
+<label id="bedfil" class="filter_label d-none"><span id="bedtypelabel"></span><input type="checkbox" id="clonebed" value="BEDTYPE"></label>
 <style>
-  .whtcontent2 {
-    padding: 50px 80px;
+  .card {
+    border: none !important;
   }
 
-  #content {
-    min-height: 100%;
-  }
-
-  @media(max-width:991px) {
-    .whtcontent2 {
-      padding: 40px 20px 60px;
+  @media screen and (max-width: 380px) {
+    .bluelink {
+      font-size: 14px;
     }
   }
 
-  @media(max-width:650px) {
+  @media screen and (min-width: 990px) and (max-width: 1160px) {
+    .primary-btn {
+      min-width: 170px !important;
+    }
 
-    .i-frame-height-adjustment,
-    .i-frame-responsiveness {
-      height: 600px;
+    .secondary-btn {
+      min-width: 170px !important;
     }
   }
 
-  @media(max-width:450px) {
+  .display-2-48 {
+    /* display: flex;
+    align-items: center; */
+  }
 
-    .i-frame-height-adjustment,
-    .i-frame-responsiveness {
-      height: 500px;
-    }
+  .dropdown-icon {
+    margin-left: 10px;
+    cursor: pointer;
+  }
 
+  .dropdown-menuus {
+    display: none;
+    /* position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    /* z-index: 1; */
+    /* min-width: 160px; */
 
   }
-</style>            </main><!-- #main -->
 
-         </div><!-- col -->
-      </div><!-- row -->
+  .roomsandsuites-icon::before {
+    font-size: 30px;
 
-   </div><!-- #primary -->
-</div><!-- #content -->
+  }
 
-<?php include dirname(__DIR__, 4) . '/_partials/footer.php'; ?>
-<?php include dirname(__DIR__, 4) . '/_partials/foot.php'; ?>
+  @media screen and (min-width: 900px) and (max-width: 970px) {
+    .roomsandsuites-heading {
+      flex: 0 0 100% !important;
+      max-width: 100% !important;
+
+    }
+  }
+</style>
+<script>
+  jQuery(document).ready(function() {
+    jQuery('.roomsandsuites-content .dropdown-icon').click(function() {
+      jQuery('.roomsandsuites-content .dropdown-menuus').toggle();
+    });
+  });
+</script><?php include dirname(__DIR__, 1) . '/_partials/footer.php'; ?>
+<?php include dirname(__DIR__, 1) . '/_partials/foot.php'; ?>
 </body>
 
 </html><!-- Rocket has webp -->

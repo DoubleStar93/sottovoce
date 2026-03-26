@@ -3,7 +3,7 @@
 <html lang="en">
 
 
-<?php include dirname(__DIR__, 4) . '/_partials/head.php'; ?>
+<?php include dirname(__DIR__, 1) . '/_partials/head.php'; ?>
 
 <body class="page-template page-template-templates page-template-photos-and-videos page-template-templatesphotos-and-videos-php page page-id-10700 page-child parent-pageid-3739">
   <!-- Preloader -->
@@ -22,7 +22,7 @@ var page = {"PAGE_SCOPE":"individual","HOME_PAGE":false,"DINE_PAGE":false,"BOOK_
 
 
 
-<?php include dirname(__DIR__, 4) . '/_partials/header.php'; ?><!-- #masthead -->
+<?php include dirname(__DIR__, 1) . '/_partials/header.php'; ?><!-- #masthead -->
 
 <style>
 #nav-main .right-nav-container {
@@ -1379,8 +1379,8 @@ document.addEventListener("DOMContentLoaded", function() {
 </main>
 
 
-<?php include dirname(__DIR__, 4) . '/_partials/footer.php'; ?>
-<?php include dirname(__DIR__, 4) . '/_partials/foot.php'; ?>
+<?php include dirname(__DIR__, 1) . '/_partials/footer.php'; ?>
+<?php include dirname(__DIR__, 1) . '/_partials/foot.php'; ?>
 </body>
 
 </html><style>

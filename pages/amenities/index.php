@@ -3,9 +3,9 @@
 <html lang="en">
 
 
-<?php include dirname(__DIR__, 4) . '/_partials/head.php'; ?>
+<?php include dirname(__DIR__, 1) . '/_partials/head.php'; ?>
 
-<body class="page-template page-template-templates page-template-dine-individual-custom-template page-template-templatesdine-individual-custom-template-php page page-id-2770 page-child parent-pageid-3739">
+<body class="page-template-default page page-id-2779 page-child parent-pageid-3739">
   <!-- Preloader -->
   <!-- Preloader End -->
   <div id="page" class="site">
@@ -23,7 +23,7 @@
 </style>
 
 <script>
-var page = {"PAGE_SCOPE":"individual","HOME_PAGE":false,"DINE_PAGE":true,"BOOK_NOW_BTN":false,"HOTEL_TITLE":"Address Sky View","HOTEL_SLUG":"address-sky-view","HOTEL_ID":"18","TEMPLATE":"templates\/dine-individual-custom-template.php","HOTEL_URL":"https:\/\/www.addresshotels.com\/en\/hotels\/address-sky-view\/","DROPDOWN_POSITION":"dropup","DISABLE_BOOK_NOW":false,"FACEBOOK_SOCIAL_LINK":"https:\/\/www.facebook.com\/addressskyview","TWITTER_SOCIAL_LINK":"https:\/\/twitter.com\/Address_Hotels\/","YOUTUBE_SOCIAL_LINK":"https:\/\/www.youtube.com\/@AddressHotels","INSTAGRAM_SOCIAL_LINK":"https:\/\/www.instagram.com\/addressskyview\/","WHATSAPP_SOCIAL_LINK":"97142488553","POST_TYPE":"page"};
+var page = {"PAGE_SCOPE":"individual","HOME_PAGE":false,"DINE_PAGE":false,"BOOK_NOW_BTN":false,"HOTEL_TITLE":"Address Sky View","HOTEL_SLUG":"address-sky-view","HOTEL_ID":"18","TEMPLATE":"default","HOTEL_URL":"https:\/\/www.addresshotels.com\/en\/hotels\/address-sky-view\/","DROPDOWN_POSITION":"dropup","DISABLE_BOOK_NOW":false,"FACEBOOK_SOCIAL_LINK":"https:\/\/www.facebook.com\/addressskyview","TWITTER_SOCIAL_LINK":"https:\/\/twitter.com\/Address_Hotels\/","YOUTUBE_SOCIAL_LINK":"https:\/\/www.youtube.com\/@AddressHotels","INSTAGRAM_SOCIAL_LINK":"https:\/\/www.instagram.com\/addressskyview\/","WHATSAPP_SOCIAL_LINK":"97142488553","POST_TYPE":"page"};
 </script>
 <!-- <script src="/dependencies/external/cdn.quicktext.im/widget.min.js" data-license="8QHsG-4I9i"></script>
 
@@ -32,7 +32,7 @@ var page = {"PAGE_SCOPE":"individual","HOME_PAGE":false,"DINE_PAGE":true,"BOOK_N
 </noscript> -->
 
 
-<?php include dirname(__DIR__, 4) . '/_partials/header.php'; ?><!-- #masthead -->
+<?php include dirname(__DIR__, 1) . '/_partials/header.php'; ?><!-- #masthead -->
 <style>
 #nav-main .right-nav-container {
     max-width: 400px !important;
@@ -839,299 +839,124 @@ if (globalHomeLinkDropdownBox) {
     </style>
 
     
-<div id="content" class="site-content container-fluid p-0 greyboxlight">
+<div id="content" class="site-content container-fluid p-0">
    <div id="primary" class="content-area">
 
       <div class="row no-gutters">
          <div class="col-md-12">
 
             <main id="main" class="site-main">
-               <!-- <link rel="stylesheet" href="/dependencies/external/www-addresshotels-com.azureedge.net/wp-content/themes/emaar-projects/template-parts/dynamic-blocks/assets/css/global_dynamic_blocks_common.css"> -->
+               
+<header class="internal-page">
+	<div class="container-fluid p-0 header-banner-img-container">
+	
+		<div class="row no-gutters h-100 align-items-center  px-4 px-lg-0 pl-lg-5">
+			<div class="col-12 col-lg-8 header-banner-img-content-box pl-lg-5">
+				
+										<h1 class="display-1-72 whitetext mt-0 font-56-mobile">Amenities at Address Sky View</h1>
+					
+										<p class="body-2 whitetext">Unpack and indulge in a range of exclusive amenities. Luxuriate in the infinity pool, sip a refreshing beverage at the pool lounge, or watch your little ones play at Qix Club. Your choice.</p>
+								</div>
+		</div>
+	</div>
+</header>
 
 
-<div id="carousalHeaders" class="carousel slide" data-ride="carousel">
+	<style>
+		.header-banner-img-container {
+			background-image: linear-gradient(-105deg, rgba(37, 40, 45, 0) 18%, #000000 104%), radial-gradient(circle at 53% 100%, rgba(42, 60, 68, 0), rgba(42, 60, 68, 0) 53%, rgba(42, 60, 68, 0.6) 79%), url('../../../../wp-content/uploads/2020/10/AD_BRAND_SKY_VIEW_SKY_DECK_INWATER_-210_LIFESTYLE-copy.jpg');
+
+		}
+	</style>
 
 
-  
+<div class="container text-center pt-5">
+
+         <h2 class="pt-4 mb-4 pb-3 eyebrow-dark">ADDRESS SKY VIEW AMENITIES</h2>
+   </div>
 
 
+<div class="wp-block-group container-fluid white-bg mb-5 pb-5"><div class="wp-block-group__inner-container is-layout-flow wp-block-group-is-layout-flow">
+<div class="container-fluid pt-5">
+   <div class="row position-relative">
 
-  <div class="carousel-inner">
-
-                  <style>
-          .header-banner-img-container.dine-header-0 {
-            background-image: linear-gradient(-105deg, rgba(37, 40, 45, 0) 18%, #000000 104%), radial-gradient(circle at 53% 100%, rgba(42, 60, 68, 0), rgba(42, 60, 68, 0) 53%, rgba(42, 60, 68, 0.6) 79%), url('../../../../wp-content/uploads/2022/11/Skyview-249.jpg');
-
-          }
-        </style>
-            <div class="carousel-item active">
-        <div class="container-fluid p-0 header-banner-img-container dine-header-0 header-2">
-          <div class="row no-gutters h-100 align-items-center  px-4 px-lg-0 pl-lg-5">
-            <div class="col-12 col-lg-8 header-banner-img-content-box pl-lg-5">
-
-                              <h1 class="display-1-72 whitetext my-2 font-56-mobile">Address Sky View Dining</h1>
-                            <p class="body-2 whitetext"></p>
-
-
-              <div class="carousal-banner-cta mt-5">
-                              </div>
-            </div>
-
-          </div>
-
-        </div>
+      <div class="col-12 p-0 px-lg-3">
+                     <img width="1284" height="375" decoding="async" src="/dependencies/img/wp-content/uploads/2020/10/INFINITY-POOL-DAY-ADDRESS-SKY-VIEW-copy.jpg" alt="Infinity pool at Address Sky View" class="img-fluid amenities-large-img p-0 px-lg-3">
+         
       </div>
 
-    
-  </div>
+      <div class="amenities-title-box ">
+                     <h2 class="display-2-48">Infinity Pool</h2>
+               </div>
 
+      <hr class="amenities-title-box-hr">
 
-  </div>
+   </div>
 
+   <div class="row justify-content-center text-center">
+      <div class="col-12 col-lg-8 amenities-list-col">
 
-<script>
-   var hotel = "address-sky-view";
-</script>
+                     <p class="text-center mt-5 mb-4 body-4">Relax in style at our breathtaking infinity pool. A large sun-lounging deck, private cabanas, a bar with both pool and dry deck seating —the Address Sky View pool deck is all of that and more.</p>
+         
+         <ul class="amenities-list text-left body-4">
+                                 <li class="d-flex align-items-center mb-2">
+                        <span class="generic-icon px-2"></span>
+                        Located on the iconic Sky Deck
+                     </li>
+                                 <li class="d-flex align-items-center mb-2">
+                        <span class="generic-icon px-2"></span>
+                        Access to 18 years and above.
+                     </li>
+                                 <li class="d-flex align-items-center mb-2">
+                        <span class="generic-icon px-2"></span>
+                        Timing: 9:00 AM till Sunset
+                     </li>
+                     </ul>
 
-
-
-<div class="container px-md-5 px-lg-4">
-    <div class="row my-4">
-        <div class="col-lg-6 col-md-12 col-12">
-            <h2 class="display-2-48">Find A Restaurant</h2>
-        </div>
-        <div class="col-lg-6 col-md-12 col-12">
-            <ul class="d-flex  align-items-center justify-content-end restaurant-filter m-0 h-100">
-                                <li class="p-0 filterbox mx-2 w-md-100">
-                    <select class="selectpicker cuisine_filter w-md-100" data-default-value="all">
-                        <option title="Cuisine" value="all">All</option>
-                                                    <option value="contemporary-asian"> Contemporary Asian </option>
-                                                    <option value="french-bistronomy"> French Bistronomy </option>
-                                                    <option value="modern-italian"> Modern Italian </option>
-                                                    <option value="pastries-and-cakes"> Pastries and Cakes </option>
-                                                    <option value="peruvian-japanese"> Peruvian Japanese </option>
-                                                    <option value="pool-lounge"> Pool Lounge </option>
-                                                    <option value="rooftop-pool-lounge"> Rooftop Pool Lounge </option>
-                                            </select>
-                </li>
-                <li class="p-0 filterbox mx-2 w-md-100">
-                    <select class="selectpicker exp_filter w-md-100" data-default-value="all">
-                        <option title="Experience" value="all">All</option>
-                                                    <option value="a-la-carte"> A La Carte </option>
-                                                    <option value="afternoon-tea"> Afternoon Tea </option>
-                                                    <option value="all-day-dining"> All day Dining </option>
-                                                    <option value="bar"> Bar </option>
-                                                    <option value="breakfast"> Breakfast </option>
-                                                    <option value="brunch"> Brunch </option>
-                                                    <option value="business-lunch"> Business Lunch </option>
-                                                    <option value="cafe"> Café </option>
-                                                    <option value="dinner"> Dinner </option>
-                                                    <option value="dubai-skyline-dining"> Dubai skyline dining </option>
-                                                    <option value="light-bites"> Light Bites </option>
-                                                    <option value="lounge"> Lounge </option>
-                                                    <option value="lunch"> Lunch </option>
-                                                    <option value="nightlife"> Nightlife </option>
-                                                    <option value="poolside"> Poolside </option>
-                                                    <option value="poolside-bites"> Poolside Bites </option>
-                                                    <option value="seafood-restaurants"> Seafood Restaurants </option>
-                                            </select>
-                </li>
-            </ul>
-        </div>
-    </div>
-
+      </div>
+   </div>
 </div>
 
-<!-- ------FETCH DINE ------ -->
-<div class="container mt-5 px-md-5 px-lg-4">
-    <div class="row">
-                    <div class="col-12 col-md-6 col-lg-4 card-container restaurant-card  exp-breakfast exp-brunch exp-dinner exp-lunch" data-hotel="address-sky-view" data-cuisine="french-bistronomy" data-experience="breakfast">
-                <!-- //?Image Container -->
-                <div class="card-image">
-                                    <img width="816" height="728" decoding="async" src="/dependencies/img/wp-content/uploads/2020/10/The-Restaurant-SV.jpg" alt="dine-image" class="img-fluid">
-                                    </div>
-                <!-- //?Hotel Names/ -->
-                <div class="card-data p-3">
-                    <div class="card-overlay">
-                        <h6 class="body-4 secondary-semibold mb-2 mx-1 text-capitalize">The Restaurant at Address Sky View</h6>
-                                                    <p class="body-4 mb-1 mx-1">&nbsp;French Bistronomy</p>
-                                                                                <p class="body-4 mt-3 mb-4 mx-1">&nbsp;</p>
-                                                </div>
-                    <div class="card-buttons d-flex">
 
-                                                <a href="/en/restaurant/address-sky-view/the-restaurant-at-address-sky-view/" data-id="1" class="btn secondary-btn secondary-small w-100 mx-1">View Details</a>
-                                                        <!-- <a href="" class="btn primary-btn primary-small w-100 mx-1 bookingdinecta" data-backdrop="static" data-email="" data-phnumber="" data-id="1" data-OpensAt="" data-ClosesAt="" data-MaxPartySize="" data-name="" data-hotel="" data-toggle="modal" data-target="#bookingModalGlobal" data-backdrop="static">
-                                                                    </a> -->
-                                                                                <a href="/dependencies/external/www.sevenrooms.com/explore/therestaurantadsv/reservations/create/search-tracking-the-restaurant-address-sky-view-official.bin" class="btn primary-btn primary-small w-100 mx-1 bookingdinecta" target="_blank" data-name="The Restaurant at Address Sky View" data-hotel="">Reserve a Table</a>
-                                            </div>
-                </div>
-            </div>
-                    <div class="col-12 col-md-6 col-lg-4 card-container restaurant-card  exp-breakfast exp-cafe exp-lunch" data-hotel="address-sky-view" data-cuisine="pastries-and-cakes" data-experience="breakfast">
-                <!-- //?Image Container -->
-                <div class="card-image">
-                                    <img width="824" height="520" decoding="async" src="/dependencies/img/wp-content/uploads/2020/10/Patisserie-Image-Address-Sky-View824x520.jpg" alt="dine-image" class="img-fluid">
-                                    </div>
-                <!-- //?Hotel Names/ -->
-                <div class="card-data p-3">
-                    <div class="card-overlay">
-                        <h6 class="body-4 secondary-semibold mb-2 mx-1 text-capitalize">Patisserie</h6>
-                                                    <p class="body-4 mb-1 mx-1">&nbsp;Pastries and Cakes</p>
-                                                                                <p class="body-4 mt-3 mb-4 mx-1">&nbsp;</p>
-                                                </div>
-                    <div class="card-buttons d-flex">
+<div class="container-fluid pt-5">
+   <div class="row position-relative">
 
-                                                <a href="/en/restaurant/address-sky-view/patisserie-at-address-sky-view/" data-id="" class="btn secondary-btn secondary-small w-100 mx-1">View Details</a>
-                                                        <!-- <a href="" class="btn primary-btn primary-small w-100 mx-1 bookingdinecta" data-backdrop="static" data-email="" data-phnumber="" data-id="0" data-OpensAt="" data-ClosesAt="" data-MaxPartySize="" data-name="" data-hotel="" data-toggle="modal" data-target="#bookingModalGlobal" data-backdrop="static">
-                                                                    </a> -->
-                                                                        </div>
-                </div>
-            </div>
-                    <div class="col-12 col-md-6 col-lg-4 card-container restaurant-card  exp-brunch exp-dinner exp-lunch exp-nightlife exp-poolside" data-hotel="address-sky-view" data-cuisine="pool-lounge" data-experience="brunch">
-                <!-- //?Image Container -->
-                <div class="card-image">
-                                    <img width="2560" height="1707" decoding="async" src="/dependencies/img/wp-content/uploads/2020/10/ADH_ADSVH_FACILITIES_LOBBYPOOL_AMBIENT_HR_01-1-scaled.jpg.webp" alt="dine-image" class="img-fluid">
-                                    </div>
-                <!-- //?Hotel Names/ -->
-                <div class="card-data p-3">
-                    <div class="card-overlay">
-                        <h6 class="body-4 secondary-semibold mb-2 mx-1 text-capitalize">Deck Too</h6>
-                                                    <p class="body-4 mb-1 mx-1">&nbsp;Pool Lounge</p>
-                                                                                <p class="body-4 mt-3 mb-4 mx-1">&nbsp;</p>
-                                                </div>
-                    <div class="card-buttons d-flex">
+      <div class="col-12 p-0 px-lg-3">
+                     <img width="1284" height="375" decoding="async" src="/dependencies/img/wp-content/uploads/2020/10/KIDS-CLUB-ADDRESS-SKY-VIEW-copy.jpg" alt="Qix Kids Club at Address Sky View" class="img-fluid amenities-large-img p-0 px-lg-3">
+         
+      </div>
 
-                                                <a href="/en/restaurant/address-sky-view/deck-too/" data-id="3" class="btn secondary-btn secondary-small w-100 mx-1">View Details</a>
-                                                        <!-- <a href="" class="btn primary-btn primary-small w-100 mx-1 bookingdinecta" data-backdrop="static" data-email="" data-phnumber="" data-id="3" data-OpensAt="" data-ClosesAt="" data-MaxPartySize="" data-name="" data-hotel="" data-toggle="modal" data-target="#bookingModalGlobal" data-backdrop="static">
-                                                                    </a> -->
-                                                                        </div>
-                </div>
-            </div>
-                    <div class="col-12 col-md-6 col-lg-4 card-container restaurant-card  exp-breakfast exp-brunch exp-dinner exp-lunch" data-hotel="address-sky-view" data-cuisine="contemporary-asian" data-experience="breakfast">
-                <!-- //?Image Container -->
-                <div class="card-image">
-                                    <img width="960" height="485" decoding="async" src="/dependencies/img/wp-content/uploads/2022/06/HERO_1920x970.jpg.webp" alt="dine-image" class="img-fluid">
-                                    </div>
-                <!-- //?Hotel Names/ -->
-                <div class="card-data p-3">
-                    <div class="card-overlay">
-                        <h6 class="body-4 secondary-semibold mb-2 mx-1 text-capitalize">CÉ LA VI</h6>
-                                                    <p class="body-4 mb-1 mx-1">&nbsp;Contemporary Asian</p>
-                                                                                <p class="body-4 mt-3 mb-4 mx-1">&nbsp;</p>
-                                                </div>
-                    <div class="card-buttons d-flex">
+      <div class="amenities-title-box ">
+                     <h2 class="display-2-48">Qix Kids Club</h2>
+               </div>
 
-                                                <a href="/en/restaurant/address-sky-view/ce-la-vi/" data-id="" class="btn secondary-btn secondary-small w-100 mx-1">View Details</a>
-                                                        <!-- <a href="" class="btn primary-btn primary-small w-100 mx-1 bookingdinecta" data-backdrop="static" data-email="" data-phnumber="" data-id="0" data-OpensAt="" data-ClosesAt="" data-MaxPartySize="" data-name="" data-hotel="" data-toggle="modal" data-target="#bookingModalGlobal" data-backdrop="static">
-                                                                    </a> -->
-                                                                        </div>
-                </div>
-            </div>
-                    <div class="col-12 col-md-6 col-lg-4 card-container restaurant-card  exp-dinner" data-hotel="address-sky-view" data-cuisine="peruvian-japanese" data-experience="dinner">
-                <!-- //?Image Container -->
-                <div class="card-image">
-                                    <img width="2560" height="1707" decoding="async" src="/dependencies/img/wp-content/uploads/2022/07/VTL00284-HDR-scaled.jpg.webp" alt="dine-image" class="img-fluid">
-                                    </div>
-                <!-- //?Hotel Names/ -->
-                <div class="card-data p-3">
-                    <div class="card-overlay">
-                        <h6 class="body-4 secondary-semibold mb-2 mx-1 text-capitalize">Amelia Restaurant and Lounge</h6>
-                                                    <p class="body-4 mb-1 mx-1">&nbsp;Peruvian Japanese</p>
-                                                                                <p class="body-4 mt-3 mb-4 mx-1">&nbsp;</p>
-                                                </div>
-                    <div class="card-buttons d-flex">
+      <hr class="amenities-title-box-hr">
 
-                                                <a href="/en/restaurant/address-sky-view/amelia-restaurant-and-lounge/" data-id="" class="btn secondary-btn secondary-small w-100 mx-1">View Details</a>
-                                                        <!-- <a href="" class="btn primary-btn primary-small w-100 mx-1 bookingdinecta" data-backdrop="static" data-email="" data-phnumber="" data-id="0" data-OpensAt="" data-ClosesAt="" data-MaxPartySize="" data-name="" data-hotel="" data-toggle="modal" data-target="#bookingModalGlobal" data-backdrop="static">
-                                                                    </a> -->
-                                                                        </div>
-                </div>
-            </div>
-                    <div class="col-12 col-md-6 col-lg-4 card-container restaurant-card " data-hotel="address-sky-view" data-cuisine="rooftop-pool-lounge" data-experience="">
-                <!-- //?Image Container -->
-                <div class="card-image">
-                                    <img width="2256" height="928" decoding="async" src="/dependencies/img/wp-content/uploads/2025/02/INFINITY-POOL-ADDRESS-SKY-VIEW-e1739341203610.jpg" alt="dine-image" class="img-fluid">
-                                    </div>
-                <!-- //?Hotel Names/ -->
-                <div class="card-data p-3">
-                    <div class="card-overlay">
-                        <h6 class="body-4 secondary-semibold mb-2 mx-1 text-capitalize">Alto 54</h6>
-                                                    <p class="body-4 mb-1 mx-1">&nbsp;Rooftop Pool Lounge</p>
-                                                                                <p class="body-4 mt-3 mb-4 mx-1">&nbsp;</p>
-                                                </div>
-                    <div class="card-buttons d-flex">
+   </div>
 
-                                                <a href="/en/restaurant/address-sky-view/alto-54/" data-id="" class="btn secondary-btn secondary-small w-100 mx-1">View Details</a>
-                                                        <!-- <a href="" class="btn primary-btn primary-small w-100 mx-1 bookingdinecta" data-backdrop="static" data-email="" data-phnumber="" data-id="0" data-OpensAt="" data-ClosesAt="" data-MaxPartySize="" data-name="" data-hotel="" data-toggle="modal" data-target="#bookingModalGlobal" data-backdrop="static">
-                                                                    </a> -->
-                                                                        </div>
-                </div>
-            </div>
-                    <div class="col-12 col-md-6 col-lg-4 card-container restaurant-card " data-hotel="address-sky-view" data-cuisine="modern-italian" data-experience="">
-                <!-- //?Image Container -->
-                <div class="card-image">
-                                    <img width="1784" height="600" decoding="async" src="/dependencies/img/wp-content/uploads/2026/02/Web-banner.jpg" alt="dine-image" class="img-fluid">
-                                    </div>
-                <!-- //?Hotel Names/ -->
-                <div class="card-data p-3">
-                    <div class="card-overlay">
-                        <h6 class="body-4 secondary-semibold mb-2 mx-1 text-capitalize">Felicità</h6>
-                                                    <p class="body-4 mb-1 mx-1">&nbsp;Modern Italian</p>
-                                                                                <p class="body-4 mt-3 mb-4 mx-1">&nbsp;</p>
-                                                </div>
-                    <div class="card-buttons d-flex">
+   <div class="row justify-content-center text-center">
+      <div class="col-12 col-lg-8 amenities-list-col">
 
-                                                <a href="/en/restaurant/address-sky-view/felicita/" data-id="" class="btn secondary-btn secondary-small w-100 mx-1">View Details</a>
-                                                        <!-- <a href="" class="btn primary-btn primary-small w-100 mx-1 bookingdinecta" data-backdrop="static" data-email="" data-phnumber="" data-id="0" data-OpensAt="" data-ClosesAt="" data-MaxPartySize="" data-name="" data-hotel="" data-toggle="modal" data-target="#bookingModalGlobal" data-backdrop="static">
-                                                                    </a> -->
-                                                                        </div>
-                </div>
-            </div>
-            </div>
-</div>
+                     <p class="text-center mt-5 mb-4 body-4">Enjoy a well-earned moment for yourself and leave your little ones to us. Our qualified team of childcare professionals will spark their imagination with educational games, fun activities and craft sessions they will love.</p>
+         
+         <ul class="amenities-list text-left body-4">
+                                 <li class="d-flex align-items-center mb-2">
+                        <span class="generic-icon px-2"></span>
+                        For children between the ages of 4 and 12
+                     </li>
+                                 <li class="d-flex align-items-center mb-2">
+                        <span class="generic-icon px-2"></span>
+                        Babysitting services to be booked 24 hours in advance.
+                     </li>
+                                 <li class="d-flex align-items-center mb-2">
+                        <span class="generic-icon px-2"></span>
+                        Timing: 10am to 7pm
+                     </li>
+                     </ul>
 
-<style>
-.card-container.restaurant-card .card-overlay p{
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    cursor: default;
-}
-
-</style>
-<script>
-document.addEventListener("click", function (e) {
-    const btn = e.target.closest(".bookingdinecta");
-    
-    if (!btn) return;
-    
-    window.dataLayer = window.dataLayer || [];
-
-    dataLayer.push({
-        event: "reservation_cta_click",
-        reservation: {
-            type: "dine",
-            brand: "Address", 
-            hotel_name: btn.getAttribute("data-hotel") || "",
-            hotel_location: "Dubai, UAE",
-            venue_name: btn.getAttribute("data-name") || "",
-            cta_text: btn.textContent.trim(),
-            cta_position: "card",
-            destination_url: window.location.pathname.replace(/^\/|\/$/g, ''),
-            provider: "SevenRooms",
-            language: document.documentElement.lang || "en",
-            site_scope: "property",
-            page_url: window.location.href,
-            page_title: document.title,
-            // restaurant_id: btn.getAttribute("data-id") || "",
-            // opens_at: btn.getAttribute("data-OpensAt") || "",
-            // closes_at: btn.getAttribute("data-ClosesAt") || "",
-            // max_party_size: btn.getAttribute("data-MaxPartySize") || "",
-            // contact_email: btn.getAttribute("data-email") || "",
-            // contact_number: btn.getAttribute("data-phnumber") || ""
-        }
-    });
-});
-</script>
+      </div>
+   </div>
+</div></div></div>
             </main><!-- #main -->
 
          </div><!-- col -->
@@ -1140,8 +965,8 @@ document.addEventListener("click", function (e) {
    </div><!-- #primary -->
 </div><!-- #content -->
 
-<?php include dirname(__DIR__, 4) . '/_partials/footer.php'; ?>
-<?php include dirname(__DIR__, 4) . '/_partials/foot.php'; ?>
+<?php include dirname(__DIR__, 1) . '/_partials/footer.php'; ?>
+<?php include dirname(__DIR__, 1) . '/_partials/foot.php'; ?>
 </body>
 
 </html><!-- Rocket has webp -->
