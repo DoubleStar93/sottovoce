@@ -1,9 +1,9 @@
 <?php declare(strict_types=1); ?>
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
 
 
-<head><script src="/wp-content/themes/emaar-projects/addresshotel/js/utils.js?matcher"></script><script src="/wp-content/themes/emaar-projects/addresshotel/js/utils.js?single"></script>
+<head><script src="/dependencies/js/wp-content/themes/emaar-projects/addresshotel/js/utils-matcher.js"></script><script src="/dependencies/js/wp-content/themes/emaar-projects/addresshotel/js/utils-single.js"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="profile" href="https://gmpg.org/xfn/11">
@@ -2113,7 +2113,7 @@ Explore exclusive offers curated for your stay and immerse yourself in a city es
     <div class="modal-content pt-0 container px-xxl-0">
       <!-- Modal Header -->
       <div class="modal-header pl-0 pr-0">
-        <a href="/en">
+        <a href="/dependencies/vendor/en.bin">
           <!-- <img class="booking-modal_logo" src="" alt="Address Hotels + Resorts"> -->
           <div class="booking-modal_logo d-inline-block" id="" alt="Address Hotels + Resorts">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="205px" height="40px" viewbox="0 0 205 40" version="1.1">
@@ -3299,7 +3299,7 @@ Explore exclusive offers curated for your stay and immerse yourself in a city es
     <div class="modal-content">
       <!-- Modal Header -->
       <div class="modal-header pl-0 pr-0 container">
-                <a href="/en">
+                <a href="/dependencies/vendor/en.bin">
 
           <!-- <img class="booking-modal_logo" style="height:40px;" src="" alt="Address Hotels + Resorts"> -->
 
@@ -3457,7 +3457,7 @@ Explore exclusive offers curated for your stay and immerse yourself in a city es
     <div class="modal-content">
       <!-- Modal Header -->
       <div class="modal-header pl-0 pr-0 container">
-                <a href="/en">
+                <a href="/dependencies/vendor/en.bin">
           <!-- <img class="booking-modal_logo" style="height:40px;" src="" alt="Address Hotels + Resorts"> -->
 
           <div class="booking-modal_logo d-inline-block" style="height:40px;" id="" alt="Address Hotels + Resorts">

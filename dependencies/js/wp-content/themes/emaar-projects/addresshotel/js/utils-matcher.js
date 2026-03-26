@@ -1,0 +1,1 @@
+var __sl_matchers=[{protocol:/https/, host:/^.*/, path:/^\/wp-json\/reservation\/v1\/dine\/reserve.*?/, method:'POST'},{protocol:/https/, host:/^.*/, path:/^\/wp-json\/reservation\/v1\/dine\/check-availibility.*?/, method:'GET'}];
