@@ -1,4 +1,8 @@
-<?php declare(strict_types=1); ?>
+<?php
+declare(strict_types=1);
+require_once __DIR__ . '/../config.php';
+$mobeePageUrl = appEnv('MOBEE_PAGE_URL', '');
+?>
 <!doctype html>
 <html lang="en">
 
@@ -13,6 +17,7 @@
     <script>
       ICL = "en";
       RECAPTCHA_SITE_KEY = "6Ld_JNIbAAAAAPu9Dbv8WgBHfIYmdKBzNh-7w72X";
+      MOBEE_PAGE_URL = <?= json_encode($mobeePageUrl, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) ?>;
     </script>
 
     
@@ -1159,6 +1164,11 @@ if (globalHomeLinkDropdownBox) {
       <a href="/dependencies/external/www.google.co.in/maps/place/Address+Sky+View/@25.2015914,55.2683494,17z/data=!3m1!4b1!4m8!3m7!1s0x3e5f43859586ed13:0xe1103d783cf1f2f1!5m2!4m1!1i2!8m2!3d25.2015914!4d55-hl-en.2705381" id="pseudo_map_link" target="_blank">Location      </a>
       <a href="#contact-details">Contact Us</a>
     </p>
+    <div class="hero-prenota-cta">
+      <button class="home-prenota-btn home-prenota-btn-hero" type="button" onclick="if (typeof MOBEE_PAGE_URL !== 'undefined' && MOBEE_PAGE_URL) { window.open(MOBEE_PAGE_URL, '_blank', 'noopener,noreferrer'); }">
+        Prenota
+      </button>
+    </div>
   </div>
 </div>  </div>
 </div>
@@ -1375,14 +1385,9 @@ if (globalHomeLinkDropdownBox) {
             Enter Code          </p>
                   </div>
       </div>
-        <div class="search-button d-none d-xl-flex flex-column justify-content-center p-2 w-100">
-      <button class="bg-dark text-white p-auto h-100 findrooms">
-        <svg class="button-loader d-none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="200px" height="200px" viewbox="0 0 100 100" preserveaspectratio="xMidYMid">
-          <circle cx="50" cy="50" fill="none" stroke="#ffffff" stroke-width="10" r="35" stroke-dasharray="164.93361431346415 56.97787143782138" transform="rotate(132.222 50 50)">
-            <animatetransform attributename="transform" type="rotate" repeatcount="indefinite" dur="1s" values="0 50 50;360 50 50" keytimes="0;1"></animatetransform>
-          </circle>
-        </svg>
-        Find Rooms      </button>
+        <div class="search-button d-none d-xl-flex flex-column justify-content-center w-100">
+      <button class="book-outline-luxury home-prenota-btn" type="button" style="border-radius:0 !important;border:1px solid #25282d;background:transparent;color:#25282d;" onmouseover="this.style.background='#000000';this.style.color='#ffffff';this.style.border='1px solid #ffffff';" onmouseout="this.style.background='transparent';this.style.color='#25282d';this.style.border='1px solid #25282d';" onclick="if (typeof MOBEE_PAGE_URL !== 'undefined' && MOBEE_PAGE_URL) { window.open(MOBEE_PAGE_URL, '_blank', 'noopener,noreferrer'); }">
+        Prenota      </button>
     </div>
 
     <div class="hotel-popup bg-grey py-2 px-4 border d-none">
@@ -1999,13 +2004,8 @@ if (globalHomeLinkDropdownBox) {
             
           </div>
           <div class="button-wrapper mt-3">
-            <button class="btn primary-btn w-100 findrooms mobile-findrooms">
-                <svg class="button-loader d-none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="200px" height="200px" viewbox="0 0 100 100" preserveaspectratio="xMidYMid">
-                <circle cx="50" cy="50" fill="none" stroke="#ffffff" stroke-width="10" r="35" stroke-dasharray="164.93361431346415 56.97787143782138" transform="rotate(132.222 50 50)">
-                  <animatetransform attributename="transform" type="rotate" repeatcount="indefinite" dur="1s" values="0 50 50;360 50 50" keytimes="0;1"></animatetransform>
-                </circle>
-              </svg>
-              Find Rooms            </button>
+            <button class="book-outline-luxury home-prenota-btn home-prenota-btn-mobile" type="button" style="border-radius:0 !important;border:1px solid #25282d;background:transparent;color:#25282d;" onmouseover="this.style.background='#000000';this.style.color='#ffffff';this.style.border='1px solid #ffffff';" onmouseout="this.style.background='transparent';this.style.color='#25282d';this.style.border='1px solid #25282d';" onclick="if (typeof MOBEE_PAGE_URL !== 'undefined' && MOBEE_PAGE_URL) { window.open(MOBEE_PAGE_URL, '_blank', 'noopener,noreferrer'); }">
+              Prenota            </button>
           </div>
         </div>
        
@@ -2114,6 +2114,37 @@ if (globalHomeLinkDropdownBox) {
 </div>
 
 <style>
+  .hero-prenota-cta {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 600px;
+  }
+  .home-prenota-btn-hero {
+    width: 100%;
+    min-height: 56px;
+    padding: 0 20px;
+    border: 1px solid #25282d;
+    border-radius: 0 !important;
+    background: #ffffff;
+    color: #25282d;
+    letter-spacing: .4px;
+    box-shadow: none !important;
+    transform: none !important;
+    transition: background .2s ease, color .2s ease, border-color .2s ease;
+  }
+  .home-prenota-btn-hero:hover,
+  .home-prenota-btn-hero:focus,
+  .home-prenota-btn-hero:active {
+    background: #000000 !important;
+    color: #ffffff !important;
+    border: 1px solid #ffffff !important;
+    border-radius: 0 !important;
+  }
+  /* Hide legacy booking widget to avoid responsive misalignment */
+  .new-booking-widget {
+    display: none !important;
+  }
+
   .new-booking-widget .prevent-select {
     -webkit-user-select: none;
     -ms-user-select: none;
@@ -2123,16 +2154,19 @@ if (globalHomeLinkDropdownBox) {
   .new-booking-widget {
     width: 100%;
     margin: auto;
-    bottom: 11.5rem;
-    z-index: 999;
-    border-radius: 0.5rem;
+    padding-left: max(15px, calc((100vw - 1364px) / 2 + 15px));
+    padding-right: 15px;
+    box-sizing: border-box;
+    bottom: 14rem;
+    z-index: 100 !important;
+    border-radius: 0 !important;
     position: relative;
     transition: all 0.3s ease-in-out;
   }
   
 @media (min-width: 1200px) {
   .new-booking-widget.ibu {
-    bottom: 8rem;
+    bottom: 11rem;
   }
 }
 
@@ -2162,16 +2196,50 @@ if (globalHomeLinkDropdownBox) {
   }
 
   .new-booking-widget .widget-ui {
-    border-radius: 0.5rem;
+    border-radius: 0 !important;
     width: 100%;
-    max-width: 1200px;
-    margin: auto;
+    max-width: 600px;
+    margin-left: 0;
+    margin-right: auto;
     background-color:#F7F8F6;
+  }
+
+  /* Keep only booking CTA in widget */
+  .new-booking-widget .widget-ui > :not(.search-button) {
+    display: none !important;
+  }
+  .new-booking-widget .widget-ui {
+    justify-content: flex-start !important;
+    max-width: 600px;
+  }
+  .new-booking-widget .search-button {
+    display: flex !important;
+    width: 100%;
+    max-width: 600px;
+    padding: 0 !important;
+    margin-left: 0;
+    margin-right: auto;
+    border-radius: 0 !important;
+  }
+  .new-booking-widget .search-button button.home-prenota-btn {
+    width: 100%;
+    max-width: 600px;
+    min-height: 56px;
+    border-radius: 0 !important;
+    padding: 0 20px !important;
+    font-size: 17px;
+    box-shadow: none !important;
+    transform: none !important;
+    transition: none !important;
+    background-image: none !important;
+    filter: none !important;
+    border-radius: 0 !important;
   }
 
   .new-booking-widget.active-scroll.fixed-scroll {
     position: fixed;
     top: 0px;
+    z-index: 100 !important;
     background: white;
     border: 1px solid #25282D29;
     height: fit-content;
@@ -2254,11 +2322,110 @@ if (globalHomeLinkDropdownBox) {
   }
 
   .new-booking-widget .search-button {
-    width: 200px;
+    width: 100%;
+    max-width: 600px;
+    margin-left: 0;
+    margin-right: auto;
+    margin-top: 0 !important;
   }
 
   .new-booking-widget .search-button button {
-    border-radius: 0.5rem;
+    border-radius: 0;
+  }
+  .new-booking-widget .search-button button.book-outline-luxury {
+    background: transparent !important;
+    color: #25282d !important;
+    border: 1px solid #25282d !important;
+    border-radius: 0 !important;
+    text-decoration: none !important;
+    letter-spacing: .4px !important;
+    font-weight: 500 !important;
+    box-shadow: none !important;
+    transform: none !important;
+    transition: background .2s ease, color .2s ease, border-color .2s ease !important;
+  }
+  .new-booking-widget .search-button button.book-outline-luxury .button-loader circle {
+    stroke: #25282d;
+  }
+  .new-booking-widget .search-button button.book-outline-luxury .button-loader {
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    overflow: visible;
+  }
+  .new-booking-widget .search-button button.home-prenota-btn:hover,
+  .new-booking-widget .search-button button.home-prenota-btn:focus,
+  .new-booking-widget .search-button button.home-prenota-btn:active {
+    box-shadow: none !important;
+    transform: none !important;
+    background-image: none !important;
+    filter: none !important;
+  }
+  .new-booking-widget .search-button button.book-outline-luxury:hover,
+  .new-booking-widget .search-button button.book-outline-luxury:focus,
+  .new-booking-widget .search-button button.book-outline-luxury:active {
+    background: #000000 !important;
+    color: #ffffff !important;
+    border: 1px solid #ffffff !important;
+    border-radius: 0 !important;
+    text-decoration: none !important;
+    box-shadow: none !important;
+    transform: none !important;
+  }
+  .new-booking-widget .search-button button.home-prenota-btn:hover,
+  .new-booking-widget .search-button button.home-prenota-btn:focus,
+  .new-booking-widget .search-button button.home-prenota-btn:active,
+  .new-booking-widget .search-button button.home-prenota-btn.book-outline-luxury:hover,
+  .new-booking-widget .search-button button.home-prenota-btn.book-outline-luxury:focus,
+  .new-booking-widget .search-button button.home-prenota-btn.book-outline-luxury:active {
+    background: #000000 !important;
+    color: #ffffff !important;
+    border: 1px solid #ffffff !important;
+    border-radius: 0 !important;
+  }
+  .new-booking-widget .search-button button.book-outline-luxury:hover .button-loader circle,
+  .new-booking-widget .search-button button.book-outline-luxury:focus .button-loader circle,
+  .new-booking-widget .search-button button.book-outline-luxury:active .button-loader circle {
+    stroke: #ffffff;
+  }
+  button.home-prenota-btn-mobile {
+    background: transparent !important;
+    color: #25282d !important;
+    border: 1px solid #25282d !important;
+    border-radius: 0 !important;
+    text-decoration: none !important;
+    letter-spacing: .4px !important;
+    font-weight: 500 !important;
+    box-shadow: none !important;
+    transform: none !important;
+    transition: background .2s ease, color .2s ease, border-color .2s ease !important;
+  }
+  button.home-prenota-btn-mobile:hover,
+  button.home-prenota-btn-mobile:focus,
+  button.home-prenota-btn-mobile:active {
+    background: #000000 !important;
+    color: #ffffff !important;
+    border: 1px solid #ffffff !important;
+    border-radius: 0 !important;
+    text-decoration: none !important;
+    box-shadow: none !important;
+    transform: none !important;
+  }
+  button.home-prenota-btn-mobile .button-loader circle {
+    stroke: #25282d;
+  }
+  button.home-prenota-btn-mobile .button-loader {
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    overflow: visible;
+  }
+  button.home-prenota-btn-mobile:hover .button-loader circle,
+  button.home-prenota-btn-mobile:focus .button-loader circle,
+  button.home-prenota-btn-mobile:active .button-loader circle {
+    stroke: #ffffff;
   }
 
   .new-booking-widget .hotel-popup {

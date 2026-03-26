@@ -112,28 +112,6 @@ $homePrefix = $isOnePageHome ? '' : '/pages/index.php';
 
         <div class="d-flex flex-xl-row flex-column justify-content-end right-nav-container  h-100" id="right-side-elements">
           <ul class="navbar-nav rightlinks  cntplink align-items-xl-end fit-content justify-content-  ">
-            
-                        <li class="nav-item">
-              <!--login -->
-<div class="dropdown login-dropdown">
-   <a class="nav-link login first_name dropdown-toggle disabled" href="javascript:void(0);" type="" id="loginMenuButton" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
-      <span class="sign_in_text">Sign In</span>
-   </a>
-   <div class="login dropdown-menu dropdown-menu-center" aria-labelledby="loginMenuButton">
-      <div class="dropdown-item">
-         <p class="go-back-text d-lg-none d-block"><i class="fal fa-caret-left " style="font-weight: bolder !important;padding-right:5px;"></i>
-            Go Back</p>
-         <h6 class="login_item full_name body-4 text-capitalize secondary-semibold"></h6>
-         <p class="login_item tier_name font-14 text-upparcase"></p>
-         <p class="login_item upoints font-14 ">Total Upoints: <span class="CurrentPoints"></span>
-            worth AED <span class="CurrentBalance"></span></p>
-      </div>
-      <div class="dropdown-divider"></div>
-      <a class="dropdown-item login_item dashboard_link" href="/en/my-dashboard/">My Dashboard</a>
-      <a class="dropdown-item login_item sign_out" href="javascript:void(0);" id="sign_out_link">Sign Out</a>
-   </div>
-</div>
-<a class="nav-link login d-none" href="javascript:void(0);"></a>
             <li class="nav-item d-flex align-items-end language-selector language-individual-spacing">
               
 <div class="wpml-ls-statics-shortcode_actions wpml-ls wpml-ls-legacy-dropdown-click js-wpml-ls-legacy-dropdown-click">
