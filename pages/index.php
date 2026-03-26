@@ -12,6 +12,7 @@ $mobeePageUrl = appEnv('MOBEE_PAGE_URL', '');
 <body id="page-top" class="page-template page-template-templates page-template-individual-home-custom-template page-template-templatesindividual-home-custom-template-php page page-id-3739 page-parent page-child parent-pageid-662">
   <!-- Preloader -->
   <!-- Preloader End -->
+  <div id="bgHalosHome" class="bg-halos-home" aria-hidden="true"></div>
   <div id="page" class="site">
 
     <script>
@@ -394,7 +395,12 @@ document.addEventListener("DOMContentLoaded", function() {
         }
 
       } else {
-        navbar.classList.remove('darkHeader');
+        const scroll = window.pageYOffset || document.documentElement.scrollTop;
+        if (scroll > 0) {
+          navbar.classList.add('darkHeader');
+        } else {
+          navbar.classList.remove('darkHeader');
+        }
 
         // Reset z-index to default when dropdowns are closed
         if (newBookingWidget) {
@@ -406,10 +412,24 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
 
+  function applyHeaderStateOnScroll() {
+    const navbar = document.querySelector('#nav-main.navbar');
+    if (!navbar) return;
+
+    const scroll = window.pageYOffset || document.documentElement.scrollTop;
+    if (scroll > 0) {
+      navbar.classList.add('darkHeader');
+    } else {
+      navbar.classList.remove('darkHeader');
+    }
+  }
+
   if (window.innerWidth > 1200) {
     //adjustDropdownMargin();
   }
   handleDropdowns();
+  applyHeaderStateOnScroll();
+  window.addEventListener('scroll', applyHeaderStateOnScroll, { passive: true });
 
   window.addEventListener('resize', function() {
     if (window.innerWidth > 1200) {
@@ -1126,13 +1146,6 @@ if (globalHomeLinkDropdownBox) {
     <h1 class="display-2-48 text-capitalize mb-2 pb-1 text-white h2">Address Sky View</h1>
     <p class="mb-2 homepage-content-description text-white d-none"></p>
     <p class="mb-2 homepage-content-address ">Sheikh Mohammed Bin Rashed Boulevard Downtown Dubai, PO Box 111969 Dubai, UAE</p>
-    <p class="mb-0 homepage-content-conact-links">
-      <a class="bluelink secondary-medium" href="tel:+97148738888">
-        <span class="dir-ltr">+97148738888</span>
-      </a>
-      <a href="#contact-details" id="pseudo_map_link">Location      </a>
-      <a href="#contact-details">Contact Us</a>
-    </p>
     <div class="hero-prenota-cta">
       <button class="home-prenota-btn home-prenota-btn-hero" type="button" onclick="if (typeof MOBEE_PAGE_URL !== 'undefined' && MOBEE_PAGE_URL) { window.open(MOBEE_PAGE_URL, '_blank', 'noopener,noreferrer'); }">
         Prenota
@@ -2083,6 +2096,33 @@ if (globalHomeLinkDropdownBox) {
 </div>
 
 <style>
+  body,
+  #page,
+  .site {
+    background: #3c3e21;
+  }
+  .site-main,
+  .site-main > section,
+  .site-main > div,
+  .site-main .container,
+  .site-main .container-fluid,
+  .site-main .row,
+  .site-main [class*="col-"] {
+    background-color: #3c3e21 !important;
+    background-image: none !important;
+  }
+  .site-main h1,
+  .site-main h2,
+  .site-main h3,
+  .site-main h4,
+  .site-main h5,
+  .site-main p,
+  .site-main li,
+  .site-main span,
+  .site-main a {
+    color: #ffffff !important;
+  }
+
   .hero-prenota-cta {
     margin-top: 20px;
     width: 100%;
@@ -2092,26 +2132,44 @@ if (globalHomeLinkDropdownBox) {
     width: 100%;
     min-height: 56px;
     padding: 0 20px;
-    border: 1px solid #25282d;
+    border: 1px solid #e3cba5;
     border-radius: 0 !important;
-    background: #ffffff;
-    color: #25282d;
+    background: #3c3e21;
+    color: #e3cba5;
     letter-spacing: .4px;
     box-shadow: none !important;
     transform: none !important;
     transition: background .2s ease, color .2s ease, border-color .2s ease;
   }
   .home-prenota-btn-hero:hover,
-  .home-prenota-btn-hero:focus,
+  .home-prenota-btn-hero:focus {
+    background: #e3cba5 !important;
+    color: #000000 !important;
+    border: 1px solid #3c3e21 !important;
+    border-radius: 0 !important;
+  }
+
+  body#page-top a.home-prenota-btn-hero:hover,
+  body#page-top a.home-prenota-btn-hero:focus,
+  body#page-top button.home-prenota-btn-hero:hover,
+  body#page-top button.home-prenota-btn-hero:focus {
+    color: #000000 !important;
+  }
+
   .home-prenota-btn-hero:active {
-    background: #000000 !important;
-    color: #ffffff !important;
-    border: 1px solid #ffffff !important;
+    background: #e3cba5 !important;
+    color: #3c3e21 !important;
+    border: 1px solid #3c3e21 !important;
     border-radius: 0 !important;
   }
   /* Hide legacy booking widget to avoid responsive misalignment */
   .new-booking-widget {
     display: none !important;
+  }
+
+  .content-box {
+    background: #e3cba5;
+    padding: 24px;
   }
 
   .new-booking-widget .prevent-select {
@@ -2782,11 +2840,7 @@ if (globalHomeLinkDropdownBox) {
 
 </style>
 
-<div id="highlights" class="individual-homepage-hotel-highlights-section  " style="background-image: linear-gradient( to bottom, #ffffff 0%, #ffffff00 40%, #ffffff00 60%, #ffffff 100% ),
-    url('../../../wp-content/uploads/2021/07/Address-Artwork-123x123-1-1-1.png');
-    background-repeat: repeat;
-    /* background-size: cover; */
-    height: 100%;">
+<div id="highlights" class="individual-homepage-hotel-highlights-section">
       <div class="container-fluid">
       <div class="container text-center inline-up show-on-scroll">
 
@@ -2913,6 +2967,13 @@ if (globalHomeLinkDropdownBox) {
   </div>
 </div>
 <style>
+  #highlights,
+  #highlights > .container-fluid,
+  #highlights .container.text-center {
+    background: transparent !important;
+    background-image: none !important;
+  }
+
   .highlight-container {
     position: relative;
     overflow: hidden;
@@ -3537,6 +3598,152 @@ if (globalHomeLinkDropdownBox) {
   </div>
 </section>
 
+
+<style>
+  .bg-halos-home {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 2;
+    mix-blend-mode: screen;
+  }
+
+  .bg-halo-home {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 214, 188, 0.2) 0%, rgba(206, 85, 22, 0.2) 30%, rgba(206, 85, 22, 0.08) 56%, rgba(206, 85, 22, 0) 78%);
+    filter: blur(var(--blur, 24px));
+    opacity: var(--opacity, 0.62);
+    transform: translate(-50%, -50%);
+    animation: homeHaloDrift var(--dur, 9s) ease-in-out infinite;
+    animation-delay: var(--delay, 0s);
+  }
+
+  #page {
+    position: relative;
+    z-index: 1;
+  }
+
+  @keyframes homeHaloDrift {
+    0%, 100% { transform: translate(-50%, -50%) scale(0.92); }
+    50% { transform: translate(-50%, -50%) scale(1.08); }
+  }
+
+  body#page-top,
+  body#page-top * {
+    color: #ffffff !important;
+  }
+
+  body#page-top input::placeholder,
+  body#page-top textarea::placeholder {
+    color: #ffffff !important;
+    opacity: 1;
+  }
+
+  body#page-top .amenities-title-box {
+    background-color: #e3cba5 !important;
+    background-image: none !important;
+  }
+
+  body#page-top .accordion.accordionFaq,
+  body#page-top .accordion.accordionFaq .card,
+  body#page-top .accordion.accordionFaq .card-header,
+  body#page-top .accordion.accordionFaq .card-body,
+  body#page-top .accordion.accordionFaq .accordionFaq-card-content {
+    background-color: #e3cba5 !important;
+    background-image: none !important;
+  }
+
+  body#page-top #nav-main,
+  body#page-top nav.global-navbar,
+  body#page-top nav.global-navbar.internal-nav,
+  body#page-top .individual-home-navbar {
+    background-color: transparent !important;
+    background-image: none !important;
+  }
+
+  body#page-top #nav-main.darkHeader,
+  body#page-top #nav-main.menu-open,
+  body#page-top #nav-main.individual-home-navbar,
+  body#page-top nav.global-navbar.darkHeader,
+  body#page-top nav.global-navbar.internal-nav.darkHeader {
+    background-color: #3c3e21 !important;
+    background-image: none !important;
+  }
+
+  body#page-top #nav-main .nav-link,
+  body#page-top #nav-main .wpml-ls-legacy-dropdown-click a,
+  body#page-top #nav-main .toggler-icon-animated i {
+    color: #ffffff !important;
+  }
+
+  body#page-top #nav-main #black_logo {
+    display: none !important;
+  }
+
+  body#page-top #nav-main #white_logo {
+    display: block !important;
+  }
+
+  #contact-details,
+  #contact-details .individual-homepage-contact-map,
+  #faq,
+  #faq.greyboxlight,
+  #faq .container {
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+  }
+
+  body#page-top footer,
+  body#page-top footer .footer,
+  body#page-top footer .ft-btm-link,
+  body#page-top footer .enclosedarea,
+  body#page-top footer .footer-links,
+  body#page-top footer .footer-info-card {
+    background-color: #e3cba5 !important;
+    background-image: none !important;
+  }
+
+  body#page-top footer {
+    position: relative;
+    z-index: 4;
+  }
+</style>
+
+<script>
+  (function () {
+    var HALO_COUNT = 10;
+    var count = Math.min(40, Math.max(1, HALO_COUNT));
+    var root = document.getElementById("bgHalosHome");
+    if (!root) return;
+
+    for (var i = 0; i < count; i += 1) {
+      var halo = document.createElement("div");
+      halo.className = "bg-halo-home";
+
+      var size = 140 + Math.random() * 320;
+      var left = Math.random() * 100;
+      var top = Math.random() * 100;
+      var opacity = 0.4 + Math.random() * 0.35;
+      var blur = 12 + Math.random() * 22;
+      var duration = 7 + Math.random() * 7;
+      var delay = -Math.random() * 6;
+
+      halo.style.width = size + "px";
+      halo.style.height = size + "px";
+      halo.style.left = left + "%";
+      halo.style.top = top + "%";
+      halo.style.setProperty("--opacity", opacity.toFixed(2));
+      halo.style.setProperty("--blur", blur.toFixed(0) + "px");
+      halo.style.setProperty("--dur", duration.toFixed(2) + "s");
+      halo.style.setProperty("--delay", delay.toFixed(2) + "s");
+
+      root.appendChild(halo);
+    }
+  })();
+</script>
 
 <script type="application/ld+json">
 {

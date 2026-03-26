@@ -33,9 +33,9 @@ $homePrefix = $isOnePageHome ? '' : '/pages/index.php';
 
       <div id="custom-sticky-itendifier">
         <a class="navbar-brand pb-0 pl-3 px-lg-0 custom-width-navbar-brand d-flex justify-content-center" href="<?= $homePrefix ?>#page-top">
-          <img width="141" height="34" id="black_logo" src="/dependencies/img/wp-content/uploads/2021/03/address-SkyViews-logo-B.svg" alt="logo" class="logo" style="display:none">
+          <img width="141" height="34" id="black_logo" src="/img/logo_colored.png" alt="logo" class="logo" style="display:none">
 
-          <img width="141" height="34" id="white_logo" src="/dependencies/img/wp-content/uploads/2021/03/address-SkyViews-logo-W.svg" alt="logo" class="logo">
+          <img width="141" height="34" id="white_logo" src="/img/logo_white.png" alt="logo" class="logo">
         </a>
       </div>
 

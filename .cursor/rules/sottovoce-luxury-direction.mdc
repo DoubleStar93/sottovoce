@@ -1,0 +1,35 @@
+---
+description: Linee guida luxury per il sito Sottovoce (IT/EN, sunset, turni 50 min, placeholder AI)
+alwaysApply: true
+---
+
+# Sottovoce Luxury Direction
+
+- Progetta e scrivi il sito come esperienza **luxury contemporanea** per Sottovoce, locale a Ravenna per aperitivo e dining.
+- Tono premium, elegante, sobrio: evita linguaggio aggressivo, turistico o troppo promozionale.
+- Coerenza visuale/editoriale con palette del progetto (verde scuro, beige, accento arancio) e spaziatura ordinata/minimale.
+
+## Vincoli operativi da rispettare sempre
+
+- Il concept racconta apertura **al tramonto**.
+- La prenotazione funziona su **turni da 50 minuti**.
+- Se compaiono orari o disponibilita, devono essere coerenti con la logica sunset + slot 50 minuti.
+
+## Bilingua obbligatoria
+
+- Ogni contenuto utente va previsto in **italiano e inglese**.
+- Se manca il testo definitivo, genera bozze AI in entrambe le lingue con pari qualita e stesso significato.
+
+## Placeholder e label (fase iniziale)
+
+- In assenza di copy finale, usa **solo testi esempio in label esplicite**.
+- Formato consigliato:
+  - `[[LABEL_IT: ...]]`
+  - `[[LABEL_EN: ...]]`
+- Non presentare i placeholder come testo definitivo di produzione.
+
+## Guardrail contenuto
+
+- Evita claim non verificabili (es. "miglior ristorante d'Italia").
+- Privilegia microcopy chiaro per prenotazione, disponibilita, policy turni e contatti.
+- Mantieni sempre l'identita locale: Ravenna, atmosfera serale, aperitivo + cucina.
