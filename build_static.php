@@ -176,6 +176,8 @@ foreach ($htmlFiles as $htmlFile) {
     file_put_contents($targetPageFile, $phpWrapper);
 }
 
+applySharedHeaderFooterIncludes();
+
 echo "Build completed.\n";
 echo "- Pages: " . count($htmlFiles) . PHP_EOL;
 echo "- Dependencies: " . count($assetRouteMap) . PHP_EOL;
@@ -670,6 +672,100 @@ function ensureValidDocumentSkeleton(string $html): string
     }
 
     return $html;
+}
+
+function applySharedHeaderFooterIncludes(): void
+{
+    $home = OUTPUT_PAGES_ROOT . DIRECTORY_SEPARATOR . 'en' . DIRECTORY_SEPARATOR . 'hotels' . DIRECTORY_SEPARATOR . 'address-sky-view' . DIRECTORY_SEPARATOR . 'index.php';
+    if (!is_file($home)) {
+        return;
+    }
+
+    $homeContent = file_get_contents($home);
+    if (!is_string($homeContent) || $homeContent === '') {
+        return;
+    }
+
+    $headChunk = null;
+    $headerChunk = null;
+    $footerChunk = null;
+    $footChunk = null;
+    if (preg_match('/<head>[\s\S]*?<\/head>/i', $homeContent, $m0)) {
+        $headChunk = $m0[0];
+    }
+    if (preg_match('/<header id="masthead"[\s\S]*?<\/header>/i', $homeContent, $m1)) {
+        $headerChunk = $m1[0];
+    }
+    if (preg_match('/<footer class="">[\s\S]*?<\/footer>/i', $homeContent, $m2)) {
+        $footerChunk = $m2[0];
+    }
+    if (preg_match('/<\/footer>([\s\S]*?)<\/body>/i', $homeContent, $m3)) {
+        $footChunk = $m3[1];
+    }
+    if ($headChunk === null || $headerChunk === null || $footerChunk === null || $footChunk === null) {
+        return;
+    }
+
+    $partialsDir = OUTPUT_PAGES_ROOT . DIRECTORY_SEPARATOR . '_partials';
+    ensureDir($partialsDir);
+    file_put_contents($partialsDir . DIRECTORY_SEPARATOR . 'head.php', $headChunk);
+    file_put_contents($partialsDir . DIRECTORY_SEPARATOR . 'header.php', $headerChunk);
+    file_put_contents($partialsDir . DIRECTORY_SEPARATOR . 'footer.php', $footerChunk);
+    file_put_contents($partialsDir . DIRECTORY_SEPARATOR . 'foot.php', $footChunk);
+
+    $iterator = new RecursiveIteratorIterator(
+        new RecursiveDirectoryIterator(OUTPUT_PAGES_ROOT, FilesystemIterator::SKIP_DOTS)
+    );
+
+    foreach ($iterator as $fileInfo) {
+        if (!$fileInfo instanceof SplFileInfo || !$fileInfo->isFile()) {
+            continue;
+        }
+        if (strtolower($fileInfo->getExtension()) !== 'php') {
+            continue;
+        }
+        $path = $fileInfo->getPathname();
+        if (str_contains($path, DIRECTORY_SEPARATOR . '_partials' . DIRECTORY_SEPARATOR)) {
+            continue;
+        }
+
+        $content = file_get_contents($path);
+        if (!is_string($content) || $content === '') {
+            continue;
+        }
+
+        $dirPath = str_replace('\\', '/', dirname($path));
+        $rootPath = str_replace('\\', '/', OUTPUT_PAGES_ROOT);
+        $relativeDir = '';
+        if (str_starts_with($dirPath, $rootPath . '/')) {
+            $relativeDir = substr($dirPath, strlen($rootPath) + 1);
+        }
+        $relativeDir = normalizePath($relativeDir);
+        $depth = $relativeDir === '' ? 0 : count(array_filter(explode('/', $relativeDir)));
+        $levelsUp = $depth === 0 ? 1 : $depth;
+        $headInclude = "<?php include dirname(__DIR__, " . $levelsUp . ") . '/_partials/head.php'; ?>";
+        $headerInclude = "<?php include dirname(__DIR__, " . $levelsUp . ") . '/_partials/header.php'; ?>";
+        $footerInclude = "<?php include dirname(__DIR__, " . $levelsUp . ") . '/_partials/footer.php'; ?>";
+        $footInclude = "<?php include dirname(__DIR__, " . $levelsUp . ") . '/_partials/foot.php'; ?>";
+
+        $updated = preg_replace('/<head>[\s\S]*?<\/head>/i', $headInclude, $content, 1);
+        $updated = is_string($updated) ? $updated : $content;
+        $updated = preg_replace('/<header id="masthead"[\s\S]*?<\/header>/i', $headerInclude, $updated, 1);
+        $updated = is_string($updated) ? $updated : $content;
+        $updated = preg_replace_callback(
+            '/(<\/footer>)([\s\S]*?)(<\/body>)/i',
+            static function (array $m) use ($footInclude): string {
+                return $m[1] . "\n" . $footInclude . "\n" . $m[3];
+            },
+            $updated,
+            1
+        );
+        $updated = is_string($updated) ? $updated : $content;
+        $updated = preg_replace('/<footer class="">[\s\S]*?<\/footer>/i', $footerInclude, $updated, 1);
+        $updated = is_string($updated) ? $updated : $content;
+
+        file_put_contents($path, $updated);
+    }
 }
 
 function localizeExternalAssets(string $html): string
