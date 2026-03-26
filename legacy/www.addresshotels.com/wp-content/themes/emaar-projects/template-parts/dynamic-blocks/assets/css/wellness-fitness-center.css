@@ -1,0 +1,35 @@
+.wellness-fitness-center .img-fluid{
+   max-height: 768px;
+   -o-object-fit: cover;
+      object-fit: cover;
+}
+
+.wellness-fitness-img figure {
+    text-align: left;
+    margin: 0;
+    line-height: 1;
+}
+
+.wellness-fitness-text-content{
+    padding: 120px 60px;
+    height: 100%;
+}
+
+.wellness-fitness-text-content h2 {
+    margin: 6px;
+    letter-spacing: -2px;
+    line-height: 85px;
+}
+.wellness-fitness-text-content dd {
+    margin-top: 12px;
+}
+dd{
+    margin-bottom: 0;
+}
+
+@media screen and (max-width:992px) {
+   .wellness-fitness-text-content{
+      padding: 20px;
+   }
+   
+}

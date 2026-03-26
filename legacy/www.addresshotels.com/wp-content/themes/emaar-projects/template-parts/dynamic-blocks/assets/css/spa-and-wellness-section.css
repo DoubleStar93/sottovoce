@@ -1,0 +1,64 @@
+.spa-and-wellness-section {
+  padding: 80px 15px 120px;
+}
+
+.cta-btns-inline {
+  
+  -webkit-box-align: center;
+  
+  -webkit-align-items: center;
+  
+     -moz-box-align: center;
+  
+      -ms-flex-align: center;
+  
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+ 
+}
+.content-box{
+   max-width: 600px;
+   margin: 0 auto;
+}
+.cta-btn-inline {
+  margin: 15px;
+}
+.img-shadow {
+  -webkit-box-shadow: 0 60px 70px -30px rgb(37 40 45 / 50%);
+     -moz-box-shadow: 0 60px 70px -30px rgb(37 40 45 / 50%);
+          box-shadow: 0 60px 70px -30px rgb(37 40 45 / 50%);
+}
+.img-box {
+  height: 394px;
+  max-width: 424px;
+  margin: 0 auto;
+  -webkit-box-shadow: 0 60px 70px -30px rgba(37, 40, 45, 0.5);
+     -moz-box-shadow: 0 60px 70px -30px rgba(37, 40, 45, 0.5);
+          box-shadow: 0 60px 70px -30px rgba(37, 40, 45, 0.5);
+  background-color: white;
+}
+
+
+
+/*Media Queries*/
+
+@media (max-width: 992px) {
+  .spa-and-wellness-section {
+    padding: 40px 20px;
+    height: auto !important;
+    margin-bottom: 60px !important;
+  }
+  .img-box{
+     max-width: 100%;
+  }
+  .cta-btns-inline{
+     max-width: 100%;
+  }
+  
+}
+
+

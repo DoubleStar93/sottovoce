@@ -1,0 +1,108 @@
+.global-hotel-landing-faq-section {
+  /* max-width: 805px; */
+  /* margin: auto; */
+}
+
+.page-template-individual-home-custom-template section.global-hotel-landing-faq-section.grey-background .container.px-3.py-5 {
+  padding-top: 0 !important;
+  padding-bottom: 120px !important;
+  max-width: 1236px !important;
+}
+
+.accordionFaq {
+  padding-top: 20px;
+  padding-bottom: 40px;
+  background: #fff;
+}
+
+.accordionFaq .card {
+  border: none;
+}
+
+.accordionFaq .card-header {
+  background: #fff;
+  border: none;
+  padding: 1px 40px;
+}
+
+.accordionFaq .accordionFaq-card-content {
+  padding: 1px 10px;
+}
+
+.accordionFaq .card-body {
+  padding-left: 2rem;
+}
+
+.accordionFaq button > h3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #444;
+  padding: 23px 0;
+}
+
+.accordionFaq .card:not(:last-child) button {
+  border-bottom: 2px dashed rgba(37, 40, 45, 0.16);
+}
+
+.accordionFaq button:hover,
+.accordionFaq button:focus {
+  text-decoration: none;
+  box-shadow: none;
+}
+
+.accordionFaq button :focus-visible {
+  outline: none;
+}
+
+.accordionFaq .plus-icon {
+  font-weight: 400;
+  color: #444;
+  font-size: 16px;
+  padding: 0 32px;
+}
+
+.faq-cta {
+  margin-top: 1.5rem;
+}
+
+.faq_btn {
+  display: inline-block;
+  padding: 1rem 1.5rem;
+  font-weight: 600;
+  border: 1px solid #333;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  min-width: 185px;
+}
+
+.faq_btn:hover {
+  text-decoration: none;
+}
+
+.faq_btn--dark {
+  background: #000;
+  color: #fff;
+}
+
+.faq_btn--light:hover {
+  color: #000;
+}
+
+.faq_btn--dark:hover {
+  color: #fff;
+}
+
+@media (max-width: 991px) {
+  .accordionFaq .plus-icon {
+    padding: 0 5px;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 991px) {
+  .page-template-individual-home-custom-template section.global-hotel-landing-faq-section.grey-background .container.px-3.py-5 {
+    padding-right: 60px !important;
+    padding-left: 60px !important;
+  }
+}

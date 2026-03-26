@@ -1,0 +1,303 @@
+
+
+ /*** Dynamically Generated CSS , Not for editing ***/
+
+
+.display-1-72{   color: #25282D;
+   font-family: Vanitasbold;
+   font-size: 72px;
+   letter-spacing: -2px;
+   line-height: 85px;}
+
+.display-2-48{   color: #25282D;
+   font-family: Vanitasbold;
+   font-size: 48px;
+   letter-spacing: -1px;
+   line-height: 57px;}
+
+.display-3-40{   color: #25282D;
+   font-family: Vanitasbold;
+   font-size: 40px;
+   letter-spacing: -0.6px;
+   line-height: 47px;}
+
+.display-4-32{   color: #25282D;
+   font-family: Vanitasbold;
+   font-size: 32px;
+   letter-spacing: 0;
+   line-height: 38px;}
+
+.body-1{   font-size: 28px;
+   color: #25282D;
+   font-family: FreightSansProBook;
+   font-weight: 300;
+   letter-spacing: 0;
+   line-height: 28px;}
+
+.body-2{   font-size: 22px;
+   color: #25282D;
+   font-family: FreightSansProBook;
+   font-weight: 300;
+   letter-spacing: 0;
+   line-height: 34px;}
+
+.body-3{   font-size: 18px;
+   color: #25282D;
+   font-family: FreightSansProBook;
+   font-weight: 300;
+   letter-spacing: 0;
+   line-height: 24px;}
+
+.body-4{   font-size: 17px;
+   color: #25282D;
+   font-family: FreightSansProBook;
+   font-weight: 300;
+   letter-spacing: 0;
+   line-height: 21px;}
+
+.body-5{   font-size: 14px;
+   color: #25282D;
+   font-family: FreightSansProMedium;
+   font-weight: 300;
+   letter-spacing: 1px;
+   line-height: 18px;}
+
+.body-6{   font-size: 12px;
+   color: #25282D;
+   font-family: FreightSansProBook;
+   font-weight: 300;
+   letter-spacing: 0;
+   line-height: 15px;}
+
+.eyebrow-dark{   font-size: 16px;
+   color: #917F6B;
+   font-family: FreightSansProSemiBold;
+   font-weight: 600;
+   letter-spacing: 2.2px;
+   line-height: 30px;}
+
+.primary-btn{   font-size: 17px;
+   border-radius: 4px;
+   border: none;
+   background-color: #25282D !important;
+   color: #FFF !important;
+   font-family: FreightSansProBook;
+   font-weight: 600;
+   letter-spacing: 0.5px;
+   line-height: 22px;
+   text-align: center;
+   min-width: 200px;
+   min-height: 48px;
+   display: inline-flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.primary-btn:hover{ background-color: rgba(0, 0, 0) !important;
+ color: #fff;}
+
+.primary-btn.primary-small{   font-size: 14px;
+   border-radius: 2px;
+   min-height: 34px;
+   letter-spacing: 0.2px;
+   line-height: 18px;
+   min-width: 174px;}
+
+.secondary-btn{   font-size: 17px;
+   border: 1px solid #232323;
+   border-radius: 4px;
+   box-shadow: 0 0 3px -1px rgba(37, 40, 45, 0.7);
+   background-color: #fff !important;
+   color: #25282D !important;
+   font-family: FreightSansProBook;
+   font-weight: 600;
+   letter-spacing: 0.5px;
+   line-height: 22px;
+   text-align: center;
+   opacity: 0.7;
+   min-width: 200px;
+   min-height: 48px;
+   display: inline-flex;
+   justify-content: center;
+   align-items: center;}
+
+.secondary-btn:hover{   opacity: 1;}
+
+.secondary-btn.secondary-small{   font-size: 14px;
+   border-radius: 2px;
+   letter-spacing: 0.2px;
+   line-height: 18px;
+   text-align: center;
+   min-height: 34px;
+   min-width: 174px;}
+
+.alternate-btn{   font-size: 14px;
+   min-width: 120px;
+   min-height: 34px;
+   border-radius: 2px;
+   background-color: #FFFFFF;
+   box-shadow: 0 2px 8px 2px rgba(37, 40, 45, 0.1);
+   color: #25282D;
+   font-family: FreightSansProSemibold;
+   font-weight: 600;
+   letter-spacing: 0.2px;
+   line-height: 18px;
+   text-align: center;}
+
+.alternate-btn.small-btn{   min-width: inherit}
+
+.alternate-btn:hover{   background-color: #F7F8F6;
+   box-shadow: 0 2px 16px 4px rgba(37, 40, 45, 0.1);}
+
+.transparent-btn{   font-size: 17px;
+   border-radius: 4px;
+   background-color: transparent;
+   min-width: 220px;
+   min-height: 48px;
+   opacity: 0.7;
+   font-family: FreightSansProSemibold;
+   line-height: 2.3;
+   letter-spacing: 0.5px;
+   text-align: center;
+   color: #ffffff;
+   border: 1px solid #ffffff;}
+
+.transparent-btn:hover{   color: #fff;
+   opacity: 1;}
+
+.smallwhitebtn{   border: 1px solid #fff;
+   padding: 6px 11px;
+   border-radius: 2px;
+   box-shadow: 0 2px 16px 4px rgba(37, 40, 45, 0.1);
+   background-color: #fff;
+   font-size: 14px;
+   font-family: FreightSansProSemibold;
+   display: block;}
+
+.bluelink{   font-size: 16px;
+   font-family: FreightSansProBook;
+   font-weight: 500;
+   color: #483d8b !important;
+   text-decoration: none;
+   padding-bottom: 0;}
+
+.whitelink{   color: #fff !important;
+   text-decoration: none;
+   padding-bottom: 0;
+   font-size: 17px;
+  font-family: FreightSansProBook;}
+
+.blacklink{   font-size: 17px;
+   color: #000 !important;
+  font-family: FreightSansProBook;}
+
+
+
+ /**************** Custom Classes Directly added in Settings ************** ***/
+
+::selection {
+    background-color: var(--primary-color);
+}
+.badge {
+   color: #ffffff;
+   font-size: 0.739em;
+   padding: 4px 10px;
+   height: 19px;
+   border-radius: 10px;
+   background-color: #e1a65f;
+   font-family: FreightSansProBold;
+   margin-left: 20px;
+}
+:lang(ru-ru) .display-1-72 {
+    font-size: 70px;
+}
+.font-medium{   font-weight: 500;}
+
+.font-semi-bold{   font-weight: 600;}
+
+.whitetext{   color: #fff;}
+
+.font-56{   font-size: 56px;}
+
+.font-24{   font-size: 24px;}
+.font-20{   font-size: 20px;}
+
+.font-16{   font-size: 16px;}
+
+.font-14{   font-size: 14px;}
+
+.secondary-medium{   font-family: FreightSansProMedium;}
+
+.secondary-regular{   font-family: FreightSansProBook-Regular;}
+
+.secondary-semibold{   font-family: FreightSansProSemibold;}
+
+.secondary-normal{   font-family: FreightSansProBook;}
+
+.w-148{   min-width: 148px !important;}
+
+.w-200{   min-width: 200px !important;}
+
+@media screen and (max-width:600px) {
+.font-56-mobile {font-size: 56px !important;line-height: 66px !important;}
+.w-148{   min-width: auto !important;}
+.w-200{   min-width: auto !important;}   
+}
+
+.whitelink:hover{
+color:#fff
+}
+.blacklink:hover{color:#000}
+
+
+
+:lang(ru) #topbooknow {
+    font-size: 14px;
+}
+
+
+
+
+
+h2.display-1-72 {
+    color: #25282D;
+    font-family: 'Vanitasbold';
+    font-size: 72px;
+    letter-spacing: -2px;
+    line-height: 85px;
+    margin-bottom: 18px;
+}
+h2.display-1-72.whitetext{color: #fff !important;}
+
+@media (max-width: 576px){
+h2.display-1-72 {
+    font-size: 72px;
+}
+}
+@media screen and (min-width: 991px){
+.menu-bottom-border{
+border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+padding: 10px 0px;
+margin: 0 40px 0 15px;
+}
+}
+@media screen and (max-width: 991px){
+.menu-bottom-border{
+padding: 10px 0px;
+}
+}
+.card_details-row {padding-top: 3px;
+}
+.wpml-ls-sub-menu > .wpml-ls-item-en-ru { display: none !important; }
+
+/* Added to hide dots in slider */
+.flickity-page-dots{
+display:none !important;
+}
+
+.gform_wrapper.gravity-theme .gfield_required {
+    color: #c02b0a00 !important;
+}
+
+
+

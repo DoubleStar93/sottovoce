@@ -1,0 +1,1400 @@
+/* //!Desktop Queries */
+
+/* hide the sign link of LMS */
+/* a#loginMenuButton{
+  display: none !important;
+}
+
+a.primary-btn.ubyemaar-cta-btns{
+  display: none !important;
+} */
+/* hide the sign link of LMS */
+
+.static-topNavbar {
+  height: 93px;
+}
+
+#loginMenuButton.disabled {
+  background: transparent;
+}
+
+#nav-main .nav-link,
+#hotelList__dropdown .dropdown-item {
+  font-family: FreightSansProMedium;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 21px;
+  -webkit-font-smoothing: antialiased;
+}
+
+#hotelList__dropdown .dropdown-item {
+  padding: 0;
+}
+
+#hotelList__dropdown .dropdown-item.menu-item {
+  padding: 10px 16px 13px 16px;
+}
+
+#hotelList__dropdown .nav-indentation-class.menu-item .dropdown-item {
+  font-weight: 600;
+  text-decoration: none !important;
+  cursor: default;
+}
+
+#nav-main.navbar .navbar-nav .nav-link {
+  color: #fff;
+  font-size: 17px;
+}
+
+#nav-main.navbar .menu-item-has-children .dropdown-menu .nav-link {
+  color: #000;
+}
+
+.navbar-toggler {
+  /* background-color: aqua; */
+}
+
+#nav-main .navbar-collapse .navbar-nav .dropdown-menu {
+  margin-top: 0;
+  border: none;
+}
+
+/* Navbar change by Shubham for adjusting space on global homepage as requested by Maral */
+
+.manage-booking-div {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+:lang(ar) .manage-booking-div {
+  right: unset;
+  left: 0;
+}
+
+.manageBooking-global.manageBooking-desktop {
+  position: absolute;
+  top: 2px;
+  right: 65px;
+  color: #fff;
+  font-family: FreightSansProBook;
+  font-size: 14px !important;
+  font-weight: 300 !important;
+  letter-spacing: 0;
+  line-height: 18px !important;
+  margin-bottom: 14px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.darkHeader .manageBooking-global.manageBooking-desktop {
+  right: 35px;
+}
+
+:lang(ar) .manageBooking-global.manageBooking-desktop {
+  right: unset;
+  left: 35px;
+}
+
+.global-navbar.internal-nav .manageBooking-global.manageBooking-desktop {
+  right: 35px;
+}
+
+:lang(ar) .global-navbar.internal-nav .manageBooking-global.manageBooking-desktop {
+  right: unset !important;
+  left: 15px;
+}
+
+:lang(ar) .darkHeader .manageBooking-global.manageBooking-desktop {
+  right: unset;
+  left: 15px;
+}
+
+@-moz-document url-prefix() {
+  :lang(ar) .manageBooking-desktop {
+    left: 0px;
+  }
+}
+
+.manageBooking-desktop:hover {
+  text-decoration: underline;
+}
+
+.darkHeader .manageBooking-desktop {
+  color: #25282d;
+}
+
+#nav-main.navbar:hover .manageBooking-desktop {
+  color: #25282d;
+}
+
+/* Navbar change by Shubham for adjusting space on global homepage as requested by Maral */
+
+/* //!Scrolled State of Navbar */
+
+#nav-main.navbar.darkHeader:not(.navbar-booknow),
+#nav-main.navbar.alternate-navbar {
+  background-color: #fff;
+  box-shadow: 0 3px 100px -20px rgba(0, 0, 0, 0.3);
+}
+
+#nav-main.navbar.darkHeader.navbar-booknow {
+  box-shadow: 0 0 80px 0 rgba(131, 134, 163, 0.12);
+}
+
+#nav-main.navbar.darkHeader .navbar-nav .nav-link,
+#nav-main.navbar.alternate-navbar .navbar-nav .nav-link {
+  color: black;
+}
+
+.darkHeader .global-home-link-dropdown-box #dropdownMenuButton1 {
+  color: #25282d;
+}
+
+a#loginMenuButton.login:hover {
+  color: #25282d;
+}
+
+@media screen and (min-width: 1500px) {
+  :lang(fr-fr) #nav-main .navbar-collapse .navbar-nav.rightlinks {
+    max-width: 300px;
+  }
+}
+
+@media screen and (min-width: 1140px) {
+  #nav-main.navbar {
+    padding: 24px;
+  }
+
+  #nav-main.navbar:hover {
+    background-color: #fff;
+  }
+
+  #nav-main.navbar:hover .navbar-nav .nav-link,
+  #nav-main.navbar:hover .global-home-link-dropdown-box #dropdownMenuButton1 {
+    color: #25282d;
+  }
+
+  #nav-main.navbar:hover #black_logo {
+    display: block !important;
+  }
+
+  #nav-main.navbar:hover #white_logo {
+    display: none !important;
+  }
+
+  #nav-main .nav-item.dropdown.menu-item {
+    position: inherit;
+  }
+
+  #nav-main .navbar .dropdown-menu {
+    width: 100vw;
+  }
+
+  #nav-main nav-main .navbar-collapse {
+    height: 48px;
+  }
+
+  #nav-main .navbar-collapse .navbar-nav {
+    /* max-width: 780px; */
+    width: 100%;
+    justify-content: space-evenly;
+    /* margin: auto auto auto 0; */
+  }
+
+  #nav-main .nav-link {
+    padding-bottom: 0;
+  }
+
+  #nav-main .navbar-collapse .navbar-nav.rightlinks {
+    max-width: 230px;
+    padding-right: 0;
+    transition: padding 1s ease;
+  }
+
+  :lang(fr-fr) #nav-main .navbar-collapse .navbar-nav.rightlinks {
+    max-width: 280px;
+  }
+
+  #nav-main .navbar-collapse .navbar-nav.rightlinks.show,
+  #nav-main .navbar-collapse .navbar-nav.rightlinks.internal_page {
+    max-width: 300px !important;
+    /* padding-right: 120px; */
+  }
+
+  :lang(ar) #nav-main .navbar-collapse .navbar-nav.rightlinks.show,
+  :lang(ar) #nav-main .navbar-collapse .navbar-nav.rightlinks.internal_page {
+    max-width: 340px !important;
+    /* padding-right: 120px; */
+  }
+
+  :lang(fr-fr) #nav-main .navbar-collapse .navbar-nav.rightlinks.show,
+  :lang(fr-fr) #nav-main .navbar-collapse .navbar-nav.rightlinks.internal_page {
+    padding-right: 180px;
+  }
+
+  /* :lang(fr-fr) #nav-main .navbar-collapse .navbar-nav.rightlinks.show,
+  #nav-main .navbar-collapse .navbar-nav.rightlinks.internal_page {
+    max-width: 100%;
+  } */
+  #nav-main .right-nav-container {
+    max-width: 340px;
+    width: 100%;
+    transition: max-width 0.5s ease;
+  }
+
+  :lang(fr-fr) #nav-main .right-nav-container {
+    max-width: 500px;
+    width: 100%;
+    transition: max-width 0.5s ease;
+  }
+
+  :lang(ar) #nav-main .right-nav-container {
+    max-width: 340px;
+  }
+
+  #topbooknow {
+    min-width: 128px;
+    position: absolute;
+    right: -160px;
+    bottom: 15px;
+    transition: right 1.2s ease, opacity 0.1s ease;
+    border: none;
+  }
+
+  :lang(fr-fr) #topbooknow {
+    right: -230px;
+  }
+
+  #nav-main .navbar-nav.rightlinks.show #topbooknow,
+  #nav-main .navbar-nav.rightlinks.internal_page #topbooknow {
+    right: 32px;
+  }
+
+  /* .right-nav-container.show {
+    max-width: 450px;
+    transition: max-width .5s ease;
+  } */
+  #nav-main .right-nav-container.turkish {
+    justify-content: end;
+    max-width: 500px;
+  }
+
+  #topbooknow.turkish {
+    right: -200px;
+  }
+
+  #nav-main .navbar-collapse .navbar-nav.rightlinks.turkish.show {
+    padding-right: 125px;
+  }
+
+  #nav-main .navbar-collapse .navbar-nav.rightlinks.turkish {
+    max-width: 100% !important;
+  }
+
+  #nav-main .navbar-collapse .navbar-nav.rightlinks.show.turkish,
+  #nav-main .navbar-collapse .navbar-nav.rightlinks.internal_page.turkish {
+    max-width: 100% !important;
+  }
+
+  .navbar-booknow .right-booking-items li.nav-item.sign-in .dropdown.login-dropdown #loginMenuButton {
+    padding-top: 3px !important;
+  }
+
+  /* #nav-main .navbar-collapse .navbar-nav.rightlinks.internal_page.turkish{
+    padding-right: 200px;
+  } */
+  :lang(de-de) #nav-main.navbar .navbar-nav .nav-link,
+  :lang(fr-fr) #nav-main.navbar .navbar-nav .nav-link,
+  :lang(de-de) .wpml-ls-legacy-dropdown-click a,
+  :lang(fr-fr) .wpml-ls-legacy-dropdown-click a {
+    padding-left: 10px;
+    font-size: 17px;
+  }
+
+  :lang(ru) #nav-main.navbar .navbar-nav .nav-link,
+  :lang(ru) .wpml-ls-legacy-dropdown-click a {
+    padding-left: 10px;
+    font-size: 16px;
+  }
+
+  :lang(ru) #nav-main.navbar .navbar-nav .nav-link.nav-indentation-class,
+  :lang(de-de) #nav-main.navbar .navbar-nav .nav-link.nav-indentation-class,
+  :lang(fr-fr) #nav-main.navbar .navbar-nav .nav-link.nav-indentation-class {
+    padding-left: 0 !important;
+  }
+
+  :lang(ru) #nav-main.navbar .navbar-nav .nav-link.residence-nav-sub-heading,
+  :lang(de-de) #nav-main.navbar .navbar-nav .nav-link.residence-nav-sub-heading,
+  :lang(fr-fr) #nav-main.navbar .navbar-nav .nav-link.residence-nav-sub-heading {
+    padding-left: 16px !important;
+  }
+
+  :lang(ru) #nav-main .right-nav-container {
+    max-width: 300px;
+  }
+}
+
+
+/* ?Book now Code */
+
+@media (min-width: 768px) {
+  .right-booking-items {
+    /* max-width: 165px; */
+    /* Shubham Pardeshi Code Start Incident Request - #229582 25th/08/2022 (Changed max-width from 165px to 200px)*/
+    max-width: 200px;
+    /* Shubham Pardeshi Code End Incident Request - #229582 25th/08/2022 */
+    position: inherit;
+  }
+
+  :lang(fr-fr) .right-booking-items {
+    max-width: unset;
+  }
+
+  .login.dropdown-menu-center.show {
+    width: 245px;
+    top: 60px;
+    right: 0;
+    left: auto;
+  }
+
+  #loginMenuButton,
+  .rightlinks {
+    position: inherit;
+  }
+}
+
+
+/* Menu redesign */
+
+.hotel-nav-sub-heading>.dropdown-item {
+  font-weight: 700 !important;
+}
+
+.hotel-nav-sub-heading>.nav-link {
+  font-weight: 700 !important;
+}
+
+.nav-indentation-class a.dropdown-item {
+  cursor: default !important;
+}
+
+.nav-indentation-class a.dropdown-item:hover {
+  cursor: default !important;
+}
+
+.hotel-nav-sub-heading {
+  cursor: default !important;
+}
+
+.residence-nav-sub-heading {
+  cursor: default !important;
+}
+
+.residence-nav-sub-heading>.dropdown-item {
+  font-weight: 700 !important;
+}
+
+.header-content a.global-home-link {
+  color: #fff;
+}
+
+.internal-page a.global-home-link {
+  color: #fff;
+}
+
+.hotel-nav-sub-heading>.dropdown-item:hover {
+  text-decoration: none !important;
+  cursor: default;
+}
+
+.hotel-nav-sub-heading:hover {
+  text-decoration: none !important;
+}
+
+.residence-nav-sub-heading:hover {
+  text-decoration: none !important;
+}
+
+.nav-link.hotels-resort-homepage-link {
+  color: #000;
+  padding: 0;
+}
+
+.hotels-resort-homepage-link:hover {
+  color: #2b2724;
+}
+
+.nav-link.hotels-resort-homepage-link:hover {
+  text-decoration: underline !important;
+}
+
+#hotelList__dropdown .hotel_resorts_dropdown li .nav-link {
+  padding: 0;
+}
+
+
+[id^='menu-item-'] #hotelList__dropdown .dropdown-item:focus,
+[id^='menu-item-'] #hotelList__dropdown .dropdown-item:hover {
+  background: none !important;
+  text-decoration: none;
+}
+
+:lang(ar) nav [id^='menu-item-'] #hotelList__dropdown.dropdown-menu li:focus,
+:lang(ar) nav [id^='menu-item-'] #hotelList__dropdown.dropdown-menu li:hover {
+  background: none !important;
+}
+
+/* @media (min-width: 1200px) and (max-width: 1550px) {
+  [id^='menu-item-'] #hotelList__dropdown .hotel_resorts_dropdown {
+    margin-left: 55px;
+  }
+} */
+
+@media (max-width: 900px) {
+  .hotel_resorts_dropdown .dropdown-item {
+    padding-left: 0px !important;
+  }
+
+  .hotel_resorts_dropdown .nav-indentation-class {
+    padding-left: 0px;
+    margin: 0 40px 0 0;
+  }
+
+  #hotelList__dropdown {
+    padding: 10px;
+  }
+
+  #hotelList__dropdown.dropdown-menu.show {
+    max-height: 85vh;
+    overflow: scroll;
+    padding-bottom: 80px;
+  }
+
+  #hotelList__dropdown.dropdown-menu.show>.hotel_resorts_dropdown {
+    padding-bottom: 80px;
+  }
+
+  .navbar-global-home-page ul.dropdown-menu {
+    margin-left: 0 !important;
+  }
+
+  .navbar-global-home-page #hotelList__dropdown .nav-indentation-class {
+    margin: 0 40px 0 0;
+  }
+
+  :lang(ar) .navbar-global-home-page [id^='menu-item-'] #hotelList__dropdown .nav-indentation-class {
+    margin: 0;
+  }
+
+  .hotels-resort-homepage-link p {
+    margin-left: 10px;
+    width: fit-content;
+  }
+}
+
+.navbar.navbar-expand-xl.menu-dropdown-open-class,
+#navbar__Global.menu-dropdown-open-class {
+  background-color: #fff;
+}
+
+/* Menu redesign END */
+
+.navbar-brand #black_logo,
+.navbar-brand #white_logo,
+.navbar-brand #black_logo svg,
+.navbar-brand #white_logo svg {
+  height: 40px;
+  width: auto;
+  max-width: 230px;
+  object-fit: contain;
+}
+
+@media (max-width: 600px) {
+  .navbar-booknow .right-booking-items {
+    position: inherit;
+  }
+
+  .rooms_hotels_list_page.loginopen {
+    margin-top: 300px;
+  }
+
+  .login-dropdown {
+    position: inherit;
+  }
+
+  .login.dropdown-menu.dropdown-menu-center {
+    width: 100vw;
+  }
+
+  #nav-main.navbar .global-home-link-dropdown-inner-box .navbar-nav .nav-link,
+  #hotelList__dropdown .dropdown-item {
+    white-space: break-spaces;
+  }
+}
+
+@media (max-width: 350px) {
+
+  .navbar-brand #black_logo,
+  .navbar-brand #white_logo,
+  .navbar-brand #black_logo svg,
+  .navbar-brand #white_logo svg {
+    max-width: 200px;
+  }
+
+  :lang(ar) .navbar-brand #black_logo,
+  :lang(ar) .navbar-brand #white_logo,
+  :lang(ar) .navbar-brand #black_logo svg,
+  :lang(ar) .navbar-brand #white_logo svg {
+    max-width: 180px;
+  }
+}
+
+@media (max-width: 330px) {
+
+  .navbar-brand #black_logo,
+  .navbar-brand #white_logo,
+  .navbar-brand #black_logo svg,
+  .navbar-brand #white_logo svg {
+    max-width: 160px;
+  }
+
+  :lang(ar) .navbar-booknow .navbar-brand {
+    max-width: 130px;
+    padding: 0 !important;
+  }
+
+  :lang(ar) .navbar-booknow .navbar-brand #black_logo,
+  :lang(ar) .navbar-booknow .navbar-brand #white_logo,
+  :lang(ar) .navbar-booknow .navbar-brand #black_logo svg,
+  :lang(ar) .navbar-booknow .navbar-brand #white_logo svg {
+    max-width: 140px;
+  }
+}
+
+/* Language Switcher Start */
+
+.wpml-ls-legacy-dropdown-click {
+  width: max-content;
+  max-width: 100%;
+  margin-inline-end: 5px;
+}
+
+.wpml-ls-legacy-dropdown-click a {
+  display: block;
+  text-decoration: none;
+  color: black;
+  border: transparent;
+  padding: 0 10px;
+  background-color: transparent;
+  line-height: 1;
+  font-family: FreightSansProMedium;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 21px;
+  text-align: center;
+}
+
+#nav-main.navbar:hover .wpml-ls-legacy-dropdown-click a {
+  color: #25282d;
+}
+
+#nav-main.navbar.darkHeader .wpml-ls-legacy-dropdown-click a {
+  color: black;
+}
+
+.wpml-ls-legacy-dropdown-click .wpml-ls-current-language:hover>a,
+.wpml-ls-legacy-dropdown-click a:focus,
+.wpml-ls-legacy-dropdown-click a:hover {
+  background: transparent;
+}
+
+.wpml-ls-legacy-dropdown-click .wpml-ls-sub-menu {
+  visibility: hidden;
+  position: absolute;
+  top: 48px;
+  right: 0;
+  left: -16px;
+  border-top: none;
+  margin: 0;
+  list-style-type: none;
+  z-index: 101;
+  background: #fff;
+  width: 6rem;
+}
+
+.wpml-ls-sub-menu>li.wpml-ls-slot-shortcode_actions.wpml-ls-item .wpml-ls-link {
+  padding: 10px;
+}
+
+@media screen and (max-width: 1024px) {
+  .wpml-ls-statics-shortcode_actions .wpml-ls-current-language>a {
+    color: black;
+    padding-left: 0;
+  }
+
+  .wpml-ls-legacy-dropdown-click .wpml-ls-sub-menu {
+    top: 30px;
+    position: static;
+    width: auto;
+  }
+
+  .wpml-ls-sub-menu>li.wpml-ls-slot-shortcode_actions.wpml-ls-item .wpml-ls-link {
+    padding: 6px 0px 6px 0px;
+    text-align: start;
+  }
+
+  .navbar-booknow .wpml-ls-sub-menu>li.wpml-ls-slot-shortcode_actions.wpml-ls-item .wpml-ls-link {
+    text-align: center;
+  }
+
+  .wpml-ls-legacy-dropdown-click a {
+    padding: 5px 10px;
+  }
+
+  .wpml-ls-legacy-dropdown-click .wpml-ls-sub-menu {
+    top: 40px;
+    left: 0px;
+    position: absolute;
+    width: 90px;
+    right: 10px;
+  }
+
+  .navbar-booknow .wpml-ls-legacy-dropdown-click .wpml-ls-sub-menu {
+    left: -30px;
+  }
+
+  .navbar-booknow .right-booking-items {
+    max-width: 150px;
+  }
+
+  :lang(fr-fr) .navbar-booknow .right-booking-items {
+    max-width: unset;
+  }
+
+  :lang(ar) .navbar-booknow .right-booking-items {
+    max-width: unset;
+  }
+
+  :lang(ar) .wpml-ls-legacy-dropdown-click .wpml-ls-sub-menu {
+    left: 10px;
+    right: 0px;
+  }
+
+  :lang(ar) .navbar-booknow .wpml-ls-legacy-dropdown-click .wpml-ls-sub-menu {
+    left: 10px;
+    right: -13px;
+  }
+
+  :lang(tr) .navbar-booknow .wpml-ls-legacy-dropdown-click .wpml-ls-sub-menu {
+    left: -10px;
+  }
+
+  :lang(en-ru) .navbar-booknow .wpml-ls-legacy-dropdown-click .wpml-ls-sub-menu {
+    left: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .wpml-ls-legacy-dropdown-click {
+    margin-inline-end: 0;
+  }
+
+  .rtl .navbar-booknow .wpml-ls-legacy-dropdown-click a.wpml-ls-item-toggle {
+    padding-left: calc(8px + 1.4em);
+  }
+
+  .navbar-booknow .right-booking-items {
+    max-width: unset;
+  }
+}
+
+.wpml-ls-legacy-dropdown-click a.wpml-ls-item-toggle::after {
+  right: 14px;
+  top: calc(55% - 0.2em);
+}
+
+@media (max-width: 380px) {
+  .navbar-booknow .right-booking-items .sign-in a#loginMenuButton {
+    max-width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    direction: ltr;
+    unicode-bidi: embed;
+  }
+
+  :lang(en-ru) .navbar-booknow .right-booking-items .sign-in a#loginMenuButton {
+    max-width: 73px;
+  }
+}
+
+@media (max-width: 360px) {
+
+  .navbar-brand #black_logo,
+  .navbar-brand #white_logo,
+  .navbar-brand #black_logo svg,
+  .navbar-brand #white_logo svg {
+    max-width: 185px;
+  }
+}
+
+@media (max-width: 420px) {
+
+  :lang(en-ru) .navbar-brand #black_logo,
+  :lang(en-ru) .navbar-brand #white_logo,
+  :lang(en-ru) .navbar-brand #black_logo svg,
+  :lang(en-ru) .navbar-brand #white_logo svg {
+    max-width: 160px;
+  }
+}
+
+@media (max-width: 330px) {
+
+  .navbar-brand #black_logo,
+  .navbar-brand #white_logo,
+  .navbar-brand #black_logo svg,
+  .navbar-brand #white_logo svg {
+    max-width: 160px;
+  }
+
+  .navbar-booknow .navbar-brand {
+    max-width: 130px;
+    padding: 0 !important;
+  }
+
+  .navbar-booknow .navbar-brand #black_logo,
+  .navbar-booknow .navbar-brand #white_logo,
+  .navbar-booknow .navbar-brand #black_logo svg,
+  .navbar-booknow .navbar-brand #white_logo svg {
+    max-width: 140px;
+  }
+
+  :lang(ar) .navbar-booknow .navbar-brand {
+    max-width: 130px;
+    padding: 0 !important;
+  }
+
+  :lang(ar) .navbar-booknow .navbar-brand #black_logo,
+  :lang(ar) .navbar-booknow .navbar-brand #white_logo,
+  :lang(ar) .navbar-booknow .navbar-brand #black_logo svg,
+  :lang(ar) .navbar-booknow .navbar-brand #white_logo svg {
+    max-width: 140px;
+  }
+}
+
+.wpml-ls-sub-menu>li.wpml-ls-slot-shortcode_actions.wpml-ls-item .wpml-ls-link:hover {
+  background-color: #e9ecef;
+}
+
+/* Language Switcher End */
+
+/* Country flag design change suggested by MARAL */
+
+@media (max-width: 1024px) {
+  #nav-main.navbar:not(.navbar-booknow) ul.js-wpml-ls-sub-menu.wpml-ls-sub-menu {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 71px;
+    width: 100%;
+  }
+
+  #nav-main.navbar:not(.navbar-booknow) ul.js-wpml-ls-sub-menu.wpml-ls-sub-menu li.wpml-ls-item {
+    width: 100px;
+    height: 49%;
+  }
+
+  #topbooknow {
+    margin-top: 100px;
+  }
+
+  .wpml-ls-legacy-dropdown-click .wpml-ls-sub-menu {
+    z-index: 0 !important;
+  }
+}
+
+/* Country flag design change suggested by MARAL END */
+
+/*! CSS For Display scaling issues Start */
+
+@media (-webkit-device-pixel-ratio: 1.5) {
+
+  .navbar-brand #black_logo,
+  .navbar-brand #white_logo,
+  .navbar-brand #black_logo svg,
+  .navbar-brand #white_logo svg {
+    max-width: 180px;
+  }
+
+  :lang(ar) #nav-main.navbar .navbar-nav .nav-link {
+    font-size: 13px !important;
+  }
+
+  :lang(en-ru) #nav-main.navbar .navbar-nav .language-selector .wpml-ls-item-en-ru a.js-wpml-ls-item-toggle.wpml-ls-item-toggle {
+    font-size: 13px !important;
+  }
+
+  #nav-main.navbar .navbar-nav .nav-link {
+    font-size: 14px !important;
+  }
+
+  #nav-main .right-nav-container {
+    max-width: 420px;
+  }
+
+  #nav-main .navbar-collapse .navbar-nav {
+    max-width: 730px;
+  }
+}
+
+@media (-moz-device-pixel-ratio: 1.5) {
+
+  .navbar-brand #black_logo,
+  .navbar-brand #white_logo,
+  .navbar-brand #black_logo svg,
+  .navbar-brand #white_logo svg {
+    max-width: 180px;
+  }
+
+  :lang(ar) #nav-main.navbar .navbar-nav .nav-link {
+    font-size: 13px !important;
+  }
+
+  :lang(en-ru) #nav-main.navbar .navbar-nav .language-selector .wpml-ls-item-en-ru a.js-wpml-ls-item-toggle.wpml-ls-item-toggle {
+    font-size: 13px !important;
+  }
+
+  #nav-main.navbar .navbar-nav .nav-link {
+    font-size: 14px !important;
+  }
+
+  #nav-main .right-nav-container {
+    max-width: 420px;
+  }
+
+  #nav-main .navbar-collapse .navbar-nav {
+    max-width: 730px;
+  }
+}
+
+@media (-webkit-device-pixel-ratio: 1.25) {
+
+  .navbar-brand #black_logo,
+  .navbar-brand #white_logo,
+  .navbar-brand #black_logo svg,
+  .navbar-brand #white_logo svg {
+    max-width: 180px;
+  }
+
+  :lang(ar) #nav-main.navbar .navbar-nav .nav-link {
+    font-size: 13px !important;
+  }
+
+  :lang(en-ru) #nav-main.navbar .navbar-nav .language-selector .wpml-ls-item-en-ru a.js-wpml-ls-item-toggle.wpml-ls-item-toggle {
+    font-size: 13px !important;
+  }
+
+  #nav-main.navbar .navbar-nav .nav-link {
+    font-size: 14px !important;
+  }
+
+  .navigation-ul-area .nav-link {
+    font-size: 14px !important;
+  }
+
+  #nav-main .right-nav-container {
+    max-width: 420px;
+  }
+
+  #nav-main .navbar-collapse .navbar-nav {
+    max-width: 730px;
+  }
+}
+
+@media (-moz-device-pixel-ratio: 1.25) {
+
+  .navbar-brand #black_logo,
+  .navbar-brand #white_logo,
+  .navbar-brand #black_logo svg,
+  .navbar-brand #white_logo svg {
+    max-width: 180px;
+  }
+
+  :lang(ar) #nav-main.navbar .navbar-nav .nav-link {
+    font-size: 13px !important;
+  }
+
+  :lang(en-ru) #nav-main.navbar .navbar-nav .language-selector .wpml-ls-item-en-ru a.js-wpml-ls-item-toggle.wpml-ls-item-toggle {
+    font-size: 13px !important;
+  }
+
+  #nav-main.navbar .navbar-nav .nav-link {
+    font-size: 14px !important;
+  }
+
+  #nav-main .right-nav-container {
+    max-width: 420px;
+  }
+
+  #nav-main .navbar-collapse .navbar-nav {
+    max-width: 730px;
+  }
+}
+
+/*! CSS For Display scaling issues End */
+
+:lang(ru) .login.dropdown-menu-center.show .login_item.upoints {
+  white-space: normal;
+}
+
+button#booknow {
+  width: 100%;
+}
+
+/* navbar changes to add more option */
+
+
+nav .dropdown-menu {
+  border: 1px solid #e9ecef !important;
+}
+
+@media (max-width: 1026px) {
+  .navbar-collapse .more-option-menu.dropdown .nav-link[aria-expanded='true']::before {
+    margin-top: -95px;
+  }
+
+  .navbar-collapse .more-option-menu.dropdown.menu-item.menu-item-has-children.show {
+    height: 10vh;
+  }
+
+  .more-option-menu #hotelList__dropdown {
+    padding: 0px !important;
+  }
+
+  #nav-main .navbar-collapse .navbar-nav .dropdown-menu {
+    margin-top: 5px !important;
+    border: none;
+  }
+
+  .more-option-menu #hotelList__dropdown.dropdown-menu.show {
+    max-height: 97vh;
+    overflow: hidden !important;
+    padding-bottom: 120px;
+    margin-top: -30px !important;
+  }
+
+  .more-option-menu #hotelList__dropdown .container.hotel_resorts_dropdown {
+    flex-direction: column;
+    align-items: start;
+    padding: 0;
+  }
+
+  .more-option-menu #hotelList__dropdown .container.hotel_resorts_dropdown {
+    flex-direction: column;
+    align-items: start;
+    padding: 0;
+  }
+
+  nav .more-option-menu #hotelList__dropdown.dropdown-menu li {
+    padding: 10px;
+  }
+}
+
+nav .dropdown-menu li {
+  padding: 10px 16px 13px 20px;
+}
+
+.more-option-menu #hotelList__dropdown.dropdown-menu {
+  margin-top: 0px;
+  border: 1px solid #e9ecef !important;
+}
+
+/* navbar changes to add more option */
+.custom-right {
+  right: 65px !important;
+}
+
+@media screen and (max-width: 990px) {
+  .hotel_resorts_dropdown {
+    margin-left: unset;
+  }
+}
+
+.view-all-btn:focus {
+  outline: none;
+  /* Ensure no outline is shown */
+  box-shadow: none !important;
+  /* Remove the box-shadow */
+}
+
+@media screen and (max-width: 1050px) {
+  .cta-buttons-redirection {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #fff;
+    /* Adjust the background color if needed */
+    text-align: center;
+  }
+
+  .modified-divider-vm {
+    display: none !important;
+  }
+
+  .view-all-btn-adjustment {
+    margin-bottom: 15px !important;
+    margin-top: 15px !important;
+    width: 85% !important;
+  }
+
+  .btn-outline-dark {
+    color: black !important;
+    border-color: #000000 !important;
+  }
+}
+
+.navbar-nav.rightlinks.internal_page #topbooknow {
+  margin-inline-start: 25px;
+}
+
+@media screen and (max-width: 1050px) {
+  .hotel_resorts_dropdown {
+    margin-inline-start: 0 !important;
+  }
+}
+
+@media (max-width: 768px) {
+  #custom-sticky-navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #fff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /* border-bottom: 1px solid rgba(0, 0, 0, 0.1); */
+  }
+}
+
+/* Thin bottom border line */
+.thin-bottom-border {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  /* Creates a thin, subtle bottom border */
+  width: 100%;
+  /* Full width of the container */
+  height: 1px;
+  /* Thickness of the line */
+  margin: 0 auto;
+  /* Optional: Center the line if necessary */
+
+  position: sticky;
+  /* Make the border sticky */
+  top: 0;
+  /* Position it at the top of its container */
+  z-index: 1;
+  /* Ensure it appears above other content, adjust as needed */
+}
+
+.custom-button-navbar-absolute {
+  position: absolute;
+  right: 0;
+  top: 55px;
+}
+
+@media (min-width: 1202px) and (max-width: 1300px) {
+  #header-front-navbarnav {
+    min-width: 700px;
+  }
+}
+
+@media (min-width: 1202px) and (max-width: 1500px) {
+  :lang(fr-fr) #header-front-navbarnav {
+    min-width: 720px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+
+  #nav-main:not(.menu-open, .darkHeader) .toggler-icon-animated .fal,
+  .toggler-icon .fal {
+    color: #fff;
+  }
+
+  .darkHeader .toggler-icon-animated .fal,
+  .toggler-icon .fal,
+  .alternate-navbar .toggler-icon-animated .fal,
+  .toggler-icon .fal {
+    color: #000;
+  }
+
+  .toggler-icon-animated.open span {
+    color: #000;
+  }
+
+  #nav-main:not(.menu-open) .toggler-icon-animated .fa-times,
+  #nav-main.menu-open .toggler-icon-animated .fa-bars {
+    display: none;
+  }
+
+  #nav-main.menu-open .toggler-icon-animated .fa-times,
+  #nav-main:not(.menu-open) .toggler-icon-animated .fa-bars {
+    display: block;
+  }
+
+  #nav-main.navbar .navbar-nav .nav-link {
+    color: black;
+  }
+
+  #nav-main .navbar-collapse .navbar-nav:not(.rightlinks) {
+    border-bottom: 1px solid rgba(37, 40, 45, 0.16);
+    padding: 20px 0;
+  }
+
+  #nav-main .navbar-nav .dropdown-menu {
+    border: none;
+  }
+
+  #topbooknow {
+    margin-top: 150px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .navbar.menu-open {
+    background-color: #fff;
+    height: 100vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1025px) {
+  .more-option-menu #hotelList__dropdown.dropdown-menu.show {
+    margin-inline-start: 50px;
+    margin-top: -60px !important;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  [id^="menu-item-"] #hotelList__dropdown .hotel_resorts_dropdown {
+    margin-inline-start: 0 !important;
+  }
+}
+
+@media screen and (min-width: 1140px) {
+  #nav-main .navbar-collapse .navbar-nav.rightlinks {
+    max-width: 190px;
+  }
+
+  #nav-main .right-nav-container,
+  :lang(fr-fr) #nav-main .navbar-collapse .navbar-nav.rightlinks {
+    max-width: 290px;
+  }
+
+  :lang(fr-fr) #nav-main .right-nav-container {
+    max-width: 340px;
+  }
+
+  /* :lang(fr-fr) #nav-main .navbar-collapse .navbar-nav.rightlinks {
+    max-width: 220px;
+  } */
+
+  :lang(fr-fr) #nav-main .navbar-collapse .navbar-nav.rightlinks.show {
+    max-width: 310px;
+  }
+
+  :lang(ar) #nav-main .right-nav-container {
+    max-width: 320px;
+  }
+
+  :lang(fr-fr) #nav-main .navbar-collapse .navbar-nav.rightlinks.internal_page {
+    max-width: 350px;
+  }
+
+  :lang(de-de) #nav-main .right-nav-container,
+  :lang(de-de) #nav-main .navbar-collapse .navbar-nav.rightlinks.show {
+    max-width: 270px;
+  }
+}
+
+#nav-main.navbar #darkHeader:not(.navbar-booknow),
+#nav-main.navbar.alternate-navbar {
+  background-color: #fff;
+  box-shadow: 0 3px 100px -20px rgba(0, 0, 0, 0.3);
+}
+
+@media (min-width: 1025px) {
+  [id^="menu-item-"].more-option-menu #hotelList__dropdown {
+    position: absolute;
+    width: auto;
+    top: 53px;
+    left: -40px;
+  }
+
+  [id^="menu-item-"].more-option-menu #hotelList__dropdown .hotel_resorts_dropdown {
+    width: 100px;
+    display: flex;
+    padding: 0;
+    flex-direction: column;
+    margin-left: auto !important;
+    align-items: start;
+  }
+
+  :lang(ar) [id^="menu-item-"].more-option-menu #hotelList__dropdown {
+    left: unset;
+    right: -40px;
+  }
+
+  :lang(ar) [id^="menu-item-"].more-option-menu #hotelList__dropdown .hotel_resorts_dropdown {
+    margin-right: auto;
+  }
+
+  :lang(de) [id^="menu-item-"].more-option-menu #hotelList__dropdown .hotel_resorts_dropdown {
+    width: 100%;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 1025px) {
+  .navbar-collapse .nav-item.dropdown.menu-item.menu-item-has-children.show {
+    position: absolute;
+    height: 102vh;
+    top: 102px;
+    bottom: 0;
+    z-index: 1;
+    width: 100%;
+    opacity: 1;
+    max-width: calc(100% - 32px);
+    background-color: #fff;
+  }
+
+  .navbar-collapse .nav-item.dropdown .nav-link[aria-expanded="true"]::before {
+    content: "\f0d9" " Go Back";
+    font-family: "Font Awesome 5 Pro", "FreightSansProBook";
+    display: block;
+    margin-top: -10px;
+    margin-bottom: 20px;
+    color: #25282d;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 0;
+    line-height: 18px;
+  }
+}
+
+@media (min-width: 1025px) {
+  [id^="menu-item-"] {
+    position: inherit;
+  }
+
+  [id^="menu-item-"] #hotelList__dropdown {
+    width: 100vw;
+    margin-top: 0;
+    top: 99%;
+  }
+
+  [id^="menu-item-"] #hotelList__dropdown .hotel_resorts_dropdown {
+    width: 890px;
+    /* margin-left: 280px; */
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: repeat(7, 1fr);
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  :lang(ar) [id^="menu-item-"] #hotelList__dropdown .hotel_resorts_dropdown {
+    margin-left: 0;
+    margin-right: 220px;
+  }
+
+  [id^="menu-item-"] #hotelList__dropdown .nav-indentation-class {
+    padding: 10px 0px;
+    margin: 0 40px 0 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    grid-row: 1 / 2;
+    grid-column-end: span 3;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .left-padding-adjustment {
+    padding-inline-start: 0 !important;
+  }
+}
+
+@media (min-width: 1000px) and (max-width: 1200px) {
+  .left-padding-adjustment {
+    padding-inline-start: 0 !important;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .left-padding-adjustment {
+    padding-inline-start: 2px !important;
+  }
+}
+
+@media (max-width: 900px) {
+  #hotelList__dropdown.dropdown-menu.show>.hotel_resorts_dropdown {
+    padding-bottom: 15px !important;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1025px) {
+  #hotelList__dropdown.dropdown-menu.show>.hotel_resorts_dropdown {
+    padding-bottom: 100px !important;
+  }
+}
+
+@media (min-width: 1500px) {
+  [id^="menu-item-"] #hotelList__dropdown .hotel_resorts_dropdown {
+    margin-inline-start: 280px;
+  }
+}
+
+@media (max-width: 750px) {
+  .header-bottom-line.menus-open {
+    display: block !important;
+    position: absolute;
+    width: 100vw;
+    left: 50%;
+    top: 60px;
+    transform: translateX(-50%);
+    margin-top: 20px;
+    margin-bottom: 0px !important;
+    padding: 0;
+    height: 1px;
+    border-color: rgba(0, 0, 0, 0.1) !important;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .site-header {
+    position: relative;
+  }
+
+  .header-bottom-line-IBU.menus-open {
+    display: block !important;
+    position: absolute;
+    width: 100vw;
+    left: 50%;
+    top: 70px;
+    transform: translateX(-50%);
+    margin-top: 20px;
+    margin-bottom: 0px !important;
+    padding: 0;
+    height: 1px;
+    border-color: rgba(0, 0, 0, 0.1) !important;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+}
+@media (min-width: 992px) {
+    #nav-main .nav-link {
+        padding-right: 0;
+        padding-left: 0.5rem;
+    }
+}
+:lang(ar) .wpml-ls-legacy-dropdown-click a.wpml-ls-item-toggle {
+    padding-right: 3px;
+    padding-left: calc(10px + 1.4em);
+}

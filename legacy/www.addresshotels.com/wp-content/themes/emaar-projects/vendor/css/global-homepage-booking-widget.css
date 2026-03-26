@@ -1,0 +1,563 @@
+.widget-ui {
+  border-radius: 0.5rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.new-booking-widget {
+  width: 100%;
+  margin: auto;
+  z-index: 999;
+  border-radius: 0.5rem;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 1199px) {
+
+  /* .new-booking-widget {
+    bottom: 7rem;
+    padding-left: 24px;
+    padding-right: 24px;
+  } */
+}
+
+.datepick-nav>.datepick-cmd[data-disabled='true'] {
+  color: lightgray;
+  cursor: not-allowed;
+}
+
+.datepick-nav>.datepick-cmd[data-disabled='true']>i {
+  pointer-events: none;
+}
+
+.datepick-input.is-datepick {
+  max-width: 100%;
+}
+
+.datepick-input.is-datepick.mWidth70 {
+  max-width: 70%;
+}
+
+.datepick-input,
+.datepick-input-mobile {
+  border: none !important;
+  background: transparent !important;
+  cursor: pointer;
+  max-width: 75%;
+}
+
+.booking-widget-global {
+  position: relative;
+  bottom: 3.5rem;
+  z-index: 3;
+  /* max-width: 81.25rem; */
+}
+
+.booking-widget-global .navbar-nav {
+  background-color: #fff;
+  height: 72px;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.booking-widget-global .navbar-nav .nav-item {
+  border-right: 1px solid rgba(23, 34, 38, 0.16);
+}
+
+.booking-widget-global .navbar-nav .nav-item .dropdown-item {
+  /* padding: 10px 16px 13px 16px; */
+  padding: 5px 24px 7px 24px;
+}
+
+.booking-widget-global .navbar-nav .nav-item .nav-link {
+  padding: 0;
+  display: block;
+  height: 72px;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: start;
+  -moz-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: start;
+  padding: 0 16px;
+  color: #25282d;
+}
+
+.hoteldropdown {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 23.69%;
+  -moz-box-flex: 1;
+  -ms-flex: 1 0 23.69%;
+  flex: 1 0 23.69%;
+}
+
+.datepicker-widget {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 27%;
+  -moz-box-flex: 0;
+  -ms-flex: 0 0 27%;
+  flex: 0 0 27%;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.add_rooms_nav_dropdown_widget {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 18.76%;
+  -moz-box-flex: 1;
+  -ms-flex: 1 0 18.76%;
+  flex: 1 0 18.76%;
+}
+
+.codebox-global-widget {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 14.15%;
+  -moz-box-flex: 1;
+  -ms-flex: 1 0 14.15%;
+  flex: 1 0 13.95%;
+}
+
+.widget-find-rooms {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 15.38%;
+  -moz-box-flex: 1;
+  -ms-flex: 1 0 15.38%;
+  flex: 1 0 15.38%;
+  height: 100%;
+}
+
+
+
+@media (max-width: 767px) {
+  .booking-widget-global {
+    /* bottom: 8rem; */
+    bottom: 3.9rem;
+  }
+}
+
+@media (max-width: 600px) {
+  #BookingWidget .homepage-widget {
+    bottom: 6rem !important;
+
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1200px) {
+  #findroom.bookingvld {
+    min-width: 100px;
+  }
+}
+
+@media (max-width: 1700px) {
+  .navbarDropdownXL_hotel_highlight_widget {
+    height: 67vh;
+    overflow-y: scroll;
+    max-height: 580px;
+  }
+}
+
+/* new widget */
+.homepage-widget {
+  bottom: 11.5rem !important;
+  z-index: 10 !important;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  height: 80px;
+}
+
+.grid-item {
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+
+.widget-col {
+  border-right: 1px solid rgba(23, 34, 38, 0.16);
+}
+
+@media screen and (max-width: 991px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.date-options {
+  position: absolute;
+  bottom: 95%;
+}
+
+.day-price {
+  font-family: 'FreightSansProBook';
+  font-size: 10px !important;
+  margin: 0;
+}
+
+@media screen and (max-width: 991px) {
+  .homepage-widget {
+    width: 95%;
+    padding-right: 0px !important;
+  }
+
+  .widget-col-mobile .first-row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .d-flex.py-1.justify-content-between.align-items-center {
+    display: grid !important;
+  }
+
+  .rooms {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+
+}
+
+.adult-child-dropdown {
+  display: grid;
+  grid-template-columns: 1fr;
+  /* gap: 1rem; */
+  /* padding: 24px; */
+  /* padding-top: 1rem; */
+}
+
+.counter-box {
+  gap: 1rem;
+}
+
+.addroom {
+  color: #483d8b;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.addroom i.fas.fa-plus {
+  font-size: 9px;
+  background: #483d8b;
+  color: #fff;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  padding: 3px 4px;
+  margin-right: 5px;
+}
+
+.stay_pax_dropdown {
+  padding: 1px 10px;
+  left: auto;
+
+}
+
+.roomHeading {
+  font-family: 'FreightSansProSemibold';
+  font-size: 17px;
+  line-height: 22px;
+  color: #25282d;
+}
+
+.trashWidget {
+  color: #25282d;
+  opacity: 40%;
+  cursor: pointer
+}
+
+.ag-plus,
+.ag-minus,
+.cg-minus,
+.cg-plus {
+
+  color: #25282d;
+  cursor: pointer;
+}
+
+.btn_counter.disabled {
+  opacity: .35;
+  pointer-events: none;
+}
+
+#BookingWidget {
+  position: relative;
+}
+
+.calendar-error-msg {
+  border-radius: 4px;
+  max-width: 796px;
+  width: 90% !important;
+  margin: 0 auto;
+  background-color: #ffe6e6;
+  color: #d40000;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.stay_promo_dropdown {
+  width: 340px;
+  padding: 20px;
+  left: auto;
+}
+
+.iata-group .iata,
+.promo-group .promo,
+.corporate-group .corporate,
+.group-group .group {
+  visibility: visible;
+  top: 10px;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #ffffff;
+  border: 1px solid #7c8a90;
+  border-radius: 2px;
+  line-height: 1.3;
+  line-height: 1.3;
+}
+
+.iata-group .iata:checked,
+.promo-group .promo:checked,
+.corporate-group .corporate:checked,
+.group-group .group:checked {
+  background-color: #000;
+  border: 2px solid #000;
+  font-family: 'Font Awesome 5 Pro';
+
+}
+
+.apply-btn {
+  position: absolute;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  right: 10px;
+  top: 50%;
+  z-index: 2;
+  padding: 5px 15px;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  background-color: #25282d;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.stay_promo_dropdown .iata-text-field,
+.stay_promo_dropdown .promo-text-field,
+.stay_promo_dropdown .corporate-text-field,
+.stay_promo_dropdown .group-text-field {
+
+  margin: 0px;
+  padding: 12px;
+  width: 100%;
+  outline: none;
+  border: 0.5px solid rgba(37, 40, 45, 0.4);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+.iata-popup,
+.promo-popup,
+.corporate-popup,
+.group-popup {
+  position: relative;
+}
+
+.iata-error-msg,
+.promo-error-msg,
+.corporate-error-msg,
+.group-error-msg {
+  color: #d40000;
+  font-size: 17px;
+  font-weight: 300;
+  letter-spacing: 0;
+  margin-top: 7px;
+}
+
+promocode-invalid-message {
+  color: #d40000;
+  font-size: 17px;
+  font-weight: 300;
+  letter-spacing: 0;
+  margin-top: 7px;
+  margin-bottom: 2px;
+}
+
+.promocode-validation-icon {
+  position: absolute;
+  top: 17px;
+  left: 5px;
+  color: #00b416;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.promocode-valid-icon {
+  color: #00b416;
+}
+
+.icon-space {
+  padding-left: 30px !important;
+}
+
+/* modal */
+/* Overlay background for the popup */
+.custom-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 999;
+}
+
+/* Custom Popup Container */
+.custom-popup {
+  position: fixed;
+  bottom: -100%;
+  left: 0;
+  right: 0;
+  background-color: #ebede8;
+  ;
+  height: 80%;
+  max-height: 80%;
+  width: 100%;
+  border-radius: 20px 20px 0 0;
+  transition: bottom 0.3s ease-in-out;
+  z-index: 1000;
+  display: none;
+  overflow-y: auto;
+}
+
+/* Show popup when triggered */
+.custom-popup.show {
+  bottom: 0;
+}
+
+/* Header inside the popup */
+.custom-popup-header {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+}
+
+/* Title in the header */
+.custom-popup-title {
+  flex: 1;
+  text-align: center;
+  font-size: 18px;
+}
+
+/* Close button for the popup */
+.close-btn {
+  font-size: 24px;
+  cursor: pointer;
+  color: #000;
+  padding: 0 10px;
+}
+
+/* Popup Body with scrollable content */
+.custom-popup-body {
+  padding: 15px;
+  overflow-y: auto;
+  margin: 35px;
+  padding: 15px;
+}
+
+.country-section {
+  margin-bottom: 20px;
+}
+
+.countryName_heading,
+.countryName_subheading {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* .custom_selected_hotel{
+border-bottom: 1px solid #e5e5e5;
+} */
+.hotel_list_item {
+  display: block;
+  padding: 10px 15px;
+
+  text-decoration: none;
+  color: #000;
+}
+
+/* Back button styling */
+.custom-popup-back-btn {
+  cursor: pointer;
+}
+
+.allHotels_Dropdown-Menu.dropdown-menu.stay_all_hotel_list.show[x-placement="top-start"] {
+  top: -20px !important;
+}
+
+.allHotels_Dropdown-Menu.dropdown-menu.stay_all_hotel_list.show[x-placement="bottom-start"] {
+  top: 18px !important;
+}
+
+
+input.datepick_widget_stay:focus,
+input.datepick_widget_stay:active {
+  border: none !important;
+}
+
+.rooms .room-title {
+  font-family: 'FreightSansProSemibold';
+  font-size: 17px;
+  line-height: 22px;
+  color: #25282d;
+}
+
+.rooms .trash_widget {
+  color: #25282d;
+  opacity: 40%;
+  cursor: pointer;
+}
+
+@media (min-width: 900px) and (max-width: 1199px) {
+  .mobile-popup-date-body {
+    overflow: scroll;
+    height: 500px;
+  }
+}

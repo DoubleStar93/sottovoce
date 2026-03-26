@@ -1,0 +1,137 @@
+.black-btn {
+  width: 220px;
+  padding: 12px;
+  position: relative;
+  margin-top: 15px;
+}
+
+.img-shadow {
+  -webkit-box-shadow: 0 60px 70px -30px rgb(37 40 45 / 50%);
+     -moz-box-shadow: 0 60px 70px -30px rgb(37 40 45 / 50%);
+          box-shadow: 0 60px 70px -30px rgb(37 40 45 / 50%);
+  height: 100%;
+}
+.img-shadow .img-fluid{
+   height: 100%;
+   -o-object-fit: cover;
+      object-fit: cover;
+}
+
+.individual-homepage-explore-accommodations {
+  /* padding-top: 110px; */
+  /* padding-bottom: 110px; */
+}
+.individual-homepage-explore-accommodations ol.flickity-page-dots {
+  display: none;
+}
+.individual-homepage-explore-accommodations .content-box {
+  padding: 0 80px;
+}
+button.flickity-button.flickity-prev-next-button.previous {
+  visibility: hidden;
+}
+button.flickity-button.flickity-prev-next-button.next {
+  visibility: hidden;
+}
+.cta-btn {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+     -moz-box-orient: vertical;
+     -moz-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.individual-homepage-explore-accommodations .slider-img {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+#offers-carousel .slider-img-explore-accommodations:last-child {
+  width: 904px;
+  padding-right: 80px;
+}
+#offers-carousel .slider-img-explore-accommodations:first-child {
+  padding-left: 80px;
+  width: 904px;
+}
+#offers-carousel .slider-img-explore-accommodations.single_image {
+  padding:0;
+  margin-left: 0px;
+}
+:lang(ar) #offers-carousel .slider-img-explore-accommodations.single_image {
+  margin-right: 0px;
+  padding-left: 0;
+  padding-right: 0;
+}
+.slider-img-explore-accommodations {
+  width: 904px;
+  height: 520px;
+}
+@media screen and (max-width: 992px) {
+  #offers-carousel .slider-img-explore-accommodations:first-child,
+  #offers-carousel .slider-img-explore-accommodations:last-child {
+    width: 528px;
+    /* padding-left: 80px; */
+  }
+  .individual-homepage-explore-accommodations .overlap-content{
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+       -moz-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .individual-homepage-explore-accommodations {
+    padding-top: 40px;
+  }
+  .individual-homepage-featured-offer .content-box {
+    margin-bottom: 40px;
+  }
+  #offers-carousel .slider-img-explore-accommodations:first-child {
+    width: 320px;
+    padding-left: 32px;
+    height: auto;
+  }
+  .flickity-slider > div .slider-img-explore-accommodations {
+    height: 400px;
+  }
+  #offers-carousel .slider-img-explore-accommodations:last-child {
+    width: 320px;
+    padding-left: 0px;
+    padding-right: 20px;
+    margin-left: 20px;
+    height: auto;
+  }
+  .individual-homepage-explore-accommodations .img-content {
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+  }
+  .individual-homepage-explore-accommodations .img-shadow {
+    height: 400px;
+  }
+  .individual-homepage-explore-accommodations .img-shadow img {
+    min-height: 100%;
+    min-width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .individual-homepage-explore-accommodations .overlap-content{
+    display: block;
+  }
+  .individual-homepage-explore-accommodations .overlap-content .overlap-btn{
+    margin-top: 15px;
+  }
+}
