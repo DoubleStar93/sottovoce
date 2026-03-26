@@ -5,7 +5,7 @@
 
 <?php include __DIR__ . '/_partials/head.php'; ?>
 
-<body class="page-template page-template-templates page-template-individual-home-custom-template page-template-templatesindividual-home-custom-template-php page page-id-3739 page-parent page-child parent-pageid-662">
+<body id="page-top" class="page-template page-template-templates page-template-individual-home-custom-template page-template-templatesindividual-home-custom-template-php page page-id-3739 page-parent page-child parent-pageid-662">
   <!-- Preloader -->
   <!-- Preloader End -->
   <div id="page" class="site">
@@ -2519,7 +2519,7 @@ if (globalHomeLinkDropdownBox) {
   </div>
 </section>
 
-<div class="container individual-homepage-featured-offer">
+<div id="featured-offer" class="container individual-homepage-featured-offer">
   <div class="row g-0 align-items-center text-center justify-content-between">
     <div class="col-12 col-lg-6 inline-left show-on-scroll">
       <div class="content-box" data-aos="fade-right" data-aos-duration="1000" data-aos-offset="300" data-aos-easing="ease-in-sine">
@@ -2535,7 +2535,7 @@ if (globalHomeLinkDropdownBox) {
 
 
 
-<div class="individual-homepage-explore-accommodations">
+<div id="accommodation" class="individual-homepage-explore-accommodations">
 
   <div class="container-fluid p-0">
     <div class="container text-center p-2 p-lg-5 inline-up2 show-on-scroll">
@@ -2646,7 +2646,7 @@ if (globalHomeLinkDropdownBox) {
 
 </style>
 
-<div class="individual-homepage-hotel-highlights-section  " style="background-image: linear-gradient( to bottom, #ffffff 0%, #ffffff00 40%, #ffffff00 60%, #ffffff 100% ),
+<div id="highlights" class="individual-homepage-hotel-highlights-section  " style="background-image: linear-gradient( to bottom, #ffffff 0%, #ffffff00 40%, #ffffff00 60%, #ffffff 100% ),
     url('../../../wp-content/uploads/2021/07/Address-Artwork-123x123-1-1-1.png');
     background-repeat: repeat;
     /* background-size: cover; */
@@ -2887,7 +2887,7 @@ if (globalHomeLinkDropdownBox) {
           }
         </style>
         <div class="carousel-item active">
-          <div class="container-fluid g-0 individual-homepage-corporate-section individual-homepage-corporate-section-0">
+          <div id="events" class="container-fluid g-0 individual-homepage-corporate-section individual-homepage-corporate-section-0">
             <div class="corporate-img-section">
               <div class="corporate-img-overlay"></div>
             </div>
@@ -3221,7 +3221,7 @@ if (globalHomeLinkDropdownBox) {
 </div>
 
 
-<section class="global-hotel-landing-faq-section greyboxlight">
+<section id="faq" class="global-hotel-landing-faq-section greyboxlight">
   <div class="container px-3 py-5">
     <h2 class="mb-3 pb-1 display-2-48 font-56-mobile">FAQs</h2>
     <div class="accordion accordionFaq" id="accordionFaq659105484">
@@ -3503,7 +3503,7 @@ Each of these dining establishments contributes to the rich tapestry of gastrono
   }]
 }
 </script>
-<div class="container text-center pt-5">
+<div id="amenities" class="container text-center pt-5">
   <h2 class="pt-4 mb-4 pb-3 eyebrow-dark">ADDRESS SKY VIEW AMENITIES</h2>
 </div>
 <div class="wp-block-group container-fluid white-bg mb-5 pb-5">

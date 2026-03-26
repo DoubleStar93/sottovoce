@@ -1,6 +1,23 @@
+<?php
+declare(strict_types=1);
+$requestPath = trim((string) parse_url($_SERVER['REQUEST_URI'] ?? '', PHP_URL_PATH), '/');
+$isOnePageHome = in_array($requestPath, ['', 'index.php', 'pages/index.php'], true);
+$homePrefix = $isOnePageHome ? '' : '/pages/index.php';
+?>
 <header id="masthead" class="site-header custom-navbar-page nav-individual more-dropdown-navbar">
   <div id="to-top"></div>
   <style>
+    html { scroll-behavior: smooth; }
+    #featured-offer, #accommodation, #highlights, #events, #amenities, #contact-details, #faq, #page-top {
+      scroll-margin-top: 120px;
+    }
+    #nav-main.scrolled-nav {
+      background-color: #fff !important;
+    }
+    #nav-main.scrolled-nav .navbar-nav .nav-link,
+    #nav-main.scrolled-nav .wpml-ls-legacy-dropdown-click a {
+      color: #25282d !important;
+    }
     #nav-main .toggler-icon-animated .fa-times { display: none; }
     #nav-main.menu-open .toggler-icon-animated .fa-bars { display: none; }
     #nav-main.menu-open .toggler-icon-animated .fa-times { display: inline-block; }
@@ -11,7 +28,7 @@
     <div class="custom-navigation-expandable container-fluid px-sm-3 justify-content-lg-between align-items-lg-end mt-3 mt-lg-2">
 
       <div id="custom-sticky-itendifier">
-        <a class="navbar-brand pb-0 pl-3 px-lg-0 custom-width-navbar-brand d-flex justify-content-center" href="/pages/index.php">
+        <a class="navbar-brand pb-0 pl-3 px-lg-0 custom-width-navbar-brand d-flex justify-content-center" href="<?= $homePrefix ?>#page-top">
           <img width="141" height="34" id="black_logo" src="/dependencies/img/wp-content/uploads/2021/03/address-SkyViews-logo-B.svg" alt="logo" class="logo" style="display:none">
 
           <img width="141" height="34" id="white_logo" src="/dependencies/img/wp-content/uploads/2021/03/address-SkyViews-logo-W.svg" alt="logo" class="logo">
@@ -43,7 +60,7 @@
 	<li id="menu-item-175617" class="dropdown-item menu-item menu-item-type-custom menu-item-object-custom menu-item-175617 nav-item"><a href="/en/hotels/address-dubai-mall/" class="dropdown-item">Address Dubai Mall</a></li>
 	<li id="menu-item-175618" class="dropdown-item menu-item menu-item-type-custom menu-item-object-custom menu-item-175618 nav-item"><a href="/en/hotels/address-creek-harbour/" class="dropdown-item">Address Creek Harbour</a></li>
 	<li id="menu-item-175619" class="dropdown-item menu-item menu-item-type-custom menu-item-object-custom menu-item-175619 nav-item"><a href="/en/hotels/address-montgomerie/" class="dropdown-item">Address Montgomerie</a></li>
-	<li id="menu-item-175621" class="dropdown-item menu-item menu-item-type-custom menu-item-object-custom current-menu-item active menu-item-175621 nav-item"><a href="/pages/index.php" class="dropdown-item" aria-current="page">Address Sky View</a></li>
+	<li id="menu-item-175621" class="dropdown-item menu-item menu-item-type-custom menu-item-object-custom current-menu-item active menu-item-175621 nav-item"><a href="<?= $homePrefix ?>#page-top" class="dropdown-item" aria-current="page">Address Sky View</a></li>
 	<li id="menu-item-175624" class="dropdown-item menu-item menu-item-type-custom menu-item-object-custom menu-item-175624 nav-item"><a href="/en/hotels/palace-downtown/" class="dropdown-item">Palace Downtown</a></li>
 	<li id="menu-item-175625" class="dropdown-item menu-item menu-item-type-custom menu-item-object-custom menu-item-175625 nav-item"><a href="/en/hotels/palace-dubai-creek-harbour/" class="dropdown-item">Palace Dubai Creek Harbour</a></li>
 	<li id="menu-item-175627" class="dropdown-item hotel-nav-sub-heading menu-item menu-item-type-custom menu-item-object-custom menu-item-175627 nav-item"><a href="#" class="dropdown-item">Fujairah</a></li>
@@ -61,21 +78,21 @@
 	<li id="menu-item-175638" class="dropdown-item menu-item menu-item-type-custom menu-item-object-custom menu-item-175638 nav-item"><a href="/en/hotels/address-istanbul/" class="dropdown-item">Address Istanbul</a></li>
 </div></ul>
 </li>
-<li id="menu-item-29631" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-29631 nav-item"><a href="/pages/rooms-and-suites/index.php" class="nav-link">Rooms and Suites</a></li>
-<li id="menu-item-2838" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2838 nav-item"><a href="/pages/residences/index.php" class="nav-link">Residences</a></li>
-<li id="menu-item-2839" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2839 nav-item"><a href="/pages/dining/index.php" class="nav-link">Dining</a></li>
-<li id="menu-item-2840" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2840 nav-item"><a href="/pages/wellness/index.php" class="nav-link">Wellness</a></li>
-<li id="menu-item-2841" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2841 nav-item"><a href="/pages/events/index.php" class="nav-link">Events</a></li>
+<li id="menu-item-29631" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-29631 nav-item"><a href="<?= $homePrefix ?>#accommodation" class="nav-link">Rooms and Suites</a></li>
+<li id="menu-item-2838" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2838 nav-item"><a href="<?= $homePrefix ?>#accommodation" class="nav-link">Residences</a></li>
+<li id="menu-item-2839" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2839 nav-item"><a href="<?= $homePrefix ?>#highlights" class="nav-link">Dining</a></li>
+<li id="menu-item-2840" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2840 nav-item"><a href="<?= $homePrefix ?>#highlights" class="nav-link">Wellness</a></li>
+<li id="menu-item-2841" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2841 nav-item"><a href="<?= $homePrefix ?>#events" class="nav-link">Events</a></li>
           </ul>
 
                     <div id="work-area" class="work-area-class">
             <!-- Add your content here -->
             <ul class="navbar-nav work-navbar-nav">
-              <li id="menu-item-175954" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-175954 nav-item"><a href="/pages/photos-and-videos/index.php" class="nav-link">Gallery</a></li>
-<li id="menu-item-175955" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-175955 nav-item"><a href="/pages/offers/index.php" class="nav-link">Offers</a></li>
-<li id="menu-item-175956" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-175956 nav-item"><a href="/pages/amenities/index.php" class="nav-link">Amenities</a></li>
+              <li id="menu-item-175954" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-175954 nav-item"><a href="<?= $homePrefix ?>#highlights" class="nav-link">Gallery</a></li>
+<li id="menu-item-175955" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-175955 nav-item"><a href="<?= $homePrefix ?>#featured-offer" class="nav-link">Offers</a></li>
+<li id="menu-item-175956" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-175956 nav-item"><a href="<?= $homePrefix ?>#amenities" class="nav-link">Amenities</a></li>
 <li id="menu-item-175965" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-175965 nav-item"><a target="_blank" rel="noopener noreferrer" href="/dependencies/external/www.google.co.in/maps/place/Address+Sky+View/@25.2015914,55.2683494,17z/data=!3m1!4b1!4m8!3m7!1s0x3e5f43859586ed13:0xe1103d783cf1f2f1!5m2!4m1!1i2!8m2!3d25.2015914!4d55.2705381" class="nav-link">Location</a></li>
-<li id="menu-item-175968" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-175968 nav-item"><a href="/pages/address-sky-view-360-tour/index.php" class="nav-link">360 Tour</a></li>
+<li id="menu-item-175968" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-175968 nav-item"><a href="<?= $homePrefix ?>#contact-details" class="nav-link">360 Tour</a></li>
             </ul>
           </div>
           
@@ -192,7 +209,7 @@
 <li id="menu-item-17838" class="dropdown-item menu-item menu-item-type-post_type menu-item-object-page menu-item-17838 nav-item"><a href="/en/hotels/address-dubai-mall/" class="nav-link">Address Dubai Mall</a></li>
 <li id="menu-item-96332" class="dropdown-item menu-item menu-item-type-post_type menu-item-object-page menu-item-96332 nav-item"><a href="/en/hotels/address-creek-harbour/" class="nav-link">Address Creek Harbour</a></li>
 <li id="menu-item-17828" class="dropdown-item menu-item menu-item-type-post_type menu-item-object-page menu-item-17828 nav-item"><a href="/en/hotels/address-montgomerie/" class="nav-link">Address Montgomerie</a></li>
-<li id="menu-item-17836" class="dropdown-item menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-3739 current_page_item active menu-item-17836 nav-item"><a href="/pages/index.php" class="nav-link" aria-current="page">Address Sky View</a></li>
+<li id="menu-item-17836" class="dropdown-item menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-3739 current_page_item active menu-item-17836 nav-item"><a href="<?= $homePrefix ?>#page-top" class="nav-link" aria-current="page">Address Sky View</a></li>
 <li id="menu-item-17843" class="dropdown-item menu-item menu-item-type-post_type menu-item-object-page menu-item-17843 nav-item"><a href="/en/hotels/palace-downtown/" class="nav-link">Palace Downtown</a></li>
 <li id="menu-item-156297" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-156297 nav-item"><a href="/en/hotels/palace-dubai-creek-harbour/" class="nav-link">Palace Dubai Creek Harbour</a></li>
 <li id="menu-item-19776" class="dropdown-item nav-link hotel-nav-sub-heading menu-item menu-item-type-custom menu-item-object-custom menu-item-19776 nav-item"><a href="#" class="nav-link">Fujairah</a></li>

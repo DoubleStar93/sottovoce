@@ -1895,6 +1895,7 @@ if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_c
       var menuOpen = nav.classList.contains('menu-open');
       var dropdownOpen = !!document.querySelector('#nav-main .dropdown-menu.show, #nav-main .login-dropdown.show');
       var shouldUseDark = window.scrollY > 24 || menuOpen || dropdownOpen;
+      nav.classList.toggle('scrolled-nav', shouldUseDark);
 
       nav.classList.toggle('darkHeader', shouldUseDark);
       if (blackLogo && whiteLogo) {
