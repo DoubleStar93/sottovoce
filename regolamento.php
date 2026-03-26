@@ -2,29 +2,29 @@
 <!doctype html>
 <html lang="it">
 <?php include __DIR__ . '/pages/_partials/head.php'; ?>
-<body class="page-template page-template-default page page-id-3739">
+<body class="page-template page-template-default page page-id-190574">
 <div id="page" class="site">
 <?php include __DIR__ . '/pages/_partials/header.php'; ?>
 <main class="site-main">
   <section class="page-hero" style="min-height:62vh;display:flex;align-items:flex-end;background-image:linear-gradient(180deg,rgba(0,0,0,.55),rgba(0,0,0,.45)),url('/dependencies/img/wp-content/uploads/2026/01/ASV-Infinity-Pool-5-1-e1736344266192.jpg');background-size:cover;background-position:center;">
     <div class="container pb-5">
-      <h1 class="display-1-72 text-white mb-2">Sottovoce</h1>
-      <p class="body-2 text-white mb-0">Cucina contemporanea, atmosfera elegante e servizio curato.</p>
+      <h1 class="display-1-72 text-white mb-2">Regolamento</h1>
+      <p class="body-2 text-white mb-0">Linee guida semplici per garantire un'esperienza piacevole a tutti gli ospiti.</p>
     </div>
   </section>
   <section class="subtitle-title-desc pt-5">
     <div class="container text-center">
-      <h2 class="display-1-72 font-48-mobile mt-4 text-uppercase title-pink">Sottovoce</h2>
-      <p class="body-2 description--text">Un ristorante contemporaneo con cucina italiana stagionale, servizio elegante e atmosfera rilassata.</p>
+      <h2 class="display-1-72 font-48-mobile mt-4 text-uppercase title-pink">Regolamento</h2>
+      <p class="body-2 description--text">Per garantire la migliore esperienza: puntualita, comunicazione allergeni e rispetto degli altri ospiti.</p>
     </div>
   </section>
   <div class="container individual-homepage-featured-offer">
     <div class="row g-0 align-items-center text-center justify-content-between">
       <div class="col-12 col-lg-6 inline-left show-on-scroll">
         <div class="content-box">
-          <h5 class="eyebrow-text">Esperienza</h5>
-          <h2 class="offers-section-item-heading text-center display-1-72 font-56-mobile">Cena con Vista</h2>
-          <p class="body-2 mb-0 mb-lg-5">Un percorso degustazione che cambia con le stagioni, pensato per valorizzare ingredienti locali.</p>
+          <h5 class="eyebrow-text">Linee guida</h5>
+          <h2 class="offers-section-item-heading text-center display-1-72 font-56-mobile">Informazioni Utili</h2>
+          <p class="body-2 mb-0 mb-lg-5">Il tavolo e mantenuto 15 minuti oltre l'orario prenotato. Per gruppi superiori a 8 persone e richiesta conferma anticipata.</p>
         </div>
       </div>
       <div class="col-12 col-lg-6 p-0 inline-right show-on-scroll image-zoom-animation img-shadow">
@@ -36,15 +36,15 @@
   </div>
   <section style="padding:40px 0;background:#ffffff;">
     <div class="container" style="color:#25282d;">
-      <h3 style="margin-bottom:12px;">Esempio contenuti</h3>
-      <div class="row g-3">
-        <div class="col-12 col-md-4"><div style="border:1px solid #d9d9d9;padding:16px;">Piatto firma: Risotto al limone e gambero rosso.</div></div>
-        <div class="col-12 col-md-4"><div style="border:1px solid #d9d9d9;padding:16px;">Carta vini: oltre 120 etichette italiane.</div></div>
-        <div class="col-12 col-md-4"><div style="border:1px solid #d9d9d9;padding:16px;">Prenotazioni: consigliata conferma anticipata.</div></div>
-      </div>
+      <h3 style="margin-bottom:12px;">Esempio regole</h3>
+      <ul style="margin:0;padding-left:18px;">
+        <li>Ritardo massimo accettato: 15 minuti.</li>
+        <li>Per gruppi da 8+ persone e richiesto un recapito confermato.</li>
+        <li>Allergeni: informarci prima dell'ordinazione.</li>
+        <li>Dress code consigliato: smart casual.</li>
+      </ul>
     </div>
   </section>
-  <?php include __DIR__ . '/pages/_partials/home-faq.php'; ?>
 </main>
 <?php include __DIR__ . '/pages/_partials/footer.php'; ?>
 </div>

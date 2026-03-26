@@ -524,4 +524,9 @@ html[dir=rtl] .individual-homepage-experience-section .overlap-btn-new-block,htm
 		<noscript><style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}</style></noscript>  
   
   <!-- <link href="/dependencies/external/fonts.googleapis.com/css2-family-Lato-wght-300-400-display-swap.bin" rel="stylesheet">  -->
-<meta name="generator" content="WP Rocket 3.17.3.1" data-wpr-features="wpr_lazyload_iframes wpr_image_dimensions wpr_cache_webp wpr_cdn wpr_desktop wpr_dns_prefetch"></head>
+<meta name="generator" content="WP Rocket 3.17.3.1" data-wpr-features="wpr_lazyload_iframes wpr_image_dimensions wpr_cache_webp wpr_cdn wpr_desktop wpr_dns_prefetch">
+<style>
+::selection { background: #d9c7a1 !important; color: #25282d !important; }
+::-moz-selection { background: #d9c7a1 !important; color: #25282d !important; }
+</style>
+</head>
