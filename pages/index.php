@@ -3503,6 +3503,55 @@ Each of these dining establishments contributes to the rich tapestry of gastrono
   }]
 }
 </script>
+<div class="container text-center pt-5">
+  <h2 class="pt-4 mb-4 pb-3 eyebrow-dark">ADDRESS SKY VIEW AMENITIES</h2>
+</div>
+<div class="wp-block-group container-fluid white-bg mb-5 pb-5">
+  <div class="wp-block-group__inner-container is-layout-flow wp-block-group-is-layout-flow">
+    <div class="container-fluid pt-5">
+      <div class="row position-relative">
+        <div class="col-12 p-0 px-lg-3">
+          <img width="1284" height="375" decoding="async" src="/dependencies/img/wp-content/uploads/2020/10/INFINITY-POOL-DAY-ADDRESS-SKY-VIEW-copy.jpg" alt="Infinity pool at Address Sky View" class="img-fluid amenities-large-img p-0 px-lg-3">
+        </div>
+        <div class="amenities-title-box ">
+          <h2 class="display-2-48">Infinity Pool</h2>
+        </div>
+        <hr class="amenities-title-box-hr">
+      </div>
+      <div class="row justify-content-center text-center">
+        <div class="col-12 col-lg-8 amenities-list-col">
+          <p class="text-center mt-5 mb-4 body-4">Relax in style at our breathtaking infinity pool. A large sun-lounging deck, private cabanas, a bar with both pool and dry deck seating - the Address Sky View pool deck is all of that and more.</p>
+          <ul class="amenities-list text-left body-4">
+            <li class="d-flex align-items-center mb-2"><span class="generic-icon px-2"></span>Located on the iconic Sky Deck</li>
+            <li class="d-flex align-items-center mb-2"><span class="generic-icon px-2"></span>Access to 18 years and above.</li>
+            <li class="d-flex align-items-center mb-2"><span class="generic-icon px-2"></span>Timing: 9:00 AM till Sunset</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid pt-5">
+      <div class="row position-relative">
+        <div class="col-12 p-0 px-lg-3">
+          <img width="1284" height="375" decoding="async" src="/dependencies/img/wp-content/uploads/2020/10/KIDS-CLUB-ADDRESS-SKY-VIEW-copy.jpg" alt="Qix Kids Club at Address Sky View" class="img-fluid amenities-large-img p-0 px-lg-3">
+        </div>
+        <div class="amenities-title-box ">
+          <h2 class="display-2-48">Qix Kids Club</h2>
+        </div>
+        <hr class="amenities-title-box-hr">
+      </div>
+      <div class="row justify-content-center text-center">
+        <div class="col-12 col-lg-8 amenities-list-col">
+          <p class="text-center mt-5 mb-4 body-4">Enjoy a well-earned moment for yourself and leave your little ones to us. Our qualified team of childcare professionals will spark their imagination with educational games, fun activities and craft sessions they will love.</p>
+          <ul class="amenities-list text-left body-4">
+            <li class="d-flex align-items-center mb-2"><span class="generic-icon px-2"></span>For children between the ages of 4 and 12</li>
+            <li class="d-flex align-items-center mb-2"><span class="generic-icon px-2"></span>Babysitting services to be booked 24 hours in advance.</li>
+            <li class="d-flex align-items-center mb-2"><span class="generic-icon px-2"></span>Timing: 10am to 7pm</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 </div>
 
 <?php include __DIR__ . '/_partials/footer.php'; ?>

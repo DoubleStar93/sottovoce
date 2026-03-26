@@ -1,5 +1,10 @@
 <header id="masthead" class="site-header custom-navbar-page nav-individual more-dropdown-navbar">
   <div id="to-top"></div>
+  <style>
+    #nav-main .toggler-icon-animated .fa-times { display: none; }
+    #nav-main.menu-open .toggler-icon-animated .fa-bars { display: none; }
+    #nav-main.menu-open .toggler-icon-animated .fa-times { display: inline-block; }
+  </style>
 
   <nav id="nav-main" class="navbar navbar-expand-xl fixed-top top-0 start-0 w-100 px-0 px-lg-3 py-3 py-lg-4 align-content-start global-navbar internal-nav" style="z-index: 900;">
 
@@ -15,22 +20,7 @@
 
       <!-- Mobile Search Module -->
       <div class="d-flex">
-                <div class="d-block d-xl-none whatsapp-icon-mobile">
-          <a href="/dependencies/external/api.whatsapp.com/send-phone-97142488553-text-Hi-Address-Sky-View.bin" class="nav-link " target="_blank">
-            <svg width="22" height="22" viewbox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M20.4664 2.43597C10.9087 2.43597 3.13672 10.1492 3.13672 19.6315C3.13672 23.3917 4.36218 26.8781 6.43721 29.7133L4.27275 36.0977L10.931 33.9821C13.667 35.7777 16.9437 36.8243 20.4664 36.8243C30.02 36.8243 37.7947 29.111 37.7947 19.6301C37.7947 10.1492 30.02 2.43457 20.4664 2.43457V2.43597Z" fill="url(#paint0_linear_7343_26683)"></path>
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M40.0014 19.4844C40.0014 30.2438 31.2094 38.9688 20.3647 38.9688C16.9203 38.9688 13.6855 38.0898 10.8726 36.5444L0 40L3.54363 29.5466C1.75505 26.6094 0.726612 23.1664 0.726612 19.4858C0.726612 8.72354 9.51862 0 20.3647 0C31.2108 0 40.0014 8.72354 40.0014 19.4858V19.4844ZM20.3661 3.10208C11.2597 3.10208 3.85524 10.4506 3.85524 19.4844C3.85524 23.0671 5.02201 26.3872 6.99923 29.0896L4.93817 35.1722L11.2821 33.1573C13.8881 34.8676 17.0111 35.8653 20.3661 35.8653C29.4683 35.8653 36.8756 28.5167 36.8756 19.4844C36.8756 10.452 29.4683 3.10208 20.3661 3.10208ZM30.2816 23.9726C30.16 23.7728 29.8386 23.654 29.3593 23.4151C28.8772 23.1761 26.5102 22.0205 26.0686 21.8612C25.6285 21.702 25.3043 21.6223 24.9857 22.1002C24.6643 22.5781 23.7421 23.654 23.4598 23.9726C23.1803 24.2926 22.8995 24.3303 22.4188 24.0914C21.9367 23.8524 20.3843 23.3466 18.5468 21.7215C17.1173 20.4541 16.1504 18.8919 15.8681 18.414C15.5886 17.9361 15.8401 17.679 16.0791 17.4401C16.2957 17.2249 16.5612 16.8826 16.8015 16.6045C17.0432 16.325 17.1229 16.1238 17.2836 15.8052C17.4443 15.4866 17.3646 15.2086 17.2431 14.9696C17.1243 14.7307 16.1601 12.3804 15.7591 11.4232C15.3609 10.4688 14.9584 10.5037 14.6762 10.5037C14.3939 10.5037 13.8769 10.5876 13.8769 10.5876C13.8769 10.5876 12.9113 10.7064 12.4712 11.1842C12.031 11.6621 10.7874 12.8177 10.7874 15.1666C10.7874 17.5155 12.5103 19.789 12.752 20.1062C12.9938 20.4262 16.0805 25.4063 20.9753 27.3178C25.8688 29.2294 25.8688 28.5922 26.7519 28.5111C27.6336 28.4329 29.5997 27.3569 30.0007 26.2405C30.4017 25.1254 30.4017 24.1682 30.283 23.9698L30.2816 23.9726Z" fill="white"></path>
-              <defs>
-              <lineargradient id="paint0_linear_7343_26683" x1="20.465" y1="2.43597" x2="20.465" y2="36.8257" gradientunits="userSpaceOnUse">
-              <stop stop-color="#4AC14B"></stop>
-              <stop offset="1" stop-color="#06853A"></stop>
-              </lineargradient>
-              </defs>
-              </svg>
-
-          </a>
-        </div>
-                <button class="navbar-toggler ml-2 pr-3 px-lg-3 px-xl-0 bootstrap-collapse-navbar" type="button" data-toggle="collapse" data-target="#bootscore-navbar-collapse" aria-controls="#cw-navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler ml-2 pr-3 px-lg-3 px-xl-0 bootstrap-collapse-navbar" type="button" data-toggle="collapse" data-target="#bootscore-navbar-collapse" aria-controls="#cw-navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
           <div class="toggler-icon-animated">
             <i class="fal fa-bars"></i>
             <i class="fal fa-times"></i>
@@ -105,23 +95,7 @@
 
         <div class="d-flex flex-xl-row flex-column justify-content-end right-nav-container  h-100" id="right-side-elements">
           <ul class="navbar-nav rightlinks  cntplink align-items-xl-end fit-content justify-content-  ">
-            <li class="nav-item  manageBooking-mobile d-block d-lg-none">
-              <a class="nav-link px-lg-0" href="/en/modify-booking-stay-dine/">Manage Booking              </a>
-            </li>
-                        <li class="nav-item d-xl-block d-none sunaina">
-              <a href="/dependencies/external/api.whatsapp.com/send-phone-97142488553-text-Hi-Address-Sky-View.bin" class="nav-link" target="_blank">
-                 <svg width="22" height="22" viewbox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M20.4664 2.43597C10.9087 2.43597 3.13672 10.1492 3.13672 19.6315C3.13672 23.3917 4.36218 26.8781 6.43721 29.7133L4.27275 36.0977L10.931 33.9821C13.667 35.7777 16.9437 36.8243 20.4664 36.8243C30.02 36.8243 37.7947 29.111 37.7947 19.6301C37.7947 10.1492 30.02 2.43457 20.4664 2.43457V2.43597Z" fill="url(#paint0_linear_2)"></path>
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M40.0014 19.4844C40.0014 30.2438 31.2094 38.9688 20.3647 38.9688C16.9203 38.9688 13.6855 38.0898 10.8726 36.5444L0 40L3.54363 29.5466C1.75505 26.6094 0.726612 23.1664 0.726612 19.4858C0.726612 8.72354 9.51862 0 20.3647 0C31.2108 0 40.0014 8.72354 40.0014 19.4858V19.4844ZM20.3661 3.10208C11.2597 3.10208 3.85524 10.4506 3.85524 19.4844C3.85524 23.0671 5.02201 26.3872 6.99923 29.0896L4.93817 35.1722L11.2821 33.1573C13.8881 34.8676 17.0111 35.8653 20.3661 35.8653C29.4683 35.8653 36.8756 28.5167 36.8756 19.4844C36.8756 10.452 29.4683 3.10208 20.3661 3.10208ZM30.2816 23.9726C30.16 23.7728 29.8386 23.654 29.3593 23.4151C28.8772 23.1761 26.5102 22.0205 26.0686 21.8612C25.6285 21.702 25.3043 21.6223 24.9857 22.1002C24.6643 22.5781 23.7421 23.654 23.4598 23.9726C23.1803 24.2926 22.8995 24.3303 22.4188 24.0914C21.9367 23.8524 20.3843 23.3466 18.5468 21.7215C17.1173 20.4541 16.1504 18.8919 15.8681 18.414C15.5886 17.9361 15.8401 17.679 16.0791 17.4401C16.2957 17.2249 16.5612 16.8826 16.8015 16.6045C17.0432 16.325 17.1229 16.1238 17.2836 15.8052C17.4443 15.4866 17.3646 15.2086 17.2431 14.9696C17.1243 14.7307 16.1601 12.3804 15.7591 11.4232C15.3609 10.4688 14.9584 10.5037 14.6762 10.5037C14.3939 10.5037 13.8769 10.5876 13.8769 10.5876C13.8769 10.5876 12.9113 10.7064 12.4712 11.1842C12.031 11.6621 10.7874 12.8177 10.7874 15.1666C10.7874 17.5155 12.5103 19.789 12.752 20.1062C12.9938 20.4262 16.0805 25.4063 20.9753 27.3178C25.8688 29.2294 25.8688 28.5922 26.7519 28.5111C27.6336 28.4329 29.5997 27.3569 30.0007 26.2405C30.4017 25.1254 30.4017 24.1682 30.283 23.9698L30.2816 23.9726Z" fill="white"></path>
-                  <defs>
-                  <lineargradient id="paint0_linear_2" x1="20.465" y1="2.43597" x2="20.465" y2="36.8257" gradientunits="userSpaceOnUse">
-                  <stop stop-color="#4AC14B"></stop>
-                  <stop offset="1" stop-color="#06853A"></stop>
-                  </lineargradient>
-                  </defs>
-                  </svg>
-              </a>
-            </li>
+            
                         <li class="nav-item">
               <!--login -->
 <div class="dropdown login-dropdown">
@@ -201,16 +175,11 @@
       </div>
     </div>
 
-    <a class="nav-link d-none d-lg-block manageBooking-global manageBooking-desktop managebooking-individual " href="/en/modify-booking-stay-dine/">Manage Booking</a>
-    <div class="global-home-link-dropdown-box dropdown">
-
-      <a class="dropdown-toggle global-home-link-dropdown global-home-link /en/" id="dropdownMenuButton1" href="/en/">
-        Address Hotels + Resorts</a>
+    
+    <div class="global-home-link-dropdown-box dropdown d-none" aria-hidden="true">
+      <a class="dropdown-toggle global-home-link-dropdown global-home-link /en/" id="dropdownMenuButton1" href="/en/"></a>
       <ul class="dropdown-menu d-none" aria-labelledby="dropdownMenuButton1">
         <div class="container global-home-link-dropdown-inner">
-          <a href="/en/" class=" hotels-resort-homepage-link">
-            <p>Address Hotels + Resorts</p>
-          </a>
           <div class="global-home-link-dropdown-inner-box w-100">
 
             <button type="button" class="close" data-dismiss="modal" id="modelclosesign"><i class="fal fa-times"></i></button>
