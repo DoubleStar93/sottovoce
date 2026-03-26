@@ -18,6 +18,10 @@ $homePrefix = $isOnePageHome ? '' : '/pages/index.php';
     #nav-main.scrolled-nav .wpml-ls-legacy-dropdown-click a {
       color: #25282d !important;
     }
+    #nav-main #black_logo { display: none !important; }
+    #nav-main #white_logo { display: block !important; }
+    #nav-main.scrolled-nav #black_logo { display: block !important; }
+    #nav-main.scrolled-nav #white_logo { display: none !important; }
     #nav-main .toggler-icon-animated .fa-times { display: none; }
     #nav-main.menu-open .toggler-icon-animated .fa-bars { display: none; }
     #nav-main.menu-open .toggler-icon-animated .fa-times { display: inline-block; }

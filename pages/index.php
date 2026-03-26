@@ -284,22 +284,6 @@ document.addEventListener("DOMContentLoaded", function() {
 .collapse:not(.show) {
 display: block !important;
 }
-@media (min-width: 320px) and (max-width: 1024px) {
-#black_logo {
-display: block !important;
-}
-#white_logo {
-display: none !important;
-}
-}
-@media (min-width: 1025px) and (max-width: 1140px) {
-#black_logo {
-display: block !important;
-}
-#white_logo {
-display: none !important;
-}
-}
 @media (max-width: 1199px) {
 #work-area {
 display:block !important
@@ -367,8 +351,6 @@ document.addEventListener("DOMContentLoaded", function() {
     const dropdownMenus = document.querySelectorAll(
       '.navbar-nav .menu-item-has-children .dropdown-menu');
     const navbar = document.querySelector('#nav-main.navbar');
-    const blackLogo = document.querySelector('#black_logo');
-    const whiteLogo = document.querySelector('#white_logo');
     const workAreaMoreDropdown = document.querySelector('#work-area-dropss');
     const newBookingWidget = document.querySelector('.new-booking-widget');
     const dropdownToggles = document.querySelectorAll('.navbar-nav .menu-item-has-children > a');
@@ -404,8 +386,6 @@ document.addEventListener("DOMContentLoaded", function() {
       // Toggle dark header and logos based on dropdown state
       if (isAnyMenuOpen || languageSwitcherOpen) {
         navbar.classList.add('darkHeader');
-        whiteLogo.style.setProperty('display', 'none', 'important');
-        blackLogo.style.setProperty('display', 'block', 'important');
 
 
         // Set z-index to allow dropdowns to appear over the widget
@@ -415,8 +395,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
       } else {
         navbar.classList.remove('darkHeader');
-        whiteLogo.style.display = 'block';
-        blackLogo.style.display = 'none';
 
         // Reset z-index to default when dropdowns are closed
         if (newBookingWidget) {
@@ -855,11 +833,6 @@ document.querySelector('#nav-main .navbar-toggler').addEventListener('click', fu
   navMain.classList.toggle('individual-home-navbar');
   document.querySelector('#dropdownMenuButton1').classList.toggle('darkgrey');
 
-  if (!navMain.classList.contains('darkHeader')) {
-    document.querySelectorAll('.navbar-brand .logo').forEach(logo => logo.style.display = logo
-      .style
-      .display === 'none' ? 'block' : 'none');
-  }
   document.documentElement.classList.toggle('overflow-hidden');
   document.body.classList.toggle('overflow-hidden');
 });
@@ -909,10 +882,6 @@ if (globalHomeLinkDropdownBox) {
 
 
 <!----------------------------- Specific Styles and Scripts------------------------------->
-<!--
-<link rel="stylesheet" href="/dependencies/external/www-addresshotels-com.azureedge.net/wp-content/themes/emaar-projects/vendor/css/individual-home.css">
-
--->
 
 <script>
    $(document).ready(function() {
@@ -966,7 +935,7 @@ if (globalHomeLinkDropdownBox) {
     document.body.appendChild(scriptTag);
     $(document.body).prepend('<noscript class="quicktext-noscript"></noscript>');
     $(".quicktext-noscript").html(
-        `<a href="/dependencies/external/www.quicktext.im/index.bin" title="Hotel AI Chabot and Guest Communication">Quicktext hotel chatbot</a>`
+        `<span title="Hotel AI Chabot and Guest Communication">Quicktext hotel chatbot</span>`
     );
   }
 
@@ -1161,7 +1130,7 @@ if (globalHomeLinkDropdownBox) {
       <a class="bluelink secondary-medium" href="tel:+97148738888">
         <span class="dir-ltr">+97148738888</span>
       </a>
-      <a href="/dependencies/external/www.google.co.in/maps/place/Address+Sky+View/@25.2015914,55.2683494,17z/data=!3m1!4b1!4m8!3m7!1s0x3e5f43859586ed13:0xe1103d783cf1f2f1!5m2!4m1!1i2!8m2!3d25.2015914!4d55-hl-en.2705381" id="pseudo_map_link" target="_blank">Location      </a>
+      <a href="#contact-details" id="pseudo_map_link">Location      </a>
       <a href="#contact-details">Contact Us</a>
     </p>
     <div class="hero-prenota-cta">
@@ -3370,11 +3339,7 @@ if (globalHomeLinkDropdownBox) {
 
         <div class="col-12 col-lg-7 mt-0">
 
-          <!-- # CHG3718 | 07/07/22 | Anubhav Gogoi -->
-          <!-- <a href="/dependencies/external/www.google.co.in/maps/place/Address+Sky+View/@25.2015914,55.2683494,17z/data=!3m1!4b1!4m8!3m7!1s0x3e5f43859586ed13:0xe1103d783cf1f2f1!5m2!4m1!1i2!8m2!3d25.2015914!4d55.2705381" id="pseudo_map_link" target="_blank"></a> -->
-          <!-- # CHG3718 | 07/07/22 | Anubhav Gogoi END  -->
-
-          <a href="/dependencies/external/www.google.co.in/maps/place/Address+Sky+View/@25.2015914,55.2683494,17z/data=!3m1!4b1!4m8!3m7!1s0x3e5f43859586ed13:0xe1103d783cf1f2f1!5m2!4m1!1i2!8m2!3d25.2015914!4d55-hl-en.2705381" id="pseudo_map_link" target="_blank"></a>
+          <a href="#contact-details" id="pseudo_map_link"></a>
 
 
           <div class="is-visible">
@@ -3531,7 +3496,7 @@ if (globalHomeLinkDropdownBox) {
 
           <div id="collapse6591054848" class="collapse accordionFaq-card-content" aria-labelledby="heading8" data-parent="#accordionFaq659105484">
             <div class="card-body">
-            Our offerings encompass a comprehensive array of facilities, ensuring a well-rounded and enriching experience for our guests. From the captivating “<a href="/dependencies/external/www.skyviewsdubai.com/index.bin">Sky View Observatory</a>” to the engaging Qix Kids Club, the multiple swimming pools situated on the ground level, and the mesmerizing infinity pool on Level 54, we provide diverse options for relaxation and recreation. Our spa, fitness centre, and beauty salon cater to wellness and grooming needs, while the six distinctive dining venues present a culinary journey. Additionally, we offer versatile event spaces to accommodate various occasions, further enhancing the overall experience at our establishment.              <div class="cta-btn mt-4">
+            Our offerings encompass a comprehensive array of facilities, ensuring a well-rounded and enriching experience for our guests. From the captivating “Sky View Observatory” to the engaging Qix Kids Club, the multiple swimming pools situated on the ground level, and the mesmerizing infinity pool on Level 54, we provide diverse options for relaxation and recreation. Our spa, fitness centre, and beauty salon cater to wellness and grooming needs, while the six distinctive dining venues present a culinary journey. Additionally, we offer versatile event spaces to accommodate various occasions, further enhancing the overall experience at our establishment.              <div class="cta-btn mt-4">
               </div>
             </div>
           </div>
@@ -3563,7 +3528,7 @@ if (globalHomeLinkDropdownBox) {
 
           <div id="collapse65910548410" class="collapse accordionFaq-card-content" aria-labelledby="heading10" data-parent="#accordionFaq659105484">
             <div class="card-body">
-            The Sky Views Observatory introduces a groundbreaking and unprecedented array of exhilarating experiences, featuring a unique outdoor glass slide. This extraordinary slide propels adventurous visitors from the elevated height of level 53 at 219.5 meters to level 52 at 215.5 meters, all within the confines of an enclosed and transparent glass tube. This one-of-a-kind attraction promises an unparalleled adventure, providing guests with a thrilling journey and breathtaking panoramic views of the surroundings. For bookings please visit our Sky View Observatory site and <a href="/dependencies/external/www.skyviewsdubai.com/booking.bin">Book now</a>!              <div class="cta-btn mt-4">
+            The Sky Views Observatory introduces a groundbreaking and unprecedented array of exhilarating experiences, featuring a unique outdoor glass slide. This extraordinary slide propels adventurous visitors from the elevated height of level 53 at 219.5 meters to level 52 at 215.5 meters, all within the confines of an enclosed and transparent glass tube. This one-of-a-kind attraction promises an unparalleled adventure, providing guests with a thrilling journey and breathtaking panoramic views of the surroundings. For bookings please use the Prenota button on this page.              <div class="cta-btn mt-4">
               </div>
             </div>
           </div>
