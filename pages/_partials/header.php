@@ -1,7 +1,7 @@
-<header id="masthead" class="site-header custom-navbar-page more-dropdown-navbar">
+<header id="masthead" class="site-header custom-navbar-page nav-individual more-dropdown-navbar">
   <div id="to-top"></div>
 
-  <nav id="nav-main" class="navbar navbar-expand-xl position-absolute top-0 start-0 w-100 px-0 px-lg-3 py-3 py-lg-4 align-content-start global-navbar " style="z-index: 900;">
+  <nav id="nav-main" class="navbar navbar-expand-xl fixed-top top-0 start-0 w-100 px-0 px-lg-3 py-3 py-lg-4 align-content-start global-navbar internal-nav" style="z-index: 900;">
 
     <div class="custom-navigation-expandable container-fluid px-sm-3 justify-content-lg-between align-items-lg-end mt-3 mt-lg-2">
 

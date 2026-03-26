@@ -1816,6 +1816,7 @@ var sbiajaxurl = "/internal/admin-ajax-disabled";
 <link rel='stylesheet' id='individual-homepage-corporate-section-css-css' href='/dependencies/css/wp-content/themes/emaar-projects/template-parts/dynamic-blocks/assets/css/individual-homepage-corporate-section-1.css?ver=1737511378' type='text/css' media='all'>
 <link rel='stylesheet' id='individual-homepage-contact-map-css-css' href='/dependencies/css/wp-content/themes/emaar-projects/template-parts/dynamic-blocks/assets/css/individual-homepage-contact-map.css?ver=1737511378' type='text/css' media='all'>
 <link rel='stylesheet' id='global-hotel-landing-faq-section-css' href='/dependencies/css/wp-content/themes/emaar-projects/template-parts/dynamic-blocks/assets/css/global-hotel-landing-faq-section.css?ver=1737511375' type='text/css' media='all'>
+<link rel='stylesheet' id='single-amenity-details-css-css' href='/dependencies/css/wp-content/themes/emaar-projects/template-parts/dynamic-blocks/assets/css/single-amenity-details.css?ver=1737511382' type='text/css' media='all'>
 <link rel='stylesheet' id='footer-css-css' href='/dependencies/css/wp-content/themes/emaar-projects/vendor/css/footer.css?ver=1740064444' type='text/css' media='all'>
 <link rel='stylesheet' id='dinebooking-css' href='/dependencies/css/wp-content/themes/emaar-projects/vendor/css/dinebooking.css?ver=1707315139' type='text/css' media='all'>
 <link rel='stylesheet' id='jquery.datepick-css' href='/dependencies/css/wp-content/themes/emaar-projects/vendor/css/jquery.datepick.css?ver=1707315139' type='text/css' media='all'>
@@ -1882,6 +1883,38 @@ if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_c
       }, 400);
     });
   });
+</script>
+<script>
+  (function() {
+    function syncHeaderContrast() {
+      var nav = document.getElementById('nav-main');
+      if (!nav) return;
+
+      var blackLogo = document.getElementById('black_logo');
+      var whiteLogo = document.getElementById('white_logo');
+      var menuOpen = nav.classList.contains('menu-open');
+      var dropdownOpen = !!document.querySelector('#nav-main .dropdown-menu.show, #nav-main .login-dropdown.show');
+      var shouldUseDark = window.scrollY > 24 || menuOpen || dropdownOpen;
+
+      nav.classList.toggle('darkHeader', shouldUseDark);
+      if (blackLogo && whiteLogo) {
+        blackLogo.style.display = shouldUseDark ? 'block' : 'none';
+        whiteLogo.style.display = shouldUseDark ? 'none' : 'block';
+      }
+    }
+
+    window.addEventListener('scroll', syncHeaderContrast);
+    window.addEventListener('resize', syncHeaderContrast);
+    document.addEventListener('click', function() {
+      setTimeout(syncHeaderContrast, 0);
+    });
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', syncHeaderContrast);
+    } else {
+      syncHeaderContrast();
+    }
+  })();
 </script>
 
 </div>
