@@ -149,6 +149,8 @@ foreach (array_keys($rootAssetUrls) as $rootUrl) {
     }
 }
 
+syncMissingWebfontsFromCss();
+
 foreach ($htmlFiles as $htmlFile) {
     $htmlRelative = normalizePath(substr($htmlFile, strlen($legacyRoot) + 1));
     $htmlContent = file_get_contents($htmlFile);
@@ -403,6 +405,88 @@ function sanitizeExternalReferences(string $html, string $pageDir, array $assetR
     return $html;
 }
 
+function syncMissingWebfontsFromCss(): void
+{
+    $cssFiles = new RecursiveIteratorIterator(
+        new RecursiveDirectoryIterator(OUTPUT_DEPENDENCIES_ROOT, FilesystemIterator::SKIP_DOTS)
+    );
+
+    foreach ($cssFiles as $fileInfo) {
+        if (!$fileInfo instanceof SplFileInfo || !$fileInfo->isFile()) {
+            continue;
+        }
+        if (strtolower($fileInfo->getExtension()) !== 'css') {
+            continue;
+        }
+
+        $cssPath = $fileInfo->getPathname();
+        $cssContent = file_get_contents($cssPath);
+        if (!is_string($cssContent) || $cssContent === '') {
+            continue;
+        }
+
+        $matches = [];
+        preg_match_all('/url\((["\']?)([^)"\']+)\1\)/i', $cssContent, $matches);
+        if (!isset($matches[2]) || !is_array($matches[2])) {
+            continue;
+        }
+
+        foreach ($matches[2] as $assetUrl) {
+            $asset = trim($assetUrl);
+            if ($asset === '' || str_starts_with($asset, 'data:') || str_starts_with($asset, 'http://') || str_starts_with($asset, 'https://') || str_starts_with($asset, '//')) {
+                continue;
+            }
+
+            [$assetPath] = splitUrl($asset);
+            $ext = strtolower(pathinfo($assetPath, PATHINFO_EXTENSION));
+            if (!in_array($ext, ['woff', 'woff2', 'ttf', 'eot', 'otf', 'svg'], true)) {
+                continue;
+            }
+
+            $localAbsolute = normalizePath(dirname($cssPath) . '/' . $assetPath);
+            $localAbsolute = str_replace('/', DIRECTORY_SEPARATOR, $localAbsolute);
+            if (is_file($localAbsolute)) {
+                continue;
+            }
+
+            $rootCandidate = deriveLegacyRootPathFromDependencyPath($localAbsolute);
+            if ($rootCandidate === null) {
+                continue;
+            }
+
+            $content = fetchRemoteAsset('https://www.addresshotels.com' . $rootCandidate);
+            if ($content === null) {
+                continue;
+            }
+
+            ensureDir(dirname($localAbsolute));
+            file_put_contents($localAbsolute, $content);
+        }
+    }
+}
+
+function deriveLegacyRootPathFromDependencyPath(string $localAbsolute): ?string
+{
+    $normalized = normalizePath(str_replace('\\', '/', $localAbsolute));
+    $needle = normalizePath(str_replace('\\', '/', OUTPUT_DEPENDENCIES_ROOT)) . '/';
+    if (!str_starts_with($normalized, $needle)) {
+        return null;
+    }
+
+    $relativeToDeps = substr($normalized, strlen($needle));
+    if (!is_string($relativeToDeps) || $relativeToDeps === '') {
+        return null;
+    }
+
+    // remove dependency type prefix (css/js/img/fonts/media/docs/vendor)
+    $parts = explode('/', $relativeToDeps);
+    if (count($parts) < 2) {
+        return null;
+    }
+    array_shift($parts);
+    return '/' . implode('/', $parts);
+}
+
 function injectInternalOnlyRuntimeGuard(string $html): string
 {
     $guard = <<<'HTML'
@@ -415,6 +499,29 @@ function injectInternalOnlyRuntimeGuard(string $html): string
     } catch (e) {
       return true;
     }
+  }
+
+  // WPML legacy global used by inline theme scripts.
+  if (typeof window.ICL === 'undefined') {
+    window.ICL = 'en';
+  }
+  if (typeof window.ICL_LANGUAGE_CODE === 'undefined') {
+    window.ICL_LANGUAGE_CODE = window.ICL;
+  }
+  if (typeof window.google === 'undefined') {
+    window.google = {
+      maps: {
+        event: { addDomListener: function () {} },
+        LatLng: function () {},
+        MapTypeId: { ROADMAP: 'roadmap' },
+        Map: function () {},
+        MarkerImage: function () {},
+        Size: function () {},
+        Point: function () {},
+        Marker: function () {},
+        InfoWindow: function () {}
+      }
+    };
   }
 
   var originalFetch = window.fetch;

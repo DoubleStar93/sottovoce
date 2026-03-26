@@ -15,6 +15,29 @@
     }
   }
 
+  // WPML legacy global used by inline theme scripts.
+  if (typeof window.ICL === 'undefined') {
+    window.ICL = 'en';
+  }
+  if (typeof window.ICL_LANGUAGE_CODE === 'undefined') {
+    window.ICL_LANGUAGE_CODE = window.ICL;
+  }
+  if (typeof window.google === 'undefined') {
+    window.google = {
+      maps: {
+        event: { addDomListener: function () {} },
+        LatLng: function () {},
+        MapTypeId: { ROADMAP: 'roadmap' },
+        Map: function () {},
+        MarkerImage: function () {},
+        Size: function () {},
+        Point: function () {},
+        Marker: function () {},
+        InfoWindow: function () {}
+      }
+    };
+  }
+
   var originalFetch = window.fetch;
   if (typeof originalFetch === 'function') {
     window.fetch = function (input, init) {
