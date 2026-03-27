@@ -1,0 +1,431 @@
+/**
+ * Sottovoce luxury shell — verde #3c3e21, tipografia chiara, navbar.
+ * Applicare: <body class="sottovoce-luxury"> (insieme a id="page-top" sulla home se serve ancora l’ancora).
+ */
+
+body.sottovoce-luxury,
+body.sottovoce-luxury #page,
+body.sottovoce-luxury .site {
+  background: #3c3e21;
+}
+
+body.sottovoce-luxury .site-main,
+body.sottovoce-luxury .site-main > section,
+body.sottovoce-luxury .site-main > div,
+body.sottovoce-luxury .site-main .container,
+body.sottovoce-luxury .site-main .container-fluid,
+body.sottovoce-luxury .site-main .row,
+body.sottovoce-luxury .site-main [class*="col-"] {
+  background-color: #3c3e21 !important;
+  background-image: none !important;
+}
+
+body.sottovoce-luxury .site-main h1,
+body.sottovoce-luxury .site-main h2,
+body.sottovoce-luxury .site-main h3,
+body.sottovoce-luxury .site-main h4,
+body.sottovoce-luxury .site-main h5,
+body.sottovoce-luxury .site-main p,
+body.sottovoce-luxury .site-main li,
+body.sottovoce-luxury .site-main span,
+body.sottovoce-luxury .site-main a {
+  color: #ffffff !important;
+}
+
+body.sottovoce-luxury,
+body.sottovoce-luxury * {
+  color: #ffffff !important;
+}
+
+body.sottovoce-luxury h2 {
+  text-shadow:
+    0 0 8px rgba(255, 255, 255, 0.95),
+    0 0 22px rgba(255, 255, 255, 0.65),
+    0 0 44px rgba(255, 255, 255, 0.4),
+    0 0 72px rgba(255, 255, 255, 0.22) !important;
+}
+
+body.sottovoce-luxury input::placeholder,
+body.sottovoce-luxury textarea::placeholder {
+  color: #ffffff !important;
+  opacity: 1;
+}
+
+body.sottovoce-luxury .wp-block-group.white-bg,
+body.sottovoce-luxury .wp-block-group.white-bg .wp-block-group__inner-container {
+  background-color: #3c3e21 !important;
+  background-image: none !important;
+}
+
+body.sottovoce-luxury .amenities-title-box {
+  background-color: #3c3e21 !important;
+  background-image: none !important;
+  border: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+}
+
+body.sottovoce-luxury #nav-main,
+body.sottovoce-luxury nav.global-navbar,
+body.sottovoce-luxury nav.global-navbar.internal-nav,
+body.sottovoce-luxury .individual-home-navbar {
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+body.sottovoce-luxury #nav-main.darkHeader,
+body.sottovoce-luxury #nav-main.menu-open,
+body.sottovoce-luxury #nav-main.individual-home-navbar,
+body.sottovoce-luxury nav.global-navbar.darkHeader,
+body.sottovoce-luxury nav.global-navbar.internal-nav.darkHeader {
+  background-color: #3c3e21 !important;
+  background-image: none !important;
+}
+
+body.sottovoce-luxury #nav-main .nav-link,
+body.sottovoce-luxury #nav-main .wpml-ls-legacy-dropdown-click a,
+body.sottovoce-luxury #nav-main .toggler-icon-animated i {
+  color: #ffffff !important;
+}
+
+body.sottovoce-luxury #nav-main #black_logo {
+  display: none !important;
+}
+
+body.sottovoce-luxury #nav-main #white_logo {
+  display: block !important;
+}
+
+/* Scroll: stesso verde + voci sempre bianche (il tema usa .scrolled-nav con testo scuro) */
+body.sottovoce-luxury #nav-main.scrolled-nav {
+  background-color: #3c3e21 !important;
+}
+
+body.sottovoce-luxury #nav-main.scrolled-nav .navbar-nav .nav-link,
+body.sottovoce-luxury #nav-main.scrolled-nav .wpml-ls-legacy-dropdown-click a,
+body.sottovoce-luxury #nav-main.scrolled-nav .navbar-nav a,
+body.sottovoce-luxury #nav-main.scrolled-nav .dropdown-toggle,
+body.sottovoce-luxury #nav-main.scrolled-nav .toggler-icon-animated i {
+  color: #ffffff !important;
+}
+
+body.sottovoce-luxury #nav-main.scrolled-nav #black_logo {
+  display: none !important;
+}
+
+body.sottovoce-luxury #nav-main.scrolled-nav #white_logo {
+  display: block !important;
+}
+
+/* Menu primario ridotto (4 voci): evita min-width del tema su .static-area */
+@media (min-width: 1200px) and (max-width: 1350px) {
+  body.sottovoce-luxury .more-dropdown-navbar .static-area.sottovoce-primary-nav {
+    min-width: 0 !important;
+  }
+}
+
+/*
+ * Navbar Sottovoce luxury: menu solo tramite overlay (hamburger sempre visibile).
+ * Overlay a schermo intero, stesso verde della pagina, voci centrate verticalmente giganti.
+ */
+body.sottovoce-luxury #nav-main.sottovoce-navbar-overlay-mode {
+  z-index: 1000 !important;
+}
+
+body.sottovoce-luxury .sottovoce-navbar-shell {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+body.sottovoce-luxury .sottovoce-navbar-shell .sottovoce-nav-toggler {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+/*
+ * Un solo “apri” (hamburger) e un solo “chiudi” (× nell’overlay).
+ * Il tema mostra fa-times nel toggler quando .menu-open → X duplicata sopra l’overlay in chiusura.
+ */
+body.sottovoce-luxury #nav-main .toggler-icon-animated .fa-times {
+  display: none !important;
+}
+
+body.sottovoce-luxury #nav-main.menu-open .sottovoce-nav-toggler {
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+/* Tema: #bootscore-navbar-collapsedd { display:flex } da 1198px — senza overlay chiuso */
+body.sottovoce-luxury
+  .custom-navbar-page
+  #bootscore-navbar-collapsedd.sottovoce-navbar-overlay-panel.collapse:not(.show):not(.collapsing) {
+  display: none !important;
+}
+
+body.sottovoce-luxury #bootscore-navbar-collapsedd.sottovoce-navbar-overlay-panel {
+  max-height: none !important;
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+  -webkit-overflow-scrolling: touch;
+}
+
+/*
+ * Fase Bootstrap .collapsing (prima di .show in apertura): senza questo il pannello
+ * resta opacità 1 per un frame e poi parte l’animazione → effetto “compare e poi si muove”.
+ */
+body.sottovoce-luxury #bootscore-navbar-collapsedd.sottovoce-navbar-overlay-panel.collapsing:not(.show) {
+  opacity: 0 !important;
+  transform: translateY(1.1rem);
+}
+
+body.sottovoce-luxury #bootscore-navbar-collapsedd.sottovoce-navbar-overlay-panel.collapsing {
+  position: fixed !important;
+  inset: 0 !important;
+  z-index: 999 !important;
+  width: 100% !important;
+  min-height: 100vh !important;
+  min-height: 100dvh !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  height: auto !important;
+  background-color: #3c3e21 !important;
+}
+
+body.sottovoce-luxury #bootscore-navbar-collapsedd.sottovoce-navbar-overlay-panel.collapse.show {
+  position: fixed !important;
+  inset: 0 !important;
+  z-index: 999 !important;
+  width: 100% !important;
+  min-height: 100vh !important;
+  min-height: 100dvh !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: stretch !important;
+  justify-content: center !important;
+  height: auto !important;
+  background-color: #3c3e21 !important;
+  background-image: none !important;
+}
+
+body.sottovoce-luxury .sottovoce-nav-overlay-inner {
+  flex: 1 0 auto;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  max-width: 42rem;
+  margin-inline: auto;
+  padding: clamp(5.5rem, 14vh, 9rem) 1.5rem 2.5rem;
+  box-sizing: border-box;
+}
+
+/* Apertura: ease-in sull’intero overlay — `both` applica subito il fotogramma “from” (no flash) */
+body.sottovoce-luxury
+  #bootscore-navbar-collapsedd.sottovoce-navbar-overlay-panel.collapse.show:not(.sottovoce-overlay-exit) {
+  animation: sottovoceOverlayPanelIn 0.48s ease-in both;
+}
+
+/* Chiusura: ease-out sull’intero overlay */
+body.sottovoce-luxury #bootscore-navbar-collapsedd.sottovoce-navbar-overlay-panel.sottovoce-overlay-exit {
+  animation: sottovoceOverlayPanelOut 0.4s ease-out forwards !important;
+}
+
+@keyframes sottovoceOverlayPanelIn {
+  from {
+    opacity: 0;
+    transform: translateY(1.1rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes sottovoceOverlayPanelOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(-0.65rem);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.sottovoce-luxury
+    #bootscore-navbar-collapsedd.sottovoce-navbar-overlay-panel.collapse.show:not(.sottovoce-overlay-exit),
+  body.sottovoce-luxury #bootscore-navbar-collapsedd.sottovoce-navbar-overlay-panel.sottovoce-overlay-exit {
+    animation: none !important;
+    transform: none !important;
+    will-change: auto;
+  }
+
+  body.sottovoce-luxury #bootscore-navbar-collapsedd.sottovoce-navbar-overlay-panel.sottovoce-overlay-exit {
+    opacity: 0;
+  }
+}
+
+body.sottovoce-luxury .custom-navbar-page #bootscore-navbar-collapsedd .sottovoce-overlay-nav-list.navbar-nav {
+  flex-direction: column !important;
+  width: 100%;
+}
+
+body.sottovoce-luxury .sottovoce-overlay-nav-list .nav-item {
+  width: 100%;
+}
+
+body.sottovoce-luxury .sottovoce-overlay-nav-list .nav-link {
+  font-size: clamp(2rem, 7.5vw, 4.25rem) !important;
+  line-height: 1.12 !important;
+  font-weight: 300 !important;
+  letter-spacing: 0.06em !important;
+  padding: 0.28em 1rem !important;
+  text-decoration: none !important;
+  border: none !important;
+  text-transform: uppercase !important;
+  color: rgba(255, 255, 255, 0.96) !important;
+  text-shadow:
+    0 0 12px rgba(255, 255, 255, 0.45),
+    0 0 32px rgba(255, 255, 255, 0.22),
+    0 0 56px rgba(255, 230, 210, 0.12);
+  transition:
+    color 0.35s ease,
+    text-shadow 0.45s ease,
+    transform 0.35s ease;
+}
+
+body.sottovoce-luxury .sottovoce-overlay-nav-list .nav-link:hover,
+body.sottovoce-luxury .sottovoce-overlay-nav-list .nav-link:focus {
+  color: #ffffff !important;
+  text-shadow:
+    0 0 16px rgba(255, 255, 255, 0.95),
+    0 0 40px rgba(255, 245, 235, 0.55),
+    0 0 72px rgba(255, 170, 95, 0.45),
+    0 0 96px rgba(255, 140, 70, 0.22);
+  transform: scale(1.02);
+  outline: none;
+}
+
+body.sottovoce-luxury .sottovoce-nav-overlay-lang .nav-link,
+body.sottovoce-luxury .sottovoce-overlay-lang-link {
+  font-size: clamp(1.25rem, 4vw, 2rem) !important;
+  letter-spacing: 0.35em !important;
+  font-weight: 400 !important;
+  padding: 0.75rem 1rem !important;
+  text-transform: uppercase !important;
+  text-shadow:
+    0 0 10px rgba(255, 255, 255, 0.35),
+    0 0 28px rgba(255, 220, 190, 0.18);
+  transition: text-shadow 0.35s ease, color 0.35s ease;
+}
+
+body.sottovoce-luxury .sottovoce-nav-overlay-lang .nav-link:hover,
+body.sottovoce-luxury .sottovoce-nav-overlay-lang .nav-link:focus,
+body.sottovoce-luxury .sottovoce-overlay-lang-link:hover,
+body.sottovoce-luxury .sottovoce-overlay-lang-link:focus {
+  text-shadow:
+    0 0 14px rgba(255, 255, 255, 0.75),
+    0 0 36px rgba(255, 180, 110, 0.4);
+  outline: none;
+}
+
+body.sottovoce-luxury .sottovoce-overlay-close {
+  position: fixed;
+  top: clamp(0.75rem, 3vw, 1.35rem);
+  right: clamp(0.75rem, 3vw, 1.35rem);
+  z-index: 1001;
+  width: auto;
+  min-width: 2.5rem;
+  height: auto;
+  min-height: 2.5rem;
+  padding: 0.25rem 0.35rem;
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  background: transparent !important;
+  color: #ffffff !important;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  transition:
+    opacity 0.35s ease-out,
+    transform 0.3s ease-out;
+  box-shadow: none !important;
+}
+
+body.sottovoce-luxury .sottovoce-overlay-close:hover,
+body.sottovoce-luxury .sottovoce-overlay-close:focus {
+  opacity: 0.88;
+  transform: scale(1.06);
+  outline: none;
+}
+
+body.sottovoce-luxury .sottovoce-overlay-close-x {
+  font-size: 2rem;
+  font-weight: 200;
+  line-height: 1;
+  text-shadow:
+    0 0 12px rgba(255, 255, 255, 0.65),
+    0 0 28px rgba(255, 190, 120, 0.35);
+}
+
+body.sottovoce-luxury #nav-main.menu-open,
+body.sottovoce-luxury #nav-main.individual-home-navbar {
+  height: auto !important;
+  max-height: none !important;
+  overflow: visible !important;
+  background-color: transparent !important;
+}
+
+body.sottovoce-luxury #nav-main.menu-open,
+body.sottovoce-luxury #nav-main.menu-open .toggler-icon-animated i {
+  color: #ffffff !important;
+}
+
+body.sottovoce-luxury #nav-main .navbar-collapse .navbar-nav:not(.rightlinks) {
+  border-bottom: none !important;
+  padding: 0 !important;
+}
+
+body.sottovoce-luxury #page {
+  position: relative;
+  z-index: 1;
+}
+
+/* Pagine legali / testo lungo */
+body.sottovoce-luxury .sottovoce-legal-page {
+  padding-top: 3rem;
+  padding-bottom: 4rem;
+}
+
+body.sottovoce-luxury .sottovoce-legal-page .container {
+  max-width: 42rem;
+}
+
+body.sottovoce-luxury .sottovoce-legal-page h2 {
+  margin-bottom: 1.25rem;
+}
+
+body.sottovoce-luxury .sottovoce-legal-page h3 {
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  margin-top: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+
+body.sottovoce-luxury .sottovoce-legal-page .body-2 {
+  line-height: 1.65;
+  opacity: 0.95;
+}

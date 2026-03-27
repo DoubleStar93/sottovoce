@@ -21,22 +21,22 @@ $homeHref = $currentLocale === 'en' ? '/en/' : '/';
       z-index: 10;
     }
 
-    body#page-top .site-footer-minimal,
-    body#page-top .site-footer-minimal .container,
-    body#page-top .site-footer-minimal .row,
-    body#page-top .site-footer-minimal [class*="col-"],
-    body#page-top .site-footer-minimal .footer-bottom {
+    body.sottovoce-luxury .site-footer-minimal,
+    body.sottovoce-luxury .site-footer-minimal .container,
+    body.sottovoce-luxury .site-footer-minimal .row,
+    body.sottovoce-luxury .site-footer-minimal [class*="col-"],
+    body.sottovoce-luxury .site-footer-minimal .footer-bottom {
       background: #e3cba5 !important;
     }
 
-    body#page-top .site-footer-minimal,
-    body#page-top .site-footer-minimal *,
+    body.sottovoce-luxury .site-footer-minimal,
+    body.sottovoce-luxury .site-footer-minimal *,
     .site-footer-minimal,
     .site-footer-minimal * {
       color: #000000 !important;
     }
 
-    body#page-top .site-footer-minimal *,
+    body.sottovoce-luxury .site-footer-minimal *,
     .site-footer-minimal * {
       background: transparent !important;
     }

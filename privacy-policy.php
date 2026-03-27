@@ -2,18 +2,12 @@
 <!doctype html>
 <html lang="it">
 <?php include __DIR__ . '/pages/_partials/head.php'; ?>
-<body class="page-template page-template-default page">
+<body class="page-template page-template-default page sottovoce-luxury">
 <div id="page" class="site">
 <?php include __DIR__ . '/pages/_partials/header.php'; ?>
 <main class="site-main">
-  <section class="page-hero" style="min-height:42vh;display:flex;align-items:flex-end;background-image:linear-gradient(180deg,rgba(0,0,0,.55),rgba(0,0,0,.45)),url('/dependencies/img/wp-content/uploads/2026/01/ASV-Infinity-Pool-5-1-e1736344266192.jpg');background-size:cover;background-position:center;">
-    <div class="container pb-5">
-      <h1 class="display-1-72 text-white mb-2">Privacy Policy</h1>
-      <p class="body-2 text-white mb-0">Informativa sul trattamento dei dati personali.</p>
-    </div>
-  </section>
-  <section style="padding:56px 0;background:#fff;">
-    <div class="container" style="max-width:980px;color:#25282d;">
+  <section class="sottovoce-legal-page">
+    <div class="container">
       <h2 class="display-1-72 font-48-mobile mb-4">Privacy Policy</h2>
       <p class="body-2">La presente informativa descrive le modalita di raccolta, utilizzo e protezione dei dati personali forniti tramite questo sito.</p>
       <h3 class="mt-4 mb-2">Titolare del trattamento</h3>

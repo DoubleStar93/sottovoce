@@ -75,4 +75,10 @@ return [
     'sunset.err_save' => 'Could not save data/sunset-forecast.json. Check folder permissions.',
     'next_sunset.label' => 'Next sunset',
     'next_sunset.unavailable' => 'Sunset time is temporarily unavailable.',
+    'nav.servizi' => 'Services',
+    'nav.orari' => 'Hours',
+    'nav.contatti' => 'Contacts',
+    'nav.prenota' => 'Book',
+    'nav.aria.menu_toggle' => 'Open or close the navigation menu',
+    'nav.aria.close_overlay' => 'Close menu',
 ];

@@ -14,7 +14,7 @@ $nextSunsetCountdown = (new NextSunset(SunsetForecast::fromEnv()))->resolve();
 
 <?php include __DIR__ . '/_partials/head.php'; ?>
 
-<body id="page-top" class="page-template page-template-templates page-template-individual-home-custom-template page-template-templatesindividual-home-custom-template-php page page-id-3739 page-parent page-child parent-pageid-662">
+<body id="page-top" class="sottovoce-luxury page-template page-template-templates page-template-individual-home-custom-template page-template-templatesindividual-home-custom-template-php page page-id-3739 page-parent page-child parent-pageid-662">
   <!-- Preloader -->
   <!-- Preloader End -->
   <div id="bgHalosHome" class="bg-halos-home" aria-hidden="true"></div>
@@ -49,10 +49,6 @@ $nextSunsetCountdown = (new NextSunset(SunsetForecast::fromEnv()))->resolve();
     border-right: unset;
   }
 
-  #hotelList__dropdown .work-area-more-dropdown li {
-    margin: 0 !important;
-    width: 100%;
-  }
 }
 
 @media (min-width: 1200px) {
@@ -241,17 +237,6 @@ nav.global-navbar.internal-nav .language-selector .wpml-ls-item-tr {
 
 
 
-@media (min-width: 1199px) {
-
-  #work-area {
-    visibility: hidden;
-  }
-
-  .navigation-ul-area {
-    visibility: hidden;
-  }
-}
-
 :lang(ar) .manageBooking-global.manageBooking-desktop.managebooking-individual {
   right: unset;
   left: 180px;
@@ -351,9 +336,6 @@ document.addEventListener("DOMContentLoaded", function() {
         );
         if (dropdownElement) {
           dropdownElement.style.marginInlineStart = distanceFromStart + 'px';
-
-        } else {
-          console.error('Dropdown element not found');
         }
       } else {
         console.error('Element with class "static-area" not found');
@@ -367,7 +349,6 @@ document.addEventListener("DOMContentLoaded", function() {
     const dropdownMenus = document.querySelectorAll(
       '.navbar-nav .menu-item-has-children .dropdown-menu');
     const navbar = document.querySelector('#nav-main.navbar');
-    const workAreaMoreDropdown = document.querySelector('#work-area-dropss');
     const newBookingWidget = document.querySelector('.new-booking-widget');
     const dropdownToggles = document.querySelectorAll('.navbar-nav .menu-item-has-children > a');
 
@@ -378,10 +359,6 @@ document.addEventListener("DOMContentLoaded", function() {
           isAnyMenuOpen = true;
         }
       });
-
-      if (workAreaMoreDropdown && workAreaMoreDropdown.classList.contains('show')) {
-        isAnyMenuOpen = true;
-      }
 
       let languageSwitcherOpen = false;
 
@@ -464,13 +441,6 @@ document.addEventListener("DOMContentLoaded", function() {
         //    dropdownMenu.classList.toggle('show');
         //  }
         handleDropdowns();
-      }
-
-      const moreDropdown = document.querySelector('#work-area-dropss > a');
-      if (moreDropdown) {
-        moreDropdown.addEventListener('click', function() {
-          handleDropdowns();
-        });
       }
     }
   });
@@ -595,242 +565,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     }
   }
-
-
-
-
-  function getSpacingBetweenItems(container) {
-    const items = container.querySelectorAll('.static-area > li');
-    let totalSpacing = 0;
-    let count = 0;
-
-    for (let i = 0; i < items.length - 1; i++) {
-      const currentItem = items[i];
-      const nextItem = items[i + 1];
-
-      // Calculate spacing in an absolute manner to avoid negative values
-      const spacing = Math.abs(isRTL ?
-        currentItem.offsetLeft - nextItem.offsetLeft - nextItem.offsetWidth :
-        nextItem.offsetLeft - (currentItem.offsetLeft + currentItem.offsetWidth)
-      );
-
-      totalSpacing += spacing;
-      count++;
-    }
-
-    const averageSpacing = count > 0 ? totalSpacing / count : 0;
-    return averageSpacing;
-  }
-
-  function checkAndHideEmptyListItems() {
-    const workArea = document.querySelector('#work-area');
-    const ulElement = workArea ? workArea.querySelector('.work-navbar-nav') : null;
-
-
-    if (!workArea || !ulElement) {
-      return;
-    }
-
-    const listItems = ulElement.querySelectorAll('li');
-
-    let allItemsEmptyOrZeroWidth = true;
-
-    listItems.forEach((li, index) => {
-      // Check if the li element is empty (no child nodes or text content)
-      const isEmpty = !li.textContent.trim() && li.children.length === 0;
-
-      // Check if the li element is taking space
-      const hasWidth = li.offsetWidth > 0;
-
-      // If any item is not empty or has width, set the flag to false
-      if (!isEmpty && hasWidth) {
-        allItemsEmptyOrZeroWidth = false;
-      }
-    });
-
-    // Hide the #work-area element if all li elements are empty or have 0px width
-    if (allItemsEmptyOrZeroWidth) {
-      workArea.style.setProperty('display', 'none', 'important');
-    } else {
-
-    }
-  }
-
-  function adjustNavItems() {
-    const parentContainer = document.querySelector('#bootscore-navbar-collapsedd');
-    if (!parentContainer) {
-      console.error('Parent container not found.');
-      return;
-    }
-
-    const ulElement = parentContainer.querySelector('ul.navbar-nav');
-    const divElement = parentContainer.querySelector('#right-side-elements');
-    if (!ulElement || !divElement) {
-      console.error('Navbar elements not found.');
-      return;
-    }
-
-    const getFixedScreenWidth = (screenWidth) => {
-      if (screenWidth >= 1200 && screenWidth < 1300) {
-        return 1200;
-      } else if (screenWidth >= 1300 && screenWidth < 1400) {
-        return 1300;
-      } else if (screenWidth >= 1400 && screenWidth < 1600) {
-        return 1400;
-      } else if (screenWidth >= 1600 && screenWidth < 1800) {
-        return 1600;
-      } else {
-        return screenWidth; // No change if screen width is 1600 or more
-      }
-    };
-
-    // Function to determine the parent container width based on screen width
-    const getParentContainerWidth = (screenWidth) => {
-      if (screenWidth >= 1800) {
-        return parentContainer.getBoundingClientRect()
-          .width; // For 1500px, parent container width should be 1200px
-      } else if (screenWidth >= 1600) {
-        return 1200; // For 1400px, parent container width should be 1100px
-      } else if (screenWidth >= 1400) {
-        return 1000; // For 1300px, parent container width should be 1000px
-      } else if (screenWidth >= 1300) {
-        return 900; // For 1300px, parent container width should be 1000px
-      } else if (screenWidth >= 1200) {
-        return 800; // For 1300px, parent container width should be 1000px
-      }
-    };
-
-    const screenWidth = window.innerWidth;
-
-    // Apply the fixed screen width logic
-    const fixedWidth = getFixedScreenWidth(screenWidth);
-
-    // Get the parent container width based on screen width
-    const parentWidth = getParentContainerWidth(screenWidth);
-
-    // Set the parent container width dynamically
-    parentContainer.style.width = `${parentWidth}px`;
-    const ulWidth = ulElement.offsetWidth;
-    const divWidth = 300;
-
-    const staticArea = document.querySelector('.static-area');
-    const moreNavigationArea = document.querySelector('.navigation-ul-area');
-    const moreNavigationAreaWidth = moreNavigationArea ? moreNavigationArea.offsetWidth : 0;
-    const spacing = getSpacingBetweenItems(
-      staticArea); // Get spacing between items in static area
-
-
-    const totalMargin = spacing * (ulElement.children.length - 1);
-    const spaceWidth = parentWidth - (ulWidth + divWidth + moreNavigationAreaWidth);
-
-    const workArea = document.querySelector('#work-area');
-    const moreDropdownMenu = document.querySelector(
-      '#hotelList__dropdown .work-area-more-dropdown');
-    const moreDropdown = document.querySelector('#work-area-dropss');
-
-    if (!moreDropdownMenu) {
-      console.error('Work Area menu container or work area not found.');
-      return;
-    }
-    if (!workArea) {
-      console.error('Dropdown menu container not found.');
-      return;
-    }
-
-    workArea.style.display = 'block';
-
-    const listItems = [
-      ...workArea.querySelectorAll('ul.navbar-nav > li'),
-      ...moreDropdownMenu.querySelectorAll('li')
-    ].filter((item) => item.className.trim() !== "");
-
-
-    let totalWidth = 0;
-
-    moreDropdownMenu.querySelectorAll('li').forEach((item) => {
-      moreDropdownMenu.removeChild(item);
-      workArea.querySelector('ul.navbar-nav').appendChild(item);
-    });
-
-    listItems.forEach((item, index) => {
-      item.style.margin = isRTL ? `0 0 0 ${spacing}px` : `0 ${spacing}px 0 0`;
-      const itemWidth = item.offsetWidth + spacing;
-      if (index === listItems.length - 1) {
-        item.style.marginRight = '0'; // Remove margin for the last item
-      }
-
-
-      if ((totalWidth + itemWidth) <= spaceWidth) {
-        totalWidth += itemWidth;
-        item.style.display = 'inline-block';
-      } else {
-        item.style.display = '';
-        moreDropdownMenu.appendChild(item);
-      }
-    });
-
-
-
-    const spacer = document.createElement('li');
-    spacer.style.display = 'inline-block';
-    spacer.style.width = `${spacing}px`;
-    workArea.querySelector('ul.navbar-nav').appendChild(spacer);
-
-    if (window.innerWidth > 1450) {
-      if (moreDropdownMenu.children.length === 0) {
-        moreDropdown.classList.add('d-none');
-      } else {
-        moreDropdown.classList.remove('d-none');
-      }
-    }
-
-    if (totalWidth < spaceWidth) {
-      if ((spaceWidth - totalWidth) > 4) {
-        document.querySelector('.custom-navbar-page #work-area').style.maxWidth =
-          `${totalWidth}px`;
-      }
-      parentContainer.style.width = `${totalWidth}px`;
-    }
-
-    moveItemsToDropdownIfEmpty([...workArea.querySelectorAll('ul.navbar-nav > li'), ...
-      moreDropdownMenu
-      .querySelectorAll('li')
-    ], moreDropdownMenu);
-
-    workArea.style.visibility = 'visible';
-    moreNavigationArea.style.visibility = 'visible';
-    checkAndHideEmptyListItems();
-  }
-
-  function moveItemsToDropdownIfEmpty(listItems, moreDropdownMenu) {
-    const navLinksEmpty = listItems.length === 0;
-    const dropdownEmpty = moreDropdownMenu.children.length === 0;
-
-    if (navLinksEmpty && dropdownEmpty) {
-      listItems.forEach((item) => {
-        moreDropdownMenu.appendChild(item);
-      });
-    }
-  }
-
-  // Initial layout adjustment
-  if (window.innerWidth > 1200) {
-    adjustNavItems();
-  }
-
-  // Adjust nav items on window resize and zoom
-  window.addEventListener('resize', function() {
-    if (window.innerWidth > 1200) {
-      adjustNavItems();
-    }
-  });
-
-  // Handle browser zoom changes
-  window.visualViewport.addEventListener('resize', function() {
-    if (window.innerWidth > 1200) {
-      adjustNavItems();
-    }
-  });
 
 });
 
@@ -2111,35 +1845,10 @@ if (globalHomeLinkDropdownBox) {
 </div>
 
 <style>
-  body,
-  #page,
-  .site {
-    background: #3c3e21;
-  }
-  .site-main,
-  .site-main > section,
-  .site-main > div,
-  .site-main .container,
-  .site-main .container-fluid,
-  .site-main .row,
-  .site-main [class*="col-"] {
-    background-color: #3c3e21 !important;
-    background-image: none !important;
-  }
-  .site-main h1,
-  .site-main h2,
-  .site-main h3,
-  .site-main h4,
-  .site-main h5,
-  .site-main p,
-  .site-main li,
-  .site-main span,
-  .site-main a {
-    color: #ffffff !important;
-  }
+  /* Shell verde / tipografia: css/sottovoce-luxury-shell.css */
 
   /* 20px dal bordo inferiore dell’area video (override tema: 11.5rem) */
-  body#page-top .fullscreen-hero-banner-booking-widget .individual-homepage-content-section.hero-home-bottom {
+  body.sottovoce-luxury .fullscreen-hero-banner-booking-widget .individual-homepage-content-section.hero-home-bottom {
     bottom: 20px !important;
   }
   .hero-home-bottom .container.mx-auto {
@@ -2159,7 +1868,7 @@ if (globalHomeLinkDropdownBox) {
     margin-left: auto;
     margin-right: auto;
   }
-  body#page-top .hero-home-bottom button.home-prenota-btn-hero {
+  body.sottovoce-luxury .hero-home-bottom button.home-prenota-btn-hero {
     width: 100%;
     min-height: 56px;
     padding: 0 20px;
@@ -2184,8 +1893,8 @@ if (globalHomeLinkDropdownBox) {
       box-shadow 0.25s ease,
       text-shadow 0.25s ease;
   }
-  body#page-top .hero-home-bottom button.home-prenota-btn-hero:hover,
-  body#page-top .hero-home-bottom button.home-prenota-btn-hero:focus {
+  body.sottovoce-luxury .hero-home-bottom button.home-prenota-btn-hero:hover,
+  body.sottovoce-luxury .hero-home-bottom button.home-prenota-btn-hero:focus {
     background: rgba(255, 255, 255, 0.1) !important;
     color: #ffffff !important;
     border: 1px solid rgba(255, 255, 255, 0.95) !important;
@@ -2199,7 +1908,7 @@ if (globalHomeLinkDropdownBox) {
       0 0 44px rgba(255, 255, 255, 0.28),
       inset 0 0 22px rgba(255, 255, 255, 0.12) !important;
   }
-  body#page-top .hero-home-bottom button.home-prenota-btn-hero:active {
+  body.sottovoce-luxury .hero-home-bottom button.home-prenota-btn-hero:active {
     background: rgba(255, 255, 255, 0.16) !important;
     color: #ffffff !important;
     border: 1px solid rgba(255, 255, 255, 0.88) !important;
@@ -2825,7 +2534,7 @@ if (globalHomeLinkDropdownBox) {
 
 </div>
 <style>
-  body#page-top #events .corporate-img-content.sottovoce-events-copy {
+  body.sottovoce-luxury #events .corporate-img-content.sottovoce-events-copy {
     left: 50%;
     right: auto;
     transform: translateX(-50%);
@@ -2833,7 +2542,7 @@ if (globalHomeLinkDropdownBox) {
     text-align: center;
     align-items: center;
   }
-  body#page-top #events .corporate-img-content.sottovoce-events-copy .corporate-desc {
+  body.sottovoce-luxury #events .corporate-img-content.sottovoce-events-copy .corporate-desc {
     max-width: 36rem;
   }
   @media (max-width: 600px) {
@@ -3026,70 +2735,6 @@ $footerTelHref = preg_replace('/\s+/', '', $footerPhoneDisplay);
     50% { transform: translate(-50%, -50%) scale(1.08); }
   }
 
-  body#page-top,
-  body#page-top * {
-    color: #ffffff !important;
-  }
-
-  body#page-top h2 {
-    text-shadow:
-      0 0 8px rgba(255, 255, 255, 0.95),
-      0 0 22px rgba(255, 255, 255, 0.65),
-      0 0 44px rgba(255, 255, 255, 0.4),
-      0 0 72px rgba(255, 255, 255, 0.22) !important;
-  }
-
-  body#page-top input::placeholder,
-  body#page-top textarea::placeholder {
-    color: #ffffff !important;
-    opacity: 1;
-  }
-
-  body#page-top .wp-block-group.white-bg,
-  body#page-top .wp-block-group.white-bg .wp-block-group__inner-container {
-    background-color: #3c3e21 !important;
-    background-image: none !important;
-  }
-
-  body#page-top .amenities-title-box {
-    background-color: #3c3e21 !important;
-    background-image: none !important;
-    border: none !important;
-    border-bottom: none !important;
-    box-shadow: none !important;
-  }
-
-  body#page-top #nav-main,
-  body#page-top nav.global-navbar,
-  body#page-top nav.global-navbar.internal-nav,
-  body#page-top .individual-home-navbar {
-    background-color: transparent !important;
-    background-image: none !important;
-  }
-
-  body#page-top #nav-main.darkHeader,
-  body#page-top #nav-main.menu-open,
-  body#page-top #nav-main.individual-home-navbar,
-  body#page-top nav.global-navbar.darkHeader,
-  body#page-top nav.global-navbar.internal-nav.darkHeader {
-    background-color: #3c3e21 !important;
-    background-image: none !important;
-  }
-
-  body#page-top #nav-main .nav-link,
-  body#page-top #nav-main .wpml-ls-legacy-dropdown-click a,
-  body#page-top #nav-main .toggler-icon-animated i {
-    color: #ffffff !important;
-  }
-
-  body#page-top #nav-main #black_logo {
-    display: none !important;
-  }
-
-  body#page-top #nav-main #white_logo {
-    display: block !important;
-  }
-
   #contact-details,
   #contact-details .individual-homepage-contact-map,
   #faq,
@@ -3099,39 +2744,39 @@ $footerTelHref = preg_replace('/\s+/', '', $footerPhoneDisplay);
     background-image: none !important;
   }
 
-  body#page-top #contact-details.individual-homepage-contact-map-section {
+  body.sottovoce-luxury #contact-details.individual-homepage-contact-map-section {
     padding-top: 3rem !important;
     padding-bottom: 0 !important;
   }
 
-  body#page-top #contact-details .individual-homepage-contact-map {
+  body.sottovoce-luxury #contact-details .individual-homepage-contact-map {
     max-width: 100% !important;
     padding: 2.75rem 1rem 3rem !important;
     background: transparent !important;
   }
 
-  body#page-top #contact-details .sottovoce-contact-copy {
+  body.sottovoce-luxury #contact-details .sottovoce-contact-copy {
     background: transparent !important;
   }
 
-  body#page-top #contact-details .contact-details p {
+  body.sottovoce-luxury #contact-details .contact-details p {
     display: block !important;
     text-align: center !important;
     margin-left: auto !important;
     margin-right: auto !important;
   }
 
-  body#page-top #contact-details .sottovoce-contact-map {
+  body.sottovoce-luxury #contact-details .sottovoce-contact-map {
     max-width: 72rem;
     margin-left: auto;
     margin-right: auto;
   }
 
-  body#page-top #faq.sottovoce-faq {
+  body.sottovoce-luxury #faq.sottovoce-faq {
     position: relative;
   }
 
-  body#page-top #faq.sottovoce-faq .sottovoce-faq-title {
+  body.sottovoce-luxury #faq.sottovoce-faq .sottovoce-faq-title {
     max-width: 28rem;
     margin-left: auto;
     margin-right: auto;
@@ -3139,7 +2784,7 @@ $footerTelHref = preg_replace('/\s+/', '', $footerPhoneDisplay);
     letter-spacing: 0.04em;
   }
 
-  body#page-top #faq.sottovoce-faq .accordionFaq {
+  body.sottovoce-luxury #faq.sottovoce-faq .accordionFaq {
     max-width: 52rem;
     margin-left: auto;
     margin-right: auto;
@@ -3150,33 +2795,33 @@ $footerTelHref = preg_replace('/\s+/', '', $footerPhoneDisplay);
     box-shadow: none !important;
   }
 
-  body#page-top #faq.sottovoce-faq .accordionFaq .card {
+  body.sottovoce-luxury #faq.sottovoce-faq .accordionFaq .card {
     border: none !important;
     background: transparent !important;
     background-color: transparent !important;
   }
 
-  body#page-top #faq.sottovoce-faq .accordionFaq .card:not(:last-child) {
+  body.sottovoce-luxury #faq.sottovoce-faq .accordionFaq .card:not(:last-child) {
     border-bottom: 1px solid rgba(227, 203, 165, 0.28) !important;
   }
 
-  body#page-top #faq.sottovoce-faq .accordionFaq .card-header {
+  body.sottovoce-luxury #faq.sottovoce-faq .accordionFaq .card-header {
     background: transparent !important;
     background-color: transparent !important;
     padding-left: 0 !important;
     padding-right: 0 !important;
   }
 
-  body#page-top #faq.sottovoce-faq .accordionFaq .card-body,
-  body#page-top #faq.sottovoce-faq .accordionFaq .accordionFaq-card-content,
-  body#page-top #faq.sottovoce-faq .accordionFaq .collapse {
+  body.sottovoce-luxury #faq.sottovoce-faq .accordionFaq .card-body,
+  body.sottovoce-luxury #faq.sottovoce-faq .accordionFaq .accordionFaq-card-content,
+  body.sottovoce-luxury #faq.sottovoce-faq .accordionFaq .collapse {
     background: transparent !important;
     background-color: transparent !important;
     background-image: none !important;
     box-shadow: none !important;
   }
 
-  body#page-top #faq.sottovoce-faq .accordionFaq .card-body {
+  body.sottovoce-luxury #faq.sottovoce-faq .accordionFaq .card-body {
     padding-left: 0 !important;
     padding-right: 2rem;
     padding-top: 0;
@@ -3184,19 +2829,19 @@ $footerTelHref = preg_replace('/\s+/', '', $footerPhoneDisplay);
     line-height: 1.65;
   }
 
-  body#page-top #faq.sottovoce-faq .accordionFaq button.btn {
+  body.sottovoce-luxury #faq.sottovoce-faq .accordionFaq button.btn {
     border-bottom: none !important;
     padding-left: 0 !important;
     padding-right: 0 !important;
   }
 
-  body#page-top #faq.sottovoce-faq .accordionFaq button > h3 {
+  body.sottovoce-luxury #faq.sottovoce-faq .accordionFaq button > h3 {
     color: #ffffff !important;
     font-weight: 400 !important;
     letter-spacing: 0.02em;
   }
 
-  body#page-top #faq.sottovoce-faq .accordionFaq .plus-icon {
+  body.sottovoce-luxury #faq.sottovoce-faq .accordionFaq .plus-icon {
     color: #e3cba5 !important;
     opacity: 0.95;
   }
@@ -3216,17 +2861,17 @@ $footerTelHref = preg_replace('/\s+/', '', $footerPhoneDisplay);
     display: block;
   }
 
-  body#page-top footer,
-  body#page-top footer .footer,
-  body#page-top footer .ft-btm-link,
-  body#page-top footer .enclosedarea,
-  body#page-top footer .footer-links,
-  body#page-top footer .footer-info-card {
+  body.sottovoce-luxury footer,
+  body.sottovoce-luxury footer .footer,
+  body.sottovoce-luxury footer .ft-btm-link,
+  body.sottovoce-luxury footer .enclosedarea,
+  body.sottovoce-luxury footer .footer-links,
+  body.sottovoce-luxury footer .footer-info-card {
     background-color: #e3cba5 !important;
     background-image: none !important;
   }
 
-  body#page-top footer {
+  body.sottovoce-luxury footer {
     position: relative;
     z-index: 4;
   }

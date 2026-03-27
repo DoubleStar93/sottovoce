@@ -75,4 +75,10 @@ return [
     'sunset.err_save' => 'Impossibile salvare il file in data/. Verifica i permessi della cartella.',
     'next_sunset.label' => 'Prossimo tramonto',
     'next_sunset.unavailable' => 'Tramonto non disponibile al momento.',
+    'nav.servizi' => 'Servizi',
+    'nav.orari' => 'Orari',
+    'nav.contatti' => 'Contatti',
+    'nav.prenota' => 'Prenota',
+    'nav.aria.menu_toggle' => 'Apri o chiudi il menu di navigazione',
+    'nav.aria.close_overlay' => 'Chiudi il menu',
 ];

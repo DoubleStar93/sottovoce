@@ -2,7 +2,7 @@
 <!doctype html>
 <html lang="it">
 <?php include __DIR__ . '/pages/_partials/head.php'; ?>
-<body class="page-template page-template-default page page-id-4490">
+<body class="page-template page-template-default page page-id-4490 sottovoce-luxury">
 <div id="page" class="site">
 <?php include __DIR__ . '/pages/_partials/header.php'; ?>
 <main class="site-main">
