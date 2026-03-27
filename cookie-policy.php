@@ -61,6 +61,15 @@ $locale = appCurrentLocale();
       <p class="body-2">
         <?= htmlspecialchars(label('cookies.section7.body', 'Per dettagli sul trattamento dei dati personali e sui diritti esercitabili, consulta anche la Privacy Policy o contattaci tramite i recapiti presenti nel footer.'), ENT_QUOTES) ?>
       </p>
+
+      <h3 class="mt-4 mb-2"><?= htmlspecialchars(label('cookies.section8.title', '8) Strumenti terzi attivati solo dopo scelta'), ENT_QUOTES) ?></h3>
+      <p class="body-2">
+        <?= htmlspecialchars(label('cookies.section8.intro', 'Di seguito alcuni strumenti esterni utilizzati nel sito e la logica di attivazione:'), ENT_QUOTES) ?>
+      </p>
+      <ul class="body-2">
+        <li><?= htmlspecialchars(label('cookies.section8.item1', 'Google Maps embed (mappe contatti): caricato solo dopo consenso ai cookie opzionali tramite banner/preferenze.'), ENT_QUOTES) ?></li>
+        <li><?= htmlspecialchars(label('cookies.section8.item2', 'Pulsanti di prenotazione verso provider esterno: attivati solo su azione volontaria (click) dell\'utente.'), ENT_QUOTES) ?></li>
+      </ul>
     </div>
   </section>
 </main>

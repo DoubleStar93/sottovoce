@@ -7,17 +7,103 @@ $footerTelHref = preg_replace('/\s+/', '', $footerPhoneDisplay);
 $showContactSectionTitle = $showContactSectionTitle ?? true;
 $showContactTitleAfterMap = $showContactTitleAfterMap ?? false;
 ?>
+<style>
+  .sottovoce-map-consent {
+    min-height: 360px;
+    border: 1px solid rgba(227, 203, 165, 0.7);
+    background: #2f3118;
+    color: #f6efe4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 28px;
+  }
+
+  .sottovoce-map-consent p,
+  .sottovoce-map-consent .body-3 {
+    color: #f6efe4 !important;
+    opacity: 1;
+    max-width: 860px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .sottovoce-map-consent .primary-btn {
+    background: #e3cba5 !important;
+    color: #1a1d0f !important;
+    border: 1px solid #e3cba5 !important;
+  }
+
+  .sottovoce-map-consent .primary-btn:hover,
+  .sottovoce-map-consent .primary-btn:focus {
+    background: #f0dbba !important;
+    color: #11150a !important;
+    border-color: #f0dbba !important;
+  }
+
+  .sottovoce-map-consent .secondary-btn {
+    background: transparent !important;
+    color: #f6efe4 !important;
+    border: 1px solid rgba(246, 239, 228, 0.8) !important;
+    text-decoration: none;
+  }
+
+  .sottovoce-map-consent .secondary-btn:hover,
+  .sottovoce-map-consent .secondary-btn:focus {
+    background: rgba(246, 239, 228, 0.12) !important;
+    color: #ffffff !important;
+    border-color: rgba(246, 239, 228, 0.95) !important;
+    text-decoration: none;
+  }
+
+  .sottovoce-map-consent.is-map-loaded {
+    min-height: 0;
+    border: 0;
+    background: transparent;
+    padding: 0;
+  }
+
+  .sottovoce-map-consent.is-map-loaded iframe {
+    width: 100%;
+    min-height: 420px;
+    border: 0;
+    display: block;
+  }
+
+  @media (max-width: 767.98px) {
+    .sottovoce-map-consent {
+      min-height: 300px;
+      padding: 20px;
+    }
+
+    .sottovoce-map-consent.is-map-loaded iframe {
+      min-height: 320px;
+    }
+  }
+</style>
   <div class="container individual-homepage-contact-map">
     <div class="row g-0 mt-0 mb-4 mb-lg-5 justify-content-center">
       <div class="col-12 sottovoce-contact-map">
         <div class="contact-map-wrap">
-          <iframe
-            title="<?= htmlspecialchars(label('contact.map_iframe_title', 'Mappa'), ENT_QUOTES) ?>"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            allowfullscreen=""
-            src="<?= htmlspecialchars($contactMapEmbedSrc, ENT_QUOTES) ?>"
-          ></iframe>
+          <div
+            class="sottovoce-map-consent"
+            data-map-consent
+            data-map-src="<?= htmlspecialchars($contactMapEmbedSrc, ENT_QUOTES) ?>"
+          >
+            <p class="body-3 mb-3">
+              <?= htmlspecialchars(label('contact.map_consent_text', 'Per visualizzare la mappa interattiva viene utilizzato un servizio di terze parti (Google Maps), attivato solo dopo consenso ai cookie opzionali.'), ENT_QUOTES) ?>
+            </p>
+            <div class="d-flex flex-wrap justify-content-center align-items-center" style="gap: 12px;">
+              <button type="button" class="primary-btn" data-map-open-button style="min-width:160px;">
+                <?= htmlspecialchars(label('contact.map_consent_button', 'Mostra mappa'), ENT_QUOTES) ?>
+              </button>
+              <a class="secondary-btn" href="/cookie-policy.php" style="min-width:160px;">
+                <?= htmlspecialchars(label('contact.map_consent_policy', 'Cookie Policy'), ENT_QUOTES) ?>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>

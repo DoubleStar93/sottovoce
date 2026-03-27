@@ -8,6 +8,8 @@ $footerPhone = appEnv('FOOTER_PHONE', '+39 331 125 3525');
 $footerEmail = appEnv('FOOTER_EMAIL', 'info@valentinoravenna.com');
 $footerAddressLine1 = appEnv('FOOTER_ADDRESS_LINE1', 'Via Ponte Marino, 17');
 $footerAddressLine2 = appEnv('FOOTER_ADDRESS_LINE2', '48121 Ravenna RA');
+$legalControllerName = appEnv('LEGAL_CONTROLLER_NAME', 'Sottovoce');
+$footerPiva = appEnv('FOOTER_PIVA', '');
 ?>
 <!doctype html>
 <html lang="<?= htmlspecialchars($locale, ENT_QUOTES) ?>">
@@ -25,7 +27,11 @@ $footerAddressLine2 = appEnv('FOOTER_ADDRESS_LINE2', '48121 Ravenna RA');
 
       <h3 class="mt-4 mb-2"><?= htmlspecialchars(label('privacy.section1.title', '1) Titolare del trattamento'), ENT_QUOTES) ?></h3>
       <p class="body-2">
+        <strong><?= htmlspecialchars($legalControllerName, ENT_QUOTES) ?></strong>.
         <?= htmlspecialchars(label('privacy.section1.body', 'Il titolare del trattamento e il soggetto giuridico che gestisce il locale Sottovoce a Ravenna.'), ENT_QUOTES) ?>
+        <?php if ($footerPiva !== ''): ?>
+          <?= htmlspecialchars(' ' . label('privacy.section1.vat_prefix', 'P.IVA') . ': ' . $footerPiva . '.', ENT_QUOTES) ?>
+        <?php endif; ?>
         <?= htmlspecialchars(label('privacy.section1.contacts', ' Recapiti: '), ENT_QUOTES) ?>
         <a href="mailto:<?= htmlspecialchars($footerEmail, ENT_QUOTES) ?>"><?= htmlspecialchars($footerEmail, ENT_QUOTES) ?></a>
         <?= htmlspecialchars(label('privacy.separator', ' - '), ENT_QUOTES) ?>

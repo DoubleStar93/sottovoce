@@ -725,6 +725,29 @@ body.sottovoce-luxury .sottovoce-cookie-row p {
 body.sottovoce-luxury .sottovoce-cookie-switch {
   min-width: 3.2rem;
   text-align: right;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  cursor: pointer;
+}
+
+body.sottovoce-luxury .sottovoce-cookie-switch input[type="checkbox"] {
+  width: 1.1rem;
+  height: 1.1rem;
+  accent-color: #e3cba5;
+  cursor: pointer;
+}
+
+body.sottovoce-luxury .sottovoce-cookie-switch input[type="checkbox"][disabled] {
+  cursor: not-allowed;
+}
+
+body.sottovoce-luxury .sottovoce-cookie-switch__state {
+  min-width: 2.1rem;
+  text-align: right;
+  font-size: 0.86rem;
+  letter-spacing: 0.01em;
+  color: #e3cba5 !important;
 }
 
 body.sottovoce-luxury .sottovoce-cookie-panel__actions {
