@@ -2423,7 +2423,7 @@ if (globalHomeLinkDropdownBox) {
     </div>
     <div class="col-12 col-lg-6 p-0 inline-right show-on-scroll image-zoom-animation img-shadow">
       <div class="img-box img-shadow image-zoom-animation" data-aos="fade-left" data-aos-duration="1000" data-aos-offset="300" data-aos-easing="ease-in-sine">
-        <img width="1024" height="535" decoding="async" src="/assets/images/momento_romantico.jpg" alt="Momento romantico da Sottovoce" class="img-fluid sottovoce-featured-media">        
+        <img width="1024" height="535" decoding="async" src="/assets/images/tramonto.jpg" alt="Tramonto da Sottovoce" class="img-fluid sottovoce-featured-media">        
       </div>
     </div>
   </div>
@@ -2439,14 +2439,14 @@ if (globalHomeLinkDropdownBox) {
     <div class="carousel-inner">
             <style>
           .individual-homepage-corporate-section.individual-homepage-corporate-section-0 {
-            background-image: url('/assets/images/tramonto.jpg');
+            background-image: url('/assets/images/momento_romantico.jpg');
 
           }
         </style>
 
         <style>
           html[dir="rtl"] .individual-homepage-corporate-section.individual-homepage-corporate-section-0 {
-            background-image: url('/assets/images/tramonto.jpg');
+            background-image: url('/assets/images/momento_romantico.jpg');
           }
         </style>
         <div class="carousel-item active">
