@@ -82,6 +82,7 @@ return [
     'nav.prenota' => 'Book',
     'nav.aria.menu_toggle' => 'Open or close the navigation menu',
     'nav.aria.close_overlay' => 'Close menu',
+    'nav.aria.scroll_sun' => 'Page scroll indicator',
     'hours.title' => 'Hours',
     'hours.intro' => 'Sottovoce opens at sunset: welcoming starts with the evening light, with arrival recommended close to the displayed time.',
     'hours.how_title' => 'How opening hours work',

@@ -82,6 +82,7 @@ return [
     'nav.prenota' => 'Prenota',
     'nav.aria.menu_toggle' => 'Apri o chiudi il menu di navigazione',
     'nav.aria.close_overlay' => 'Chiudi il menu',
+    'nav.aria.scroll_sun' => 'Indicatore di scorrimento pagina',
     'hours.title' => 'Orari',
     'hours.intro' => "Sottovoce apre al tramonto: l'accoglienza segue il ritmo della luce serale, con ingresso consigliato in prossimita dell'orario indicato.",
     'hours.how_title' => 'Come funzionano gli orari',

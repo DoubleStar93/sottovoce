@@ -14,7 +14,7 @@ $nextSunsetCountdown = (new NextSunset(SunsetForecast::fromEnv()))->resolve();
 
 <?php include __DIR__ . '/pages/_partials/head.php'; ?>
 
-<body id="page-top" class="sottovoce-luxury page-template page-template-templates page-template-individual-home-custom-template page-template-templatesindividual-home-custom-template-php page page-id-3739 page-parent page-child parent-pageid-662">
+<body class="sottovoce-luxury page-template page-template-templates page-template-individual-home-custom-template page-template-templatesindividual-home-custom-template-php page page-id-3739 page-parent page-child parent-pageid-662">
   <!-- Preloader -->
   <!-- Preloader End -->
   <div id="bgHalosHome" class="bg-halos-home" aria-hidden="true"></div>

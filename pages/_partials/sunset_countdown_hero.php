@@ -29,7 +29,7 @@ if (($nextSunsetCountdown['ok'] ?? false) === true && isset($nextSunsetCountdown
     position: relative;
   }
 
-  body#page-top .sunset-countdown-hero .sunset-countdown-label {
+  body.sottovoce-luxury .sunset-countdown-hero .sunset-countdown-label {
     font-size: clamp(0.62rem, 1.35vw, 0.72rem) !important;
     font-weight: 400 !important;
     letter-spacing: 0.42em !important;
@@ -78,7 +78,7 @@ if (($nextSunsetCountdown['ok'] ?? false) === true && isset($nextSunsetCountdown
     50% { opacity: 1; transform: translate(-50%, -50%) scale(1.03); }
   }
 
-  body#page-top .sunset-countdown-hero .sunset-countdown-digits {
+  body.sottovoce-luxury .sunset-countdown-hero .sunset-countdown-digits {
     position: relative;
     z-index: 1;
     font-family: ui-sans-serif, system-ui, "Segoe UI", Roboto, sans-serif !important;
@@ -101,7 +101,7 @@ if (($nextSunsetCountdown['ok'] ?? false) === true && isset($nextSunsetCountdown
       0 0 96px rgba(255, 255, 255, 0.45) !important;
   }
 
-  body#page-top .sunset-countdown-hero.sunset-countdown--unavailable .sunset-countdown-digits {
+  body.sottovoce-luxury .sunset-countdown-hero.sunset-countdown--unavailable .sunset-countdown-digits {
     font-size: clamp(1.05rem, 3.2vw, 1.25rem) !important;
     font-weight: 400 !important;
     letter-spacing: 0.06em !important;

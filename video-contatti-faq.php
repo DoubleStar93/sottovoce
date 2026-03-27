@@ -4,7 +4,7 @@ require_once __DIR__ . '/config.php';
 <!doctype html>
 <html lang="<?= htmlspecialchars(appCurrentLocale(), ENT_QUOTES) ?>">
 <?php include __DIR__ . '/pages/_partials/head.php'; ?>
-<body id="page-top" class="sottovoce-luxury page-template page-template-default page sottovoce-contact-page">
+<body class="sottovoce-luxury page-template page-template-default page sottovoce-contact-page">
 <div id="bgHalosHome" class="bg-halos-home" aria-hidden="true"></div>
 <div id="page" class="site">
 <?php include __DIR__ . '/pages/_partials/header.php'; ?>

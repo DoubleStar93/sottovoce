@@ -20,7 +20,7 @@ for ($i = 0; $i < 7; $i++) {
 <!doctype html>
 <html lang="<?= htmlspecialchars(appCurrentLocale(), ENT_QUOTES) ?>">
 <?php include __DIR__ . '/pages/_partials/head.php'; ?>
-<body id="page-top" class="sottovoce-luxury page-template page-template-default page sottovoce-hours-page">
+<body class="sottovoce-luxury page-template page-template-default page sottovoce-hours-page">
 <div id="bgHalosHome" class="bg-halos-home" aria-hidden="true"></div>
 <div id="page" class="site">
 <?php include __DIR__ . '/pages/_partials/header.php'; ?>
