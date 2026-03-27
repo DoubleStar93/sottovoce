@@ -19,7 +19,7 @@ require_once __DIR__ . '/config.php';
       <div class="container-fluid pt-5" data-reveal>
         <div class="row position-relative" data-reveal>
           <div class="col-12 p-0 px-lg-3">
-            <img width="1284" height="375" decoding="async" src="/dependencies/img/wp-content/uploads/2020/10/INFINITY-POOL-DAY-ADDRESS-SKY-VIEW-copy.jpg" alt="<?= htmlspecialchars(label('services.pool.image_alt', 'Infinity pool at Address Sky View'), ENT_QUOTES) ?>" class="img-fluid amenities-large-img p-0 px-lg-3">
+            <img width="1284" height="375" decoding="async" src="https://placehold.co/1284x375?text=Sottovoce+Placeholder" alt="<?= htmlspecialchars(label('services.pool.image_alt', 'Infinity pool at Address Sky View'), ENT_QUOTES) ?>" class="img-fluid amenities-large-img p-0 px-lg-3">
           </div>
           <div class="amenities-title-box">
             <h2 class="display-2-48"><?= htmlspecialchars(label('services.pool.title', 'Infinity Pool'), ENT_QUOTES) ?></h2>
@@ -39,7 +39,7 @@ require_once __DIR__ . '/config.php';
       <div class="container-fluid pt-5" data-reveal>
         <div class="row position-relative" data-reveal>
           <div class="col-12 p-0 px-lg-3">
-            <img width="1284" height="375" decoding="async" src="/dependencies/img/wp-content/uploads/2020/10/KIDS-CLUB-ADDRESS-SKY-VIEW-copy.jpg" alt="<?= htmlspecialchars(label('services.kids.image_alt', 'Qix Kids Club at Address Sky View'), ENT_QUOTES) ?>" class="img-fluid amenities-large-img p-0 px-lg-3">
+            <img width="1284" height="375" decoding="async" src="https://placehold.co/1284x375?text=Sottovoce+Placeholder" alt="<?= htmlspecialchars(label('services.kids.image_alt', 'Qix Kids Club at Address Sky View'), ENT_QUOTES) ?>" class="img-fluid amenities-large-img p-0 px-lg-3">
           </div>
           <div class="amenities-title-box">
             <h2 class="display-2-48"><?= htmlspecialchars(label('services.kids.title', 'Qix Kids Club'), ENT_QUOTES) ?></h2>

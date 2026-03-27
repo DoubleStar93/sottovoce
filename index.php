@@ -2423,7 +2423,7 @@ if (globalHomeLinkDropdownBox) {
     </div>
     <div class="col-12 col-lg-6 p-0 inline-right show-on-scroll image-zoom-animation img-shadow">
       <div class="img-box img-shadow image-zoom-animation" data-aos="fade-left" data-aos-duration="1000" data-aos-offset="300" data-aos-easing="ease-in-sine">
-        <img width="1024" height="535" decoding="async" src="/dependencies/img/wp-content/uploads/2026/01/ASV-Infinity-Pool-5-1-e1736344266192.jpg" alt="" class="img-fluid">        
+        <img width="1024" height="535" decoding="async" src="https://placehold.co/1024x535?text=Sottovoce+Placeholder" alt="" class="img-fluid">        
       </div>
     </div>
   </div>
@@ -2439,14 +2439,14 @@ if (globalHomeLinkDropdownBox) {
     <div class="carousel-inner">
             <style>
           .individual-homepage-corporate-section.individual-homepage-corporate-section-0 {
-            background-image: url('../../../wp-content/uploads/2024/11/EMAAR-Address-SkyView-by-Maddy-Christina-153-sur-171-scaled.jpg');
+            background-image: url('https://placehold.co/1600x900?text=Sottovoce+Placeholder');
 
           }
         </style>
 
         <style>
           html[dir="rtl"] .individual-homepage-corporate-section.individual-homepage-corporate-section-0 {
-            background-image: url('../../../wp-content/uploads/2024/11/EMAAR-Address-SkyView-by-Maddy-Christina-153-sur-171-scaled.jpg');
+            background-image: url('https://placehold.co/1600x900?text=Sottovoce+Placeholder');
           }
         </style>
         <div class="carousel-item active">

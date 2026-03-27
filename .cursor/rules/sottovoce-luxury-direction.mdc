@@ -27,6 +27,7 @@ alwaysApply: true
   - `[[LABEL_IT: ...]]`
   - `[[LABEL_EN: ...]]`
 - Non presentare i placeholder come testo definitivo di produzione.
+- Per immagini placeholder, usa `https://placehold.co/` con dimensioni coerenti al layout (es. `https://placehold.co/1284x375?text=Sottovoce+Placeholder`).
 
 ## Guardrail contenuto
 
