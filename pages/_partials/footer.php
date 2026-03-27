@@ -142,6 +142,14 @@ $cookieText = [
   </div>
 </footer>
 
+<style>
+  /* Cookie UI fallback: keeps banner/panel usable even if theme CSS is overridden */
+  .sottovoce-cookie-banner.is-visible { display: block; }
+  .sottovoce-cookie-panel.is-visible { display: flex; }
+  .sottovoce-cookie-banner[hidden],
+  .sottovoce-cookie-panel[hidden] { display: none !important; }
+</style>
+
 <section class="sottovoce-cookie-banner" id="sottovoce-cookie-banner" hidden>
   <div class="sottovoce-cookie-banner__content">
     <h3><?= htmlspecialchars($cookieText['title'], ENT_QUOTES) ?></h3>
@@ -201,6 +209,19 @@ $cookieText = [
 
 <script>
   (function () {
+    function safeClosest(target, selector) {
+      if (!target || typeof selector !== 'string') {
+        return null;
+      }
+      if (target.nodeType !== 1) {
+        target = target.parentElement;
+      }
+      if (!target || typeof target.closest !== 'function') {
+        return null;
+      }
+      return target.closest(selector);
+    }
+
     var STORAGE_KEY = 'sottovoce_cookie_consent_v1';
     var COOKIE_KEY = 'sottovoce_cookie_consent_v1';
     var COOKIE_DAYS = 365;
@@ -469,6 +490,7 @@ $cookieText = [
       }
       banner.hidden = false;
       banner.classList.add('is-visible');
+      banner.style.display = 'block';
     }
 
     function closeBanner() {
@@ -477,10 +499,17 @@ $cookieText = [
       }
       banner.classList.remove('is-visible');
       banner.hidden = true;
+      banner.style.display = 'none';
     }
 
     function openPanel() {
       if (!panel) {
+        return;
+      }
+      if (!analyticsToggle || !marketingToggle) {
+        panel.hidden = false;
+        panel.classList.add('is-visible');
+        panel.style.display = 'flex';
         return;
       }
       var current = getConsentState();
@@ -489,6 +518,7 @@ $cookieText = [
       syncToggleStateUi();
       panel.hidden = false;
       panel.classList.add('is-visible');
+      panel.style.display = 'flex';
     }
 
     function closePanel() {
@@ -497,6 +527,7 @@ $cookieText = [
       }
       panel.classList.remove('is-visible');
       panel.hidden = true;
+      panel.style.display = 'none';
     }
 
     function syncToggleStateUi() {
@@ -532,13 +563,13 @@ $cookieText = [
     }
 
     document.addEventListener('click', function (event) {
-      var actionBtn = event.target.closest('[data-cookie-action]');
+      var actionBtn = safeClosest(event.target, '[data-cookie-action]');
       if (actionBtn) {
         handleAction(actionBtn.getAttribute('data-cookie-action'));
         return;
       }
 
-      var openBtn = event.target.closest('[data-open-cookie-preferences]');
+      var openBtn = safeClosest(event.target, '[data-open-cookie-preferences]');
       if (openBtn) {
         event.preventDefault();
         closeBanner();
@@ -546,7 +577,7 @@ $cookieText = [
         return;
       }
 
-      var mapBtn = event.target.closest('[data-map-open-button]');
+      var mapBtn = safeClosest(event.target, '[data-map-open-button]');
       if (mapBtn) {
         event.preventDefault();
         var currentConsent = getConsentState();
