@@ -11,10 +11,12 @@ $itUrl = '/';
 $enUrl = '/en/';
 $switchLocale = $currentLocale === 'en' ? 'it' : 'en';
 $switchUrl = $switchLocale === 'en' ? $enUrl : $itUrl;
+$navHome = function_exists('label') ? label('nav.home', 'Home') : 'Home';
 $navServizi = function_exists('label') ? label('nav.servizi', 'Servizi') : 'Servizi';
 $navOrari = function_exists('label') ? label('nav.orari', 'Orari') : 'Orari';
 $navContatti = function_exists('label') ? label('nav.contatti', 'Contatti') : 'Contatti';
 $navPrenota = function_exists('label') ? label('nav.prenota', 'Prenota') : 'Prenota';
+$bookingUrl = trim((string) appEnv('MOBEE_PAGE_URL', ''));
 $ariaMenuToggle = function_exists('label') ? label('nav.aria.menu_toggle', 'Menu') : 'Menu';
 $ariaCloseOverlay = function_exists('label') ? label('nav.aria.close_overlay', 'Chiudi menu') : 'Chiudi menu';
 ?>
@@ -72,16 +74,24 @@ $ariaCloseOverlay = function_exists('label') ? label('nav.aria.close_overlay', '
         <div class="d-flex flex-column align-items-center justify-content-center w-100 sottovoce-nav-inner sottovoce-nav-overlay-inner" id="responsive-navbar-flex">
           <ul class="navbar-nav static-area sottovoce-primary-nav sottovoce-overlay-nav-list flex-column align-items-center text-center mb-0" role="menubar">
             <li class="nav-item" role="none">
-              <a href="#" class="nav-link" role="menuitem" onclick="return false;"><?= htmlspecialchars($navServizi, ENT_QUOTES, 'UTF-8') ?></a>
+              <a href="<?= $homePrefix ?>#page-top" class="nav-link" role="menuitem"><?= htmlspecialchars($navHome, ENT_QUOTES, 'UTF-8') ?></a>
             </li>
             <li class="nav-item" role="none">
-              <a href="#" class="nav-link" role="menuitem" onclick="return false;"><?= htmlspecialchars($navOrari, ENT_QUOTES, 'UTF-8') ?></a>
+              <a href="/servizi.php" class="nav-link" role="menuitem"><?= htmlspecialchars($navServizi, ENT_QUOTES, 'UTF-8') ?></a>
             </li>
             <li class="nav-item" role="none">
-              <a href="#" class="nav-link" role="menuitem" onclick="return false;"><?= htmlspecialchars($navContatti, ENT_QUOTES, 'UTF-8') ?></a>
+              <a href="/orari.php" class="nav-link" role="menuitem"><?= htmlspecialchars($navOrari, ENT_QUOTES, 'UTF-8') ?></a>
             </li>
             <li class="nav-item" role="none">
-              <a href="#" class="nav-link" role="menuitem" onclick="return false;"><?= htmlspecialchars($navPrenota, ENT_QUOTES, 'UTF-8') ?></a>
+              <a href="/video-contatti-faq.php" class="nav-link" role="menuitem"><?= htmlspecialchars($navContatti, ENT_QUOTES, 'UTF-8') ?></a>
+            </li>
+            <li class="nav-item" role="none">
+              <a
+                href="<?= htmlspecialchars($bookingUrl !== '' ? $bookingUrl : '#', ENT_QUOTES, 'UTF-8') ?>"
+                class="nav-link sottovoce-nav-link-booking"
+                role="menuitem"
+                <?= $bookingUrl !== '' ? 'target="_blank" rel="noopener noreferrer"' : 'onclick="return false;"' ?>
+              ><?= htmlspecialchars($navPrenota, ENT_QUOTES, 'UTF-8') ?></a>
             </li>
           </ul>
 

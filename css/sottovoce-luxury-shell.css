@@ -1,6 +1,6 @@
-/**
- * Sottovoce luxury shell — verde #3c3e21, tipografia chiara, navbar.
- * Applicare: <body class="sottovoce-luxury"> (insieme a id="page-top" sulla home se serve ancora l’ancora).
+﻿/**
+ * Sottovoce luxury shell â€” verde #3c3e21, tipografia chiara, navbar.
+ * Applicare: <body class="sottovoce-luxury"> (insieme a id="page-top" sulla home se serve ancora lâ€™ancora).
  */
 
 body.sottovoce-luxury,
@@ -148,8 +148,8 @@ body.sottovoce-luxury .sottovoce-navbar-shell .sottovoce-nav-toggler {
 }
 
 /*
- * Un solo “apri” (hamburger) e un solo “chiudi” (× nell’overlay).
- * Il tema mostra fa-times nel toggler quando .menu-open → X duplicata sopra l’overlay in chiusura.
+ * Un solo â€œapriâ€ (hamburger) e un solo â€œchiudiâ€ (Ã— nellâ€™overlay).
+ * Il tema mostra fa-times nel toggler quando .menu-open â†’ X duplicata sopra lâ€™overlay in chiusura.
  */
 body.sottovoce-luxury #nav-main .toggler-icon-animated .fa-times {
   display: none !important;
@@ -160,7 +160,7 @@ body.sottovoce-luxury #nav-main.menu-open .sottovoce-nav-toggler {
   pointer-events: none !important;
 }
 
-/* Tema: #bootscore-navbar-collapsedd { display:flex } da 1198px — senza overlay chiuso */
+/* Tema: #bootscore-navbar-collapsedd { display:flex } da 1198px â€” senza overlay chiuso */
 body.sottovoce-luxury
   .custom-navbar-page
   #bootscore-navbar-collapsedd.sottovoce-navbar-overlay-panel.collapse:not(.show):not(.collapsing) {
@@ -176,7 +176,7 @@ body.sottovoce-luxury #bootscore-navbar-collapsedd.sottovoce-navbar-overlay-pane
 
 /*
  * Fase Bootstrap .collapsing (prima di .show in apertura): senza questo il pannello
- * resta opacità 1 per un frame e poi parte l’animazione → effetto “compare e poi si muove”.
+ * resta opacitÃ  1 per un frame e poi parte lâ€™animazione â†’ effetto â€œcompare e poi si muoveâ€.
  */
 body.sottovoce-luxury #bootscore-navbar-collapsedd.sottovoce-navbar-overlay-panel.collapsing:not(.show) {
   opacity: 0 !important;
@@ -226,13 +226,13 @@ body.sottovoce-luxury .sottovoce-nav-overlay-inner {
   box-sizing: border-box;
 }
 
-/* Apertura: ease-in sull’intero overlay — `both` applica subito il fotogramma “from” (no flash) */
+/* Apertura: ease-in sullâ€™intero overlay â€” `both` applica subito il fotogramma â€œfromâ€ (no flash) */
 body.sottovoce-luxury
   #bootscore-navbar-collapsedd.sottovoce-navbar-overlay-panel.collapse.show:not(.sottovoce-overlay-exit) {
   animation: sottovoceOverlayPanelIn 0.48s ease-in both;
 }
 
-/* Chiusura: ease-out sull’intero overlay */
+/* Chiusura: ease-out sullâ€™intero overlay */
 body.sottovoce-luxury #bootscore-navbar-collapsedd.sottovoce-navbar-overlay-panel.sottovoce-overlay-exit {
   animation: sottovoceOverlayPanelOut 0.4s ease-out forwards !important;
 }
@@ -316,6 +316,24 @@ body.sottovoce-luxury .sottovoce-overlay-nav-list .nav-link:focus {
   outline: none;
 }
 
+body.sottovoce-luxury .sottovoce-overlay-nav-list .nav-link.sottovoce-nav-link-booking {
+  color: #fff8ea !important;
+  text-shadow:
+    0 0 18px rgba(255, 255, 255, 0.96),
+    0 0 44px rgba(255, 222, 170, 0.78),
+    0 0 86px rgba(255, 154, 72, 0.6),
+    0 0 120px rgba(255, 120, 40, 0.38);
+}
+
+body.sottovoce-luxury .sottovoce-overlay-nav-list .nav-link.sottovoce-nav-link-booking:hover,
+body.sottovoce-luxury .sottovoce-overlay-nav-list .nav-link.sottovoce-nav-link-booking:focus {
+  color: #ffffff !important;
+  text-shadow:
+    0 0 20px rgba(255, 255, 255, 1),
+    0 0 52px rgba(255, 230, 190, 0.92),
+    0 0 98px rgba(255, 162, 80, 0.78),
+    0 0 138px rgba(255, 126, 50, 0.5);
+}
 body.sottovoce-luxury .sottovoce-nav-overlay-lang .nav-link,
 body.sottovoce-luxury .sottovoce-overlay-lang-link {
   font-size: clamp(1.25rem, 4vw, 2rem) !important;
@@ -404,7 +422,7 @@ body.sottovoce-luxury #page {
   z-index: 1;
 }
 
-/* Pagine legali / testo lungo (cookie policy, privacy, ecc.) — sotto header fixed */
+/* Pagine legali / testo lungo (cookie policy, privacy, ecc.) â€” sotto header fixed */
 body.sottovoce-luxury .sottovoce-legal-page {
   padding-top: clamp(6rem, 16vh, 9rem);
   scroll-margin-top: clamp(6rem, 16vh, 9rem);
@@ -430,3 +448,131 @@ body.sottovoce-luxury .sottovoce-legal-page .body-2 {
   line-height: 1.65;
   opacity: 0.95;
 }
+
+/* Contatti + FAQ (riusato in home e pagina dedicata) */
+#contact-details,
+#contact-details .individual-homepage-contact-map,
+#faq,
+#faq .container {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+body.sottovoce-luxury #contact-details.individual-homepage-contact-map-section {
+  padding-top: 3rem !important;
+  padding-bottom: 0 !important;
+}
+
+body.sottovoce-luxury #contact-details .individual-homepage-contact-map {
+  max-width: 100% !important;
+  padding: 2.75rem 1rem 3rem !important;
+  background: transparent !important;
+}
+
+body.sottovoce-luxury #contact-details .sottovoce-contact-copy {
+  background: transparent !important;
+}
+
+body.sottovoce-luxury #contact-details .contact-details p {
+  display: block !important;
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+body.sottovoce-luxury #contact-details .sottovoce-contact-map {
+  max-width: 72rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body.sottovoce-luxury #faq.sottovoce-faq {
+  position: relative;
+}
+
+body.sottovoce-luxury #faq.sottovoce-faq .sottovoce-faq-title {
+  max-width: 28rem;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+}
+
+body.sottovoce-luxury #faq.sottovoce-faq .accordionFaq {
+  max-width: 52rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  background: transparent !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+body.sottovoce-luxury #faq.sottovoce-faq .accordionFaq .card {
+  border: none !important;
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+body.sottovoce-luxury #faq.sottovoce-faq .accordionFaq .card:not(:last-child) {
+  border-bottom: 1px solid rgba(227, 203, 165, 0.28) !important;
+}
+
+body.sottovoce-luxury #faq.sottovoce-faq .accordionFaq .card-header {
+  background: transparent !important;
+  background-color: transparent !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+body.sottovoce-luxury #faq.sottovoce-faq .accordionFaq .card-body,
+body.sottovoce-luxury #faq.sottovoce-faq .accordionFaq .accordionFaq-card-content,
+body.sottovoce-luxury #faq.sottovoce-faq .accordionFaq .collapse {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+body.sottovoce-luxury #faq.sottovoce-faq .accordionFaq .card-body {
+  padding-left: 0 !important;
+  padding-right: 2rem;
+  padding-top: 0;
+  opacity: 0.92;
+  line-height: 1.65;
+}
+
+body.sottovoce-luxury #faq.sottovoce-faq .accordionFaq button.btn {
+  border-bottom: none !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+body.sottovoce-luxury #faq.sottovoce-faq .accordionFaq button > h3 {
+  color: #ffffff !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.02em;
+}
+
+body.sottovoce-luxury #faq.sottovoce-faq .accordionFaq .plus-icon {
+  color: #e3cba5 !important;
+  opacity: 0.95;
+}
+
+#contact-details .contact-map-wrap {
+  position: relative;
+  overflow: hidden;
+  height: 400px;
+  filter: grayscale(1);
+  -webkit-filter: grayscale(1);
+}
+
+#contact-details .contact-map-wrap iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
