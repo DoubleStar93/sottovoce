@@ -8,6 +8,8 @@ $footerHoursLinkUrl = appEnv('FOOTER_HOURS_LINK_URL', '/pages/index.php#contact-
 $footerPhone = appEnv('FOOTER_PHONE', '+39 331 125 3525');
 $footerEmail = appEnv('FOOTER_EMAIL', 'info@valentinoravenna.com');
 $footerPiva = appEnv('FOOTER_PIVA', '');
+$currentLocale = appCurrentLocale();
+$homeHref = $currentLocale === 'en' ? '/en/' : '/';
 ?>
 <footer class="site-footer-minimal">
   <style>
@@ -92,28 +94,28 @@ $footerPiva = appEnv('FOOTER_PIVA', '');
   <div class="container">
     <div class="row">
       <div class="col-12 col-lg-4 footer-col">
-        <a href="/en/">
+        <a href="<?= htmlspecialchars($homeHref, ENT_QUOTES) ?>">
           <img src="/img/logo_nero.png" alt="Sottovoce logo" class="footer-logo">
         </a>
       </div>
 
       <div class="col-12 col-lg-4 footer-col">
-        <h3 class="footer-title">Dove siamo</h3>
+        <h3 class="footer-title"><?= htmlspecialchars(label('footer.where', 'Dove siamo'), ENT_QUOTES) ?></h3>
         <p><?= htmlspecialchars($footerAddressLine1, ENT_QUOTES) ?></p>
         <p><?= htmlspecialchars($footerAddressLine2, ENT_QUOTES) ?></p>
       </div>
 
       <div class="col-12 col-lg-4 footer-col">
-        <h3 class="footer-title">Contatti</h3>
+        <h3 class="footer-title"><?= htmlspecialchars(label('footer.contacts', 'Contatti'), ENT_QUOTES) ?></h3>
         <p><a href="tel:<?= htmlspecialchars(preg_replace('/\s+/', '', $footerPhone), ENT_QUOTES) ?>"><?= htmlspecialchars($footerPhone, ENT_QUOTES) ?></a></p>
         <p><a href="mailto:<?= htmlspecialchars($footerEmail, ENT_QUOTES) ?>"><?= htmlspecialchars($footerEmail, ENT_QUOTES) ?></a></p>
       </div>
     </div>
 
     <div class="footer-bottom">
-      <span>P.IVA <?= htmlspecialchars($footerPiva, ENT_QUOTES) ?></span>
-      <a href="/privacy-policy.php">Privacy Policy</a>
-      <a href="/cookie-policy.php">Cookie Policy</a>
+      <span><?= htmlspecialchars(label('footer.vat', 'P.IVA'), ENT_QUOTES) ?> <?= htmlspecialchars($footerPiva, ENT_QUOTES) ?></span>
+      <a href="/privacy-policy.php"><?= htmlspecialchars(label('footer.privacy', 'Privacy Policy'), ENT_QUOTES) ?></a>
+      <a href="/cookie-policy.php"><?= htmlspecialchars(label('footer.cookies', 'Cookie Policy'), ENT_QUOTES) ?></a>
     </div>
   </div>
 </footer>

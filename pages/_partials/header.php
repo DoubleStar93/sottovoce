@@ -3,12 +3,17 @@ declare(strict_types=1);
 $requestPath = trim((string) parse_url($_SERVER['REQUEST_URI'] ?? '', PHP_URL_PATH), '/');
 $isOnePageHome = in_array($requestPath, ['', 'index.php', 'pages/index.php'], true);
 $homePrefix = $isOnePageHome ? '' : '/pages/index.php';
+$currentLocale = function_exists('appCurrentLocale') ? appCurrentLocale() : 'it';
+$itUrl = '/';
+$enUrl = '/en/';
+$switchLocale = $currentLocale === 'en' ? 'it' : 'en';
+$switchUrl = $switchLocale === 'en' ? $enUrl : $itUrl;
 ?>
 <header id="masthead" class="site-header custom-navbar-page nav-individual more-dropdown-navbar">
   <div id="to-top"></div>
   <style>
     html { scroll-behavior: smooth; }
-    #featured-offer, #accommodation, #highlights, #events, #amenities, #contact-details, #faq, #page-top {
+    #featured-offer, #events, #amenities, #contact-details, #faq, #page-top {
       scroll-margin-top: 120px;
     }
     #nav-main.scrolled-nav {
@@ -82,17 +87,17 @@ $homePrefix = $isOnePageHome ? '' : '/pages/index.php';
 	<li id="menu-item-175638" class="dropdown-item menu-item menu-item-type-custom menu-item-object-custom menu-item-175638 nav-item"><a href="/en/hotels/address-istanbul/" class="dropdown-item">Address Istanbul</a></li>
 </div></ul>
 </li>
-<li id="menu-item-29631" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-29631 nav-item"><a href="<?= $homePrefix ?>#accommodation" class="nav-link">Rooms and Suites</a></li>
-<li id="menu-item-2838" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2838 nav-item"><a href="<?= $homePrefix ?>#accommodation" class="nav-link">Residences</a></li>
-<li id="menu-item-2839" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2839 nav-item"><a href="<?= $homePrefix ?>#highlights" class="nav-link">Dining</a></li>
-<li id="menu-item-2840" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2840 nav-item"><a href="<?= $homePrefix ?>#highlights" class="nav-link">Wellness</a></li>
+<li id="menu-item-29631" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-29631 nav-item"><a href="<?= $homePrefix ?>#featured-offer" class="nav-link">Rooms and Suites</a></li>
+<li id="menu-item-2838" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2838 nav-item"><a href="<?= $homePrefix ?>#featured-offer" class="nav-link">Residences</a></li>
+<li id="menu-item-2839" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2839 nav-item"><a href="<?= $homePrefix ?>#featured-offer" class="nav-link">Dining</a></li>
+<li id="menu-item-2840" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2840 nav-item"><a href="<?= $homePrefix ?>#featured-offer" class="nav-link">Wellness</a></li>
 <li id="menu-item-2841" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2841 nav-item"><a href="<?= $homePrefix ?>#events" class="nav-link">Events</a></li>
           </ul>
 
                     <div id="work-area" class="work-area-class">
             <!-- Add your content here -->
             <ul class="navbar-nav work-navbar-nav">
-              <li id="menu-item-175954" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-175954 nav-item"><a href="<?= $homePrefix ?>#highlights" class="nav-link">Gallery</a></li>
+              <li id="menu-item-175954" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-175954 nav-item"><a href="<?= $homePrefix ?>#featured-offer" class="nav-link">Gallery</a></li>
 <li id="menu-item-175955" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-175955 nav-item"><a href="<?= $homePrefix ?>#featured-offer" class="nav-link">Offers</a></li>
 <li id="menu-item-175956" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-175956 nav-item"><a href="<?= $homePrefix ?>#amenities" class="nav-link">Amenities</a></li>
 <li id="menu-item-175965" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-175965 nav-item"><a target="_blank" rel="noopener noreferrer" href="/dependencies/external/www.google.co.in/maps/place/Address+Sky+View/@25.2015914,55.2683494,17z/data=!3m1!4b1!4m8!3m7!1s0x3e5f43859586ed13:0xe1103d783cf1f2f1!5m2!4m1!1i2!8m2!3d25.2015914!4d55.2705381" class="nav-link">Location</a></li>
@@ -118,51 +123,9 @@ $homePrefix = $isOnePageHome ? '' : '/pages/index.php';
           <ul class="navbar-nav rightlinks  cntplink align-items-xl-end fit-content justify-content-  ">
             <li class="nav-item d-flex align-items-end language-selector language-individual-spacing">
               
-<div class="wpml-ls-statics-shortcode_actions wpml-ls wpml-ls-legacy-dropdown-click js-wpml-ls-legacy-dropdown-click">
-	<ul>
-
-		<li class="wpml-ls-slot-shortcode_actions wpml-ls-item wpml-ls-item-en wpml-ls-current-language wpml-ls-first-item wpml-ls-item-legacy-dropdown-click">
-
-			<a href="#" class="js-wpml-ls-item-toggle wpml-ls-item-toggle">
-                                                    <img width="18" height="12" class="wpml-ls-flag" src="/dependencies/img/wp-content/plugins/sitepress-multilingual-cms/res/flags/en.svg" alt=""><span class="wpml-ls-native">EN</span></a>
-
-			<ul class="js-wpml-ls-sub-menu wpml-ls-sub-menu">
-				
-					<li class="wpml-ls-slot-shortcode_actions wpml-ls-item wpml-ls-item-ar">
-						<a href="/ar/hotels/address-sky-view/" class="wpml-ls-link">
-                                                                <img width="18" height="12" class="wpml-ls-flag" src="/dependencies/img/wp-content/plugins/sitepress-multilingual-cms/res/flags/ar.svg" alt=""><span class="wpml-ls-native" lang="ar">AR</span></a>
-					</li>
-
-				
-					<li class="wpml-ls-slot-shortcode_actions wpml-ls-item wpml-ls-item-zh-hans">
-						<a href="/zh-hans/hotels/address-sky-view/" class="wpml-ls-link">
-                                                                <img width="18" height="12" class="wpml-ls-flag" src="/dependencies/img/wp-content/plugins/sitepress-multilingual-cms/res/flags/zh-hans.svg" alt=""><span class="wpml-ls-native" lang="zh-hans">ZH</span></a>
-					</li>
-
-				
-					<li class="wpml-ls-slot-shortcode_actions wpml-ls-item wpml-ls-item-fr">
-						<a href="/fr/hotels/address-sky-view/" class="wpml-ls-link">
-                                                                <img width="18" height="12" class="wpml-ls-flag" src="/dependencies/img/wp-content/plugins/sitepress-multilingual-cms/res/flags/fr.svg" alt=""><span class="wpml-ls-native" lang="fr">FR</span></a>
-					</li>
-
-				
-					<li class="wpml-ls-slot-shortcode_actions wpml-ls-item wpml-ls-item-de">
-						<a href="/de/hotels/address-sky-view/" class="wpml-ls-link">
-                                                                <img width="18" height="12" class="wpml-ls-flag" src="/dependencies/img/wp-content/plugins/sitepress-multilingual-cms/res/flags/de.svg" alt=""><span class="wpml-ls-native" lang="de">DE</span></a>
-					</li>
-
-				
-					<li class="wpml-ls-slot-shortcode_actions wpml-ls-item wpml-ls-item-ru wpml-ls-last-item">
-						<a href="/ru/hotels/address-sky-view/" class="wpml-ls-link">
-                                                                <img width="18" height="12" class="wpml-ls-flag" src="/dependencies/img/wp-content/plugins/sitepress-multilingual-cms/res/flags/ru.svg" alt=""><span class="wpml-ls-native" lang="ru">RU</span></a>
-					</li>
-
-							</ul>
-
-		</li>
-
-	</ul>
-</div>
+              <a href="<?= htmlspecialchars($switchUrl, ENT_QUOTES) ?>" class="nav-link px-0">
+                <?= strtoupper(htmlspecialchars($switchLocale, ENT_QUOTES)) ?>
+              </a>
             </li>
             <!-- Boat By Address Micro-Site Changes Start -->
             <!-- 

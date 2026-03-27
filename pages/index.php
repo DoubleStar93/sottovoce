@@ -1,10 +1,15 @@
 <?php
 declare(strict_types=1);
 require_once __DIR__ . '/../config.php';
+require_once __DIR__ . '/../includes/SunsetForecast.php';
+require_once __DIR__ . '/../includes/NextSunset.php';
+
 $mobeePageUrl = appEnv('MOBEE_PAGE_URL', '');
+$currentLocale = appCurrentLocale();
+$nextSunsetCountdown = (new NextSunset(SunsetForecast::fromEnv()))->resolve();
 ?>
 <!doctype html>
-<html lang="en">
+<html lang="<?= htmlspecialchars($currentLocale, ENT_QUOTES) ?>">
 
 
 <?php include __DIR__ . '/_partials/head.php'; ?>
@@ -16,7 +21,7 @@ $mobeePageUrl = appEnv('MOBEE_PAGE_URL', '');
   <div id="page" class="site">
 
     <script>
-      ICL = "en";
+      ICL = <?= json_encode($currentLocale, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) ?>;
       RECAPTCHA_SITE_KEY = "6Ld_JNIbAAAAAPu9Dbv8WgBHfIYmdKBzNh-7w72X";
       MOBEE_PAGE_URL = <?= json_encode($mobeePageUrl, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) ?>;
     </script>
@@ -150,8 +155,17 @@ left: 55px;
 
   #bootscore-navbar-collapsedd {
     max-height: 95vh;
-    overflow: scroll;
-    padding-bottom: 80px !important;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-bottom: 24px !important;
+    box-sizing: border-box;
+  }
+
+  #bootscore-navbar-collapsedd .dropdown-menu,
+  #bootscore-navbar-collapsedd .hotel_resorts_dropdown,
+  #bootscore-navbar-collapsedd .container {
+    max-width: 100%;
+    overflow-x: hidden;
   }
 }
 
@@ -192,7 +206,8 @@ nav.global-navbar.internal-nav .language-selector .wpml-ls-item-tr {
   }
 
   #right-side-elements {
-    margin-bottom: 80px;
+    margin-bottom: 0;
+    padding-bottom: 16px;
   }
 }
 
@@ -1141,14 +1156,14 @@ if (globalHomeLinkDropdownBox) {
 
 
     
-<div class="container-fluid individual-homepage-content-section">
+<div class="container-fluid individual-homepage-content-section hero-home-bottom">
   <div class="container mx-auto">
-    <h1 class="display-2-48 text-capitalize mb-2 pb-1 text-white h2">Address Sky View</h1>
+    <h1 class="sr-only"><?= htmlspecialchars(label('hero.title', 'Sottovoce Ravenna'), ENT_QUOTES) ?></h1>
+    <?php include __DIR__ . '/_partials/sunset_countdown_hero.php'; ?>
     <p class="mb-2 homepage-content-description text-white d-none"></p>
-    <p class="mb-2 homepage-content-address ">Sheikh Mohammed Bin Rashed Boulevard Downtown Dubai, PO Box 111969 Dubai, UAE</p>
     <div class="hero-prenota-cta">
       <button class="home-prenota-btn home-prenota-btn-hero" type="button" onclick="if (typeof MOBEE_PAGE_URL !== 'undefined' && MOBEE_PAGE_URL) { window.open(MOBEE_PAGE_URL, '_blank', 'noopener,noreferrer'); }">
-        Prenota
+        <?= htmlspecialchars(label('cta.book', 'Prenota'), ENT_QUOTES) ?>
       </button>
     </div>
   </div>
@@ -1368,8 +1383,8 @@ if (globalHomeLinkDropdownBox) {
                   </div>
       </div>
         <div class="search-button d-none d-xl-flex flex-column justify-content-center w-100">
-      <button class="book-outline-luxury home-prenota-btn" type="button" style="border-radius:0 !important;border:1px solid #25282d;background:transparent;color:#25282d;" onmouseover="this.style.background='#000000';this.style.color='#ffffff';this.style.border='1px solid #ffffff';" onmouseout="this.style.background='transparent';this.style.color='#25282d';this.style.border='1px solid #25282d';" onclick="if (typeof MOBEE_PAGE_URL !== 'undefined' && MOBEE_PAGE_URL) { window.open(MOBEE_PAGE_URL, '_blank', 'noopener,noreferrer'); }">
-        Prenota      </button>
+      <button class="book-outline-luxury home-prenota-btn" type="button" style="border-radius:0 !important;border:1px solid #e3cba5;background:#3c3e21;color:#e3cba5;" onmouseover="this.style.background='#e3cba5';this.style.color='#000000';this.style.border='1px solid #3c3e21';" onmouseout="this.style.background='#3c3e21';this.style.color='#e3cba5';this.style.border='1px solid #e3cba5';" onclick="if (typeof MOBEE_PAGE_URL !== 'undefined' && MOBEE_PAGE_URL) { window.open(MOBEE_PAGE_URL, '_blank', 'noopener,noreferrer'); }">
+        <?= htmlspecialchars(label('cta.book', 'Prenota'), ENT_QUOTES) ?>      </button>
     </div>
 
     <div class="hotel-popup bg-grey py-2 px-4 border d-none">
@@ -1986,8 +2001,8 @@ if (globalHomeLinkDropdownBox) {
             
           </div>
           <div class="button-wrapper mt-3">
-            <button class="book-outline-luxury home-prenota-btn home-prenota-btn-mobile" type="button" style="border-radius:0 !important;border:1px solid #25282d;background:transparent;color:#25282d;" onmouseover="this.style.background='#000000';this.style.color='#ffffff';this.style.border='1px solid #ffffff';" onmouseout="this.style.background='transparent';this.style.color='#25282d';this.style.border='1px solid #25282d';" onclick="if (typeof MOBEE_PAGE_URL !== 'undefined' && MOBEE_PAGE_URL) { window.open(MOBEE_PAGE_URL, '_blank', 'noopener,noreferrer'); }">
-              Prenota            </button>
+            <button class="book-outline-luxury home-prenota-btn home-prenota-btn-mobile" type="button" style="border-radius:0 !important;border:1px solid #e3cba5;background:#3c3e21;color:#e3cba5;" onmouseover="this.style.background='#e3cba5';this.style.color='#000000';this.style.border='1px solid #3c3e21';" onmouseout="this.style.background='#3c3e21';this.style.color='#e3cba5';this.style.border='1px solid #e3cba5';" onclick="if (typeof MOBEE_PAGE_URL !== 'undefined' && MOBEE_PAGE_URL) { window.open(MOBEE_PAGE_URL, '_blank', 'noopener,noreferrer'); }">
+              <?= htmlspecialchars(label('cta.book', 'Prenota'), ENT_QUOTES) ?>            </button>
           </div>
         </div>
        
@@ -2123,44 +2138,78 @@ if (globalHomeLinkDropdownBox) {
     color: #ffffff !important;
   }
 
+  /* 20px dal bordo inferiore dell’area video (override tema: 11.5rem) */
+  body#page-top .fullscreen-hero-banner-booking-widget .individual-homepage-content-section.hero-home-bottom {
+    bottom: 20px !important;
+  }
+  .hero-home-bottom .container.mx-auto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .hero-home-bottom .sunset-countdown-hero {
+    margin-top: 0;
+    width: 100%;
+  }
   .hero-prenota-cta {
     margin-top: 20px;
     width: 100%;
     max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
   }
-  .home-prenota-btn-hero {
+  body#page-top .hero-home-bottom button.home-prenota-btn-hero {
     width: 100%;
     min-height: 56px;
     padding: 0 20px;
-    border: 1px solid #e3cba5;
+    border: 1px solid rgba(255, 255, 255, 0.72) !important;
     border-radius: 0 !important;
-    background: #3c3e21;
-    color: #e3cba5;
-    letter-spacing: .4px;
-    box-shadow: none !important;
+    background: rgba(60, 62, 33, 0.78) !important;
+    color: #ffffff !important;
+    letter-spacing: 0.14em;
+    text-shadow:
+      0 1px 2px rgba(0, 0, 0, 0.75),
+      0 0 10px rgba(255, 255, 255, 0.65),
+      0 0 22px rgba(255, 255, 255, 0.4) !important;
+    box-shadow:
+      0 0 14px rgba(255, 255, 255, 0.28),
+      0 0 32px rgba(255, 255, 255, 0.14),
+      inset 0 0 14px rgba(255, 255, 255, 0.06) !important;
     transform: none !important;
-    transition: background .2s ease, color .2s ease, border-color .2s ease;
+    transition:
+      background 0.25s ease,
+      color 0.25s ease,
+      border-color 0.25s ease,
+      box-shadow 0.25s ease,
+      text-shadow 0.25s ease;
   }
-  .home-prenota-btn-hero:hover,
-  .home-prenota-btn-hero:focus {
-    background: #e3cba5 !important;
-    color: #000000 !important;
-    border: 1px solid #3c3e21 !important;
+  body#page-top .hero-home-bottom button.home-prenota-btn-hero:hover,
+  body#page-top .hero-home-bottom button.home-prenota-btn-hero:focus {
+    background: rgba(255, 255, 255, 0.1) !important;
+    color: #ffffff !important;
+    border: 1px solid rgba(255, 255, 255, 0.95) !important;
     border-radius: 0 !important;
+    text-shadow:
+      0 1px 2px rgba(0, 0, 0, 0.55),
+      0 0 14px rgba(255, 255, 255, 0.95),
+      0 0 32px rgba(255, 255, 255, 0.65) !important;
+    box-shadow:
+      0 0 20px rgba(255, 255, 255, 0.48),
+      0 0 44px rgba(255, 255, 255, 0.28),
+      inset 0 0 22px rgba(255, 255, 255, 0.12) !important;
   }
-
-  body#page-top a.home-prenota-btn-hero:hover,
-  body#page-top a.home-prenota-btn-hero:focus,
-  body#page-top button.home-prenota-btn-hero:hover,
-  body#page-top button.home-prenota-btn-hero:focus {
-    color: #000000 !important;
-  }
-
-  .home-prenota-btn-hero:active {
-    background: #e3cba5 !important;
-    color: #3c3e21 !important;
-    border: 1px solid #3c3e21 !important;
+  body#page-top .hero-home-bottom button.home-prenota-btn-hero:active {
+    background: rgba(255, 255, 255, 0.16) !important;
+    color: #ffffff !important;
+    border: 1px solid rgba(255, 255, 255, 0.88) !important;
     border-radius: 0 !important;
+    text-shadow:
+      0 1px 2px rgba(0, 0, 0, 0.65),
+      0 0 12px rgba(255, 255, 255, 0.85) !important;
+    box-shadow:
+      0 0 16px rgba(255, 255, 255, 0.4),
+      0 0 36px rgba(255, 255, 255, 0.2) !important;
   }
   /* Hide legacy booking widget to avoid responsive misalignment */
   .new-booking-widget {
@@ -2170,6 +2219,11 @@ if (globalHomeLinkDropdownBox) {
   .content-box {
     background: #e3cba5;
     padding: 24px;
+  }
+
+  #featured-offer .content-box {
+    background: transparent !important;
+    background-image: none !important;
   }
 
   .new-booking-widget .prevent-select {
@@ -2704,9 +2758,10 @@ if (globalHomeLinkDropdownBox) {
   <div class="container text-center">
 
 
-          <h2 class="display-1-72 font-48-mobile mt-4 text-uppercase title-pink">Iconic Luxury in a Prime Location and Unparalleled Views</h2>
+          <h2 class="display-1-72 font-48-mobile mt-4 text-uppercase title-pink"><?= htmlspecialchars(label('section.intro.title', 'Aperitivo al tramonto, firma Sottovoce'), ENT_QUOTES) ?></h2>
 
-          <p class="body-2 description--text">Discover luxury with an unparalleled view at Address Sky View. This <a href="/en/hotels-in-downtown-dubai/"><mark style="background-color:rgba(0, 0, 0, 0)" class="has-inline-color has-vivid-cyan-blue-color"><span style="text-decoration: underline;">hotel in Downtown</span></mark></a> offers breathtaking panoramas, iconic infinity pool overlooking Burj Khalifa. Renowned for its prime location with direct access to Dubai Mall and metro station, Address Sky View is a haven for both leisure and business travellers.</p>
+          <p class="body-2 description--text"><?= htmlspecialchars(label('section.intro.description', "Sottovoce e un indirizzo serale nel cuore di Ravenna, dove mixology e cucina leggera si incontrano in un'atmosfera raffinata."), ENT_QUOTES) ?></p>
+          <p class="body-2 description--text"><?= htmlspecialchars(label('section.intro.how', 'Come funziona: apertura al tramonto, prenotazione consigliata e turni da 50 minuti per garantire un servizio accurato e tempi perfetti.'), ENT_QUOTES) ?></p>
     
     <div class="cta-btn mt-4">
           </div>
@@ -2717,7 +2772,8 @@ if (globalHomeLinkDropdownBox) {
   <div class="row g-0 align-items-center text-center justify-content-between">
     <div class="col-12 col-lg-6 inline-left show-on-scroll">
       <div class="content-box" data-aos="fade-right" data-aos-duration="1000" data-aos-offset="300" data-aos-easing="ease-in-sine">
-        <h5 class="eyebrow-text">FEATURED OFFER</h5><h2 class="offers-section-item-heading text-center display-1-72 font-56-mobile">Infinity Pool Day Pass</h2><p class="body-2 mb-0 mb-lg-5">Rise above the city at Address Sky View&#8217;s iconic Infinity Pool in Alto 54. Suspended high above Dubai, the pool offers sweeping, uninterrupted views of the Burj Khalifa and the city skyline, and elegance. </p><a class="btn primary-btn" href="/en/offers/infinity-pool-day-pass/">Learn More</a>      </div>
+        <h5 class="eyebrow-text"><?= htmlspecialchars(label('section.signature.eyebrow', 'SIGNATURE EXPERIENCE'), ENT_QUOTES) ?></h5><h2 class="offers-section-item-heading text-center display-1-72 font-56-mobile"><?= htmlspecialchars(label('section.signature.title', 'Il rituale del tramonto'), ENT_QUOTES) ?></h2><p class="body-2 mb-0 mb-lg-5"><?= htmlspecialchars(label('section.signature.body', "Dal primo calice all'ultimo assaggio, un percorso elegante tra cocktail signature e piccoli piatti pensati per il ritmo della sera."), ENT_QUOTES) ?></p>
+      </div>
     </div>
     <div class="col-12 col-lg-6 p-0 inline-right show-on-scroll image-zoom-animation img-shadow">
       <div class="img-box img-shadow image-zoom-animation" data-aos="fade-left" data-aos-duration="1000" data-aos-offset="300" data-aos-easing="ease-in-sine">
@@ -2726,342 +2782,6 @@ if (globalHomeLinkDropdownBox) {
     </div>
   </div>
 </div>
-
-
-
-<div id="accommodation" class="individual-homepage-explore-accommodations">
-
-  <div class="container-fluid p-0">
-    <div class="container text-center p-2 p-lg-5 inline-up2 show-on-scroll">
-
-              <p class="text-uppercase offers-section-item-label eyebrow-dark text-center">STAY</p>
-      
-              <h2 class="offers-section-item-heading text-center display-1-72 font-56-mobile mt-0">Explore Our Accommodation</h2>
-                </div>
-  </div>
-
-  
-
-  <div id="offers-carousel">
-    <div class="main-carousel" data-flickity='{ "cellAlign": "center", "contain": true,"pageDots": false }'>
-                <div class="img-text-box slider-img slider-img-explore-accommodations is-selected ">
-            <div class="img-content">
-
-                              <div class="img-box img-shadow">
-                  <img width="824" height="520" decoding="async" src="/dependencies/img/wp-content/uploads/2020/10/DEF8469.jpg.webp" class="img-fluid" alt="">
-                </div>
-              
-
-              <style>
-                @media (max-width: 767px) {
-                  .slider-img-explore-accommodations .img-content::before {
-                    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(38%, rgba(0, 0, 0, 0)), color-stop(104%, rgba(0, 0, 0, 0.8))) !important;
-                  }
-                }
-              </style>
-
-
-              <div class="overlap-content accomodation-content">
-                <div class="overlap-text text-left text-white w-100">
-                                      <p class="smalltitle eyebrow-dark whitetext secondary-medium font-14 text-uppercase d-inline-block p-0 m-0">Address Sky View</p>
-                  
-                                      <h3 class="whitetext m-0 display-4-32 secondary-normal mb-2">Rooms</h3>
-                                    <div class="d-flex flex-column flex-md-row align-items-start align-md-items-center justify-content-between gap-2">
-                                        <div class="overlap-btn mb-0 mb-md-auto">
-                                              <a class="btn alternate-btn small-btn" style="width: max-content;" href="/pages/rooms-and-suites/index.php">Discover More</a>
-                                          </div>
-
-                  </div>
-
-                </div>
-              </div>
-            </div>
-          </div>
-
-                <div class="img-text-box slider-img slider-img-explore-accommodations is-selected ">
-            <div class="img-content">
-
-                              <div class="img-box img-shadow">
-                  <img width="824" height="520" decoding="async" src="/dependencies/img/wp-content/uploads/2020/10/ADH_ADSVH_RESIDENCES_CATEGORY_AMBIENT_HR_02.jpg.webp" class="img-fluid" alt="">
-                </div>
-              
-
-              <style>
-                @media (max-width: 767px) {
-                  .slider-img-explore-accommodations .img-content::before {
-                    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(38%, rgba(0, 0, 0, 0)), color-stop(104%, rgba(0, 0, 0, 0.8))) !important;
-                  }
-                }
-              </style>
-
-
-              <div class="overlap-content accomodation-content">
-                <div class="overlap-text text-left text-white w-100">
-                                      <p class="smalltitle eyebrow-dark whitetext secondary-medium font-14 text-uppercase d-inline-block p-0 m-0">Address Sky View</p>
-                  
-                                      <h3 class="whitetext m-0 display-4-32 secondary-normal mb-2">Residences </h3>
-                                    <div class="d-flex flex-column flex-md-row align-items-start align-md-items-center justify-content-between gap-2">
-                                        <div class="overlap-btn mb-0 mb-md-auto">
-                                              <a class="btn alternate-btn small-btn" style="width: max-content;" href="/pages/residences/index.php">Discover More</a>
-                                          </div>
-
-                  </div>
-
-                </div>
-              </div>
-            </div>
-          </div>
-
-          </div>
-  </div>
-
-</div>
-<style>
-  .accomodation-content .overlap-btn {
-    margin-bottom: 20px;
-  }
-
-  @media (max-width: 350px) {
-    .slider-img-explore-accommodations {
-      height: 500px !important;
-      width: 300px !important;
-    }
-  }
-
-  @media screen and (max-width: 767px) {
-    .accomodation-text {
-      line-height: 24px;
-    }
-
-  }
-  .page-id-196909 .overlap-btn.mb-0.mb-md-auto {
-    all: unset; 
-}
-
-</style>
-
-<div id="highlights" class="individual-homepage-hotel-highlights-section">
-      <div class="container-fluid">
-      <div class="container text-center inline-up show-on-scroll">
-
-                  <p class="text-uppercase eyebrow-dark h6 mb-2 mt-0">ADDRESS SKY VIEW</p>
-                          <h2 class="display-1-72 font-56-mobile mt-0">Iconic Stays</h2>
-                  <p class="m-auto body-2 py-lg-0">In this skyline-defining duo of towers joined by an architecturally marvellous Sky Bridge, embrace the unique privilege of staying ‘Where Life Happens’.</p>
-              </div>
-    </div>
-    <div id="dine-carousel">
-    <div class="main-carousel" data-flickity='{ "cellAlign": "center", "contain": true,"pageDots": false }'>
-                <div class="img-text-box slider-img slider-img-hotel-highlights is-selected">
-            <div class="img-content highlight-container">
-              <div class="img-box img-shadow">
-                                  <img width="380" height="400" decoding="async" src="/dependencies/img/wp-content/uploads/2020/10/THE-RESTAURANT-2-ADDRESS-SKY-VIEW.jpg.webp" class="img-fluid">
-                              </div>
-              <div class="overlap-content overlap-container flex-column">
-                <div class="d-lg-flex align-items-center justify-content-between w-100">
-                  <div class="overlap-text text-left text-white">
-                                          <span class="smalltitle eyebrow-dark whitetext secondary-medium font-14 text-uppercase ">Restaurants</span>
-                                                              <h3 class="whitetext m-0 display-4-32 secondary-normal ">Gourmet Dining</h3>
-                                      </div>
-                  <div class="overlap-btn">
-                                          <a class="btn alternate-btn small-btn" href="/pages/dining/index.php">Explore</a>
-                                      </div>
-                </div>
-                <div class="overlap-below d-none mt-1">
-                                  </div>
-                <div class="mobile-overlap-btn d-none">
-                                      <a class="btn alternate-btn small-btn" href="/pages/dining/index.php">Explore</a>
-                  
-                </div>
-
-              </div>
-            </div>
-
-
-
-          </div>
-                <div class="img-text-box slider-img slider-img-hotel-highlights is-selected">
-            <div class="img-content highlight-container">
-              <div class="img-box img-shadow">
-                                  <img width="2560" height="1706" decoding="async" src="/dependencies/img/wp-content/uploads/2023/06/THE-SPA-COUPLE-ROOM-JACUZZI-ADDRESS-SKY-VIEW-scaled.jpg.webp" class="img-fluid">
-                              </div>
-              <div class="overlap-content overlap-container flex-column">
-                <div class="d-lg-flex align-items-center justify-content-between w-100">
-                  <div class="overlap-text text-left text-white">
-                                          <span class="smalltitle eyebrow-dark whitetext secondary-medium font-14 text-uppercase ">Wellness</span>
-                                                              <h3 class="whitetext m-0 display-4-32 secondary-normal ">The Spa</h3>
-                                      </div>
-                  <div class="overlap-btn">
-                                          <a class="btn alternate-btn small-btn" href="/pages/wellness/spa/index.php">Explore</a>
-                                      </div>
-                </div>
-                <div class="overlap-below d-none mt-1">
-                                  </div>
-                <div class="mobile-overlap-btn d-none">
-                                      <a class="btn alternate-btn small-btn" href="/pages/wellness/spa/index.php">Explore</a>
-                  
-                </div>
-
-              </div>
-            </div>
-
-
-
-          </div>
-                <div class="img-text-box slider-img slider-img-hotel-highlights is-selected">
-            <div class="img-content highlight-container">
-              <div class="img-box img-shadow">
-                                  <img width="1750" height="1166" decoding="async" src="/dependencies/img/wp-content/uploads/2023/01/FITNESS-GYM-ADDRESS-SKY-VIEW-1.jpg.webp" class="img-fluid">
-                              </div>
-              <div class="overlap-content overlap-container flex-column">
-                <div class="d-lg-flex align-items-center justify-content-between w-100">
-                  <div class="overlap-text text-left text-white">
-                                          <span class="smalltitle eyebrow-dark whitetext secondary-medium font-14 text-uppercase ">Pool &amp; Fitness</span>
-                                                              <h3 class="whitetext m-0 display-4-32 secondary-normal ">Superb Recreation</h3>
-                                      </div>
-                  <div class="overlap-btn">
-                                          <a class="btn alternate-btn small-btn" href="/pages/wellness/index.php">Explore</a>
-                                      </div>
-                </div>
-                <div class="overlap-below d-none mt-1">
-                                  </div>
-                <div class="mobile-overlap-btn d-none">
-                                      <a class="btn alternate-btn small-btn" href="/pages/wellness/index.php">Explore</a>
-                  
-                </div>
-
-              </div>
-            </div>
-
-
-
-          </div>
-                <div class="img-text-box slider-img slider-img-hotel-highlights is-selected">
-            <div class="img-content highlight-container">
-              <div class="img-box img-shadow">
-                                  <img width="1750" height="1166" decoding="async" src="/dependencies/img/wp-content/uploads/2023/01/KIDS-CLUB-ADDRESS-SKY-VIEW.jpg.webp" class="img-fluid">
-                              </div>
-              <div class="overlap-content overlap-container flex-column">
-                <div class="d-lg-flex align-items-center justify-content-between w-100">
-                  <div class="overlap-text text-left text-white">
-                                          <span class="smalltitle eyebrow-dark whitetext secondary-medium font-14 text-uppercase ">Amenities</span>
-                                                              <h3 class="whitetext m-0 display-4-32 secondary-normal ">Opulent Amenities</h3>
-                                      </div>
-                  <div class="overlap-btn">
-                                          <a class="btn alternate-btn small-btn" href="/pages/amenities/index.php">Explore</a>
-                                      </div>
-                </div>
-                <div class="overlap-below d-none mt-1">
-                                  </div>
-                <div class="mobile-overlap-btn d-none">
-                                      <a class="btn alternate-btn small-btn" href="/pages/amenities/index.php">Explore</a>
-                  
-                </div>
-
-              </div>
-            </div>
-
-
-
-          </div>
-          </div>
-  </div>
-</div>
-<style>
-  #highlights,
-  #highlights > .container-fluid,
-  #highlights .container.text-center {
-    background: transparent !important;
-    background-image: none !important;
-  }
-
-  .highlight-container {
-    position: relative;
-    overflow: hidden;
-    height: auto;
-
-  }
-
-  .highlight-container .overlap-btn,
-  .highlight-container .overlap-text {
-    position: relative;
-    transition: transform 0.3s ease;
-
-  }
-
-  .highlight-container .overlap-btn {
-    padding-top: 30px;
-  }
-
-  @media (max-width: 991px) {
-    .highlight-container .overlap-btn {
-      display: none !important;
-    }
-
-    .highlight-container .overlap-below {
-      opacity: 1;
-      display: block !important;
-
-    }
-
-    html[dir="rtl"] .overlap-content {
-
-      -webkit-align-items: unset !important;
-    }
-
-    .highlight-container .mobile-overlap-btn {
-      display: block !important;
-    }
-
-    .highlight-container .overlap-content {
-      align-items: baseline !important;
-    }
-  }
-
-  @media (max-width: 600px) {
-    .slider-img-hotel-highlights {
-      height: 520px !important;
-      width: 320px !important;
-    }
-  }
-
-  @media (max-width: 350px) {
-    .slider-img-hotel-highlights {
-      height: 500px !important;
-      width: 300px !important;
-    }
-  }
-
-  .overlap-below {
-    /* position: absolute; */
-    bottom: 0;
-    left: 20px;
-    width: 100%;
-    /* padding: 10px; */
-    box-sizing: border-box;
-    color: white;
-    transition: opacity 0.3s ease;
-    opacity: 0;
-
-  }
-
-
-
-  .highlight-container:hover .overlap-below {
-    opacity: 1;
-    display: block !important;
-
-  }
-
-  @media screen and (max-width: 767px) {
-    .overlap-desc {
-      line-height: 24px;
-    }
-
-  }
- .page-id-197302 .flickity-viewport{
-  height : 500px !important;
- }  
-</style>
 
 <link rel="stylesheet" href="/dependencies/css/wp-content/themes/emaar-projects/template-parts/dynamic-blocks/assets/css/individual-homepage-corporate-section.css">
 
@@ -3088,17 +2808,13 @@ if (globalHomeLinkDropdownBox) {
             <div class="corporate-img-section">
               <div class="corporate-img-overlay"></div>
             </div>
-            <div class="corporate-img-content text-white">
+            <div class="corporate-img-content text-white text-center sottovoce-events-copy">
 
-                              <h5 class="smalltitle eyebrow-dark whitetext">Weddings &amp; Events</h5>
-              
-                              <h2 class="whitetext pt-4 display-1-72 font-56-mobile mt-0 whitetext">Memorable Events</h2>
-              
-                              <p class="body-2 whitetext corporate-desc">Whether you’re celebrating your special day or conducting business in style, we have the perfect venue to make it memorable. </p>
-              
-              <div class="cta-btn">
-                                  <a class="btn transbtn mt15r cntplink transparent-btn" href="/pages/events/index.php">View Details</a>
-                              </div>
+                              <h5 class="smalltitle eyebrow-dark whitetext mb-0"><?= htmlspecialchars(label('section.events.eyebrow', 'Al tramonto'), ENT_QUOTES) ?></h5>
+
+                              <h2 class="whitetext pt-3 pt-md-4 display-1-72 font-56-mobile mt-0 whitetext"><?= htmlspecialchars(label('section.events.title', 'Momenti speciali, in punta di luce'), ENT_QUOTES) ?></h2>
+
+                              <p class="body-2 whitetext corporate-desc mx-auto mb-0"><?= htmlspecialchars(label('section.events.body', 'Brindisi, piccole celebrazioni e serate dedicate: la sala si accende con la luce dorata del calar del sole. Un contesto intimo e curato, con turni da 50 minuti per un servizio preciso e un ritmo elegante.'), ENT_QUOTES) ?></p>
 
             </div>
           </div>
@@ -3109,12 +2825,23 @@ if (globalHomeLinkDropdownBox) {
 
 </div>
 <style>
+  body#page-top #events .corporate-img-content.sottovoce-events-copy {
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    width: min(92%, 38rem);
+    text-align: center;
+    align-items: center;
+  }
+  body#page-top #events .corporate-img-content.sottovoce-events-copy .corporate-desc {
+    max-width: 36rem;
+  }
   @media (max-width: 600px) {
     .corporate-desc {
       overflow: hidden;
       text-overflow: ellipsis;
       display: -webkit-box !important;
-      -webkit-line-clamp: 6;
+      -webkit-line-clamp: 8;
       -webkit-box-orient: vertical;
     }
   }
@@ -3123,314 +2850,68 @@ if (globalHomeLinkDropdownBox) {
 
 
 <div class="container-fluid individual-homepage-contact-map-section" id="contact-details">
+<?php
+$contactMapQuery = trim(appEnv('FOOTER_ADDRESS_LINE1', 'Via della Cucina 10') . ', ' . appEnv('FOOTER_ADDRESS_LINE2', '20100 Milano (MI)')) . ', Italy';
+$contactMapEmbedSrc = 'https://www.google.com/maps?q=' . rawurlencode($contactMapQuery) . '&output=embed&z=17';
+$footerEmail = appEnv('FOOTER_EMAIL', 'info@sottovoce-ristorante.example');
+$footerPhoneDisplay = appEnv('FOOTER_PHONE', '+39 02 0000 0000');
+$footerTelHref = preg_replace('/\s+/', '', $footerPhoneDisplay);
+?>
   <div class="container individual-homepage-contact-map">
-    <div class="row g-0">
-      <div class="col-12 col-lg-5 px-5 pt-5 py-lg-0 px-lg-3">
-        <div class="individual-homepage-contact-map-content-box" data-aos="fade-right" data-aos-duration="600" data-aos-offset="300" data-aos-easing="ease-in-sine">
-
-                      <h2 class="display-2-48">Contact Us</h2>
-          
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-8 col-xl-7 text-center">
+        <div class="individual-homepage-contact-map-content-box sottovoce-contact-copy">
+          <h2 class="display-2-48 mb-4"><?= htmlspecialchars(label('contact.title', 'Contatti'), ENT_QUOTES) ?></h2>
           <div class="contact-details">
-            <!-- Gayathree- Contact email changes start -->
-
-                          <p class="body-4">
-                <i class="fal fa-phone-alt"></i>
-                                <a class="bluelink secondary-medium" href="tel:+97148738888">
-                  <span class="dir-ltr">+97148738888</span>
-                </a>
-              </p>
-            
-
-                          <p class="body-4">
-                <i class="fal fa-envelope"></i>
-                                <a class="bluelink secondary-medium" href="mailto:stay@addresshotels.com">
-                  stay@addresshotels.com                </a>
-              </p>
-            
-
-            
-                        <!-- Gayathree- Contact email changes end -->
-
-            
-
-            
-
-                          <p class="body-4">
-                <i class="fal fa-map-marker-alt"></i>
-                Sheikh Mohammed Bin Rashed Boulevard Downtown Dubai, PO Box 111969 Dubai, UAE              </p>
-            
+            <p class="body-4 mb-3">
+              <a class="bluelink secondary-medium" href="tel:<?= htmlspecialchars($footerTelHref, ENT_QUOTES) ?>">
+                <span class="dir-ltr"><?= htmlspecialchars($footerPhoneDisplay, ENT_QUOTES) ?></span>
+              </a>
+            </p>
+            <p class="body-4 mb-3">
+              <a class="bluelink secondary-medium" href="mailto:<?= htmlspecialchars($footerEmail, ENT_QUOTES) ?>">
+                <?= htmlspecialchars($footerEmail, ENT_QUOTES) ?>
+              </a>
+            </p>
+            <p class="body-4 mb-0">
+              <?= htmlspecialchars(trim(appEnv('FOOTER_ADDRESS_LINE1', 'Via della Cucina 10') . ' - ' . appEnv('FOOTER_ADDRESS_LINE2', '20100 Milano (MI)')), ENT_QUOTES) ?>
+            </p>
           </div>
         </div>
-        <hr>
       </div>
-
-      
-        
-        
-
-        <script type="text/javascript">
-          function initialize() {
-            var mapOptions = {
-
-              center: new google.maps.LatLng(25.201485152531276, 55.27063659940833),
-              zoom: 12,
-
-              styles: [{
-                  "elementType": "geometry",
-                  "stylers": [{
-                    "color": "#f5f5f5"
-                  }]
-                },
-                {
-                  "elementType": "geometry.fill",
-                  "stylers": [{
-                    "color": "#ECEAE8"
-                  }]
-                },
-                {
-                  "elementType": "labels.icon",
-                  "stylers": [{
-                    "visibility": "off"
-                  }]
-                },
-                {
-                  "elementType": "labels.text.fill",
-                  "stylers": [{
-                    "color": "#928F8A"
-                  }]
-                },
-                {
-                  "elementType": "labels.text.stroke",
-                  "stylers": [{
-                    "color": "#f5f5f5"
-                  }]
-                },
-                {
-                  "featureType": "administrative.land_parcel",
-                  "elementType": "labels",
-                  "stylers": [{
-                    "visibility": "off"
-                  }]
-                },
-                {
-                  "featureType": "administrative.land_parcel",
-                  "elementType": "labels.text.fill",
-                  "stylers": [{
-                    "color": "#bdbdbd"
-                  }]
-                },
-                {
-                  "featureType": "administrative.locality",
-                  "elementType": "labels",
-                  "stylers": [{
-                    "visibility": "off"
-                  }]
-                },
-                {
-                  "featureType": "poi",
-                  "elementType": "geometry",
-                  "stylers": [{
-                    "color": "#eeeeee"
-                  }]
-                },
-                {
-                  "featureType": "poi",
-                  "elementType": "labels.text",
-                  "stylers": [{
-                    "visibility": "off"
-                  }]
-                },
-                {
-                  "featureType": "poi",
-                  "elementType": "labels.text.fill",
-                  "stylers": [{
-                    "color": "#757575"
-                  }]
-                },
-                {
-                  "featureType": "poi.park",
-                  "elementType": "geometry",
-                  "stylers": [{
-                    "color": "#e5e5e5"
-                  }]
-                },
-                {
-                  "featureType": "poi.park",
-                  "elementType": "labels.text.fill",
-                  "stylers": [{
-                    "color": "#9e9e9e"
-                  }]
-                },
-                {
-                  "featureType": "road",
-                  "elementType": "geometry",
-                  "stylers": [{
-                    "color": "#ffffff"
-                  }]
-                },
-                {
-                  "featureType": "road",
-                  "elementType": "geometry.fill",
-                  "stylers": [{
-                    "color": "#ffffff"
-                  }]
-                },
-                {
-                  "featureType": "road.arterial",
-                  "elementType": "labels.text.fill",
-                  "stylers": [{
-                    "color": "#757575"
-                  }]
-                },
-                {
-                  "featureType": "road.highway",
-                  "elementType": "geometry",
-                  "stylers": [{
-                    "color": "#dadada"
-                  }]
-                },
-                {
-                  "featureType": "road.highway",
-                  "elementType": "geometry.fill",
-                  "stylers": [{
-                    "color": "#ffffff"
-                  }]
-                },
-                {
-                  "featureType": "road.highway",
-                  "elementType": "labels.text.fill",
-                  "stylers": [{
-                    "color": "#616161"
-                  }]
-                },
-                {
-                  "featureType": "road.local",
-                  "elementType": "labels",
-                  "stylers": [{
-                    "visibility": "off"
-                  }]
-                },
-                {
-                  "featureType": "road.local",
-                  "elementType": "labels.text.fill",
-                  "stylers": [{
-                    "color": "#9e9e9e"
-                  }]
-                },
-                {
-                  "featureType": "transit.line",
-                  "elementType": "geometry",
-                  "stylers": [{
-                    "color": "#e5e5e5"
-                  }]
-                },
-                {
-                  "featureType": "transit.station",
-                  "elementType": "geometry",
-                  "stylers": [{
-                    "color": "#eeeeee"
-                  }]
-                },
-                {
-                  "featureType": "water",
-                  "elementType": "geometry",
-                  "stylers": [{
-                    "color": "#c9c9c9"
-                  }]
-                },
-                {
-                  "featureType": "water",
-                  "elementType": "geometry.fill",
-                  "stylers": [{
-                    "color": "#D4D1CC"
-                  }]
-                },
-                {
-                  "featureType": "water",
-                  "elementType": "labels.text.fill",
-                  "stylers": [{
-                    "color": "#9e9e9e"
-                  }]
-                }
-              ],
-              mapTypeId: google.maps.MapTypeId.ROADMAP,
-
-              // MAP CONTROLS (START)
-              // mapTypeControl: true,
-              panControl: false,
-              zoomControl: false,
-              streetViewControl: false,
-              fullscreenControl: false,
-              mapTypeControl: false,
-              // MAP CONTROLS (END)
-
-            };
-            var map = new google.maps.Map(document.getElementById("map_canvas"),
-              mapOptions);
-            /**********Location Image/icon ******/
-            var imagaloc = "/images/map-indicator.png";
-            var companyImage = new google.maps.MarkerImage(imagaloc,
-              new google.maps.Size(40, 55),
-              new google.maps.Point(0, 0),
-              new google.maps.Point(20, 60)
-            );
-            /****************************/
-
-            // -------------- MARKER 2
-            //The Address Dubai Mall
-            var marker2 = new google.maps.Marker({
-              position: new google.maps.LatLng(25.201485152531276, 55.27063659940833),
-              icon: "https://www.addresshotels.com/wp-content/themes/emaar-projects/images/marker-location.svg", // Request ID # 212282 | 26/07/22 | Anubhav Gogoi
-              map: map
-            });
-
-            var infowindow2 = new google.maps.InfoWindow({
-              content: 'Address Sky View'
-            });
-
-            marker2.addListener('click', function() {
-              infowindow2.open(map, marker2);
-              $("#pseudo_map_link")[0].click(); // Request ID # 212282 | 26/07/22 | Anubhav Gogoi
-            });
-
-
-          }
-          google.maps.event.addDomListener(window, 'load', initialize);
-        </script>
-
-        <div class="col-12 col-lg-7 mt-0">
-
-          <a href="#contact-details" id="pseudo_map_link"></a>
-
-
-          <div class="is-visible">
-            <div id="map_canvas" style="height:400px;" data-aos="fade-left" data-aos-duration="600" data-aos-offset="300" data-aos-easing="ease-in-sine"></div>
-          </div>
+    </div>
+    <div class="row g-0 mt-4 mt-lg-5 justify-content-center">
+      <div class="col-12 sottovoce-contact-map">
+        <div class="contact-map-wrap">
+          <iframe
+            title="<?= htmlspecialchars(label('contact.map_iframe_title', 'Mappa'), ENT_QUOTES) ?>"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="<?= htmlspecialchars($contactMapEmbedSrc, ENT_QUOTES) ?>"
+          ></iframe>
         </div>
-      
-
+      </div>
     </div>
   </div>
 </div>
 
 
-<section id="faq" class="global-hotel-landing-faq-section greyboxlight">
+<section id="faq" class="global-hotel-landing-faq-section sottovoce-faq">
   <div class="container px-3 py-5">
-    <h2 class="mb-3 pb-1 display-2-48 font-56-mobile">FAQs</h2>
+    <h2 class="mb-4 pb-1 display-2-48 font-56-mobile text-center sottovoce-faq-title"><?= htmlspecialchars(label('faq.title', 'Domande frequenti'), ENT_QUOTES) ?></h2>
     <div class="accordion accordionFaq" id="accordionFaq659105484">
               <div class="card">
           <div class="card-header" id="heading0">
 
                           <button class="btn btn-block d-flex text-left body-2 justify-content-between align-items-center" type="button" data-toggle="collapse" data-target="#collapse6591054840" aria-expanded="true" aria-controls="collapse0">
-                <h3 class="mb-0 body-2">How can I make a hotel reservation at Address Sky View? </h3>
+                <h3 class="mb-0 body-2"><?= htmlspecialchars(label('faq.q1', 'Come posso prenotare da Sottovoce?'), ENT_QUOTES) ?></h3>
                 <i class="fal fa-plus float-end plus-icon" aria-hidden="true"></i>
               </button>
                       </div>
 
           <div id="collapse6591054840" class="collapse accordionFaq-card-content" aria-labelledby="heading0" data-parent="#accordionFaq659105484">
             <div class="card-body">
-            To secure your reservation with us at Address Sky View, you have multiple convenient options. You may initiate the booking process by accessing our official website at <a href="/pages/index.php">https://www.addresshotels.com/en/hotels/address-sky-view/</a>. Alternatively, you can send us an email at <a href="mailto:stay@addresshotels.com">stay@addresshotels.com</a>. <br>For direct assistance and personalized service, feel free to contact our dedicated team by placing a call to us at +971 42 458 888.              <div class="cta-btn mt-4">
-              </div>
+            <?= htmlspecialchars(label('faq.a1', 'Puoi prenotare tramite il pulsante Prenota, scriverci via email oppure contattarci telefonicamente.'), ENT_QUOTES) ?>
             </div>
           </div>
         </div>
@@ -3438,15 +2919,14 @@ if (globalHomeLinkDropdownBox) {
           <div class="card-header" id="heading1">
 
                           <button class="btn btn-block d-flex text-left body-2 justify-content-between align-items-center" type="button" data-toggle="collapse" data-target="#collapse6591054841" aria-expanded="true" aria-controls="collapse1">
-                <h3 class="mb-0 body-2">What is the standard check-in time and check-out time at Address Sky View? </h3>
+                <h3 class="mb-0 body-2"><?= htmlspecialchars(label('faq.q2', 'Quanto dura ogni prenotazione?'), ENT_QUOTES) ?></h3>
                 <i class="fal fa-plus float-end plus-icon" aria-hidden="true"></i>
               </button>
                       </div>
 
           <div id="collapse6591054841" class="collapse accordionFaq-card-content" aria-labelledby="heading1" data-parent="#accordionFaq659105484">
             <div class="card-body">
-            The designated time for standard check-in is 3:00 PM, and for check-out, it is scheduled for 12:00 PM. This policy applies to all guests at Address Hotels + Resorts, ensuring a seamless and organized arrival and departure experience. We kindly request our valued guests to adhere to these timings to facilitate the efficient turnover of accommodations and maintain the high standards of service synonymous with Address Hotels + Resorts.              <div class="cta-btn mt-4">
-              </div>
+            <?= htmlspecialchars(label('faq.a2', 'Ogni tavolo segue turni da 50 minuti.'), ENT_QUOTES) ?>
             </div>
           </div>
         </div>
@@ -3454,15 +2934,14 @@ if (globalHomeLinkDropdownBox) {
           <div class="card-header" id="heading2">
 
                           <button class="btn btn-block d-flex text-left body-2 justify-content-between align-items-center" type="button" data-toggle="collapse" data-target="#collapse6591054842" aria-expanded="true" aria-controls="collapse2">
-                <h3 class="mb-0 body-2">What accommodation options are available at Address Sky View? </h3>
+                <h3 class="mb-0 body-2"><?= htmlspecialchars(label('faq.q3', 'Quando apre Sottovoce?'), ENT_QUOTES) ?></h3>
                 <i class="fal fa-plus float-end plus-icon" aria-hidden="true"></i>
               </button>
                       </div>
 
           <div id="collapse6591054842" class="collapse accordionFaq-card-content" aria-labelledby="heading2" data-parent="#accordionFaq659105484">
             <div class="card-body">
-            Discover an array of picturesque accommodations at Address Sky View, featuring an exquisite selection of rooms and suites that cater to diverse preferences. Among the enticing choices are the Premier Room King, Premier Room Twin, Premier Burj View Room King, Premier Burj View Room Twin, Club Room King, Club Room Twin, Junior Suite, Executive Suite, and the opulent Presidential Suite. Each category is meticulously designed to provide a distinctive experience, ensuring a stay that exceeds expectations.<br>For a comprehensive insight into the distinctive characteristics and amenities offered by each of our room categories, we invite you to explore further details by visiting the following link: <a href="/pages/rooms-and-suites/index.php">https://www.addresshotels.com/en/hotels/address-sky-view/rooms-and-suites/</a>. This resource provides an in-depth overview, allowing you to make an informed choice and tailor your stay at Address Sky View to your individual preferences and desires.              <div class="cta-btn mt-4">
-              </div>
+            <?= htmlspecialchars(label('faq.a3', "L'attivita e pensata per il servizio serale e apre al tramonto."), ENT_QUOTES) ?>
             </div>
           </div>
         </div>
@@ -3470,15 +2949,14 @@ if (globalHomeLinkDropdownBox) {
           <div class="card-header" id="heading3">
 
                           <button class="btn btn-block d-flex text-left body-2 justify-content-between align-items-center" type="button" data-toggle="collapse" data-target="#collapse6591054843" aria-expanded="true" aria-controls="collapse3">
-                <h3 class="mb-0 body-2">What room amenities are available at Address Sky View ? </h3>
+                <h3 class="mb-0 body-2"><?= htmlspecialchars(label('faq.q4', 'Cosa succede se arrivo in ritardo?'), ENT_QUOTES) ?></h3>
                 <i class="fal fa-plus float-end plus-icon" aria-hidden="true"></i>
               </button>
                       </div>
 
           <div id="collapse6591054843" class="collapse accordionFaq-card-content" aria-labelledby="heading3" data-parent="#accordionFaq659105484">
             <div class="card-body">
-            Step into an elevated realm of comfort and convenience with our thoughtfully furnished rooms and suites, each equipped with modern amenities for an enhanced stay. Explore the seamless accessibility of our automated in-room iPad service, granting you easy control over various services. Stay connected with complimentary high-speed Wi-Fi, and unwind with the added convenience of a coffee machine and tea-making facilities within your space. Your safety is paramount with an in-room security safe, offering a secure spot for your valuables. Enjoy entertainment at its finest with an interactive flat-screen TV, boasting a range of channels and on-demand content. Additionally, treat yourself to a private minibar, where you can indulge in a curated selection of beverages and snacks (surcharge applies), completing the perfect accommodation experience.              <div class="cta-btn mt-4">
-              </div>
+            <?= htmlspecialchars(label('faq.a4', 'Ti consigliamo di arrivare con qualche minuto di anticipo.'), ENT_QUOTES) ?>
             </div>
           </div>
         </div>
@@ -3486,15 +2964,14 @@ if (globalHomeLinkDropdownBox) {
           <div class="card-header" id="heading4">
 
                           <button class="btn btn-block d-flex text-left body-2 justify-content-between align-items-center" type="button" data-toggle="collapse" data-target="#collapse6591054844" aria-expanded="true" aria-controls="collapse4">
-                <h3 class="mb-0 body-2">How do I access the infinity pool as a hotel guest or as a non-hotel guest? </h3>
+                <h3 class="mb-0 body-2"><?= htmlspecialchars(label('faq.q5', 'E possibile fermarsi oltre i 50 minuti?'), ENT_QUOTES) ?></h3>
                 <i class="fal fa-plus float-end plus-icon" aria-hidden="true"></i>
               </button>
                       </div>
 
           <div id="collapse6591054844" class="collapse accordionFaq-card-content" aria-labelledby="heading4" data-parent="#accordionFaq659105484">
             <div class="card-body">
-            The highly sought-after infinity pool, offering breathtaking views of the iconic Burj Khalifa, is a privileged amenity exclusively accessible to our esteemed hotel guests. For those not staying with us, there&#8217;s an enticing option to relish the ambiance by choosing to dine at CÉ LA VI Dubai. However a dining experience at Ce La Vi, does not entail the use to the Infinity Pool.<br><br>For an unforgettable experience at Address Sky View, securing your stay is just a few clicks away. Explore the available accommodations, amenities, and services by visiting our website at <a href="/pages/index.php">https://www.addresshotels.com/en/hotels/address-sky-view/</a>. To make a reservation, you can also reach out to us via email at <a href="mailto:stay@addresshotels.com">stay@addresshotels.com</a> or contact our dedicated team directly at +971 42 458 888. We look forward to making your stay with us truly exceptional.              <div class="cta-btn mt-4">
-              </div>
+            <?= htmlspecialchars(label('faq.a5', 'Quando possibile, valutiamo estensioni del tempo al tavolo.'), ENT_QUOTES) ?>
             </div>
           </div>
         </div>
@@ -3502,95 +2979,14 @@ if (globalHomeLinkDropdownBox) {
           <div class="card-header" id="heading5">
 
                           <button class="btn btn-block d-flex text-left body-2 justify-content-between align-items-center" type="button" data-toggle="collapse" data-target="#collapse6591054845" aria-expanded="true" aria-controls="collapse5">
-                <h3 class="mb-0 body-2">Is U by Emaar applicable at your hotel? </h3>
+                <h3 class="mb-0 body-2"><?= htmlspecialchars(label('faq.q6', 'Avete opzioni per allergie o esigenze alimentari?'), ENT_QUOTES) ?></h3>
                 <i class="fal fa-plus float-end plus-icon" aria-hidden="true"></i>
               </button>
                       </div>
 
           <div id="collapse6591054845" class="collapse accordionFaq-card-content" aria-labelledby="heading5" data-parent="#accordionFaq659105484">
             <div class="card-body">
-            Certainly, U by Emaar discounts can be availed across various facets of your experience, extending their applicability to accommodations, dining experiences, and rejuvenating wellness treatments. Whether you choose to stay with us, indulge in delectable dining options, or pamper yourself with wellness treatments, the exclusive benefits of U by Emaar are designed to enhance and elevate every aspect of your visit.              <div class="cta-btn mt-4">
-              </div>
-            </div>
-          </div>
-        </div>
-              <div class="card">
-          <div class="card-header" id="heading6">
-
-                          <button class="btn btn-block d-flex text-left body-2 justify-content-between align-items-center" type="button" data-toggle="collapse" data-target="#collapse6591054846" aria-expanded="true" aria-controls="collapse6">
-                <h3 class="mb-0 body-2">Does Address Sky View have a spa? </h3>
-                <i class="fal fa-plus float-end plus-icon" aria-hidden="true"></i>
-              </button>
-                      </div>
-
-          <div id="collapse6591054846" class="collapse accordionFaq-card-content" aria-labelledby="heading6" data-parent="#accordionFaq659105484">
-            <div class="card-body">
-            Situated on Level 54, The Spa at Address Sky View stands out for its world-class facilities, featuring dedicated spaces for beauty treatments, massage therapies, and a diverse range of wellness experiences, all administered by highly skilled professionals.              <div class="cta-btn mt-4">
-              </div>
-            </div>
-          </div>
-        </div>
-              <div class="card">
-          <div class="card-header" id="heading7">
-
-                          <button class="btn btn-block d-flex text-left body-2 justify-content-between align-items-center" type="button" data-toggle="collapse" data-target="#collapse6591054847" aria-expanded="true" aria-controls="collapse7">
-                <h3 class="mb-0 body-2">How many restaurants are in Address Sky View? </h3>
-                <i class="fal fa-plus float-end plus-icon" aria-hidden="true"></i>
-              </button>
-                      </div>
-
-          <div id="collapse6591054847" class="collapse accordionFaq-card-content" aria-labelledby="heading7" data-parent="#accordionFaq659105484">
-            <div class="card-body">
-            Address Sky View boasts six distinct dining destinations within the hotel, offering a diverse culinary experience. These include:<br><br>&#8211; The Restaurant, an all-day dining venue<br>&#8211; Deck Too, a poolside lounge<br>&#8211; Patisserie, located in the lobby<br>&#8211; CÉ LA VI, offering contemporary Asian cuisine<br>&#8211; Lucia’s, specializing in Italian fare<br>&#8211; Amelia Restaurant and Lounge, presenting a fusion of Peruvian and Japanese flavours.<br><br>Each of these dining establishments contributes to the rich tapestry of gastronomic delights available at Address Sky View.<br>              <div class="cta-btn mt-4">
-              </div>
-            </div>
-          </div>
-        </div>
-              <div class="card">
-          <div class="card-header" id="heading8">
-
-                          <button class="btn btn-block d-flex text-left body-2 justify-content-between align-items-center" type="button" data-toggle="collapse" data-target="#collapse6591054848" aria-expanded="true" aria-controls="collapse8">
-                <h3 class="mb-0 body-2">What facilities and activities are available at the hotel? </h3>
-                <i class="fal fa-plus float-end plus-icon" aria-hidden="true"></i>
-              </button>
-                      </div>
-
-          <div id="collapse6591054848" class="collapse accordionFaq-card-content" aria-labelledby="heading8" data-parent="#accordionFaq659105484">
-            <div class="card-body">
-            Our offerings encompass a comprehensive array of facilities, ensuring a well-rounded and enriching experience for our guests. From the captivating “Sky View Observatory” to the engaging Qix Kids Club, the multiple swimming pools situated on the ground level, and the mesmerizing infinity pool on Level 54, we provide diverse options for relaxation and recreation. Our spa, fitness centre, and beauty salon cater to wellness and grooming needs, while the six distinctive dining venues present a culinary journey. Additionally, we offer versatile event spaces to accommodate various occasions, further enhancing the overall experience at our establishment.              <div class="cta-btn mt-4">
-              </div>
-            </div>
-          </div>
-        </div>
-              <div class="card">
-          <div class="card-header" id="heading9">
-
-                          <button class="btn btn-block d-flex text-left body-2 justify-content-between align-items-center" type="button" data-toggle="collapse" data-target="#collapse6591054849" aria-expanded="true" aria-controls="collapse9">
-                <h3 class="mb-0 body-2">How far is Address Sky View from Dubai Mall? </h3>
-                <i class="fal fa-plus float-end plus-icon" aria-hidden="true"></i>
-              </button>
-                      </div>
-
-          <div id="collapse6591054849" class="collapse accordionFaq-card-content" aria-labelledby="heading9" data-parent="#accordionFaq659105484">
-            <div class="card-body">
-            Dubai Mall is conveniently located just a short stroll away from Address Sky View, with an approximate walking distance of about 10 minutes via the air-conditioned walkway. This proximity allows our guests to seamlessly access the vibrant shopping, dining, and entertainment offerings at Dubai Mall, enhancing their overall experience during their stay at Address Sky View.              <div class="cta-btn mt-4">
-              </div>
-            </div>
-          </div>
-        </div>
-              <div class="card">
-          <div class="card-header" id="heading10">
-
-                          <button class="btn btn-block d-flex text-left body-2 justify-content-between align-items-center" type="button" data-toggle="collapse" data-target="#collapse65910548410" aria-expanded="true" aria-controls="collapse10">
-                <h3 class="mb-0 body-2">What is sky views observatory? </h3>
-                <i class="fal fa-plus float-end plus-icon" aria-hidden="true"></i>
-              </button>
-                      </div>
-
-          <div id="collapse65910548410" class="collapse accordionFaq-card-content" aria-labelledby="heading10" data-parent="#accordionFaq659105484">
-            <div class="card-body">
-            The Sky Views Observatory introduces a groundbreaking and unprecedented array of exhilarating experiences, featuring a unique outdoor glass slide. This extraordinary slide propels adventurous visitors from the elevated height of level 53 at 219.5 meters to level 52 at 215.5 meters, all within the confines of an enclosed and transparent glass tube. This one-of-a-kind attraction promises an unparalleled adventure, providing guests with a thrilling journey and breathtaking panoramic views of the surroundings. For bookings please use the Prenota button on this page.              <div class="cta-btn mt-4">
-              </div>
+            <?= htmlspecialchars(label('faq.a6', 'Il nostro team e disponibile a supportarti con indicazioni su ingredienti e alternative.'), ENT_QUOTES) ?>
             </div>
           </div>
         </div>
@@ -3635,24 +3031,32 @@ if (globalHomeLinkDropdownBox) {
     color: #ffffff !important;
   }
 
+  body#page-top h2 {
+    text-shadow:
+      0 0 8px rgba(255, 255, 255, 0.95),
+      0 0 22px rgba(255, 255, 255, 0.65),
+      0 0 44px rgba(255, 255, 255, 0.4),
+      0 0 72px rgba(255, 255, 255, 0.22) !important;
+  }
+
   body#page-top input::placeholder,
   body#page-top textarea::placeholder {
     color: #ffffff !important;
     opacity: 1;
   }
 
-  body#page-top .amenities-title-box {
-    background-color: #e3cba5 !important;
+  body#page-top .wp-block-group.white-bg,
+  body#page-top .wp-block-group.white-bg .wp-block-group__inner-container {
+    background-color: #3c3e21 !important;
     background-image: none !important;
   }
 
-  body#page-top .accordion.accordionFaq,
-  body#page-top .accordion.accordionFaq .card,
-  body#page-top .accordion.accordionFaq .card-header,
-  body#page-top .accordion.accordionFaq .card-body,
-  body#page-top .accordion.accordionFaq .accordionFaq-card-content {
-    background-color: #e3cba5 !important;
+  body#page-top .amenities-title-box {
+    background-color: #3c3e21 !important;
     background-image: none !important;
+    border: none !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
   }
 
   body#page-top #nav-main,
@@ -3689,11 +3093,127 @@ if (globalHomeLinkDropdownBox) {
   #contact-details,
   #contact-details .individual-homepage-contact-map,
   #faq,
-  #faq.greyboxlight,
   #faq .container {
     background: transparent !important;
     background-color: transparent !important;
     background-image: none !important;
+  }
+
+  body#page-top #contact-details.individual-homepage-contact-map-section {
+    padding-top: 3rem !important;
+    padding-bottom: 0 !important;
+  }
+
+  body#page-top #contact-details .individual-homepage-contact-map {
+    max-width: 100% !important;
+    padding: 2.75rem 1rem 3rem !important;
+    background: transparent !important;
+  }
+
+  body#page-top #contact-details .sottovoce-contact-copy {
+    background: transparent !important;
+  }
+
+  body#page-top #contact-details .contact-details p {
+    display: block !important;
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  body#page-top #contact-details .sottovoce-contact-map {
+    max-width: 72rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  body#page-top #faq.sottovoce-faq {
+    position: relative;
+  }
+
+  body#page-top #faq.sottovoce-faq .sottovoce-faq-title {
+    max-width: 28rem;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+  }
+
+  body#page-top #faq.sottovoce-faq .accordionFaq {
+    max-width: 52rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    background: transparent !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+  }
+
+  body#page-top #faq.sottovoce-faq .accordionFaq .card {
+    border: none !important;
+    background: transparent !important;
+    background-color: transparent !important;
+  }
+
+  body#page-top #faq.sottovoce-faq .accordionFaq .card:not(:last-child) {
+    border-bottom: 1px solid rgba(227, 203, 165, 0.28) !important;
+  }
+
+  body#page-top #faq.sottovoce-faq .accordionFaq .card-header {
+    background: transparent !important;
+    background-color: transparent !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  body#page-top #faq.sottovoce-faq .accordionFaq .card-body,
+  body#page-top #faq.sottovoce-faq .accordionFaq .accordionFaq-card-content,
+  body#page-top #faq.sottovoce-faq .accordionFaq .collapse {
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    box-shadow: none !important;
+  }
+
+  body#page-top #faq.sottovoce-faq .accordionFaq .card-body {
+    padding-left: 0 !important;
+    padding-right: 2rem;
+    padding-top: 0;
+    opacity: 0.92;
+    line-height: 1.65;
+  }
+
+  body#page-top #faq.sottovoce-faq .accordionFaq button.btn {
+    border-bottom: none !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  body#page-top #faq.sottovoce-faq .accordionFaq button > h3 {
+    color: #ffffff !important;
+    font-weight: 400 !important;
+    letter-spacing: 0.02em;
+  }
+
+  body#page-top #faq.sottovoce-faq .accordionFaq .plus-icon {
+    color: #e3cba5 !important;
+    opacity: 0.95;
+  }
+
+  #contact-details .contact-map-wrap {
+    position: relative;
+    overflow: hidden;
+    height: 400px;
+    filter: grayscale(1);
+    -webkit-filter: grayscale(1);
+  }
+
+  #contact-details .contact-map-wrap iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
   }
 
   body#page-top footer,
@@ -3842,10 +3362,7 @@ Each of these dining establishments contributes to the rich tapestry of gastrono
   }]
 }
 </script>
-<div id="amenities" class="container text-center pt-5">
-  <h2 class="pt-4 mb-4 pb-3 eyebrow-dark">ADDRESS SKY VIEW AMENITIES</h2>
-</div>
-<div class="wp-block-group container-fluid white-bg mb-5 pb-5">
+<div id="amenities" class="wp-block-group container-fluid white-bg mb-5 pb-5">
   <div class="wp-block-group__inner-container is-layout-flow wp-block-group-is-layout-flow">
     <div class="container-fluid pt-5">
       <div class="row position-relative">
@@ -3855,7 +3372,6 @@ Each of these dining establishments contributes to the rich tapestry of gastrono
         <div class="amenities-title-box ">
           <h2 class="display-2-48">Infinity Pool</h2>
         </div>
-        <hr class="amenities-title-box-hr">
       </div>
       <div class="row justify-content-center text-center">
         <div class="col-12 col-lg-8 amenities-list-col">
@@ -3876,7 +3392,6 @@ Each of these dining establishments contributes to the rich tapestry of gastrono
         <div class="amenities-title-box ">
           <h2 class="display-2-48">Qix Kids Club</h2>
         </div>
-        <hr class="amenities-title-box-hr">
       </div>
       <div class="row justify-content-center text-center">
         <div class="col-12 col-lg-8 amenities-list-col">
