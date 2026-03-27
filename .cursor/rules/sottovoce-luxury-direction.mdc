@@ -1,5 +1,5 @@
 ---
-description: Linee guida luxury per il sito Sottovoce (IT/EN, sunset, turni 50 min, placeholder AI)
+description: Linee guida luxury per il sito Sottovoce (IT/EN, contenuti accattivanti, prenotazione obbligatoria)
 alwaysApply: true
 ---
 
@@ -7,13 +7,25 @@ alwaysApply: true
 
 - Progetta e scrivi il sito come esperienza **luxury contemporanea** per Sottovoce, locale a Ravenna per aperitivo e dining.
 - Tono premium, elegante, sobrio: evita linguaggio aggressivo, turistico o troppo promozionale.
+- I contenuti devono essere **accattivanti**, mantenendo sempre un'eleganza misurata e credibile.
 - Coerenza visuale/editoriale con palette del progetto (verde scuro, beige, accento arancio) e spaziatura ordinata/minimale.
 
 ## Vincoli operativi da rispettare sempre
 
 - Il concept racconta apertura **al tramonto**.
-- La prenotazione funziona su **turni da 50 minuti**.
-- Se compaiono orari o disponibilita, devono essere coerenti con la logica sunset + slot 50 minuti.
+- La prenotazione e **obbligatoria**.
+- La prenotazione funziona su **slot da 50 minuti**.
+- In prenotazione si seleziona uno slot; se il cliente lo specifica in fase di booking, e possibile riservare **piu slot consecutivi**.
+- Se compaiono orari o disponibilita, devono essere coerenti con la logica sunset + slot da 50 minuti.
+- L'URL ufficiale di prenotazione va richiamato in piu punti strategici del sito (hero, CTA, sezioni contatto/prenota), senza ambiguita.
+- Nel copy commerciale evita di ripetere in modo insistente "50 minuti": comunica la regola con eleganza, senza farla percepire come limite.
+
+## Tono del locale e capacita
+
+- Il locale e un ambiente **molto formale**, con **posti limitati**.
+- Il tono testuale deve restare contenuto, discreto e rispettoso del naming "Sottovoce".
+- Evita qualsiasi formulazione chiassosa, urlata o eccessivamente commerciale.
+- Nella sezione servizi valorizza richieste speciali su prenotazione (es. mazzo di fiori e altre attenzioni personalizzate), mantenendo tono sobrio.
 
 ## Bilingua obbligatoria
 
@@ -34,3 +46,4 @@ alwaysApply: true
 - Evita claim non verificabili (es. "miglior ristorante d'Italia").
 - Privilegia microcopy chiaro per prenotazione, disponibilita, policy turni e contatti.
 - Mantieni sempre l'identita locale: Ravenna, atmosfera serale, aperitivo + cucina.
+- Se mancano dettagli operativi o di brand, **chiedi chiarimenti all'utente** prima di inventare contenuti specifici.

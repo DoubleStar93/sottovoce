@@ -4,6 +4,7 @@ $contactMapEmbedSrc = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d569
 $footerEmail = appEnv('FOOTER_EMAIL', 'info@sottovoce-ristorante.example');
 $footerPhoneDisplay = appEnv('FOOTER_PHONE', '+39 02 0000 0000');
 $footerTelHref = preg_replace('/\s+/', '', $footerPhoneDisplay);
+$bookingUrl = trim((string) appEnv('MOBEE_PAGE_URL', ''));
 $showContactSectionTitle = $showContactSectionTitle ?? true;
 $showContactTitleAfterMap = $showContactTitleAfterMap ?? false;
 ?>
@@ -136,6 +137,16 @@ $showContactTitleAfterMap = $showContactTitleAfterMap ?? false;
             <p class="body-4 mb-0">
               <?= htmlspecialchars(trim(appEnv('FOOTER_ADDRESS_LINE1', 'Via Ponte Marino, 17') . ' - ' . appEnv('FOOTER_ADDRESS_LINE2', '48121 Ravenna RA')), ENT_QUOTES) ?>
             </p>
+            <p class="body-4 mt-3 mb-3">
+              <?= htmlspecialchars(label('contact.booking_notice', 'Prenotazione obbligatoria: slot da 50 minuti.'), ENT_QUOTES) ?>
+            </p>
+            <?php if ($bookingUrl !== ''): ?>
+              <p class="mb-0">
+                <a class="primary-btn" href="<?= htmlspecialchars($bookingUrl, ENT_QUOTES) ?>" target="_blank" rel="noopener noreferrer">
+                  <?= htmlspecialchars(label('contact.booking_cta', 'Prenota il tuo slot'), ENT_QUOTES) ?>
+                </a>
+              </p>
+            <?php endif; ?>
           </div>
         </div>
       </div>

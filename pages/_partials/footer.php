@@ -8,6 +8,7 @@ $footerHoursLinkUrl = appEnv('FOOTER_HOURS_LINK_URL', '/index.php#contact-detail
 $footerPhone = appEnv('FOOTER_PHONE', '+39 331 125 3525');
 $footerEmail = appEnv('FOOTER_EMAIL', 'info@valentinoravenna.com');
 $footerPiva = appEnv('FOOTER_PIVA', '');
+$bookingUrl = trim((string) appEnv('MOBEE_PAGE_URL', ''));
 $currentLocale = appCurrentLocale();
 $homeHref = $currentLocale === 'en' ? '/en/' : '/';
 $cookieText = [
@@ -134,6 +135,10 @@ $cookieText = [
     </div>
 
     <div class="footer-bottom">
+      <span><?= htmlspecialchars(label('footer.booking_note', 'Prenotazione obbligatoria'), ENT_QUOTES) ?></span>
+      <?php if ($bookingUrl !== ''): ?>
+        <a href="<?= htmlspecialchars($bookingUrl, ENT_QUOTES) ?>" target="_blank" rel="noopener noreferrer"><?= htmlspecialchars(label('footer.booking_cta', 'Prenota online'), ENT_QUOTES) ?></a>
+      <?php endif; ?>
       <span><?= htmlspecialchars(label('footer.vat', 'P.IVA'), ENT_QUOTES) ?> <?= htmlspecialchars($footerPiva, ENT_QUOTES) ?></span>
       <a href="/privacy-policy.php"><?= htmlspecialchars(label('footer.privacy', 'Privacy Policy'), ENT_QUOTES) ?></a>
       <a href="/cookie-policy.php"><?= htmlspecialchars(label('footer.cookies', 'Cookie Policy'), ENT_QUOTES) ?></a>
