@@ -5,7 +5,7 @@
     <style>
       @media (min-width: 768px) {
         #hero-vid {
-          background-image: url(../../../wp-content/uploads/2021/02/Address-SkyView-V1.mp4.jpg);
+          background-color: #12140f;
         }
       }
 
@@ -24,7 +24,7 @@
         }
 
         #hero-vid {
-          background-image: url(../../../wp-content/uploads/2021/02/Address-SkyView-V1.mp4-1.jpg);
+          background-color: #12140f;
         }
 
         #nav-main {
