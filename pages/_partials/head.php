@@ -3,13 +3,105 @@ declare(strict_types=1);
 if (!function_exists('label') && is_file(__DIR__ . '/../../config.php')) {
   require_once __DIR__ . '/../../config.php';
 }
-$seoTitle = function_exists('label') ? label('seo.title', 'Sottovoce Ravenna | Aperitivo al tramonto') : 'Sottovoce Ravenna | Aperitivo al tramonto';
-$seoDescription = function_exists('label') ? label('seo.description', 'Sottovoce a Ravenna: aperitivo al tramonto e dining serale con prenotazione su slot da 50 minuti.') : 'Sottovoce a Ravenna: aperitivo al tramonto e dining serale con prenotazione su slot da 50 minuti.';
+$seoCurrentLocale = function_exists('appCurrentLocale') ? appCurrentLocale() : 'it';
+$seoLocale = $seoCurrentLocale === 'en' ? 'en_US' : 'it_IT';
 $seoSiteName = function_exists('label') ? label('seo.site_name', 'Sottovoce Ravenna') : 'Sottovoce Ravenna';
-$seoLocale = function_exists('appCurrentLocale') && appCurrentLocale() === 'en' ? 'en_US' : 'it_IT';
-$seoUrlPath = (string) parse_url($_SERVER['REQUEST_URI'] ?? '/index.php', PHP_URL_PATH);
-$seoUrl = $seoUrlPath !== '' ? $seoUrlPath : '/index.php';
-$seoCanonical = '/index.php';
+
+if (!function_exists('seoBuildAbsoluteUrl')) {
+  function seoBuildAbsoluteUrl(string $baseUrl, string $path, array $query = []): string
+  {
+    $baseUrl = rtrim($baseUrl, '/');
+    $path = '/' . ltrim($path, '/');
+    $url = $baseUrl . $path;
+    if ($query !== []) {
+      $url .= '?' . http_build_query($query);
+    }
+    return $url;
+  }
+}
+
+$seoRequestUri = (string) ($_SERVER['REQUEST_URI'] ?? '/index.php');
+$seoPath = (string) parse_url($seoRequestUri, PHP_URL_PATH);
+$seoPath = $seoPath !== '' ? $seoPath : '/index.php';
+$seoPath = preg_replace('#/+#', '/', $seoPath) ?: '/index.php';
+$seoPathNoLocale = preg_replace('#^/(en|it)(?=/|$)#', '', $seoPath) ?: $seoPath;
+$seoPathNoLocale = $seoPathNoLocale === '' ? '/' : $seoPathNoLocale;
+
+$seoRoute = match ($seoPathNoLocale) {
+  '/', '/index.php' => 'home',
+  '/orari.php' => 'hours',
+  '/servizi.php' => 'services',
+  '/contatti.php' => 'contact',
+  '/privacy-policy.php' => 'privacy',
+  '/cookie-policy.php' => 'cookies',
+  default => 'home',
+};
+
+$seoMetaMap = [
+  'home' => [
+    'titleKey' => 'seo.home.title',
+    'titleFallback' => 'Sottovoce Ravenna | Aperitivo al tramonto',
+    'descriptionKey' => 'seo.home.description',
+    'descriptionFallback' => 'Sottovoce a Ravenna: aperitivo al tramonto e dining serale con prenotazione su slot da 50 minuti.',
+  ],
+  'hours' => [
+    'titleKey' => 'seo.hours.title',
+    'titleFallback' => 'Orari al tramonto | Sottovoce Ravenna',
+    'descriptionKey' => 'seo.hours.description',
+    'descriptionFallback' => 'Consulta gli orari di apertura al tramonto e la disponibilita dei prossimi giorni con turni da 50 minuti.',
+  ],
+  'services' => [
+    'titleKey' => 'seo.services.title',
+    'titleFallback' => 'Servizi | Sottovoce Ravenna',
+    'descriptionKey' => 'seo.services.description',
+    'descriptionFallback' => 'Scopri servizi, atmosfera e proposta Sottovoce per aperitivo e dining serale a Ravenna.',
+  ],
+  'contact' => [
+    'titleKey' => 'seo.contact.title',
+    'titleFallback' => 'Contatti e FAQ | Sottovoce Ravenna',
+    'descriptionKey' => 'seo.contact.description',
+    'descriptionFallback' => 'Contatti, posizione, FAQ e informazioni utili per prenotare l esperienza Sottovoce a Ravenna.',
+  ],
+  'privacy' => [
+    'titleKey' => 'seo.privacy.title',
+    'titleFallback' => 'Privacy Policy | Sottovoce Ravenna',
+    'descriptionKey' => 'seo.privacy.description',
+    'descriptionFallback' => 'Informativa privacy sul trattamento dei dati personali in conformita al GDPR.',
+  ],
+  'cookies' => [
+    'titleKey' => 'seo.cookies.title',
+    'titleFallback' => 'Cookie Policy | Sottovoce Ravenna',
+    'descriptionKey' => 'seo.cookies.description',
+    'descriptionFallback' => 'Informativa cookie con gestione preferenze e categorie utilizzate sul sito Sottovoce.',
+  ],
+];
+
+$seoMeta = $seoMetaMap[$seoRoute] ?? $seoMetaMap['home'];
+$seoTitle = function_exists('label') ? label($seoMeta['titleKey'], $seoMeta['titleFallback']) : $seoMeta['titleFallback'];
+$seoDescription = function_exists('label') ? label($seoMeta['descriptionKey'], $seoMeta['descriptionFallback']) : $seoMeta['descriptionFallback'];
+
+$seoScheme = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http';
+$seoHost = (string) ($_SERVER['HTTP_HOST'] ?? 'localhost');
+$seoBaseUrl = function_exists('appEnv') ? appEnv('SITE_URL', '') : '';
+$seoBaseUrl = $seoBaseUrl !== '' ? rtrim($seoBaseUrl, '/') : ($seoScheme . '://' . $seoHost);
+
+$seoCanonicalQuery = [];
+$seoLangQuery = strtolower((string) ($_GET['lang'] ?? ''));
+if ($seoLangQuery === 'it' || $seoLangQuery === 'en') {
+  $seoCanonicalQuery['lang'] = $seoLangQuery;
+}
+
+$seoCanonicalPath = $seoPath;
+$seoCanonical = seoBuildAbsoluteUrl($seoBaseUrl, $seoCanonicalPath, $seoCanonicalQuery);
+$seoUrl = $seoCanonical;
+
+$seoHreflangIt = seoBuildAbsoluteUrl($seoBaseUrl, $seoPathNoLocale, ['lang' => 'it']);
+$seoHreflangEn = seoBuildAbsoluteUrl($seoBaseUrl, $seoPathNoLocale, ['lang' => 'en']);
+$seoHreflangDefault = $seoHreflangIt;
+
+$seoOgImagePath = function_exists('appEnv') ? appEnv('SEO_OG_IMAGE', '/img/logo_compatto.jpg') : '/img/logo_compatto.jpg';
+$seoOgImage = seoBuildAbsoluteUrl($seoBaseUrl, $seoOgImagePath);
+
 $seoSchema = [
   '@context' => 'https://schema.org',
   '@graph' => [
@@ -19,16 +111,29 @@ $seoSchema = [
       'url' => $seoCanonical,
       'name' => $seoTitle,
       'description' => $seoDescription,
-      'inLanguage' => appCurrentLocale(),
+      'inLanguage' => $seoCurrentLocale,
       'isPartOf' => ['@id' => $seoCanonical . '#website'],
     ],
     [
       '@type' => 'WebSite',
-      '@id' => $seoCanonical . '#website',
-      'url' => $seoCanonical,
+      '@id' => $seoBaseUrl . '/#website',
+      'url' => $seoBaseUrl . '/',
       'name' => $seoSiteName,
-      'description' => $seoDescription,
-      'inLanguage' => appCurrentLocale(),
+      'description' => function_exists('label') ? label('seo.home.description', 'Sottovoce a Ravenna: aperitivo al tramonto e dining serale con prenotazione su slot da 50 minuti.') : 'Sottovoce a Ravenna: aperitivo al tramonto e dining serale con prenotazione su slot da 50 minuti.',
+      'inLanguage' => $seoCurrentLocale,
+    ],
+    [
+      '@type' => 'Restaurant',
+      '@id' => $seoBaseUrl . '/#restaurant',
+      'name' => $seoSiteName,
+      'url' => $seoBaseUrl . '/',
+      'servesCuisine' => 'Italian',
+      'address' => [
+        '@type' => 'PostalAddress',
+        'streetAddress' => function_exists('appEnv') ? appEnv('FOOTER_ADDRESS_LINE1', 'Via Ponte Marino, 17') : 'Via Ponte Marino, 17',
+        'addressLocality' => 'Ravenna',
+        'addressCountry' => 'IT',
+      ],
     ],
   ],
 ];
@@ -200,10 +305,11 @@ $seoSchema = [
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="profile" href="/dependencies/external/gmpg.org/xfn/11.bin">
   <!-- Favicons -->
-  <link rel="apple-touch-icon" sizes="180x180" href="/dependencies/img/wp-content/themes/emaar-projects/img/favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/dependencies/img/wp-content/themes/emaar-projects/img/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/dependencies/img/wp-content/themes/emaar-projects/img/favicon/favicon-16x16.png">
-  <link rel="mask-icon" href="/dependencies/img/wp-content/themes/emaar-projects/img/favicon/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="mask-icon" href="/img/favicon-voce-o.png">
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
   <meta name="yandex-verification" content="4765176ea1d97e47">
@@ -215,33 +321,29 @@ $seoSchema = [
 
   
 <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'>
-<link rel="alternate" href="/index.php" hreflang="x-default">
-<link rel="alternate" hreflang="en" href="/index.php">
-
-
-
-
-
-<link rel="alternate" hreflang="x-default" href="/index.php">
+<link rel="alternate" hreflang="it" href="<?= htmlspecialchars($seoHreflangIt, ENT_QUOTES) ?>">
+<link rel="alternate" hreflang="en" href="<?= htmlspecialchars($seoHreflangEn, ENT_QUOTES) ?>">
+<link rel="alternate" hreflang="x-default" href="<?= htmlspecialchars($seoHreflangDefault, ENT_QUOTES) ?>">
 
 	<!-- This site is optimized with the Yoast SEO plugin v22.9 - https://yoast.com/wordpress/plugins/seo/ -->
 	<title><?= htmlspecialchars($seoTitle, ENT_QUOTES) ?></title>
 	<meta name="description" content="<?= htmlspecialchars($seoDescription, ENT_QUOTES) ?>">
-	<link rel="canonical" href="/index.php">
+	<link rel="canonical" href="<?= htmlspecialchars($seoCanonical, ENT_QUOTES) ?>">
 	<meta property="og:locale" content="<?= htmlspecialchars($seoLocale, ENT_QUOTES) ?>">
-	<meta property="og:type" content="article">
+	<meta property="og:type" content="website">
 	<meta property="og:title" content="<?= htmlspecialchars($seoTitle, ENT_QUOTES) ?>">
 	<meta property="og:description" content="<?= htmlspecialchars($seoDescription, ENT_QUOTES) ?>">
 	<meta property="og:url" content="<?= htmlspecialchars($seoUrl, ENT_QUOTES) ?>">
 	<meta property="og:site_name" content="<?= htmlspecialchars($seoSiteName, ENT_QUOTES) ?>">
 	<meta property="article:modified_time" content="2026-01-13T06:55:49+00:00">
-	<meta property="og:image" content="">
+	<meta property="og:image" content="<?= htmlspecialchars($seoOgImage, ENT_QUOTES) ?>">
 	<meta property="og:image:width" content="1920">
 	<meta property="og:image:height" content="1080">
 	<meta property="og:image:type" content="image/jpeg">
 	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:label1" content="Est. reading time">
-	<meta name="twitter:data1" content="1 minute">
+	<meta name="twitter:title" content="<?= htmlspecialchars($seoTitle, ENT_QUOTES) ?>">
+	<meta name="twitter:description" content="<?= htmlspecialchars($seoDescription, ENT_QUOTES) ?>">
+	<meta name="twitter:image" content="<?= htmlspecialchars($seoOgImage, ENT_QUOTES) ?>">
 	<script type="application/ld+json" class="yoast-schema-graph"><?= json_encode($seoSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) ?></script>
 	<!-- / Yoast SEO plugin. -->
 
