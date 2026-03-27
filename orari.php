@@ -27,16 +27,16 @@ for ($i = 0; $i < 7; $i++) {
 <main class="site-main">
   <section class="sottovoce-legal-page">
     <div class="container">
-      <h1 class="display-1-72 font-48-mobile mb-3 text-center sottovoce-hours-title-glow"><?= htmlspecialchars(label('hours.title', 'Orari'), ENT_QUOTES) ?></h1>
-      <p class="body-2 text-center mb-4"><?= htmlspecialchars(label('hours.intro', "Sottovoce apre al tramonto: l'accoglienza segue il ritmo della luce serale, con ingresso consigliato in prossimita dell'orario indicato."), ENT_QUOTES) ?></p>
+      <h1 class="display-1-72 font-48-mobile mb-3 text-center sottovoce-hours-title-glow" data-reveal><?= htmlspecialchars(label('hours.title', 'Orari'), ENT_QUOTES) ?></h1>
+      <p class="body-2 text-center mb-4" data-reveal><?= htmlspecialchars(label('hours.intro', "Sottovoce apre al tramonto: l'accoglienza segue il ritmo della luce serale, con ingresso consigliato in prossimita dell'orario indicato."), ENT_QUOTES) ?></p>
 
-      <div class="sottovoce-hours-card mb-4">
+      <div class="sottovoce-hours-card mb-4" data-reveal>
         <h2 class="display-2-48 mb-3 text-center"><?= htmlspecialchars(label('hours.how_title', 'Come funzionano gli orari'), ENT_QUOTES) ?></h2>
         <p class="body-2 mb-3"><?= htmlspecialchars(label('hours.how_body_1', 'Il servizio e organizzato su turni da 50 minuti per garantire puntualita, attenzione al tavolo e continuita del ritmo in sala.'), ENT_QUOTES) ?></p>
         <p class="body-2 mb-0"><?= htmlspecialchars(label('hours.how_body_2', 'Ti consigliamo di arrivare qualche minuto prima rispetto all\'orario del tuo slot; in caso di ritardo faremo il possibile per assisterti in base alla disponibilita del turno successivo.'), ENT_QUOTES) ?></p>
       </div>
 
-      <div class="sottovoce-hours-card">
+      <div class="sottovoce-hours-card" data-reveal>
         <h2 class="display-2-48 mb-3 text-center"><?= htmlspecialchars(label('hours.week_title', 'Tramonto: prossimi 7 giorni'), ENT_QUOTES) ?></h2>
         <div class="table-responsive">
           <table class="table table-borderless mb-0 sottovoce-hours-table">
@@ -128,6 +128,23 @@ for ($i = 0; $i < 7; $i++) {
     letter-spacing: 0.04em;
     color: #f2dec0;
   }
+  [data-reveal] {
+    opacity: 0;
+    transform: translate3d(0, 20px, 0);
+    transition: opacity .65s ease, transform .65s ease;
+    will-change: opacity, transform;
+  }
+  [data-reveal].is-visible {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    [data-reveal] {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+  }
 </style>
 <script>
   (function () {
@@ -155,6 +172,26 @@ for ($i = 0; $i < 7; $i++) {
       halo.style.setProperty("--delay", delay.toFixed(2) + "s");
       root.appendChild(halo);
     }
+  })();
+  (function () {
+    var nodes = Array.prototype.slice.call(document.querySelectorAll('[data-reveal]'));
+    if (!nodes.length) return;
+    nodes.forEach(function (node, idx) {
+      node.style.transitionDelay = Math.min(idx * 80, 260) + 'ms';
+    });
+    if (typeof window.IntersectionObserver !== 'function') {
+      nodes.forEach(function (node) { node.classList.add('is-visible'); });
+      return;
+    }
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.18, rootMargin: '0px 0px -10% 0px' });
+    nodes.forEach(function (node) { observer.observe(node); });
   })();
 </script>
 </body>

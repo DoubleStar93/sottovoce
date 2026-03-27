@@ -9,15 +9,15 @@ require_once __DIR__ . '/config.php';
 <div id="page" class="site">
 <?php include __DIR__ . '/pages/_partials/header.php'; ?>
 <main class="site-main">
-  <section class="sottovoce-services-heading">
+  <section class="sottovoce-services-heading" data-reveal>
     <div class="container text-center">
       <h1 class="display-1-72 font-48-mobile mb-0 sottovoce-services-title-glow"><?= htmlspecialchars(label('services.title', 'Servizi'), ENT_QUOTES) ?></h1>
     </div>
   </section>
   <div id="amenities" class="wp-block-group container-fluid white-bg mb-5 pb-5">
     <div class="wp-block-group__inner-container is-layout-flow wp-block-group-is-layout-flow">
-      <div class="container-fluid pt-5">
-        <div class="row position-relative">
+      <div class="container-fluid pt-5" data-reveal>
+        <div class="row position-relative" data-reveal>
           <div class="col-12 p-0 px-lg-3">
             <img width="1284" height="375" decoding="async" src="/dependencies/img/wp-content/uploads/2020/10/INFINITY-POOL-DAY-ADDRESS-SKY-VIEW-copy.jpg" alt="<?= htmlspecialchars(label('services.pool.image_alt', 'Infinity pool at Address Sky View'), ENT_QUOTES) ?>" class="img-fluid amenities-large-img p-0 px-lg-3">
           </div>
@@ -25,7 +25,7 @@ require_once __DIR__ . '/config.php';
             <h2 class="display-2-48"><?= htmlspecialchars(label('services.pool.title', 'Infinity Pool'), ENT_QUOTES) ?></h2>
           </div>
         </div>
-        <div class="row justify-content-center text-center">
+        <div class="row justify-content-center text-center" data-reveal>
           <div class="col-12 col-lg-8 amenities-list-col">
             <p class="text-center mt-5 mb-4 body-4"><?= htmlspecialchars(label('services.pool.body', 'Relax in style at our breathtaking infinity pool. A large sun-lounging deck, private cabanas, a bar with both pool and dry deck seating - the Address Sky View pool deck is all of that and more.'), ENT_QUOTES) ?></p>
             <ul class="amenities-list text-left body-4">
@@ -36,8 +36,8 @@ require_once __DIR__ . '/config.php';
           </div>
         </div>
       </div>
-      <div class="container-fluid pt-5">
-        <div class="row position-relative">
+      <div class="container-fluid pt-5" data-reveal>
+        <div class="row position-relative" data-reveal>
           <div class="col-12 p-0 px-lg-3">
             <img width="1284" height="375" decoding="async" src="/dependencies/img/wp-content/uploads/2020/10/KIDS-CLUB-ADDRESS-SKY-VIEW-copy.jpg" alt="<?= htmlspecialchars(label('services.kids.image_alt', 'Qix Kids Club at Address Sky View'), ENT_QUOTES) ?>" class="img-fluid amenities-large-img p-0 px-lg-3">
           </div>
@@ -45,7 +45,7 @@ require_once __DIR__ . '/config.php';
             <h2 class="display-2-48"><?= htmlspecialchars(label('services.kids.title', 'Qix Kids Club'), ENT_QUOTES) ?></h2>
           </div>
         </div>
-        <div class="row justify-content-center text-center">
+        <div class="row justify-content-center text-center" data-reveal>
           <div class="col-12 col-lg-8 amenities-list-col">
             <p class="text-center mt-5 mb-4 body-4"><?= htmlspecialchars(label('services.kids.body', 'Enjoy a well-earned moment for yourself and leave your little ones to us. Our qualified team of childcare professionals will spark their imagination with educational games, fun activities and craft sessions they will love.'), ENT_QUOTES) ?></p>
             <ul class="amenities-list text-left body-4">
@@ -104,6 +104,23 @@ require_once __DIR__ . '/config.php';
       0 0 28px rgba(255, 215, 180, 0.46),
       0 0 56px rgba(206, 85, 22, 0.26);
   }
+  [data-reveal] {
+    opacity: 0;
+    transform: translate3d(0, 22px, 0);
+    transition: opacity .7s ease, transform .7s ease;
+    will-change: opacity, transform;
+  }
+  [data-reveal].is-visible {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    [data-reveal] {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+  }
 
 </style>
 <script>
@@ -136,6 +153,26 @@ require_once __DIR__ . '/config.php';
 
       root.appendChild(halo);
     }
+  })();
+  (function () {
+    var nodes = Array.prototype.slice.call(document.querySelectorAll('[data-reveal]'));
+    if (!nodes.length) return;
+    nodes.forEach(function (node, idx) {
+      node.style.transitionDelay = Math.min(idx * 60, 300) + 'ms';
+    });
+    if (typeof window.IntersectionObserver !== 'function') {
+      nodes.forEach(function (node) { node.classList.add('is-visible'); });
+      return;
+    }
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.16, rootMargin: '0px 0px -8% 0px' });
+    nodes.forEach(function (node) { observer.observe(node); });
   })();
 </script>
 </body>

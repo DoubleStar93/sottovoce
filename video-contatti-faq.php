@@ -92,6 +92,23 @@ require_once __DIR__ . '/config.php';
     border-radius: 0;
     box-shadow: none;
   }
+  body.sottovoce-contact-page [data-reveal] {
+    opacity: 0;
+    transform: translate3d(0, 22px, 0);
+    transition: opacity .68s ease, transform .68s ease;
+    will-change: opacity, transform;
+  }
+  body.sottovoce-contact-page [data-reveal].is-visible {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    body.sottovoce-contact-page [data-reveal] {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+  }
 </style>
 <script>
   (function () {
@@ -123,6 +140,46 @@ require_once __DIR__ . '/config.php';
 
       root.appendChild(halo);
     }
+  })();
+  (function () {
+    var targets = [];
+    var mapWrap = document.querySelector('#contact-details .contact-map-wrap');
+    var contactTitle = document.querySelector('#contact-details h2.display-2-48');
+    var contactDetails = document.querySelector('#contact-details .contact-details');
+    var faqTitle = document.querySelector('#faq .sottovoce-faq-title');
+    var faqCards = Array.prototype.slice.call(document.querySelectorAll('#faq .card'));
+
+    [mapWrap, contactTitle, contactDetails, faqTitle].forEach(function (node) {
+      if (node) {
+        node.setAttribute('data-reveal', '');
+        targets.push(node);
+      }
+    });
+    faqCards.forEach(function (card, idx) {
+      card.setAttribute('data-reveal', '');
+      card.style.transitionDelay = Math.min(120 + idx * 70, 520) + 'ms';
+      targets.push(card);
+    });
+    if (!targets.length) return;
+
+    if (typeof window.IntersectionObserver !== 'function') {
+      targets.forEach(function (node) { node.classList.add('is-visible'); });
+      return;
+    }
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.16, rootMargin: '0px 0px -10% 0px' });
+    targets.forEach(function (node, idx) {
+      if (!node.style.transitionDelay) {
+        node.style.transitionDelay = Math.min(idx * 70, 320) + 'ms';
+      }
+      observer.observe(node);
+    });
   })();
 </script>
 </body>
