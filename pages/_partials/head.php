@@ -102,6 +102,9 @@ $seoHreflangDefault = $seoHreflangIt;
 $seoOgImagePath = function_exists('appEnv') ? appEnv('SEO_OG_IMAGE', '/img/logo_compatto.jpg') : '/img/logo_compatto.jpg';
 $seoOgImage = seoBuildAbsoluteUrl($seoBaseUrl, $seoOgImagePath);
 
+$dynamicFontFacesFile = dirname(__DIR__, 2) . '/dependencies/css/wp-content/themes/emaar-projects/css/dynamic-css/dynamic-font-faces.css';
+$dynamicFontFacesVer = is_file($dynamicFontFacesFile) ? (string) filemtime($dynamicFontFacesFile) : '6.6.4';
+
 $seoSchema = [
   '@context' => 'https://schema.org',
   '@graph' => [
@@ -619,7 +622,7 @@ html[dir=rtl] .individual-homepage-experience-section .overlap-btn-new-block,htm
 <link rel='stylesheet' id='bootstrap-select-css' href='/dependencies/css/wp-content/themes/emaar-projects/vendor/css/bootstrap-select.min.css?ver=1.13.0' type='text/css' media='all'>
 <link rel='stylesheet' id='typography-art-board-css' href='/dependencies/css/wp-content/themes/emaar-projects/css/dynamic-css/dynamic-typography.css?ver=6.6.4' type='text/css' media='all'>
 <link rel='stylesheet' id='dynamic-custom-colors-css' href='/dependencies/css/wp-content/themes/emaar-projects/css/dynamic-css/dynamic-custom-colors.css?ver=6.6.4' type='text/css' media='all'>
-<link rel='stylesheet' id='dynamic-font-faces-css' href='/dependencies/css/wp-content/themes/emaar-projects/css/dynamic-css/dynamic-font-faces.css?ver=6.6.4' type='text/css' media='all'>
+<link rel='stylesheet' id='dynamic-font-faces-css' href='/dependencies/css/wp-content/themes/emaar-projects/css/dynamic-css/dynamic-font-faces.css?ver=<?= htmlspecialchars($dynamicFontFacesVer, ENT_QUOTES) ?>' type='text/css' media='all'>
 
 <link rel='stylesheet' id='global_styles-css' href='/dependencies/css/wp-content/themes/emaar-projects/css/lib/global_styles.css?ver=1716547034' type='text/css' media='all'>
 <link rel='stylesheet' id='navbar-css-css' href='/dependencies/css/wp-content/themes/emaar-projects/template-parts/navbars/css/navbar.css?ver=1766397437' type='text/css' media='all'>

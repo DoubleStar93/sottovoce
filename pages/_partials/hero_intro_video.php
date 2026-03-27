@@ -5,9 +5,7 @@
     <style>
       @media (min-width: 768px) {
         #hero-vid {
-          background-image: url('https://placehold.co/1920x1080/png?text=Sottovoce+Hero+Placeholder');
-          background-size: cover;
-          background-position: center;
+          background-image: url(../../../wp-content/uploads/2021/02/Address-SkyView-V1.mp4.jpg);
         }
       }
 
@@ -26,9 +24,7 @@
         }
 
         #hero-vid {
-          background-image: url('https://placehold.co/1080x1920/png?text=Sottovoce+Hero+Placeholder');
-          background-size: cover;
-          background-position: center;
+          background-image: url(../../../wp-content/uploads/2021/02/Address-SkyView-V1.mp4-1.jpg);
         }
 
         #nav-main {
