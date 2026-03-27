@@ -11,7 +11,7 @@ require_once __DIR__ . '/config.php';
 <main class="site-main">
   <section class="sottovoce-services-heading">
     <div class="container text-center">
-      <h1 class="display-1-72 font-48-mobile mb-0 sottovoce-services-title-glow">Servizi</h1>
+      <h1 class="display-1-72 font-48-mobile mb-0 sottovoce-services-title-glow"><?= htmlspecialchars(label('services.title', 'Servizi'), ENT_QUOTES) ?></h1>
     </div>
   </section>
   <div id="amenities" class="wp-block-group container-fluid white-bg mb-5 pb-5">
@@ -19,19 +19,19 @@ require_once __DIR__ . '/config.php';
       <div class="container-fluid pt-5">
         <div class="row position-relative">
           <div class="col-12 p-0 px-lg-3">
-            <img width="1284" height="375" decoding="async" src="/dependencies/img/wp-content/uploads/2020/10/INFINITY-POOL-DAY-ADDRESS-SKY-VIEW-copy.jpg" alt="Infinity pool at Address Sky View" class="img-fluid amenities-large-img p-0 px-lg-3">
+            <img width="1284" height="375" decoding="async" src="/dependencies/img/wp-content/uploads/2020/10/INFINITY-POOL-DAY-ADDRESS-SKY-VIEW-copy.jpg" alt="<?= htmlspecialchars(label('services.pool.image_alt', 'Infinity pool at Address Sky View'), ENT_QUOTES) ?>" class="img-fluid amenities-large-img p-0 px-lg-3">
           </div>
           <div class="amenities-title-box">
-            <h2 class="display-2-48">Infinity Pool</h2>
+            <h2 class="display-2-48"><?= htmlspecialchars(label('services.pool.title', 'Infinity Pool'), ENT_QUOTES) ?></h2>
           </div>
         </div>
         <div class="row justify-content-center text-center">
           <div class="col-12 col-lg-8 amenities-list-col">
-            <p class="text-center mt-5 mb-4 body-4">Relax in style at our breathtaking infinity pool. A large sun-lounging deck, private cabanas, a bar with both pool and dry deck seating - the Address Sky View pool deck is all of that and more.</p>
+            <p class="text-center mt-5 mb-4 body-4"><?= htmlspecialchars(label('services.pool.body', 'Relax in style at our breathtaking infinity pool. A large sun-lounging deck, private cabanas, a bar with both pool and dry deck seating - the Address Sky View pool deck is all of that and more.'), ENT_QUOTES) ?></p>
             <ul class="amenities-list text-left body-4">
-              <li class="d-flex align-items-center mb-2"><span class="generic-icon px-2"></span>Located on the iconic Sky Deck</li>
-              <li class="d-flex align-items-center mb-2"><span class="generic-icon px-2"></span>Access to 18 years and above.</li>
-              <li class="d-flex align-items-center mb-2"><span class="generic-icon px-2"></span>Timing: 9:00 AM till Sunset</li>
+              <li class="d-flex align-items-center mb-2"><span class="generic-icon px-2"></span><?= htmlspecialchars(label('services.pool.point_1', 'Located on the iconic Sky Deck'), ENT_QUOTES) ?></li>
+              <li class="d-flex align-items-center mb-2"><span class="generic-icon px-2"></span><?= htmlspecialchars(label('services.pool.point_2', 'Access to 18 years and above.'), ENT_QUOTES) ?></li>
+              <li class="d-flex align-items-center mb-2"><span class="generic-icon px-2"></span><?= htmlspecialchars(label('services.pool.point_3', 'Timing: 9:00 AM till Sunset'), ENT_QUOTES) ?></li>
             </ul>
           </div>
         </div>
@@ -39,19 +39,19 @@ require_once __DIR__ . '/config.php';
       <div class="container-fluid pt-5">
         <div class="row position-relative">
           <div class="col-12 p-0 px-lg-3">
-            <img width="1284" height="375" decoding="async" src="/dependencies/img/wp-content/uploads/2020/10/KIDS-CLUB-ADDRESS-SKY-VIEW-copy.jpg" alt="Qix Kids Club at Address Sky View" class="img-fluid amenities-large-img p-0 px-lg-3">
+            <img width="1284" height="375" decoding="async" src="/dependencies/img/wp-content/uploads/2020/10/KIDS-CLUB-ADDRESS-SKY-VIEW-copy.jpg" alt="<?= htmlspecialchars(label('services.kids.image_alt', 'Qix Kids Club at Address Sky View'), ENT_QUOTES) ?>" class="img-fluid amenities-large-img p-0 px-lg-3">
           </div>
           <div class="amenities-title-box">
-            <h2 class="display-2-48">Qix Kids Club</h2>
+            <h2 class="display-2-48"><?= htmlspecialchars(label('services.kids.title', 'Qix Kids Club'), ENT_QUOTES) ?></h2>
           </div>
         </div>
         <div class="row justify-content-center text-center">
           <div class="col-12 col-lg-8 amenities-list-col">
-            <p class="text-center mt-5 mb-4 body-4">Enjoy a well-earned moment for yourself and leave your little ones to us. Our qualified team of childcare professionals will spark their imagination with educational games, fun activities and craft sessions they will love.</p>
+            <p class="text-center mt-5 mb-4 body-4"><?= htmlspecialchars(label('services.kids.body', 'Enjoy a well-earned moment for yourself and leave your little ones to us. Our qualified team of childcare professionals will spark their imagination with educational games, fun activities and craft sessions they will love.'), ENT_QUOTES) ?></p>
             <ul class="amenities-list text-left body-4">
-              <li class="d-flex align-items-center mb-2"><span class="generic-icon px-2"></span>For children between the ages of 4 and 12</li>
-              <li class="d-flex align-items-center mb-2"><span class="generic-icon px-2"></span>Babysitting services to be booked 24 hours in advance.</li>
-              <li class="d-flex align-items-center mb-2"><span class="generic-icon px-2"></span>Timing: 10am to 7pm</li>
+              <li class="d-flex align-items-center mb-2"><span class="generic-icon px-2"></span><?= htmlspecialchars(label('services.kids.point_1', 'For children between the ages of 4 and 12'), ENT_QUOTES) ?></li>
+              <li class="d-flex align-items-center mb-2"><span class="generic-icon px-2"></span><?= htmlspecialchars(label('services.kids.point_2', 'Babysitting services to be booked 24 hours in advance.'), ENT_QUOTES) ?></li>
+              <li class="d-flex align-items-center mb-2"><span class="generic-icon px-2"></span><?= htmlspecialchars(label('services.kids.point_3', 'Timing: 10am to 7pm'), ENT_QUOTES) ?></li>
             </ul>
           </div>
         </div>

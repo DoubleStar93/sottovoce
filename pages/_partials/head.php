@@ -1,3 +1,38 @@
+<?php
+declare(strict_types=1);
+if (!function_exists('label') && is_file(__DIR__ . '/../../config.php')) {
+  require_once __DIR__ . '/../../config.php';
+}
+$seoTitle = function_exists('label') ? label('seo.title', 'Sottovoce Ravenna | Aperitivo al tramonto') : 'Sottovoce Ravenna | Aperitivo al tramonto';
+$seoDescription = function_exists('label') ? label('seo.description', 'Sottovoce a Ravenna: aperitivo al tramonto e dining serale con prenotazione su slot da 50 minuti.') : 'Sottovoce a Ravenna: aperitivo al tramonto e dining serale con prenotazione su slot da 50 minuti.';
+$seoSiteName = function_exists('label') ? label('seo.site_name', 'Sottovoce Ravenna') : 'Sottovoce Ravenna';
+$seoLocale = function_exists('appCurrentLocale') && appCurrentLocale() === 'en' ? 'en_US' : 'it_IT';
+$seoUrlPath = (string) parse_url($_SERVER['REQUEST_URI'] ?? '/index.php', PHP_URL_PATH);
+$seoUrl = $seoUrlPath !== '' ? $seoUrlPath : '/index.php';
+$seoCanonical = '/index.php';
+$seoSchema = [
+  '@context' => 'https://schema.org',
+  '@graph' => [
+    [
+      '@type' => 'WebPage',
+      '@id' => $seoCanonical . '#webpage',
+      'url' => $seoCanonical,
+      'name' => $seoTitle,
+      'description' => $seoDescription,
+      'inLanguage' => appCurrentLocale(),
+      'isPartOf' => ['@id' => $seoCanonical . '#website'],
+    ],
+    [
+      '@type' => 'WebSite',
+      '@id' => $seoCanonical . '#website',
+      'url' => $seoCanonical,
+      'name' => $seoSiteName,
+      'description' => $seoDescription,
+      'inLanguage' => appCurrentLocale(),
+    ],
+  ],
+];
+?>
 <head>
 <script>
 (function () {
@@ -193,15 +228,15 @@
 <link rel="alternate" hreflang="x-default" href="/index.php">
 
 	<!-- This site is optimized with the Yoast SEO plugin v22.9 - https://yoast.com/wordpress/plugins/seo/ -->
-	<title>Address Sky View | Downtown Dubai | Address Hotels + Resorts</title>
-	<meta name="description" content="Stay above it all at Address Sky View, a luxury hotel in Downtown Dubai with iconic infinity pool, breathtaking views of Burj Khalifa, direct access to Dubai Mall.">
+	<title><?= htmlspecialchars($seoTitle, ENT_QUOTES) ?></title>
+	<meta name="description" content="<?= htmlspecialchars($seoDescription, ENT_QUOTES) ?>">
 	<link rel="canonical" href="/index.php">
-	<meta property="og:locale" content="en_US">
+	<meta property="og:locale" content="<?= htmlspecialchars($seoLocale, ENT_QUOTES) ?>">
 	<meta property="og:type" content="article">
-	<meta property="og:title" content="Address Sky View | Downtown Dubai | Address Hotels + Resorts">
-	<meta property="og:description" content="Stay above it all at Address Sky View, a luxury hotel in Downtown Dubai with iconic infinity pool, breathtaking views of Burj Khalifa, direct access to Dubai Mall.">
-	<meta property="og:url" content="/en/hotels/address-sky-view/">
-	<meta property="og:site_name" content="Address Hotels in Dubai">
+	<meta property="og:title" content="<?= htmlspecialchars($seoTitle, ENT_QUOTES) ?>">
+	<meta property="og:description" content="<?= htmlspecialchars($seoDescription, ENT_QUOTES) ?>">
+	<meta property="og:url" content="<?= htmlspecialchars($seoUrl, ENT_QUOTES) ?>">
+	<meta property="og:site_name" content="<?= htmlspecialchars($seoSiteName, ENT_QUOTES) ?>">
 	<meta property="article:modified_time" content="2026-01-13T06:55:49+00:00">
 	<meta property="og:image" content="">
 	<meta property="og:image:width" content="1920">
@@ -210,7 +245,7 @@
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:label1" content="Est. reading time">
 	<meta name="twitter:data1" content="1 minute">
-	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://www.addresshotels.com/en/hotels/address-sky-view/","url":"https://www.addresshotels.com/en/hotels/address-sky-view/","name":"Address Sky View | Downtown Dubai | Address Hotels + Resorts","isPartOf":{"@id":"https://www.addresshotels.com/en/#website"},"primaryImageOfPage":{"@id":"https://www.addresshotels.com/en/hotels/address-sky-view/#primaryimage"},"image":{"@id":"https://www.addresshotels.com/en/hotels/address-sky-view/#primaryimage"},"thumbnailUrl":"https://www-addresshotels-com.azureedge.net/wp-content/uploads/2021/02/Address-SkyView-V1.mp4.jpg","datePublished":"2020-10-07T08:47:07+00:00","dateModified":"2026-01-13T06:55:49+00:00","description":"Stay above it all at Address Sky View, a luxury hotel in Downtown Dubai with iconic infinity pool, breathtaking views of Burj Khalifa, direct access to Dubai Mall.","inLanguage":"en","potentialAction":[{"@type":"ReadAction","target":["https://www.addresshotels.com/en/hotels/address-sky-view/"]}]},{"@type":"ImageObject","inLanguage":"en","@id":"https://www.addresshotels.com/en/hotels/address-sky-view/#primaryimage","url":"https://www-addresshotels-com.azureedge.net/wp-content/uploads/2021/02/Address-SkyView-V1.mp4.jpg","contentUrl":"https://www-addresshotels-com.azureedge.net/wp-content/uploads/2021/02/Address-SkyView-V1.mp4.jpg","width":1920,"height":1080},{"@type":"WebSite","@id":"https://www.addresshotels.com/en/#website","url":"https://www.addresshotels.com/en/","name":"Address Hotels in Dubai","description":"Book a Hotel - Address Hotels + Resorts","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.addresshotels.com/en/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en"}]}</script>
+	<script type="application/ld+json" class="yoast-schema-graph"><?= json_encode($seoSchema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) ?></script>
 	<!-- / Yoast SEO plugin. -->
 
 

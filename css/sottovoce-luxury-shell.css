@@ -600,3 +600,165 @@ body.sottovoce-luxury #faq.sottovoce-faq .accordionFaq .plus-icon {
   display: block;
 }
 
+/* GDPR cookie banner + preference panel */
+body.sottovoce-luxury .sottovoce-cookie-banner {
+  position: fixed;
+  left: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 1200;
+  background: rgba(34, 35, 24, 0.96);
+  border: 1px solid rgba(227, 203, 165, 0.4);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.28);
+  backdrop-filter: blur(8px);
+}
+
+body.sottovoce-luxury .sottovoce-cookie-banner__content {
+  max-width: 76rem;
+  margin: 0 auto;
+  padding: 1rem 1.1rem;
+}
+
+body.sottovoce-luxury .sottovoce-cookie-banner h3 {
+  margin: 0 0 0.45rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff8ea !important;
+}
+
+body.sottovoce-luxury .sottovoce-cookie-banner p {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.55;
+  opacity: 0.94;
+}
+
+body.sottovoce-luxury .sottovoce-cookie-banner a {
+  color: #e3cba5 !important;
+}
+
+body.sottovoce-luxury .sottovoce-cookie-banner__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-top: 0.85rem;
+}
+
+body.sottovoce-luxury .sottovoce-cookie-banner__actions .secondary-btn,
+body.sottovoce-luxury .sottovoce-cookie-panel__actions .secondary-btn {
+  background-color: #2f3120 !important;
+  border: 1px solid #e3cba5 !important;
+  color: #fff8ea !important;
+  opacity: 1 !important;
+  text-shadow: none !important;
+}
+
+body.sottovoce-luxury .sottovoce-cookie-banner__actions .secondary-btn:hover,
+body.sottovoce-luxury .sottovoce-cookie-panel__actions .secondary-btn:hover {
+  background-color: #3b3d27 !important;
+  color: #ffffff !important;
+}
+
+body.sottovoce-luxury .sottovoce-cookie-banner__actions .primary-btn,
+body.sottovoce-luxury .sottovoce-cookie-panel__actions .primary-btn {
+  background-color: #e3cba5 !important;
+  border: 1px solid #e3cba5 !important;
+  color: #1f2115 !important;
+  opacity: 1 !important;
+  text-shadow: none !important;
+}
+
+body.sottovoce-luxury .sottovoce-cookie-banner__actions .primary-btn:hover,
+body.sottovoce-luxury .sottovoce-cookie-panel__actions .primary-btn:hover {
+  background-color: #edd8b7 !important;
+  border-color: #edd8b7 !important;
+  color: #1b1d12 !important;
+}
+
+body.sottovoce-luxury .sottovoce-cookie-banner button,
+body.sottovoce-luxury .sottovoce-cookie-panel button {
+  -webkit-text-fill-color: currentColor !important;
+}
+
+body.sottovoce-luxury .sottovoce-cookie-panel {
+  position: fixed;
+  inset: 0;
+  z-index: 1201;
+  background: rgba(11, 12, 9, 0.58);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+body.sottovoce-luxury .sottovoce-cookie-panel__box {
+  width: min(42rem, 100%);
+  background: #2a2c1b;
+  border: 1px solid rgba(227, 203, 165, 0.45);
+  box-shadow: 0 24px 45px rgba(0, 0, 0, 0.33);
+  padding: 1.2rem 1.2rem 1rem;
+  position: relative;
+}
+
+body.sottovoce-luxury .sottovoce-cookie-panel h3 {
+  margin: 0 0 1rem;
+  color: #fff8ea !important;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+body.sottovoce-luxury .sottovoce-cookie-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+  border-top: 1px solid rgba(227, 203, 165, 0.26);
+  padding: 0.85rem 0;
+}
+
+body.sottovoce-luxury .sottovoce-cookie-row p {
+  margin: 0.2rem 0 0;
+  font-size: 0.9rem;
+  opacity: 0.92;
+}
+
+body.sottovoce-luxury .sottovoce-cookie-switch {
+  min-width: 3.2rem;
+  text-align: right;
+}
+
+body.sottovoce-luxury .sottovoce-cookie-panel__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.55rem;
+  margin-top: 0.35rem;
+}
+
+body.sottovoce-luxury .sottovoce-cookie-panel__close {
+  position: absolute;
+  right: 0.6rem;
+  top: 0.35rem;
+  font-size: 1.45rem;
+  line-height: 1;
+  border: none;
+  background: transparent;
+  color: #ffffff;
+  opacity: 0.9;
+}
+
+body.sottovoce-luxury .sottovoce-cookie-manage-link {
+  border: none;
+  background: transparent;
+  padding: 0;
+  text-decoration: underline;
+}
+
+@media (max-width: 767.98px) {
+  body.sottovoce-luxury .sottovoce-cookie-banner {
+    left: 0.5rem;
+    right: 0.5rem;
+    bottom: 0.5rem;
+  }
+}
+

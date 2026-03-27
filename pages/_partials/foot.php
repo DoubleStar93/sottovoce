@@ -1,64 +1,123 @@
-﻿
+<?php
+declare(strict_types=1);
+if (!function_exists('label') && is_file(__DIR__ . '/../../config.php')) {
+  require_once __DIR__ . '/../../config.php';
+}
+?>
 <script type="text/javascript">
+  var __svI18n = {
+    required_text: <?= json_encode(label('legacy.required_text', 'This field is required'), JSON_UNESCAPED_UNICODE) ?>,
+    mob_already_exist: <?= json_encode(label('legacy.mob_already_exist', 'Looks like your mobile number already exists'), JSON_UNESCAPED_UNICODE) ?>,
+    ubymaartext: <?= json_encode(label('legacy.ubymaartext', 'Use your U by Emaar credentials to sign in.'), JSON_UNESCAPED_UNICODE) ?>,
+    welbacktext: <?= json_encode(label('legacy.welbacktext', 'Welcome Back'), JSON_UNESCAPED_UNICODE) ?>,
+    signintext: <?= json_encode(label('legacy.signintext', 'Sign In'), JSON_UNESCAPED_UNICODE) ?>,
+    valid_otp: <?= json_encode(label('legacy.valid_otp', 'Please Enter valid otp'), JSON_UNESCAPED_UNICODE) ?>,
+    error_only_digits: <?= json_encode(label('legacy.error_only_digits', 'Mobile number can only contain digits'), JSON_UNESCAPED_UNICODE) ?>,
+    error_min_dig_7: <?= json_encode(label('legacy.error_min_dig_7', 'Minimum allowed digits is 7'), JSON_UNESCAPED_UNICODE) ?>,
+    error_min_dig_10: <?= json_encode(label('legacy.error_min_dig_10', 'Maximum allowed digits is 15'), JSON_UNESCAPED_UNICODE) ?>,
+    strong_pwd: <?= json_encode(label('legacy.strong_pwd', 'Please enter a strong password'), JSON_UNESCAPED_UNICODE) ?>,
+    valid_email: <?= json_encode(label('legacy.valid_email', 'Please enter a valid Email.'), JSON_UNESCAPED_UNICODE) ?>,
+    valid_name: <?= json_encode(label('legacy.valid_name', 'Please enter valid name.'), JSON_UNESCAPED_UNICODE) ?>,
+    success_account_created: <?= json_encode(label('legacy.success_account_created', 'Thank you! your account had been successfully created.'), JSON_UNESCAPED_UNICODE) ?>,
+    opt_resent: <?= json_encode(label('legacy.opt_resent', 'OTP has been resent!'), JSON_UNESCAPED_UNICODE) ?>,
+    security_token_error: <?= json_encode(label('legacy.security_token_error', 'Could not set security token. Please reload and try again.'), JSON_UNESCAPED_UNICODE) ?>,
+    server_reach_error: <?= json_encode(label('legacy.server_reach_error', 'Could not reach server. Please try again later.'), JSON_UNESCAPED_UNICODE) ?>,
+    unknown_error: <?= json_encode(label('legacy.unknown_error', 'We are facing an unknown error. Please try again later.'), JSON_UNESCAPED_UNICODE) ?>,
+    enter_code_var: <?= json_encode(label('legacy.enter_code_var', 'Enter code'), JSON_UNESCAPED_UNICODE) ?>,
+    code_applied_var: <?= json_encode(label('legacy.code_applied_var', 'Code applied'), JSON_UNESCAPED_UNICODE) ?>,
+    codes_applied_var: <?= json_encode(label('legacy.codes_applied_var', 'Codes applied'), JSON_UNESCAPED_UNICODE) ?>,
+    hotel_modalTitle: <?= json_encode(label('legacy.hotel_modalTitle', 'Select a hotel and check availability'), JSON_UNESCAPED_UNICODE) ?>,
+    modal_title: <?= json_encode(label('legacy.modal_title', 'Search available hotels for this offer'), JSON_UNESCAPED_UNICODE) ?>,
+    modal_title_rooms: <?= json_encode(label('legacy.modal_title_rooms', 'Select your check-in & check-out dates'), JSON_UNESCAPED_UNICODE) ?>,
+    loading_price_var: <?= json_encode(label('legacy.loading_price_var', 'Loading all prices'), JSON_UNESCAPED_UNICODE) ?>,
+    price_var: <?= json_encode(label('legacy.price_var', 'All prices are displayed in'), JSON_UNESCAPED_UNICODE) ?>,
+    child_text: <?= json_encode(label('legacy.child_text', 'Child'), JSON_UNESCAPED_UNICODE) ?>,
+    children_text: <?= json_encode(label('legacy.children_text', 'Children'), JSON_UNESCAPED_UNICODE) ?>,
+    adult_text: <?= json_encode(label('legacy.adult_text', 'Adult'), JSON_UNESCAPED_UNICODE) ?>,
+    adults_text: <?= json_encode(label('legacy.adults_text', 'Adults'), JSON_UNESCAPED_UNICODE) ?>,
+    nightVar: <?= json_encode(label('legacy.nightVar', 'Night'), JSON_UNESCAPED_UNICODE) ?>,
+    nightsVar: <?= json_encode(label('legacy.nightsVar', 'Nights'), JSON_UNESCAPED_UNICODE) ?>,
+    minLength_error_message: <?= json_encode(label('legacy.minLength_error_message', 'The selected dates requires a minimum of'), JSON_UNESCAPED_UNICODE) ?>,
+    maxLength_error_message: <?= json_encode(label('legacy.maxLength_error_message', 'The selected dates requires a maximum of'), JSON_UNESCAPED_UNICODE) ?>,
+    nights_stay_var: <?= json_encode(label('legacy.nights_stay_var', 'nights stay.'), JSON_UNESCAPED_UNICODE) ?>,
+    select_these_dates_var: <?= json_encode(label('legacy.select_these_dates_var', 'Select these dates'), JSON_UNESCAPED_UNICODE) ?>,
+    select_a_checkout_date_var: <?= json_encode(label('legacy.select_a_checkout_date_var', 'Select a checkout date'), JSON_UNESCAPED_UNICODE) ?>,
+    all_hotels_var: <?= json_encode(label('legacy.all_hotels_var', 'All Hotels'), JSON_UNESCAPED_UNICODE) ?>,
+    room_var: <?= json_encode(label('legacy.room_var', 'Room'), JSON_UNESCAPED_UNICODE) ?>,
+    add_room_var: <?= json_encode(label('legacy.add_room_var', 'Add Room'), JSON_UNESCAPED_UNICODE) ?>,
+    view_detail_var: <?= json_encode(label('legacy.view_detail_var', 'View Detail'), JSON_UNESCAPED_UNICODE) ?>,
+    hide_detail_var: <?= json_encode(label('legacy.hide_detail_var', 'Hide Detail'), JSON_UNESCAPED_UNICODE) ?>,
+    people_var: <?= json_encode(label('legacy.people_var', 'people'), JSON_UNESCAPED_UNICODE) ?>,
+    seating_var: <?= json_encode(label('legacy.seating_var', 'Seating'), JSON_UNESCAPED_UNICODE) ?>,
+    reservDetails: <?= json_encode(label('legacy.reservDetails', 'Reservation Details'), JSON_UNESCAPED_UNICODE) ?>,
+    email_var: <?= json_encode(label('legacy.email_var', 'Please enter a valid email address'), JSON_UNESCAPED_UNICODE) ?>,
+    none_var: <?= json_encode(label('legacy.none_var', 'None'), JSON_UNESCAPED_UNICODE) ?>,
+    invalid_confirmation: <?= json_encode(label('legacy.invalid_confirmation', 'Invalid Confirmation Number'), JSON_UNESCAPED_UNICODE) ?>,
+    invalid_last_name: <?= json_encode(label('legacy.invalid_last_name', 'Invalid Last Name'), JSON_UNESCAPED_UNICODE) ?>,
+    select_hotel_name: <?= json_encode(label('legacy.select_hotel_name', 'Select hotel'), JSON_UNESCAPED_UNICODE) ?>,
+    select_resturant_name: <?= json_encode(label('legacy.select_resturant_name', 'Select resturant'), JSON_UNESCAPED_UNICODE) ?>,
+    invalid_email: <?= json_encode(label('legacy.invalid_email', 'Invalid Email'), JSON_UNESCAPED_UNICODE) ?>,
+    no_upcoming_booking: <?= json_encode(label('legacy.no_upcoming_booking', 'No Upcoming Bookings'), JSON_UNESCAPED_UNICODE) ?>
+  };
   // Sing-in & sign-up page messaages
 
 
-  var required_text = "This field is required";
-  var mob_already_exist = "Looks like your mobile number already exists";
-  var ubymaartext = "Use your U by Emaar credentials to sign in.";
-  var welbacktext = "Welcome Back";
-  var signintext = "Sign In";
-  var valid_otp = "Please Enter valid otp";
-  var error_only_digits = "Mobile number can only contain digits";
-  var error_min_dig_7 = "Minimum allowed digits is 7";
-  var error_min_dig_10 = "Maximum allowed digits is 15";
-  var strong_pwd = "Please enter a strong password";
-  var valid_email = "Please enter a valid Email.";
-  var valid_name = "Please enter valid name.";
-  var success_account_created = "Thank you! your account had been successfully created.";
-  var opt_resent = "OTP has been resent!";
+  var required_text = __svI18n.required_text;
+  var mob_already_exist = __svI18n.mob_already_exist;
+  var ubymaartext = __svI18n.ubymaartext;
+  var welbacktext = __svI18n.welbacktext;
+  var signintext = __svI18n.signintext;
+  var valid_otp = __svI18n.valid_otp;
+  var error_only_digits = __svI18n.error_only_digits;
+  var error_min_dig_7 = __svI18n.error_min_dig_7;
+  var error_min_dig_10 = __svI18n.error_min_dig_10;
+  var strong_pwd = __svI18n.strong_pwd;
+  var valid_email = __svI18n.valid_email;
+  var valid_name = __svI18n.valid_name;
+  var success_account_created = __svI18n.success_account_created;
+  var opt_resent = __svI18n.opt_resent;
 
   // Sing-in & sign-up page messaages
 
   // Sing-in & sign-up Api error page messaages
 
-  var security_token_error = "Could not set security token. Please reload and try again.";
-  var server_reach_error = "Could not reach server. Please try again later.";
-  var unknown_error = "We are facing an unknown error. Please try again later.";
+  var security_token_error = __svI18n.security_token_error;
+  var server_reach_error = __svI18n.server_reach_error;
+  var unknown_error = __svI18n.unknown_error;
 
   // Sing-in & sign-up Api error page messaages
 
 
   // Booking Modal & Widget Month&Day
 
-  var enter_code_var = "Enter code";
-  var code_applied_var = "Code applied";
-  var codes_applied_var = "Codes applied";
-  var hotel_modalTitle = "Select a hotel and check availability";
-  var modal_title = "Search available hotels for this offer";
-  var modal_title_rooms = "Select your check-in & check-out dates";
-  var loading_price_var = "Loading all prices";
-  var price_var = "All prices are displayed in";
-  var child_text = "Child";
-  var children_text = "Children";
-  var adult_text = "Adult";
-  var adults_text = "Adults";
-  var nightVar = "Night";
-  var nightsVar = "Nights";
-  var minLength_error_message = "The selected dates requires a minimum of";
+  var enter_code_var = __svI18n.enter_code_var;
+  var code_applied_var = __svI18n.code_applied_var;
+  var codes_applied_var = __svI18n.codes_applied_var;
+  var hotel_modalTitle = __svI18n.hotel_modalTitle;
+  var modal_title = __svI18n.modal_title;
+  var modal_title_rooms = __svI18n.modal_title_rooms;
+  var loading_price_var = __svI18n.loading_price_var;
+  var price_var = __svI18n.price_var;
+  var child_text = __svI18n.child_text;
+  var children_text = __svI18n.children_text;
+  var adult_text = __svI18n.adult_text;
+  var adults_text = __svI18n.adults_text;
+  var nightVar = __svI18n.nightVar;
+  var nightsVar = __svI18n.nightsVar;
+  var minLength_error_message = __svI18n.minLength_error_message;
   // var minLength_error_message = "This offer requires a reservation of at least";
-  var maxLength_error_message = "The selected dates requires a maximum of";
-  var nights_stay_var = "nights stay.";
+  var maxLength_error_message = __svI18n.maxLength_error_message;
+  var nights_stay_var = __svI18n.nights_stay_var;
   // var nights_stay_var = "nights.";
-  var select_these_dates_var = "Select these dates";
-  var select_a_checkout_date_var = "Select a checkout date";
-  var all_hotels_var = "All Hotels";
+  var select_these_dates_var = __svI18n.select_these_dates_var;
+  var select_a_checkout_date_var = __svI18n.select_a_checkout_date_var;
+  var all_hotels_var = __svI18n.all_hotels_var;
 
   //multiroom changes
-  var room_var = "Room";
-  var add_room_var = "Add Room";
-  var view_detail_var = "View Detail";
-  var hide_detail_var = "Hide Detail";
+  var room_var = __svI18n.room_var;
+  var add_room_var = __svI18n.add_room_var;
+  var view_detail_var = __svI18n.view_detail_var;
+  var hide_detail_var = __svI18n.hide_detail_var;
 
 
   // Months
@@ -85,24 +144,24 @@
 
 
   // dine modal
-  var people_var = "people";
-  var seating_var = "Seating";
-  var reservDetails = "Reservation Details";
-  var email_var = "Please enter a valid email address";
-  var none_var = "None";
+  var people_var = __svI18n.people_var;
+  var seating_var = __svI18n.seating_var;
+  var reservDetails = __svI18n.reservDetails;
+  var email_var = __svI18n.email_var;
+  var none_var = __svI18n.none_var;
 
   // Booking Modal & Widget Month&Day
 
 
   // ModifyBooking Messages
 
-  var invalid_confirmation = "Invalid Confirmation Number";
-  var invalid_last_name = "Invalid Last Name";
-  var select_hotel_name = "Select hotel";
-  var select_resturant_name = "Select resturant";
-  var invalid_email = "Invalid Email";
+  var invalid_confirmation = __svI18n.invalid_confirmation;
+  var invalid_last_name = __svI18n.invalid_last_name;
+  var select_hotel_name = __svI18n.select_hotel_name;
+  var select_resturant_name = __svI18n.select_resturant_name;
+  var invalid_email = __svI18n.invalid_email;
   // ModifyBooking Messages
-  var no_upcoming_booking = "No Upcoming Bookings";
+  var no_upcoming_booking = __svI18n.no_upcoming_booking;
 
   // Akshay | 04-08-22
   var time_format;
@@ -1908,6 +1967,103 @@ if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_c
       document.addEventListener('DOMContentLoaded', syncHeaderContrast);
     } else {
       syncHeaderContrast();
+    }
+  })();
+</script>
+<script>
+  (function () {
+    if (window.__svI18n) {
+      Object.keys(window.__svI18n).forEach(function (key) {
+        if (Object.prototype.hasOwnProperty.call(window, key)) {
+          window[key] = window.__svI18n[key];
+        }
+      });
+    }
+
+    var replacements = {
+      "All Hotels": <?= json_encode(label('legacy.all_hotels_var', 'All Hotels'), JSON_UNESCAPED_UNICODE) ?>,
+      "Enter Code": <?= json_encode(label('legacy.enter_code_label', 'Enter Code'), JSON_UNESCAPED_UNICODE) ?>,
+      "Select a hotel and check availability": <?= json_encode(label('legacy.hotel_modalTitle', 'Select a hotel and check availability'), JSON_UNESCAPED_UNICODE) ?>,
+      "Select a date & check availability": <?= json_encode(label('legacy.select_date_check', 'Select a date & check availability'), JSON_UNESCAPED_UNICODE) ?>,
+      "Check In - Check Out": <?= json_encode(label('legacy.checkin_checkout', 'Check In - Check Out'), JSON_UNESCAPED_UNICODE) ?>,
+      "Check In – Check Out": <?= json_encode(label('legacy.checkin_checkout', 'Check In - Check Out'), JSON_UNESCAPED_UNICODE) ?>,
+      "Rooms & Guests": <?= json_encode(label('legacy.rooms_guests', 'Rooms & Guests'), JSON_UNESCAPED_UNICODE) ?>,
+      "Room and Guests": <?= json_encode(label('legacy.rooms_guests', 'Rooms & Guests'), JSON_UNESCAPED_UNICODE) ?>,
+      "1 Adult, 0 Child": <?= json_encode(label('legacy.default_guests_short', '1 Adult, 0 Child'), JSON_UNESCAPED_UNICODE) ?>,
+      "1 Adult, 0 Children": <?= json_encode(label('legacy.default_guests', '1 Adult, 0 Children'), JSON_UNESCAPED_UNICODE) ?>,
+      "Adults (12+)": <?= json_encode(label('legacy.adults_12', 'Adults (12+)'), JSON_UNESCAPED_UNICODE) ?>,
+      "Adult (12+)": <?= json_encode(label('legacy.adult_12', 'Adult (12+)'), JSON_UNESCAPED_UNICODE) ?>,
+      "Children (4-11)": <?= json_encode(label('legacy.children_4_11', 'Children (4-11)'), JSON_UNESCAPED_UNICODE) ?>,
+      "Add a room": <?= json_encode(label('legacy.add_room_text', 'Add a room'), JSON_UNESCAPED_UNICODE) ?>,
+      "Add Room": <?= json_encode(label('legacy.add_room_var', 'Add Room'), JSON_UNESCAPED_UNICODE) ?>,
+      "Done": <?= json_encode(label('legacy.done', 'Done'), JSON_UNESCAPED_UNICODE) ?>,
+      "Clear": <?= json_encode(label('legacy.clear', 'Clear'), JSON_UNESCAPED_UNICODE) ?>,
+      "Search": <?= json_encode(label('legacy.search', 'Search'), JSON_UNESCAPED_UNICODE) ?>,
+      "Select these dates": <?= json_encode(label('legacy.select_these_dates_var', 'Select these dates'), JSON_UNESCAPED_UNICODE) ?>,
+      "IATA code": <?= json_encode(label('legacy.iata_code', 'IATA code'), JSON_UNESCAPED_UNICODE) ?>,
+      "Corporate code": <?= json_encode(label('legacy.corporate_code', 'Corporate code'), JSON_UNESCAPED_UNICODE) ?>,
+      "Promo code": <?= json_encode(label('legacy.promo_code', 'Promo code'), JSON_UNESCAPED_UNICODE) ?>,
+      "Group code": <?= json_encode(label('legacy.group_code', 'Group code'), JSON_UNESCAPED_UNICODE) ?>,
+      "Apply": <?= json_encode(label('legacy.apply', 'Apply'), JSON_UNESCAPED_UNICODE) ?>,
+      "Stay": <?= json_encode(label('legacy.stay', 'Stay'), JSON_UNESCAPED_UNICODE) ?>,
+      "Dine": <?= json_encode(label('legacy.dine', 'Dine'), JSON_UNESCAPED_UNICODE) ?>,
+      "Offer:": <?= json_encode(label('legacy.offer', 'Offer:'), JSON_UNESCAPED_UNICODE) ?>,
+      "You can apply upto two codes at a time as below combination. e.g.": <?= json_encode(label('legacy.code_help', 'You can apply upto two codes at a time as below combination. e.g.'), JSON_UNESCAPED_UNICODE) ?>,
+      "IATA +Promo Code": <?= json_encode(label('legacy.code_combo_1', 'IATA +Promo Code'), JSON_UNESCAPED_UNICODE) ?>,
+      "IATA + Corporate Code": <?= json_encode(label('legacy.code_combo_2', 'IATA + Corporate Code'), JSON_UNESCAPED_UNICODE) ?>,
+      "You can’t apply more than two codes.": <?= json_encode(label('legacy.code_error_max', 'You can’t apply more than two codes.'), JSON_UNESCAPED_UNICODE) ?>,
+      "You can't apply more than two codes.": <?= json_encode(label('legacy.code_error_max', 'You can’t apply more than two codes.'), JSON_UNESCAPED_UNICODE) ?>,
+      "You can’t apply two codes without IATA code combination.": <?= json_encode(label('legacy.code_error_iata', 'You can’t apply two codes without IATA code combination.'), JSON_UNESCAPED_UNICODE) ?>,
+      "You can't apply two codes without IATA code combination.": <?= json_encode(label('legacy.code_error_iata', 'You can’t apply two codes without IATA code combination.'), JSON_UNESCAPED_UNICODE) ?>,
+      "This combination is not valid.": <?= json_encode(label('legacy.code_error_invalid', 'This combination is not valid.'), JSON_UNESCAPED_UNICODE) ?>
+    };
+
+    var placeholderReplacements = {
+      "Enter IATA code": <?= json_encode(label('legacy.enter_iata', 'Enter IATA code'), JSON_UNESCAPED_UNICODE) ?>,
+      "Enter corporate code": <?= json_encode(label('legacy.enter_corporate', 'Enter corporate code'), JSON_UNESCAPED_UNICODE) ?>,
+      "Enter promo code": <?= json_encode(label('legacy.enter_promo', 'Enter promo code'), JSON_UNESCAPED_UNICODE) ?>,
+      "Enter group code": <?= json_encode(label('legacy.enter_group', 'Enter group code'), JSON_UNESCAPED_UNICODE) ?>
+    };
+
+    function replaceExactText(node) {
+      if (!node || node.nodeType !== Node.TEXT_NODE) return;
+      var raw = node.nodeValue;
+      if (!raw) return;
+      var trimmed = raw.trim();
+      if (!trimmed || !Object.prototype.hasOwnProperty.call(replacements, trimmed)) return;
+      var leading = raw.match(/^\s*/);
+      var trailing = raw.match(/\s*$/);
+      node.nodeValue = (leading ? leading[0] : '') + replacements[trimmed] + (trailing ? trailing[0] : '');
+    }
+
+    function translateDom(root) {
+      if (!root) return;
+      var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null);
+      var current;
+      while ((current = walker.nextNode())) {
+        replaceExactText(current);
+      }
+      var fields = root.querySelectorAll('input[placeholder], input[value], [alt]');
+      fields.forEach(function (el) {
+        var ph = el.getAttribute('placeholder');
+        if (ph && Object.prototype.hasOwnProperty.call(placeholderReplacements, ph.trim())) {
+          el.setAttribute('placeholder', placeholderReplacements[ph.trim()]);
+        }
+        var val = el.getAttribute('value');
+        if (val && Object.prototype.hasOwnProperty.call(replacements, val.trim())) {
+          el.setAttribute('value', replacements[val.trim()]);
+        }
+        var alt = el.getAttribute('alt');
+        if (alt && Object.prototype.hasOwnProperty.call(replacements, alt.trim())) {
+          el.setAttribute('alt', replacements[alt.trim()]);
+        }
+      });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', function () { translateDom(document.body); });
+    } else {
+      translateDom(document.body);
     }
   })();
 </script>
