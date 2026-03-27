@@ -404,9 +404,10 @@ body.sottovoce-luxury #page {
   z-index: 1;
 }
 
-/* Pagine legali / testo lungo */
+/* Pagine legali / testo lungo (cookie policy, privacy, ecc.) — sotto header fixed */
 body.sottovoce-luxury .sottovoce-legal-page {
-  padding-top: 3rem;
+  padding-top: clamp(6rem, 16vh, 9rem);
+  scroll-margin-top: clamp(6rem, 16vh, 9rem);
   padding-bottom: 4rem;
 }
 
