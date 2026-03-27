@@ -17,9 +17,9 @@ require_once __DIR__ . '/config.php';
   <div id="amenities" class="wp-block-group container-fluid white-bg mb-5 pb-5">
     <div class="wp-block-group__inner-container is-layout-flow wp-block-group-is-layout-flow">
       <div class="container-fluid pt-5" data-reveal>
-        <div class="row position-relative" data-reveal>
+        <div class="row position-relative sottovoce-amenities-media-row" data-reveal>
           <div class="col-12 p-0 px-lg-3">
-            <img width="1284" height="375" decoding="async" src="https://placehold.co/1284x375?text=Sottovoce+Placeholder" alt="<?= htmlspecialchars(label('services.pool.image_alt', 'Infinity pool at Address Sky View'), ENT_QUOTES) ?>" class="img-fluid amenities-large-img p-0 px-lg-3">
+            <img width="1280" height="720" decoding="async" src="/assets/images/drink_signture.jpg" alt="<?= htmlspecialchars(label('services.pool.image_alt', 'Infinity pool at Address Sky View'), ENT_QUOTES) ?>" class="img-fluid amenities-large-img p-0 px-lg-3">
           </div>
           <div class="amenities-title-box">
             <h2 class="display-2-48"><?= htmlspecialchars(label('services.pool.title', 'Infinity Pool'), ENT_QUOTES) ?></h2>
@@ -37,9 +37,9 @@ require_once __DIR__ . '/config.php';
         </div>
       </div>
       <div class="container-fluid pt-5" data-reveal>
-        <div class="row position-relative" data-reveal>
+        <div class="row position-relative sottovoce-amenities-media-row" data-reveal>
           <div class="col-12 p-0 px-lg-3">
-            <img width="1284" height="375" decoding="async" src="https://placehold.co/1284x375?text=Sottovoce+Placeholder" alt="<?= htmlspecialchars(label('services.kids.image_alt', 'Qix Kids Club at Address Sky View'), ENT_QUOTES) ?>" class="img-fluid amenities-large-img p-0 px-lg-3">
+            <img width="1280" height="720" decoding="async" src="/assets/images/terrazza.jpg" alt="<?= htmlspecialchars(label('services.kids.image_alt', 'Qix Kids Club at Address Sky View'), ENT_QUOTES) ?>" class="img-fluid amenities-large-img p-0 px-lg-3">
           </div>
           <div class="amenities-title-box">
             <h2 class="display-2-48"><?= htmlspecialchars(label('services.kids.title', 'Qix Kids Club'), ENT_QUOTES) ?></h2>
@@ -103,6 +103,18 @@ require_once __DIR__ . '/config.php';
       0 0 10px rgba(255, 255, 255, 0.72),
       0 0 28px rgba(255, 215, 180, 0.46),
       0 0 56px rgba(206, 85, 22, 0.26);
+  }
+  .amenities-large-img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    object-position: center center;
+    display: block;
+  }
+  .sottovoce-amenities-media-row {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
   }
   [data-reveal] {
     opacity: 0;
