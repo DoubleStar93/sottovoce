@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Sottovoce luxury shell â€” verde #3c3e21, tipografia chiara, navbar.
  * Applicare: <body class="sottovoce-luxury"> (insieme a id="page-top" sulla home se serve ancora lâ€™ancora).
  */
@@ -7,6 +7,30 @@ body.sottovoce-luxury,
 body.sottovoce-luxury #page,
 body.sottovoce-luxury .site {
   background: #3c3e21;
+}
+
+body.sottovoce-luxury,
+body.sottovoce-luxury p,
+body.sottovoce-luxury li,
+body.sottovoce-luxury span,
+body.sottovoce-luxury a,
+body.sottovoce-luxury button,
+body.sottovoce-luxury input,
+body.sottovoce-luxury textarea,
+body.sottovoce-luxury select {
+  font-family: "Manrope", "FreightSansProBook", ui-sans-serif, system-ui, "Segoe UI", sans-serif !important;
+  font-weight: 300;
+  letter-spacing: 0.01em;
+}
+
+body.sottovoce-luxury .nav-link,
+body.sottovoce-luxury .btn,
+body.sottovoce-luxury .primary-btn,
+body.sottovoce-luxury .secondary-btn,
+body.sottovoce-luxury strong,
+body.sottovoce-luxury b {
+  font-weight: 450 !important;
+  letter-spacing: 0.015em;
 }
 
 body.sottovoce-luxury .site-main,
