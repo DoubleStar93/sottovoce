@@ -182,19 +182,19 @@
 
   
 <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'>
-<link rel="alternate" href="/pages/index.php" hreflang="x-default">
-<link rel="alternate" hreflang="en" href="/pages/index.php">
+<link rel="alternate" href="/index.php" hreflang="x-default">
+<link rel="alternate" hreflang="en" href="/index.php">
 
 
 
 
 
-<link rel="alternate" hreflang="x-default" href="/pages/index.php">
+<link rel="alternate" hreflang="x-default" href="/index.php">
 
 	<!-- This site is optimized with the Yoast SEO plugin v22.9 - https://yoast.com/wordpress/plugins/seo/ -->
 	<title>Address Sky View | Downtown Dubai | Address Hotels + Resorts</title>
 	<meta name="description" content="Stay above it all at Address Sky View, a luxury hotel in Downtown Dubai with iconic infinity pool, breathtaking views of Burj Khalifa, direct access to Dubai Mall.">
-	<link rel="canonical" href="/pages/index.php">
+	<link rel="canonical" href="/index.php">
 	<meta property="og:locale" content="en_US">
 	<meta property="og:type" content="article">
 	<meta property="og:title" content="Address Sky View | Downtown Dubai | Address Hotels + Resorts">

@@ -2,9 +2,9 @@
 declare(strict_types=1);
 require_once dirname(__DIR__, 2) . '/config.php';
 
-$footerAddressLine1 = appEnv('FOOTER_ADDRESS_LINE1', 'Via IX Febbraio, 1');
-$footerAddressLine2 = appEnv('FOOTER_ADDRESS_LINE2', '48121 Ravenna (RA)');
-$footerHoursLinkUrl = appEnv('FOOTER_HOURS_LINK_URL', '/pages/index.php#contact-details');
+$footerAddressLine1 = appEnv('FOOTER_ADDRESS_LINE1', 'Via Ponte Marino, 17');
+$footerAddressLine2 = appEnv('FOOTER_ADDRESS_LINE2', '48121 Ravenna RA');
+$footerHoursLinkUrl = appEnv('FOOTER_HOURS_LINK_URL', '/index.php#contact-details');
 $footerPhone = appEnv('FOOTER_PHONE', '+39 331 125 3525');
 $footerEmail = appEnv('FOOTER_EMAIL', 'info@valentinoravenna.com');
 $footerPiva = appEnv('FOOTER_PIVA', '');
@@ -19,6 +19,7 @@ $homeHref = $currentLocale === 'en' ? '/en/' : '/';
       padding: 44px 0 26px;
       position: relative;
       z-index: 10;
+      margin-bottom: -25px !important;
     }
 
     body.sottovoce-luxury .site-footer-minimal,

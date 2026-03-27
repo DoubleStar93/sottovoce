@@ -1,13 +1,35 @@
 <div class="container-fluid individual-homepage-contact-map-section" id="contact-details">
 <?php
-$contactMapQuery = trim(appEnv('FOOTER_ADDRESS_LINE1', 'Via della Cucina 10') . ', ' . appEnv('FOOTER_ADDRESS_LINE2', '20100 Milano (MI)')) . ', Italy';
-$contactMapEmbedSrc = 'https://www.google.com/maps?q=' . rawurlencode($contactMapQuery) . '&output=embed&z=17';
+$contactMapEmbedSrc = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5699.341013142288!2d12.196659976562394!3d44.419406602538864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x477df91d0e0333db%3A0x14bb96f746a53614!2sFigo%20Burger%20Pizza%20%26%20Sushi!5e0!3m2!1sit!2sit!4v1774603582267!5m2!1sit!2sit';
 $footerEmail = appEnv('FOOTER_EMAIL', 'info@sottovoce-ristorante.example');
 $footerPhoneDisplay = appEnv('FOOTER_PHONE', '+39 02 0000 0000');
 $footerTelHref = preg_replace('/\s+/', '', $footerPhoneDisplay);
 $showContactSectionTitle = $showContactSectionTitle ?? true;
+$showContactTitleAfterMap = $showContactTitleAfterMap ?? false;
 ?>
   <div class="container individual-homepage-contact-map">
+    <div class="row g-0 mt-0 mb-4 mb-lg-5 justify-content-center">
+      <div class="col-12 sottovoce-contact-map">
+        <div class="contact-map-wrap">
+          <iframe
+            title="<?= htmlspecialchars(label('contact.map_iframe_title', 'Mappa'), ENT_QUOTES) ?>"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen=""
+            src="<?= htmlspecialchars($contactMapEmbedSrc, ENT_QUOTES) ?>"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+
+    <?php if ($showContactTitleAfterMap): ?>
+      <div class="row justify-content-center">
+        <div class="col-12 text-center">
+          <h2 class="display-2-48 mb-4"><?= htmlspecialchars(label('contact.title', 'Contatti'), ENT_QUOTES) ?></h2>
+        </div>
+      </div>
+    <?php endif; ?>
+
     <div class="row justify-content-center">
       <div class="col-12 col-lg-8 col-xl-7 text-center">
         <div class="individual-homepage-contact-map-content-box sottovoce-contact-copy">
@@ -26,21 +48,9 @@ $showContactSectionTitle = $showContactSectionTitle ?? true;
               </a>
             </p>
             <p class="body-4 mb-0">
-              <?= htmlspecialchars(trim(appEnv('FOOTER_ADDRESS_LINE1', 'Via della Cucina 10') . ' - ' . appEnv('FOOTER_ADDRESS_LINE2', '20100 Milano (MI)')), ENT_QUOTES) ?>
+              <?= htmlspecialchars(trim(appEnv('FOOTER_ADDRESS_LINE1', 'Via Ponte Marino, 17') . ' - ' . appEnv('FOOTER_ADDRESS_LINE2', '48121 Ravenna RA')), ENT_QUOTES) ?>
             </p>
           </div>
-        </div>
-      </div>
-    </div>
-    <div class="row g-0 mt-4 mt-lg-5 justify-content-center">
-      <div class="col-12 sottovoce-contact-map">
-        <div class="contact-map-wrap">
-          <iframe
-            title="<?= htmlspecialchars(label('contact.map_iframe_title', 'Mappa'), ENT_QUOTES) ?>"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            src="<?= htmlspecialchars($contactMapEmbedSrc, ENT_QUOTES) ?>"
-          ></iframe>
         </div>
       </div>
     </div>

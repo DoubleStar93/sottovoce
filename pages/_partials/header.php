@@ -4,8 +4,8 @@ if (!function_exists('label') && is_file(__DIR__ . '/../../config.php')) {
     require_once __DIR__ . '/../../config.php';
 }
 $requestPath = trim((string) parse_url($_SERVER['REQUEST_URI'] ?? '', PHP_URL_PATH), '/');
-$isOnePageHome = in_array($requestPath, ['', 'index.php', 'pages/index.php'], true);
-$homePrefix = $isOnePageHome ? '' : '/pages/index.php';
+$isOnePageHome = in_array($requestPath, ['', 'index.php'], true);
+$homePrefix = $isOnePageHome ? '' : '/index.php';
 $currentLocale = function_exists('appCurrentLocale') ? appCurrentLocale() : 'it';
 $itUrl = '/';
 $enUrl = '/en/';

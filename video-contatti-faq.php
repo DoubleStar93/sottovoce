@@ -9,12 +9,8 @@ require_once __DIR__ . '/config.php';
 <div id="page" class="site">
 <?php include __DIR__ . '/pages/_partials/header.php'; ?>
 <main class="site-main">
-  <section class="sottovoce-legal-page">
-    <div class="container text-center">
-      <h1 class="display-1-72 font-48-mobile mb-2 sottovoce-contact-title-glow"><?= htmlspecialchars(label('contact.title', 'Contatti'), ENT_QUOTES) ?></h1>
-    </div>
-  </section>
   <?php $showContactSectionTitle = false; ?>
+  <?php $showContactTitleAfterMap = true; ?>
   <?php include __DIR__ . '/pages/_partials/contact_faq_section.php'; ?>
 </main>
 <?php include __DIR__ . '/pages/_partials/footer.php'; ?>
@@ -51,19 +47,50 @@ require_once __DIR__ . '/config.php';
     z-index: 1;
   }
 
-  .sottovoce-contact-title-glow {
-    text-shadow:
-      0 0 10px rgba(255, 255, 255, 0.7),
-      0 0 28px rgba(255, 215, 180, 0.45),
-      0 0 54px rgba(206, 85, 22, 0.24);
-  }
-
   body.sottovoce-contact-page .sottovoce-legal-page {
     padding-bottom: 1rem;
   }
 
   body.sottovoce-contact-page #contact-details.individual-homepage-contact-map-section {
-    padding-top: 0.75rem !important;
+    padding-top: clamp(2rem, 5vh, 3rem) !important;
+  }
+
+  body.sottovoce-contact-page #contact-details .contact-map-wrap {
+    height: clamp(320px, 52vh, 520px);
+    filter: grayscale(1) contrast(1.06) !important;
+    -webkit-filter: grayscale(1) contrast(1.06) !important;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 10px 34px rgba(0, 0, 0, 0.24);
+  }
+
+  body.sottovoce-contact-page #contact-details .row.g-0 {
+    justify-content: center !important;
+  }
+
+  body.sottovoce-contact-page #contact-details .individual-homepage-contact-map.container {
+    max-width: 100% !important;
+    width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  body.sottovoce-contact-page #contact-details .sottovoce-contact-map {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  body.sottovoce-contact-page #contact-details .contact-map-wrap iframe {
+    opacity: 1;
+    width: 100%;
+    display: block;
+  }
+
+  body.sottovoce-contact-page #contact-details .contact-map-wrap {
+    border-radius: 0;
+    box-shadow: none;
   }
 </style>
 <script>
