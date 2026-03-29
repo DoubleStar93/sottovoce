@@ -28,10 +28,10 @@ require_once __DIR__ . '/config.php';
         <div class="row justify-content-center text-center" data-reveal>
           <div class="col-12 col-lg-8 amenities-list-col">
             <p class="text-center mt-5 mb-4 body-4"><?= htmlspecialchars(label('services.pool.body', 'Relax in style at our breathtaking infinity pool. A large sun-lounging deck, private cabanas, a bar with both pool and dry deck seating - the Address Sky View pool deck is all of that and more.'), ENT_QUOTES) ?></p>
-            <ul class="amenities-list text-left body-4">
-              <li class="d-flex align-items-center mb-2"><span class="generic-icon px-2"></span><?= htmlspecialchars(label('services.pool.point_1', 'Located on the iconic Sky Deck'), ENT_QUOTES) ?></li>
-              <li class="d-flex align-items-center mb-2"><span class="generic-icon px-2"></span><?= htmlspecialchars(label('services.pool.point_2', 'Access to 18 years and above.'), ENT_QUOTES) ?></li>
-              <li class="d-flex align-items-center mb-2"><span class="generic-icon px-2"></span><?= htmlspecialchars(label('services.pool.point_3', 'Timing: 9:00 AM till Sunset'), ENT_QUOTES) ?></li>
+            <ul class="amenities-list sottovoce-services-amenities-list body-4">
+              <li class="d-flex align-items-start justify-content-center mb-3"><span class="generic-icon px-2 flex-shrink-0 mt-1"></span><span><?= htmlspecialchars(label('services.pool.point_1', 'Located on the iconic Sky Deck'), ENT_QUOTES) ?></span></li>
+              <li class="d-flex align-items-start justify-content-center mb-3"><span class="generic-icon px-2 flex-shrink-0 mt-1"></span><span><?= htmlspecialchars(label('services.pool.point_2', 'Access to 18 years and above.'), ENT_QUOTES) ?></span></li>
+              <li class="d-flex align-items-start justify-content-center mb-0"><span class="generic-icon px-2 flex-shrink-0 mt-1"></span><span><?= htmlspecialchars(label('services.pool.point_3', 'Timing: 9:00 AM till Sunset'), ENT_QUOTES) ?></span></li>
             </ul>
           </div>
         </div>
@@ -48,10 +48,10 @@ require_once __DIR__ . '/config.php';
         <div class="row justify-content-center text-center" data-reveal>
           <div class="col-12 col-lg-8 amenities-list-col">
             <p class="text-center mt-5 mb-4 body-4"><?= htmlspecialchars(label('services.kids.body', 'Enjoy a well-earned moment for yourself and leave your little ones to us. Our qualified team of childcare professionals will spark their imagination with educational games, fun activities and craft sessions they will love.'), ENT_QUOTES) ?></p>
-            <ul class="amenities-list text-left body-4">
-              <li class="d-flex align-items-center mb-2"><span class="generic-icon px-2"></span><?= htmlspecialchars(label('services.kids.point_1', 'For children between the ages of 4 and 12'), ENT_QUOTES) ?></li>
-              <li class="d-flex align-items-center mb-2"><span class="generic-icon px-2"></span><?= htmlspecialchars(label('services.kids.point_2', 'Babysitting services to be booked 24 hours in advance.'), ENT_QUOTES) ?></li>
-              <li class="d-flex align-items-center mb-2"><span class="generic-icon px-2"></span><?= htmlspecialchars(label('services.kids.point_3', 'Timing: 10am to 7pm'), ENT_QUOTES) ?></li>
+            <ul class="amenities-list sottovoce-services-amenities-list body-4">
+              <li class="d-flex align-items-start justify-content-center mb-3"><span class="generic-icon px-2 flex-shrink-0 mt-1"></span><span><?= htmlspecialchars(label('services.kids.point_1', 'For children between the ages of 4 and 12'), ENT_QUOTES) ?></span></li>
+              <li class="d-flex align-items-start justify-content-center mb-3"><span class="generic-icon px-2 flex-shrink-0 mt-1"></span><span><?= htmlspecialchars(label('services.kids.point_2', 'Babysitting services to be booked 24 hours in advance.'), ENT_QUOTES) ?></span></li>
+              <li class="d-flex align-items-start justify-content-center mb-0"><span class="generic-icon px-2 flex-shrink-0 mt-1"></span><span><?= htmlspecialchars(label('services.kids.point_3', 'Timing: 10am to 7pm'), ENT_QUOTES) ?></span></li>
             </ul>
           </div>
         </div>
@@ -115,6 +115,35 @@ require_once __DIR__ . '/config.php';
     max-width: 1100px;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  /* Override theme grid: single centered column, one item per row */
+  .sottovoce-services-page ul.sottovoce-services-amenities-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 42rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2.5rem;
+    padding: 0;
+    list-style: none;
+    grid-template-columns: unset;
+  }
+
+  .sottovoce-services-page ul.sottovoce-services-amenities-list li {
+    width: 100%;
+    max-width: 36rem;
+    text-align: center;
+  }
+
+  @media (max-width: 900px) {
+    .sottovoce-services-page ul.sottovoce-services-amenities-list {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 100%;
+    }
   }
   [data-reveal] {
     opacity: 0;
