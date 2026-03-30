@@ -1804,14 +1804,13 @@ if (globalHomeLinkDropdownBox) {
     margin-top: 0;
     width: 100%;
   }
-  .hero-prenota-cta {
-    margin-top: 20px;
+  #featured-offer .signature-prenota-cta {
+    margin-top: 96px;
+    margin-bottom: 19px;
     width: 100%;
     max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
   }
-  body.sottovoce-luxury .hero-home-bottom button.home-prenota-btn-hero {
+  body.sottovoce-luxury #featured-offer .signature-prenota-cta button.home-prenota-btn-hero {
     width: 100%;
     min-height: 56px;
     padding: 0 20px;
@@ -1836,8 +1835,8 @@ if (globalHomeLinkDropdownBox) {
       box-shadow 0.25s ease,
       text-shadow 0.25s ease;
   }
-  body.sottovoce-luxury .hero-home-bottom button.home-prenota-btn-hero:hover,
-  body.sottovoce-luxury .hero-home-bottom button.home-prenota-btn-hero:focus {
+  body.sottovoce-luxury #featured-offer .signature-prenota-cta button.home-prenota-btn-hero:hover,
+  body.sottovoce-luxury #featured-offer .signature-prenota-cta button.home-prenota-btn-hero:focus {
     background: rgba(255, 255, 255, 0.1) !important;
     color: #ffffff !important;
     border: 1px solid rgba(255, 255, 255, 0.95) !important;
@@ -1851,7 +1850,7 @@ if (globalHomeLinkDropdownBox) {
       0 0 44px rgba(255, 255, 255, 0.28),
       inset 0 0 22px rgba(255, 255, 255, 0.12) !important;
   }
-  body.sottovoce-luxury .hero-home-bottom button.home-prenota-btn-hero:active {
+  body.sottovoce-luxury #featured-offer .signature-prenota-cta button.home-prenota-btn-hero:active {
     background: rgba(255, 255, 255, 0.16) !important;
     color: #ffffff !important;
     border: 1px solid rgba(255, 255, 255, 0.88) !important;
@@ -2408,9 +2407,6 @@ if (globalHomeLinkDropdownBox) {
 
           <p class="body-2 description--text"><?= htmlspecialchars(label('section.intro.description', "Sottovoce e un indirizzo serale nel cuore di Ravenna, dove mixology e cucina leggera si incontrano in un'atmosfera raffinata."), ENT_QUOTES) ?></p>
           <p class="body-2 description--text"><?= htmlspecialchars(label('section.intro.how', 'Come funziona: apertura al tramonto, prenotazione consigliata e turni da 50 minuti per garantire un servizio accurato e tempi perfetti.'), ENT_QUOTES) ?></p>
-    
-    <div class="cta-btn mt-4">
-          </div>
   </div>
 </section>
 
@@ -2424,6 +2420,15 @@ if (globalHomeLinkDropdownBox) {
     <div class="col-12 col-lg-6 p-0 inline-right show-on-scroll image-zoom-animation img-shadow">
       <div class="img-box img-shadow image-zoom-animation" data-aos="fade-left" data-aos-duration="1000" data-aos-offset="300" data-aos-easing="ease-in-sine">
         <img width="1024" height="535" decoding="async" src="/assets/images/tramonto.jpg" alt="Tramonto da Sottovoce" class="img-fluid sottovoce-featured-media">        
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 d-flex justify-content-center">
+      <div class="signature-prenota-cta">
+        <button class="home-prenota-btn home-prenota-btn-hero" type="button" onclick="if (typeof MOBEE_PAGE_URL !== 'undefined' && MOBEE_PAGE_URL) { window.open(MOBEE_PAGE_URL, '_blank', 'noopener,noreferrer'); }">
+          <?= htmlspecialchars(label('cta.book', 'Prenota'), ENT_QUOTES) ?>
+        </button>
       </div>
     </div>
   </div>

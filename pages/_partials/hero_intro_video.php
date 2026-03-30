@@ -43,11 +43,6 @@
         <h1 class="sr-only"><?= htmlspecialchars(label('hero.title', 'Sottovoce Ravenna'), ENT_QUOTES) ?></h1>
         <?php include __DIR__ . '/sunset_countdown_hero.php'; ?>
         <p class="mb-2 homepage-content-description text-white d-none"></p>
-        <div class="hero-prenota-cta">
-          <button class="home-prenota-btn home-prenota-btn-hero" type="button" onclick="if (typeof MOBEE_PAGE_URL !== 'undefined' && MOBEE_PAGE_URL) { window.open(MOBEE_PAGE_URL, '_blank', 'noopener,noreferrer'); }">
-            <?= htmlspecialchars(label('cta.book', 'Prenota'), ENT_QUOTES) ?>
-          </button>
-        </div>
       </div>
     </div>
   </div>
